@@ -179,7 +179,7 @@ try {
                 $('body').append('<div class="modal fade" id="modalLocalEnvironment" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel">Local Environment Warning</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">SVG Objects, Icons, YouTube and Vimeo Videos might not show correctly on local environment. For better result, please preview on a server.</div><div class="modal-footer"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button></div></div></div></div>');
                 var modalLocalEnvironment = document.getElementById('modalLocalEnvironment');
                 var modalLocalEnvironment = bootstrap.Modal.getOrCreateInstance(modalLocalEnvironment);
-                modalLocalEnvironment.hide();
+                modalLocalEnvironment.show();
             }
         }
     });
