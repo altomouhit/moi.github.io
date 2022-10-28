@@ -1,0 +1,257 @@
+html {
+    font-size: 1rem;
+    scrollbar-color: #080808 #a6a7a8;
+}
+
+
+/*! Other Browser */
+
+html {
+    --scrollbarBG: #ECEEF2;
+    --thumbBG: #BEC6D0;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+/* Scrolling End */
+a {
+    text-decoration: none;
+}
+#pbmcNav .nav-brand img {
+    width: 4.5rem;
+}
+.btnPbmc {
+    background: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 52px;
+    min-width: 150px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnPbmc:hover {
+    border: 1px solid var(--secondary-color);
+}
+.pbmc-tabs {
+    background-color: #f0f0f0;
+}
+.pbmc-tabs .nav-tabs {
+    border: none;
+}
+.pbmc-tabs .nav-tabs .nav-item {
+    background-color: white;
+    -webkit-box-shadow: 0 2px 40px 8px rgb(15 15 15 / 15%);
+    box-shadow: 0 2px 40px 8px rgb(15 15 15 / 15%);
+    border-radius: 0.35rem;
+    width: 129px;
+    height: 89px;
+}
+@media only screen and (min-width:768px) and (max-width:991px) {
+	.pbmc-tabs .nav-tabs .nav-item {
+		width: 129px;
+	}
+}
+@media only screen and (max-width:767px) {
+	.pbmc-tabs .nav-tabs .nav-item {
+		width: 119px;
+	}
+}
+@media only screen and (min-width:768px) and (max-width:991px) {
+    #pbmcNav .nav-brand img {
+        width: 3.5rem;
+    }
+	.pbmc-tabs .nav-tabs .nav-item {
+		width: 99px;
+	}
+    .pbmc-tabs .nav-tabs .nav-item a h4 {
+        font-size: 0.825rem !important;
+    }
+}
+@media only screen and (max-width:767px) {
+    #pbmcNav .nav-brand img {
+        width: 3.5rem;
+    }
+	.pbmc-tabs .nav-tabs .nav-item {
+		width: 99px;
+        margin-bottom: 00.625rem;
+	}
+}
+.pbmc-tabs .nav-tabs .nav-item a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 89px;
+}
+.pbmc-tabs .nav-tabs .nav-item a h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    margin-top: 0.825rem;
+}
+.pbmc-tabs .nav-tabs .nav-link.active, .pbmc-tabs .nav-tabs .nav-item.show .nav-link {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 0.5rem;
+    height: 89px;
+}
+.pbmc-tabs .nav-tabs .nav-link.active span img, .pbmc-tabs .nav-tabs .nav-item.show .nav-link span img {
+    filter: brightness(0.25);
+}
+.pbmc-tabs .tab-content .tab-pane {
+    padding: 40px 0;
+}
+.post-thumbnail img {
+    position: relative;
+    width: 100%;
+    height: 302px;
+    overflow: hidden;
+}
+.single-post-area .post-meta span img {
+    width: 30px;
+}
+.text-bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+.badge-dot {
+    width: 10px;
+    height: 10px;
+    display: inline-flex;
+    align-items: center;
+    --bs-badge-padding-x: 0.35em;
+}
+.clock-tower {
+    width: 15rem;
+}
+.card img {
+    height: 150px;
+}
+table.table1 > thead > tr > th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+}
+table.table1 > tbody > tr > td:first-child {
+    background-color: #E9E9E9;
+    color: #555;
+    text-align: left;
+    padding-left: 2%;
+    border-right: #FFF solid 2px;
+    border-bottom: #F7F7F7 solid 1px;
+}
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border-color: transparent;
+}
+/* Login Page */
+.img {
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center center;
+}
+.ftco-section {
+    padding: 7rem 0;
+}
+.login-wrap {
+    position: relative;
+    color: rgba(255,255,255,.9);
+}
+
+.login-wrap .form-control {
+    height: 52px;
+    border: 1px solid transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.field-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #000;
+}
+.form-group {
+    position: relative;
+}
+.card-bg {
+    background-color: rgb(255 255 255 / 56%);
+}
+.social {
+    width: 100%;
+}
+.social a {
+    width: 50%;
+    display: block;
+    border: 1px solid rgba(255,255,255,.4);
+    color: #000;
+    background: #fff;
+}
+.card-bg label {
+    color: #000;
+    font-weight: 600;
+}
+.login-xs, .menu-image{
+    display: none !important;
+}
+.breakpoint-on .classynav ul li.login-xs {
+    display: block !important;
+}
+.breakpoint-on .book-now-btn a {
+	display: none !important;
+}
+.breakpoint-on .classy-menu .menu-image {
+    display: block !important;
+    bottom: 0;
+    width: 16rem;
+}
+@media (min-width: 576px){
+    .breakpoint-on .classy-menu .menu-image {
+        bottom: -2.8125rem;
+    }
+}
+.backHome {
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.backHome a {
+    color: #000;
+}
+.search-bottom {
+    margin-bottom: 0.625rem;
+}
+.header .lead {
+    max-width: 620px;
+  }
+  
+  /** Below CSS is completely optional **/
+  
+  .gallery-item {
+    width: 200px;
+    padding: 5px;
+  }
+  

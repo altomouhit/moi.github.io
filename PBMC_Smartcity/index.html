@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="PBMC Smart City" />
+    <meta name="author" content="PBMC Smart City" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>:: Home ::</title>
+
+    <link rel=icon href="img/PBMC_Fav.svg" type=image/png />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header-area">
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="pbmcNav">
+                        <a class="nav-brand" href="index.html">
+                            <img src="img/PBMC_Logo@2x.png" alt="PBMC Logo" />
+                        </a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span><span class="bottom"></span>
+                                </div>
+                            </div>
+
+                            <div class="classynav">
+                                <div class="menu-title">
+                                    <img src="img/menu-title.png" alt="" />
+                                </div>
+                                <ul id="nav" class="mb-0">
+                                    <li class="active"><a href="index.html"><i class="fal fa-home fa-fw"></i> Home</a>
+                                    </li>
+                                    <!-- <li><a href="flights.html">Flights</a></li> -->
+                                    <li><a href="hotels.html">Hotels</a></li>
+                                    <li><a href="carHire.html">Car Hire</a></li>
+                                    <!-- <li>
+                                        <a href="#" class="more">More</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#!">- Dropdown</a></li>
+                                            <li><a href="#!">- Dropdown</a></li>
+                                            <li><a href="#!">- Dropdown</a></li>
+                                            <li><a href="#!">- Dropdown</a></li>
+                                            <li><a href="#!">- Dropdown</a></li>
+                                            <li><a href="#!">- Dropdown</a></li>
+                                            <li><a href="#!">- Dropdown</a></li>
+                                            <li>
+                                                <a href="#">- Dropdown</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">- Dropdown Item</a></li>
+                                                    <li><a href="#">- Dropdown Item</a></li>
+                                                    <li><a href="#">- Dropdown Item</a></li>
+                                                    <li><a href="#">- Dropdown Item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                </ul>
+
+                                <ul class="mb-0">
+                                    <li><a href="help.html">Help </a></li>
+                                    <li class="text-white divider">|</li>
+                                    <li><a href="register.html">Register </a></li>
+                                    <li class="login-xs"><a href="login.html">login </a></li>
+                                </ul>
+
+                                <div class="book-now-btn">
+                                    <a href="login.html">LOGIN </a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <img src="img/menu-image.png" alt="" class="position-absolute menu-image">
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="welcome-area">
+        <div class="welcome-slides owl-carousel">
+            <div class="single-welcome-slide bg-img" style="background-image: url(img/slider/slider-1.png)"
+                data-img-url="img/slider/slider-1.png">
+                <div class="welcome-content h-100">
+                    <div class="container h-100">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="welcome-text text-center mt-4">
+                                    <h2 data-animation="fadeInLeft" data-delay="200ms">
+                                        The Proactive <span>SMART CITY</span> Connecting
+                                        everything and
+                                    </h2>
+                                    <h2 data-animation="fadeInLeft" data-delay="500ms">
+                                        everyone for Smarter living...
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-welcome-slide bg-img" style="background-image: url(img/slider/slider-2.png)"
+                data-img-url="img/slider/slider-2.png">
+                <div class="welcome-content h-100">
+                    <div class="container h-100">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="welcome-text text-center mt-2">
+                                    <h2 data-animation="fadeInLeft" data-delay="200ms">
+                                        The Proactive <span>SMART CITY</span> Connecting
+                                        everything and
+                                    </h2>
+                                    <h2 data-animation="fadeInLeft" data-delay="500ms">
+                                        everyone for Smarter living...
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pbmc-about-area pt-md-1 section-padding-100-0">
+
+        <div class="hotel-search-form-area">
+            <div class="container-fluid">
+                <form action="#" method="post">
+                    <div class="row justify-content-between align-items-end">
+                        <div class="col-12 col-sm-10 col-lg-11 hotel-search-form">
+                            <div class="row">
+                                <div class="col-12 search-bottom">
+                                    <label for="search">Search</label>
+                                    <input type="search" name="search" id="search" class="form-control"
+                                        placeholder="Type your keyword ..." />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-2 col-lg-1 p-0">
+                            <div class="col">
+                                <button type="submit" class="btn pbmc-btn w-100">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.container-fluid -->
+
+            <!-- <div class="container-fluid">
+                <form action="#" method="post">
+                    <div class="row justify-content-between align-items-end">
+                        <div class="col-12 col-sm-10 col-lg-11 hotel-search-form">
+                            <div class="row">
+                                <div class="col-6 col-md-2">
+                                    <label for="category">Category</label>
+                                    <select name="category" id="category" class="form-control">
+                                        <option value="">Flights</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <label for="from">From</label>
+                                    <select name="from" id="from" class="form-control">
+                                        <option value="">Choose</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <label for="to">To</label>
+                                    <select name="to" id="to" class="form-control">
+                                        <option value="">Choose</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <label for="depart">Depart</label>
+                                    <select name="depart" id="depart" class="form-control">
+                                        <option value="">Choose</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <label for="return">Return</label>
+                                    <select name="return" id="return" class="form-control">
+                                        <option value="">Choose</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 col-md-2">
+                                    <label for="cabinTrvlr">Cabin & Travellers</label>
+                                    <select name="cabinTrvlr" id="cabinTrvlr" class="form-control">
+                                        <option value="">Choose</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-2 col-lg-1 p-0">
+                            <div class="col">
+                                <button type="submit" class="btn pbmc-btn w-100">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div> -->
+            <!-- /.container-fluid -->
+        </div>
+
+        <div class="container mt-md-3 mt-100">
+            <div class="row align-items-center mb-40">
+                <div class="col-12 col-lg-12">
+                    <div class="section-heading wow fadeInUp text-center mb-0" data-wow-delay="100ms">
+                        <h2>Making a City Smart</h2>
+                    </div>
+                    <div class="about-us-content mb-3">
+                        <p class="wow fadeInUp m-0 text-center" data-wow-delay="300ms">
+                            Making a City Smart encapsulates learnings from the Smart Cities
+                            Mission to outline the WHAT, WHY and HOW a Smart City
+                        </p>
+                        <p class="wow fadeInUp m-0 text-center" data-wow-delay="500ms">
+                            It is structured as a workbook with tasks in each section to
+                            help cities chart out their own smart city journeys.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-12">
+                    <div class="projects-slides owl-carousel">
+                        <a href="cityMap.html">
+                            <div class="single-project-slide bg-img" style="background-image: url(img/city/2.jpg)">
+                                <div class="project-content">
+                                    <div class="text">
+                                        <h5>City Map</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="news.html">
+                            <div class="single-project-slide bg-img" style="background-image: url(img/city/1.jpg)">
+                                <div class="project-content">
+                                    <div class="text">
+                                        <h5>News Updates</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="online_Services.html">
+                            <div class="single-project-slide bg-img" style="background-image: url(img/city/3.jpg)">
+                                <div class="project-content">
+                                    <div class="text">
+                                        <h5>Online Services</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="census.html">
+                            <div class="single-project-slide bg-img" style="background-image: url(img/city/4.jpg)">
+                                <div class="project-content">
+                                    <div class="text">
+                                        <h5>Census</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-40">
+                <div class="col-12 col-lg-12 d-flex justify-content-center">
+                    <a href="" class="btn btnPbmc"> See all Tours </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pbmc-project-area">
+        <div class="">
+            <div class="">
+                <img src="img/city/5.jpg" class="img-fluid" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <section class="pbmc-tabs">
+        <div class="container pt-50">
+            <div class="row align-items-center mb-4">
+                <div class="col-12 col-lg-12">
+                    <div class="section-heading wow fadeInUp text-center mb-0" data-wow-delay="100ms">
+                        <h2>Find Your Destination</h2>
+                    </div>
+                    <div class="about-us-content">
+                        <p class="wow fadeInUp m-0 text-center" data-wow-delay="300ms">
+                            Reward yourself somewhere on the weekends!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="tabs tabs-bottom tabs-center tabs-simple custom-tabs-style-1">
+                        <ul class="nav nav-tabs d-flex justify-content-between">
+                            <li class="nav-item">
+                                <a class="nav-link pb-2" href="#galleryTab" data-bs-toggle="tab">
+                                    <span class="p-0 m-0">
+                                        <img width="40" height="40" src="img/tabs_Icons/camera.png" alt="" />
+                                        <h4 class="positive-ls-3 font-weight-bold text-3">
+                                            Gallery
+                                        </h4>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pb-2" href="#downloadsTab" data-bs-toggle="tab">
+                                    <span class="p-0 m-0">
+                                        <img width="40" height="40" src="img/tabs_Icons/downloads.png" alt="" />
+                                        <h4 class="positive-ls-3 font-weight-bold text-3">
+                                            Downloads
+                                        </h4>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pb-2" href="#tourismTab" data-bs-toggle="tab">
+                                    <span class="p-0 m-0">
+                                        <img width="40" height="40" src="img/tabs_Icons/tourism.png" alt="" />
+                                        <h4 class="positive-ls-3 font-weight-bold text-3">
+                                            Tourism
+                                        </h4>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pb-2 active" href="#investmentTab" data-bs-toggle="tab">
+                                    <span class="p-0 m-0">
+                                        <img width="40" height="40" src="img/tabs_Icons/investment.png" alt="" />
+                                        <h4 class="positive-ls-3 font-weight-bold text-3">
+                                            Investment
+                                        </h4>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pb-2" href="#servicesTab" data-bs-toggle="tab">
+                                    <span class="p-0 m-0">
+                                        <img width="40" height="40" src="img/tabs_Icons/services.png" alt="" />
+                                        <h4 class="positive-ls-3 font-weight-bold text-3">
+                                            Services
+                                        </h4>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pb-2" href="#feedbackTab" data-bs-toggle="tab">
+                                    <span class="p-0 m-0">
+                                        <img width="40" height="40" src="img/tabs_Icons/feedback.png" alt="" />
+                                        <h4 class="positive-ls-3 font-weight-bold text-3">
+                                            Feedback
+                                        </h4>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane" id="galleryTab">
+                                <div class="container-sm">
+                                    <div class="row justify-content-center">
+                                        <div class="col col-md-10">
+                                            <div class="gallery-container" id="animated-thumbnails-gallery">
+                                                <a data-lg-size="1600-1067" class="gallery-item"  data-src="img/slider/slider-1.png"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img alt="layers of blue." class="img-responsive" src="img/slider/slider-1.png" />
+                                                </a>
+                                                <a data-lg-size="1600-2400" data-pinterest-text="Pin it2"
+                                                    data-tweet-text="lightGallery slide  2" class="gallery-item" data-src="img/slider/slider-2.png"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/slider/slider-2.png" />
+                                                </a>
+                                                <a data-lg-size="1600-2400" data-pinterest-text="Pin it3"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/slider/Census.jpg"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/slider/Census.jpg" />
+                                                </a>
+                                                <a data-lg-size="1600-2398" data-pinterest-text="Pin it4"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/city/citimap.jpg"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/city/citimap.jpg" />
+                                                </a>
+                                                <a data-lg-size="1600-1067" data-pinterest-text="Pin it5"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/city/Clock-tower.webp"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive"  src="img/city/Clock-tower.webp" />
+                                                </a>
+                                                <a data-lg-size="1600-1067" data-pinterest-text="Pin it6"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/news/1.png"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/news/1.png" />
+                                                </a>
+                                                <a data-lg-size="1600-1126" data-pinterest-text="Pin it7"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/news/2.png"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/news/2.png" />
+                                                </a>
+                                                <a data-lg-size="1600-1063" data-pinterest-text="Pin it8"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/news/3.jpg"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/news/3.jpg" />
+                                                </a>
+                                                <a data-lg-size="1600-1063" data-pinterest-text="Pin it3"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/news/4.webp"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/news/4.webp" />
+                                                </a>
+                                                <a data-lg-size="1600-1063" data-pinterest-text="Pin it3"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/news/5.jpeg"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/news/5.jpeg" />
+                                                </a>
+                                                <a data-lg-size="1600-2398" data-pinterest-text="Pin it4"
+                                                    data-tweet-text="lightGallery slide  4" class="gallery-item" data-src="img/city/citimap.jpg"
+                                                    data-sub-html="<h4>Photo by - <a href='#!'>Port Blair </a></h4><p> Location - <a href='#!'>Port Blair</a>City Smart</p>">
+                                                    <img class="img-responsive" src="img/city/citimap.jpg" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="downloadsTab">
+                                <div class="row">
+                                    <div class="col-12 col-lg-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Title</th>
+                                                        <th style="width: 5%;">Download</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>City Smart</td>
+                                                        <td><a href="#!" class="btn btn btnPbmc" style="width: auto;"><i class="fal fa-download fa-fw fa-lg"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>City Municipality</td>
+                                                        <td><a href="#!" class="btn btn btnPbmc" style="width: auto;"><i class="fal fa-download fa-fw fa-lg"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="tourismTab">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-post-area wow fadeInUp">
+                                            <a href="#" class="post-thumbnail">
+                                                <img src="img/city/1.png" alt="" /></a>
+                                        </div>
+                                        <a href="#" class="post-title">Ross Island</a>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-post-area wow fadeInUp">
+                                            <a href="#" class="post-thumbnail">
+                                                <img src="img/city/2.png" alt="" /></a>
+                                        </div>
+                                        <a href="#" class="post-title text-dark">Cellular Jail</a>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-post-area wow fadeInUp">
+                                            <a href="#" class="post-thumbnail">
+                                                <img src="img/city/3.png" alt="" /></a>
+                                        </div>
+                                        <a href="#" class="post-title text-dark">Scuba Diving</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane active" id="investmentTab">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-post-area wow fadeInUp" data-wow-delay="300ms">
+                                            <a href="#" class="post-thumbnail">
+                                                <img src="img/city/1.png" alt="" /></a>
+
+                                            <a href="#" class="post-title">Ross Island</a>
+                                            <div class="post-meta">
+                                                <span><img src="img/tabs_Icons/flight.png" alt="flight" />
+                                                    179</span>
+                                                <span><img src="img/tabs_Icons/hotel.png" alt="hotel" />
+                                                    149</span>
+                                                <span><img src="img/tabs_Icons/car.png" alt="" />
+                                                    36</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-post-area wow fadeInUp" data-wow-delay="500ms">
+                                            <a href="#" class="post-thumbnail">
+                                                <img src="img/city/2.png" alt="" /></a>
+                                            <a href="#" class="post-title">Cellular Jail</a>
+                                            <div class="post-meta">
+                                                <span><img src="img/tabs_Icons/flight.png" alt="flight" />
+                                                    179</span>
+                                                <span><img src="img/tabs_Icons/hotel.png" alt="hotel" />
+                                                    149</span>
+                                                <span><img src="img/tabs_Icons/car.png" alt="" />
+                                                    36</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-post-area wow fadeInUp" data-wow-delay="700ms">
+                                            <a href="#" class="post-thumbnail">
+                                                <img src="img/city/3.png" alt="" /></a>
+
+                                            <a href="#" class="post-title">Scuba Diving</a>
+                                            <div class="post-meta">
+                                                <span><img src="img/tabs_Icons/flight.png" alt="flight" />
+                                                    179</span>
+                                                <span><img src="img/tabs_Icons/hotel.png" alt="hotel" />
+                                                    149</span>
+                                                <span><img src="img/tabs_Icons/car.png" alt="" />
+                                                    36</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="servicesTab">
+                                <div class="row bg-white p-3">
+                                    <div class="col-12 col-lg-12">
+                                        <div class="room-service">
+                                            <h4>Online Services</h4>
+                                            <ul class="p-0">
+                                                <li><a href="#!"><img src="img/tabs_Icons/car.png" alt=""> Rent a
+                                                        Car</a></li>
+                                                <li><a href="#!"><img src="img/tabs_Icons/flight.png" alt="">Air
+                                                        Tickets</a></li>
+                                                <li><a href="#!"><img src="img/tabs_Icons/hotel.png" alt="">Book a
+                                                        Hotel</a></li>
+                                                <li><a href="#!"><img src="img/tabs_Icons/restaurant.webp" alt="">Book a
+                                                        Restaurant</a></li>
+                                                <li><a href="#!"><img src="img/tabs_Icons/tv.webp" alt="">Holiday
+                                                        Packages</a></li>
+                                                <li><a href="#!"><img src="img/tabs_Icons/24x7.webp" alt=""> Travel
+                                                        Agent</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="feedbackTab">
+                                <div class="row bg-white p-3">
+                                    <div class="col-12">
+                                        <div class="section-heading wow fadeInUp" data-wow-delay="50ms">
+                                            <h6><span class="ms-2">Feedback</span></h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="pbmc-contact-form">
+                                            <form action="#" method="post" class="needs-validation" novalidate="">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-6 wow fadeInUp mb-3">
+                                                        <input type="text" name="message-name" class="form-control"
+                                                            placeholder="Your Name" required>
+                                                        <div class="invalid-feedback"> Please enter a Name. </div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-6 wow fadeInUp mb-3">
+                                                        <input type="email" name="message-email" class="form-control"
+                                                            placeholder="Your Email" required>
+                                                        <div class="invalid-feedback"> Please enter a valid email
+                                                            address. </div>
+                                                    </div>
+                                                    <div class="col-12 wow fadeInUp mb-30">
+                                                        <textarea name="message" class="form-control"
+                                                            placeholder="Your Message" required></textarea>
+                                                        <div class="invalid-feedback"> Please enter a message </div>
+                                                    </div>
+                                                    <div class="col-12 text-center wow fadeInUp">
+                                                        <button type="submit" class="btn btnPbmc mt-15">Send</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-area">
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row align-items-baseline justify-content-between">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="single-footer-widget">
+                            <a href="#" class="footer-logo"><img src="img/PBMC_Logo.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8 d-flex justify-content-end">
+                        <div class="copywrite-text">
+                            <p> Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/pbmc.bundle.js"></script>
+    <script src="js/default-assets/active.js"></script>
+    <script src="js/lightgallery/lightgallery.js"></script>
+    <script src="js/lightgallery/lg-zoom.umd.js"></script>
+    <script src="js/lightgallery/jquery.justifiedGallery.js"></script>
+    <script src="js/lightgallery/lg-thumbnail.umd.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })();
+
+        jQuery("#animated-thumbnails-gallery")
+            .justifiedGallery({
+                captions: true,
+                lastRow: "hide",
+                rowHeight: 180,
+                margins: 5
+            })
+            .on("jg.complete", function () {
+                window.lightGallery(
+                    document.getElementById("animated-thumbnails-gallery"), {
+                    autoplayFirstVideo: true,
+                    pager: true,
+                    galleryId: "nature",
+                    plugins: [lgZoom, lgThumbnail],
+                    mobileSettings: {
+                        controls: true,
+                        showCloseIcon: true,
+                        download: true,
+                        rotate: true
+                    }
+                }
+                );
+            });
+
+    </script>
+</body>
+
+</html>
