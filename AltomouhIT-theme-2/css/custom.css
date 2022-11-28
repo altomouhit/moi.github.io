@@ -3270,6 +3270,6 @@ body {
     width: 220px;
 }
 address { 
-    line-height: 24px;
+    line-height: 24px !important;
     font-weight: normal;
 }
