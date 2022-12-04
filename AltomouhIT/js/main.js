@@ -20,7 +20,7 @@
 		var e = o.scrollTop(),
 			t = a(".navbar-brand.inner-logo img"),
 			s = a(".navbar-brand.dark-logo img");
-		e <= 50 ? (a("header").removeClass("scrollHeader").addClass("fixedHeader"), s.attr("src", "img/logos/logo.png"), t.attr("src", "img/logos/logo-white.png")) : (a("header").removeClass("fixedHeader").addClass("scrollHeader"), s.attr("src", "img/logos/logo-white.png"), 992 <= o.width() && t.attr("src", "img/logos/logo.png"))
+		e <= 50 ? (a("header").removeClass("scrollHeader").addClass("fixedHeader"), s.attr("src", "img/AL_TOMOUH-Logo.png"), t.attr("src", "img/AL_TOMOUH-Logo-white.png")) : (a("header").removeClass("fixedHeader").addClass("scrollHeader"), s.attr("src", "img/AL_TOMOUH-Logo.png"), 992 <= o.width() && t.attr("src", "img/AL_TOMOUH-Logo.png"))
 	}), o.width() <= 991 && a(".onepage-header .navbar-nav .nav-link").on("click", function() {
 		a(".navbar-nav").css("display", "none"), a(".navbar .navbar-toggler").removeClass("menu-opened")
 	}), o.on("scroll", function() {

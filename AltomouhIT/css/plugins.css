@@ -551,7 +551,7 @@ img.mfp-img {
 	box-sizing: border-box
 }
 body {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Segoe UI', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 	font-size: 16px;
@@ -721,19 +721,19 @@ _:-ms-lang(x), .row>* {
 	padding-left: 15px
 }
 .alt-font {
-	font-family: 'Poppins', sans-serif
+	font-family: 'Segoe UI', sans-serif
 }
 .main-font {
-	font-family: 'Poppins', sans-serif
+	font-family: 'Segoe UI', sans-serif
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: 600;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Segoe UI', sans-serif;
 	color: #1f194c
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
 	font-weight: 600;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Segoe UI', sans-serif;
 	color: #282b2d
 }
 .display-7 {
@@ -961,7 +961,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
 	background-color: rgba(0, 0, 0, 0.5)
 }
 section {
-	padding: 120px 0;
+	/* padding: 120px 0; */
+	padding: 50px 0;
 	overflow: hidden;
 	background: #fff;
 	position: relative
@@ -13533,6 +13534,9 @@ section.md {
 	.sm-top-position {
 		margin-top: -66px
 	}
+	.attr-nav ul li a span {
+		display: none;
+	}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
 	.parallax {
@@ -13604,7 +13608,7 @@ header {
 	position: relative;
 	display: block;
 	font-size: 15px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: 600;
 	padding: 21px 0.5rem;
 	color: #1d184a;
@@ -15631,4 +15635,7 @@ pre[class*="language-"] {
 }
 .token.entity {
 	cursor: help
+}
+.text-justify {
+	text-align: justify;
 }

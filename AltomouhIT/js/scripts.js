@@ -14,7 +14,7 @@ jQuery(function($) {
 });
 (function($) {
 	$(window).on('load', function() {
-		var images = ['quform/images/close.png', 'quform/images/success.png', 'quform/images/error.png', 'quform/images/default-loading.gif'];
+		var images = ['quform/images/close.png', 'quform/images/success.png', 'quform/images/error.png', 'img/default-loading.gif'];
 		if ($('.quform-theme-light-light, .quform-theme-light-rounded').length) {
 			images = images.concat(['quform/themes/light/images/button-active-bg-rep.png', 'quform/themes/light/images/close.png', 'quform/themes/light/images/input-active-bg-rep.png']);
 		}
