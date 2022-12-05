@@ -584,7 +584,7 @@
 			})
 		}), a(".filtering2").on("click", "span", function() {
 			a(this).addClass("active").siblings().removeClass("active")
-		}), a(".portfolio-gallery,.portfolio-gallery-isotope").lightGallery(), a(".portfolio-link").on("click", e => {
+		}), a(".portfolio-gallery").lightGallery(), a(".portfolio-link").on("click", e => {
 			e.stopPropagation()
 		}), o.stellar(), a(".tabs_div").toggleClass("tabs_div_visible")
 	})

@@ -9,6 +9,7 @@ html {
 html {
     --scrollbarBG: #ECEEF2;
     --thumbBG: #BEC6D0;
+	font-size: 1rem;
 }
 
 body::-webkit-scrollbar {
@@ -1552,7 +1553,7 @@ a.butn.white:hover, a.butn.white:active, a.butn.white:focus {
 	line-height: 24px
 }
 .butn.style-two.medium {
-	padding: 8px 22px;
+	padding: 8px 14px;
 	font-size: 14px;
 	line-height: 26px
 }
@@ -1980,7 +1981,7 @@ a.butn.white:hover, a.butn.white:active, a.butn.white:focus {
 }
 .section-heading2 span {
 	position: relative;
-	font-size: 15px;
+	font-size: 1.5rem;
 	font-weight: 600;
 	color: #292dc2;
 	line-height: 200%;

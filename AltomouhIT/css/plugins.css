@@ -554,7 +554,7 @@ body {
 	font-family: 'Segoe UI', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
-	font-size: 16px;
+	font-size: 1rem;
 	letter-spacing: 0.5px;
 	color: #575a7b;
 	font-weight: 400;
@@ -15638,4 +15638,22 @@ pre[class*="language-"] {
 }
 .text-justify {
 	text-align: justify;
+}
+.banner-img-height {
+	height: 699px;
+}
+@media screen and (max-width: 575px) {
+	.banner-img-height {
+		height: auto;
+	}
+}
+@media (min-width: 575px) and (max-width: 992px) {
+	.banner-img-height {
+		height: 299px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1280px) {
+	.banner-img-height {
+		height: 549px;
+	}
 }
