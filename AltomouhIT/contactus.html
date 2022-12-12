@@ -195,6 +195,10 @@
         <section class="bg-grey">
             <div class="container">
                 <div class="row justify-content-center">
+                    <div class="alert alert-success alert-dismissible" role="alert" id="alert" style="display: none;">
+                        <div>Your message sent successfully!!</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                     <div class="col-12 col-lg-4 wow fadeIn">
                         <div class="row">
                             <div class="col-lg-12 mt-4">
@@ -206,8 +210,8 @@
                                             <div class="box-circle-small"></div>
                                         </div>
                                         <h3 class="h5 mb-3">Let's Talk</h3>
-                                        <p class="mb-0 w-90 w-md-75 w-lg-100 mx-auto"><strong
-                                                class="font-weight-600">Phone:</strong> (O) +968 24650310</p>
+                                        <p class="w-90 w-md-75 w-lg-100 mx-auto">
+                                            <strong class="font-weight-600">Phone:</strong> (O) +968 24650310</p>
                                     </div>
                                 </div>
                             </div>
@@ -219,8 +223,9 @@
                                             <div class="box-circle-large"></div>
                                             <div class="box-circle-small"></div>
                                         </div>
-                                        <h3 class="h5 mb-3">E-mail Us</h3>
-                                        <p class="mb-0 w-90 w-md-75 w-lg-100 mx-auto"><a href="#!">info@altomouhit.com</a>
+                                        <h3 class="h5 mb-3">e-Mail Us</h3>
+                                        <p class="w-90 w-md-75 w-lg-100 mx-auto">
+                                            <a href="#!">support@altomouhit.com</a>
                                         </p>
                                     </div>
                                 </div>
@@ -230,85 +235,87 @@
 
                     <div class="col-12 col-lg-8 wow fadeOut">
 
-                        <div class="w-md-85 w-xl-65 text-center mx-auto mb-6 mb-lg-8">
-                            <h2 class="mb-4">Get in Touch</h2>
+                        <div class="w-md-85 w-xl-65 text-center mx-auto">
+                            <h2>Get in Touch</h2>
                             <p class="mx-auto mb-0">We are available 24/7 by e-mail and phone. You can also ask a
                                 question about our services through our contact form.</p>
                         </div>
 
                         <!-- start form here -->
-                        <form class="quform" action="contact.php" method="post" enctype="multipart/form-data" onclick="">
+                        <!-- <form class="" onsubmit="sendEmail(); reset(); return false;"> -->
+                        <form class="needs-validation" novalidate>
                             <div class="quform-elements">
                                 <div class="row">
 
-                                    <!-- Begin Text input element -->
+                                    <!-- Begin Name -->
                                     <div class="col-md-6">
                                         <div class="quform-element form-group">
-                                            <label for="name">Your Name <span class="quform-required">*</span></label>
+                                            <label for="name">Name <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="name" type="text" name="name"
-                                                    placeholder="Your name here" />
+                                                <input class="form-control" id="name" type="text" placeholder="Name" required autocomplete="off" />
+                                                <div class="invalid-feedback">Please enter a Name.</div>
                                             </div>
                                         </div>
-
+                                        
                                     </div>
-                                    <!-- End Text input element -->
+                                    <!-- End Name -->
 
-                                    <!-- Begin Text input element -->
+                                    <!-- Begin Email -->
                                     <div class="col-md-6">
                                         <div class="quform-element form-group">
-                                            <label for="email">Your Email <span class="quform-required">*</span></label>
+                                            <label for="email">Email <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" type="text" name="email"
-                                                    placeholder="Your email here" />
+                                                <input class="form-control" type="email" id="email" placeholder="Email" required autocomplete="off" />
+                                                <div class="invalid-feedback">Please enter a valid email.</div>
                                             </div>
                                         </div>
+                                        
                                     </div>
-                                    <!-- End Text input element -->
+                                    <!-- End Email -->
 
-                                    <!-- Begin Text input element -->
+                                    <!-- Begin Subject -->
                                     <div class="col-md-6">
                                         <div class="quform-element form-group">
-                                            <label for="subject">Your Subject <span
-                                                    class="quform-required">*</span></label>
+                                            <label for="subject">Subject <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" type="text" name="subject"
-                                                    placeholder="Your subject here" />
+                                                <input class="form-control" type="text" id="subject" placeholder="Subject" required autocomplete="off" />
+                                                <div class="invalid-feedback">Please enter a Subject.</div>
                                             </div>
                                         </div>
-
+                                        
                                     </div>
-                                    <!-- End Text input element -->
+                                    <!-- End Subject -->
 
-                                    <!-- Begin Text input element -->
+                                    <!-- Begin Mobile Number -->
                                     <div class="col-md-6">
                                         <div class="quform-element form-group">
-                                            <label for="phone">Contact Number</label>
+                                            <label for="phone">Mobile Number</label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="phone" type="text" name="phone"
-                                                    placeholder="Your phone number" />
+                                                <input class="form-control" id="phone" type="text" placeholder="Mobile number" required maxlength="10" autocomplete="off" />
+                                                <div class="invalid-feedback"> Please enter a Mobile Number.</div>
                                             </div>
                                         </div>
-
+                                        
                                     </div>
-                                    <!-- End Text input element -->
+                                    <!-- End Mobile Number -->
 
-                                    <!-- Begin Textarea element -->
+                                    <!-- Begin Message -->
                                     <div class="col-md-12">
                                         <div class="quform-element form-group">
                                             <label for="message">Message <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <textarea class="form-control" id="message" name="message" rows="4"
-                                                    placeholder="Tell us a few words"></textarea>
+                                                <textarea class="form-control" id="message" rows="4" placeholder="Tell us a few words" required maxlength="99"></textarea>
+                                                <div class="invalid-feedback"> Please enter a Message.</div>
                                             </div>
                                         </div>
+                                        
                                     </div>
-                                    <!-- End Textarea element -->
+                                    <!-- End Message -->
 
                                     <!-- Begin Submit button -->
                                     <div class="col-md-12">
                                         <div class="quform-submit-inner">
-                                            <button class="butn style-one fill" type="submit"><span>Submit</span></button>
+                                            <button class="butn style-one fill" type="submit" id="btnSubmit"><span>Submit</span></button>
                                         </div>
                                         <div class="quform-loading-wrap text-start"><span class="quform-loading"></span>
                                         </div>
@@ -321,7 +328,6 @@
 
                         </form>
                         <!-- end form here -->
-
                     </div>
                 </div>
             </div>
@@ -443,8 +449,11 @@
     <!-- form scripts js -->
     <script src="js/scripts.js"></script>
 
-    <!-- all js include end -->
+    <!-- form contact js -->
+    <script type="text/javascript" src="js/email.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
 
+    <!-- all js include end -->
 </body>
 
 </html>
