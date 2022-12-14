@@ -31,7 +31,22 @@
 
     <!-- theme core css -->
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        .checkmark {
+            color: #198754;
+            font-size: 100px;
+            line-height: 200px;
+            margin-left: -15px;
+        }
 
+        .card-success {
+            background: white;
+            padding: 50px;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 3px #C8D0D8;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -195,30 +210,27 @@
         <section class="bg-grey">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="alert alert-success alert-dismissible" role="alert" id="alert" style="display: none;">
-                        <div>Your message sent successfully!!</div>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
                     <div class="col-12 col-lg-4 wow fadeIn">
                         <div class="row">
-                            <div class="col-lg-12 mt-4">
+                            <div class="col-lg-12">
                                 <div class="card card-style07 px-1-6 bg-white wow fadeInUp" data-wow-delay=".4s">
                                     <div class="card-body">
-                                        <div class="title-box mb-4">
+                                        <div class="title-box my-3">
                                             <i class="fas fa-comments"></i>
                                             <div class="box-circle-large"></div>
                                             <div class="box-circle-small"></div>
                                         </div>
                                         <h3 class="h5 mb-3">Let's Talk</h3>
                                         <p class="w-90 w-md-75 w-lg-100 mx-auto">
-                                            <strong class="font-weight-600">Phone:</strong> (O) +968 24650310</p>
+                                            <strong class="font-weight-600">Phone:</strong> (O) +968 24650310
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 mt-4">
                                 <div class="card card-style07 px-1-6 bg-white wow fadeInUp" data-wow-delay=".6s">
                                     <div class="card-body">
-                                        <div class="title-box mb-4">
+                                        <div class="title-box my-3">
                                             <i class="fas fa-envelope"></i>
                                             <div class="box-circle-large"></div>
                                             <div class="box-circle-small"></div>
@@ -235,7 +247,16 @@
 
                     <div class="col-12 col-lg-8 wow fadeOut">
 
-                        <div class="w-md-85 w-xl-65 text-center mx-auto">
+                        <div class="card-success wow fadeInUp" id="alert" style="display: none;" data-wow-delay=".4s">
+                            <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+                                <i class="checkmark">✓</i>
+                            </div>
+                            <h1 class="text-success">Success</h1>
+                            <p>We received your request;<br /> We'll be in touch shortly!</p>
+                            <a href="" class="btn btn-success">Okay</a>
+                        </div>
+
+                        <div class="w-md-85 w-xl-65 text-center mx-auto getouch">
                             <h2>Get in Touch</h2>
                             <p class="mx-auto mb-0">We are available 24/7 by e-mail and phone. You can also ask a
                                 question about our services through our contact form.</p>
@@ -252,11 +273,12 @@
                                         <div class="quform-element form-group">
                                             <label for="name">Name <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="name" type="text" placeholder="Name" required autocomplete="off" />
-                                                <div class="invalid-feedback">Please enter a Name.</div>
+                                                <input class="form-control required_step1" id="name" type="text"
+                                                    placeholder="Name" required autocomplete="off" />
+                                                <div class="invalid-feedback name">Please enter a Name.</div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <!-- End Name -->
 
@@ -265,11 +287,12 @@
                                         <div class="quform-element form-group">
                                             <label for="email">Email <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" type="email" id="email" placeholder="Email" required autocomplete="off" />
-                                                <div class="invalid-feedback">Please enter a valid email.</div>
+                                                <input class="form-control required_step1" type="email" id="email"
+                                                    placeholder="Email" required autocomplete="off" />
+                                                <div class="invalid-feedback email">Please enter a valid email.</div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <!-- End Email -->
 
@@ -278,24 +301,28 @@
                                         <div class="quform-element form-group">
                                             <label for="subject">Subject <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" type="text" id="subject" placeholder="Subject" required autocomplete="off" />
-                                                <div class="invalid-feedback">Please enter a Subject.</div>
+                                                <input class="form-control required_step1" type="text" id="subject"
+                                                    placeholder="Subject" required autocomplete="off" />
+                                                <div class="invalid-feedback subject">Please enter a Subject.</div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <!-- End Subject -->
 
                                     <!-- Begin Mobile Number -->
                                     <div class="col-md-6">
                                         <div class="quform-element form-group">
-                                            <label for="phone">Mobile Number</label>
+                                            <label for="phone">Mobile Number <span
+                                                    class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <input class="form-control" id="phone" type="text" placeholder="Mobile number" required maxlength="10" autocomplete="off" />
-                                                <div class="invalid-feedback"> Please enter a Mobile Number.</div>
+                                                <input class="form-control required_step1" id="phone" type="text"
+                                                    placeholder="Mobile number" required maxlength="10"
+                                                    autocomplete="off" />
+                                                <div class="invalid-feedback phone"> Please enter a Mobile Number.</div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <!-- End Mobile Number -->
 
@@ -304,18 +331,21 @@
                                         <div class="quform-element form-group">
                                             <label for="message">Message <span class="quform-required">*</span></label>
                                             <div class="quform-input">
-                                                <textarea class="form-control" id="message" rows="4" placeholder="Tell us a few words" required maxlength="99"></textarea>
-                                                <div class="invalid-feedback"> Please enter a Message.</div>
+                                                <textarea class="form-control required_step1" id="message" rows="4"
+                                                    placeholder="Tell us a few words" required
+                                                    maxlength="99"></textarea>
+                                                <div class="invalid-feedback message"> Please enter a Message.</div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <!-- End Message -->
 
                                     <!-- Begin Submit button -->
                                     <div class="col-md-12">
                                         <div class="quform-submit-inner">
-                                            <button class="butn style-one fill" type="submit" id="btnSubmit"><span>Submit</span></button>
+                                            <button class="butn style-one fill" type="submit"
+                                                id="btnSubmit"><span>Submit</span></button>
                                         </div>
                                         <div class="quform-loading-wrap text-start"><span class="quform-loading"></span>
                                         </div>
