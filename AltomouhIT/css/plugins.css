@@ -730,7 +730,8 @@ _:-ms-lang(x), .row>* {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: 600;
 	font-family: 'Philosopher', sans-serif;
-	color: #1f194c
+	color: #1f194c;
+	letter-spacing: 2px;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
 	font-weight: 600;

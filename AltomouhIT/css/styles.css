@@ -1981,13 +1981,14 @@ a.butn.white:hover, a.butn.white:active, a.butn.white:focus {
 }
 .section-heading2 span {
 	position: relative;
-	font-size: 1.5rem;
+	font-size: 2.1rem;
 	font-weight: 600;
 	color: #292dc2;
 	line-height: 200%;
 	margin-bottom: 5px;
 	letter-spacing: 1px;
-	display: inline-block
+	display: inline-block;
+	font-family: 'Philosopher', sans-serif;
 }
 .section-heading2.white span {
 	color: #fff
