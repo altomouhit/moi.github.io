@@ -112,16 +112,16 @@
           <!-- SmartWizard html -->
           <div id="smartwizard">
             <ul id="credit">
-              <li data-interest="1"> <a href="#ApplicantDetails"><i class="fa fa-user fa-fw"></i>Applicant Details</a>
+              <li data-interest="1"> <a href="#ApplicantDetails"><i class="fal fa-user fa-fw"></i>Applicant Details</a>
               </li>
-              <li data-interest="3"> <a href="#BeneficiaryDetails"><i class="fa fa-users fa-fw"></i>Beneficiary /
+              <li data-interest="3"> <a href="#BeneficiaryDetails"><i class="fal fa-users fa-fw"></i>Beneficiary /
                   Request</a> </li>
-              <li data-interest="4"> <a href="#BuildingsDetails"><i class="fa fa-building-o fa-fw"></i>Buildings
+              <li data-interest="4"> <a href="#BuildingsDetails"><i class="fal fa-building fa-fw"></i>Buildings
                   Details</a> </li>
               <!-- <li data-interest="5"> <a href="#ConsultantDetails"><i class="fa fa-user-secret fa-fw"></i>Consultant Details</a> </li> -->
-              <li data-interest="6"> <a href="#Attachment"><i class="fa fa-paperclip fa-fw"></i>Required Documents</a>
+              <li data-interest="6"> <a href="#Attachment"><i class="fal fa-paperclip fa-fw"></i>Required Documents</a>
               </li>
-              <li data-interest="8"><a href="#others"><i class="fa fa-check-square-o fa-fw"></i>Comments</a></li>
+              <li data-interest="8"><a href="#others"><i class="fal fa-comment-alt-lines fa-fw"></i>Comments</a></li>
               <!-- <li data-interest = "7"><a href="#LicenseDetails"><i class="fa fa-credit-card fa-fw"></i>Payments &amp; Licenses</a></li> -->
             </ul>
             <div>
@@ -214,62 +214,64 @@
                     </div>
                     <fieldset>
                       <legend>Service Details</legend>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="astatus">Application Status</label>
-                        <input type="text" class="form-control" id="astatus" placeholder="Application Status"
-                          value="In Progress" readonly>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="srname" class="required">Service Request Name</label>
-                        <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
-                          value="Application for a preliminary study" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="srdate">Service Request Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="srdate" placeholder="DD/MM/YYYY" disabled />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                      <div class="row">
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="astatus">Application Status</label>
+                          <input type="text" class="form-control" id="astatus" placeholder="Application Status"
+                            value="In Progress" readonly>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="sdate">Submission Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="sdate" placeholder="DD/MM/YYYY" disabled />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="srname" class="required">Service Request Name</label>
+                          <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
+                            value="Application for a preliminary study" readonly>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="region_ser" class="required">Governorate</label>
-                        <select name="region_ser" id="region_ser" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="1">Alshaqiya Governorate</option>
-                          <option value="2">Aldhahira Governorate</option>
-                          <option value="3">Mosandam Governorate</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-5 col-md-4 col-lg-3">
-                        <label for="Willayat_ser" class="required">Willayat</label>
-                        <select name="Willayat_ser" id="Willayat_ser" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="1">Suhar </option>
-                          <option value="2">Nizwa</option>
-                          <option value="3">Ibra</option>
-                          <option value="3">Saham</option>
-                          <option value="3">Nakhal</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Municiplity_ser" class="required">Municipality</label>
-                        <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="461">Sohar Municipality</option>
-                          <option value="463">Saham Municipality</option>
-                          <option value="464">Ibra Municipality</option>
-                          <option value="465">Duqum Municipality</option>
-                          <option value="466">Nizwa Municipality</option>
-                        </select>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="srdate">Service Request Date</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="srdate" placeholder="DD/MM/YYYY" disabled />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="sdate">Submission Date</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="sdate" placeholder="DD/MM/YYYY" disabled />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="region_ser" class="required">Governorate</label>
+                          <select name="region_ser" id="region_ser" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="1">Alshaqiya Governorate</option>
+                            <option value="2">Aldhahira Governorate</option>
+                            <option value="3">Mosandam Governorate</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-5 col-md-4 col-lg-3">
+                          <label for="Willayat_ser" class="required">Willayat</label>
+                          <select name="Willayat_ser" id="Willayat_ser" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="1">Suhar </option>
+                            <option value="2">Nizwa</option>
+                            <option value="3">Ibra</option>
+                            <option value="3">Saham</option>
+                            <option value="3">Nakhal</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Municiplity_ser" class="required">Municipality</label>
+                          <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="461">Sohar Municipality</option>
+                            <option value="463">Saham Municipality</option>
+                            <option value="464">Ibra Municipality</option>
+                            <option value="465">Duqum Municipality</option>
+                            <option value="466">Nizwa Municipality</option>
+                          </select>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
@@ -288,30 +290,30 @@
                     </div>
                     <fieldset>
                       <legend>Beneficiary Details</legend>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Beneficiary_select" class="required">Beneficiary</label>
-                        <select name="Beneficiary_select" id="Beneficiary_select" class="form-control">
-                          <option value="1000">Please select...</option>
-                          <option value="Owner" selected>Owner</option>
-                          <option value="Investor">Investor</option>
-                          <option value="Usufructer">Usufructer</option>
-                          <option value="Attorney">Power of Attorney</option>
-                          <option value="Heirs">Heirs</option>
-                          <option value="waqf">waqf</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="AuthorizationNo">
-                        <label for="Authorization_No" class="required">Usufructer Number</label>
-                        <input type="text" class="form-control numeric" id="Authorization_No"
-                          placeholder="Usufructer Number" />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="InvestorNo">
-                        <label for="Investor_No" class="required">Investment Contract Number</label>
-                        <input type="text" class="form-control numeric" id="Investor_No"
-                          placeholder="Investment Contract Number" />
-                      </div>
-                      <div id="benradio1">
-                        <div class="form-group col-sm-6 col-md-4 col-lg-3" id="benradio">
+                      <div class="row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Beneficiary_select" class="required">Beneficiary</label>
+                          <select name="Beneficiary_select" id="Beneficiary_select" class="form-control">
+                            <option value="1000">Please select...</option>
+                            <option value="Owner" selected>Owner</option>
+                            <option value="Investor">Investor</option>
+                            <option value="Usufructer">Usufructer</option>
+                            <option value="Attorney">Power of Attorney</option>
+                            <option value="Heirs">Heirs</option>
+                            <option value="waqf">waqf</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="AuthorizationNo">
+                          <label for="Authorization_No" class="required">Usufructer Number</label>
+                          <input type="text" class="form-control numeric" id="Authorization_No"
+                            placeholder="Usufructer Number" />
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="InvestorNo">
+                          <label for="Investor_No" class="required">Investment Contract Number</label>
+                          <input type="text" class="form-control numeric" id="Investor_No"
+                            placeholder="Investment Contract Number" />
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4 col-lg-3 benradio1" id="benradio">
                           <label for="optradio" class="required">Beneficiary Type</label>
                           <div class="form-control" id="orgtypeID">
                             <label class="radio-inline">
@@ -322,25 +324,24 @@
                               Organization </label>
                           </div>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3" id="samehide">
-                        <label for="Same as Applicant" class="required">Same as Applicant</label>
-                        <div class="form-control">
-                          <label class="radio-inline">
-                            <input type="radio" name="optradio1" value="Yes">
-                            Yes </label>
-                          <label class="radio-inline">
-                            <input type="radio" name="optradio1" value="No" checked>
-                            No</label>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3" id="samehide">
+                          <label for="Same as Applicant" class="required">Same as Applicant</label>
+                          <div class="form-control">
+                            <label class="radio-inline">
+                              <input type="radio" name="optradio1" value="Yes">
+                              Yes </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="optradio1" value="No" checked>
+                              No</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3" id="benhide">
                           <label for="optradio2">Beneficiary Type </label>
                           <input type="text" class="form-control" id="optradio2" placeholder="Beneficiary Type"
                             readonly>
                         </div>
-                        <div id="benType" class="">
+                      </div>
+                        <div id="benType" class="row">
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
                             <label for="BeneficiaryID" class="required">Beneficiary ID</label>
                             <input type="text" class="form-control numeric" id="BeneficiaryID"
@@ -381,8 +382,7 @@
                         </div>
                         <!-- End Beneficiary Details -->
 
-                        <div id="OrganizationDetails" class="">
-                          <div class="row">
+                        <div id="OrganizationDetails" class="row">
                             <div class="form-group col-sm-6 col-md-3 col-lg-3">
                               <label for="crid">Commerical Registration ID <span style="color:red">*</span></label>
                               <input type="text" class="form-control" id="crid" placeholder="Commerical Registration ID"
@@ -404,7 +404,6 @@
                               <div class="col-sm-12 col-md-12 col-lg-12" id="Cemail_Error" style="color:red">Please
                                 Enter Valid Email</div>
                             </div>
-                          </div>
                           <!-- .row -->
                         </div>
                         <!-- OrganizationDetails -->
@@ -413,8 +412,6 @@
                           <button type="button" class="btn btn-ts" onclick="Beneficiary1()" id="form1Submit"><i
                               class="fa fa-plus"></i>&nbsp;Add Beneficiary</button>
                         </div>
-                      </div>
-                      <!-- .row -->
                       <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="table-responsive">
@@ -442,68 +439,70 @@
                     </div>
                     <fieldset>
                       <legend>Plot Data</legend>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Plot Serial Number">Plot Serial Number <span style="color:red">*</span></label>
-                        <input class="form-control" id="PSN_Plot" placeholder="Plot Serial Number" type="text">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Plot Number">Plot Number <span style="color:red">*</span></label>
-                        <input class="form-control numeric" id="PSN" min="0" placeholder="Plot Number" type="number">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Region">Governorate <span style="color:red">*</span></label>
-                        <select class="form-control" id="region_Ld" name="">
-                          <option value="0"> Please select... </option>
-                          <option value="1"> Alshaqiya Governorate </option>
-                          <option value="2"> Aldhahira Governorate </option>
-                          <option value="3"> Mosandam Governorate </option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Willayat">Willayat <span style="color:red">*</span></label>
-                        <select class="form-control" id="Willayat_Ld" name="">
-                          <option value="0"> Please select... </option>
-                          <option value="1"> Suhar </option>
-                          <option value="2"> Nizwa </option>
-                          <option value="3"> Ibra </option>
-                          <option value="3"> Saham </option>
-                          <option value="3"> Nakhal </option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Village">Village <span style="color:red">*</span></label>
-                        <select class="form-control" id="village_Ld" name="">
-                          <option value="0"> Please select... </option>
-                          <option value="461"> Hay elain </option>
-                          <option value="463"> Suaal </option>
-                          <option value="464"> Karsha </option>
-                          <option value="465"> Eliqir </option>
-                          <option value="466"> Daris </option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Square">Block <span style="color:red">*</span></label>
-                        <input class="form-control numeric" id="square_Ld" min="0" placeholder="Block" type="number">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Plot Area">Plot Area <span style="color:red">*</span></label>
-                        <input class="form-control numeric" id="Plotsurface_Ld" min="0" placeholder="Plot Area"
-                          type="number">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="StreetNumber_Ld">Street Name <span style="color:red">*</span></label>
-                        <input class="form-control numeric" id="StreetNumber_Ld" min="0" placeholder="Street Name"
-                          type="number">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Type of use">Type of Use <span style="color:red">*</span></label>
-                        <select class="form-control" id="typeUse_Ld" name="">
-                          <option value="0"> Please select... </option>
-                          <option value="463"> Residential </option>
-                          <option value="461"> Residential Commercial </option>
-                          <option value="464"> Industrial </option>
-                          <option value="465"> Commercial </option>
-                        </select>
+                      <div class="row">
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Plot Serial Number">Plot Serial Number <span style="color:red">*</span></label>
+                          <input class="form-control" id="PSN_Plot" placeholder="Plot Serial Number" type="text">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Plot Number">Plot Number <span style="color:red">*</span></label>
+                          <input class="form-control numeric" id="PSN" min="0" placeholder="Plot Number" type="number">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Region">Governorate <span style="color:red">*</span></label>
+                          <select class="form-control" id="region_Ld" name="">
+                            <option value="0"> Please select... </option>
+                            <option value="1"> Alshaqiya Governorate </option>
+                            <option value="2"> Aldhahira Governorate </option>
+                            <option value="3"> Mosandam Governorate </option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Willayat">Willayat <span style="color:red">*</span></label>
+                          <select class="form-control" id="Willayat_Ld" name="">
+                            <option value="0"> Please select... </option>
+                            <option value="1"> Suhar </option>
+                            <option value="2"> Nizwa </option>
+                            <option value="3"> Ibra </option>
+                            <option value="3"> Saham </option>
+                            <option value="3"> Nakhal </option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Village">Village <span style="color:red">*</span></label>
+                          <select class="form-control" id="village_Ld" name="">
+                            <option value="0"> Please select... </option>
+                            <option value="461"> Hay elain </option>
+                            <option value="463"> Suaal </option>
+                            <option value="464"> Karsha </option>
+                            <option value="465"> Eliqir </option>
+                            <option value="466"> Daris </option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Square">Block <span style="color:red">*</span></label>
+                          <input class="form-control numeric" id="square_Ld" min="0" placeholder="Block" type="number">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Plot Area">Plot Area <span style="color:red">*</span></label>
+                          <input class="form-control numeric" id="Plotsurface_Ld" min="0" placeholder="Plot Area"
+                            type="number">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="StreetNumber_Ld">Street Name <span style="color:red">*</span></label>
+                          <input class="form-control numeric" id="StreetNumber_Ld" min="0" placeholder="Street Name"
+                            type="number">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Type of use">Type of Use <span style="color:red">*</span></label>
+                          <select class="form-control" id="typeUse_Ld" name="">
+                            <option value="0"> Please select... </option>
+                            <option value="463"> Residential </option>
+                            <option value="461"> Residential Commercial </option>
+                            <option value="464"> Industrial </option>
+                            <option value="465"> Commercial </option>
+                          </select>
+                        </div>
                       </div>
                     </fieldset>
                     <br>
@@ -555,7 +554,7 @@
               <div id="BuildingsDetails" class="">
                 <div class="form-group">
                   <div class="row">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
                       <div class="padtopbot">
                         <!--//validations added for Units & storeys-Kiran 9/5/2017-->
                         <div id="ExtBuildingDetails_Err" class="Error">Please fill all required fields of Existing
@@ -565,68 +564,70 @@
                         <div id="ExtBuilding_StoreyssDetails_Err" class="Error">Please Add Storeys under Existing
                           building Details </div>
                       </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne" style="background: rgb(184, 150, 87);">
-                          <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
+                      <div class="card border-0">
+                        <div class="card-header ts-panel" role="tab" id="headingOne">
+                          <h4 class="card-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
                               href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <i
-                                class="more-less glyphicon glyphicon-chevron-down pull-right"></i>Existing Buildings
+                                class="more-less fal fa-chevron-down float-right"></i>Existing Buildings
                               Details </a> </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        <div id="collapseOne" class="accordion-collapse collapse show" role="tabpanel"
                           aria-labelledby="headingOne">
-                          <div class="panel-body">
+                          <div class="card-body p-0">
                             <fieldset>
                               <!-- <legend>Existing Buildings Details</legend> -->
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="BuildingNo" class="required">Building Number</label>
-                                <input type="number" class="form-control numeric" id="BuildingNo"
-                                  placeholder="Building Number" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Buildingname" class="required">Building Name</label>
-                                <input type="text" class="form-control" id="Buildingname" placeholder="Building Name" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Btype" class="required">Type of Use</label>
-                                <select name="Btype" id="Btype" class="form-control">
-                                  <option value="0">Please select...</option>
-                                  <option value="463">Residential</option>
-                                  <option value="461">Residential Commercial</option>
-                                  <option value="464">Industrial</option>
-                                  <option value="465">Commercial</option>
-                                </select>
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Bstatus" class="required">Building Status</label>
-                                <select name="Bstatus" id="Bstatus" class="form-control">
-                                  <option value="0">Please select...</option>
-                                  <option value="1">New</option>
-                                  <option value="2">Approved For Construction</option>
-                                  <option value="3">Final</option>
-                                  <option value="4">Construction Started</option>
-                                </select>
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="BuildingNumberofunits" class="required">Number of Units</label>
-                                <input type="number" class="form-control numeric" id="BuildingNumberofunits"
-                                  placeholder="Number of Units" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="BuildingNumberoffloors" class="required">Number of Floors</label>
-                                <input type="number" class="form-control numeric" id="BuildingNumberoffloors"
-                                  placeholder="Number of Floors" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Buildingtotalarea">Total Builtup Area(m2)</label>
-                                <input type="number" class="form-control numeric" id="Buildingtotalarea"
-                                  placeholder="Total Builtup Area(m2)" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Footprint_ExBld" class="required">Plot Area(m2)</label>
-                                <input type="number" class="form-control numeric" id="Footprint_ExBld"
-                                  placeholder="Plot Area(m2)" />
-                                <div id="Total_PlotError" style="color:red">Please enter less than Total Builtup
-                                  Area(m2)</div>
+                              <div class="row">
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="BuildingNo" class="required">Building Number</label>
+                                  <input type="number" class="form-control numeric" id="BuildingNo"
+                                    placeholder="Building Number" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Buildingname" class="required">Building Name</label>
+                                  <input type="text" class="form-control" id="Buildingname" placeholder="Building Name" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Btype" class="required">Type of Use</label>
+                                  <select name="Btype" id="Btype" class="form-control">
+                                    <option value="0">Please select...</option>
+                                    <option value="463">Residential</option>
+                                    <option value="461">Residential Commercial</option>
+                                    <option value="464">Industrial</option>
+                                    <option value="465">Commercial</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Bstatus" class="required">Building Status</label>
+                                  <select name="Bstatus" id="Bstatus" class="form-control">
+                                    <option value="0">Please select...</option>
+                                    <option value="1">New</option>
+                                    <option value="2">Approved For Construction</option>
+                                    <option value="3">Final</option>
+                                    <option value="4">Construction Started</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="BuildingNumberofunits" class="required">Number of Units</label>
+                                  <input type="number" class="form-control numeric" id="BuildingNumberofunits"
+                                    placeholder="Number of Units" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="BuildingNumberoffloors" class="required">Number of Floors</label>
+                                  <input type="number" class="form-control numeric" id="BuildingNumberoffloors"
+                                    placeholder="Number of Floors" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Buildingtotalarea">Total Builtup Area(m2)</label>
+                                  <input type="number" class="form-control numeric" id="Buildingtotalarea"
+                                    placeholder="Total Builtup Area(m2)" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Footprint_ExBld" class="required">Plot Area(m2)</label>
+                                  <input type="number" class="form-control numeric" id="Footprint_ExBld"
+                                    placeholder="Plot Area(m2)" />
+                                  <div id="Total_PlotError" style="color:red">Please enter less than Total Builtup
+                                    Area(m2)</div>
+                                </div>
                               </div>
                               <div class="row">
                                 <div class="form-group col-sm-4 col-md-4 col-lg-3">
@@ -1909,7 +1910,7 @@
   <!-- end scrolling top-->
 
   <!--End Footer -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
   <!-- Date &amp; Time Live-->
   <script src="js/Time/timejs.js"></script>
   <!-- Date &amp; Time Live-->

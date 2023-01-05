@@ -111,16 +111,16 @@
           <!-- SmartWizard html -->
           <div id="smartwizard">
             <ul id="credit">
-              <li data-interest="1"><a href="#ApplicantDetails"><i class="fa fa-user fa-fw"></i>Applicant Details</a>
+              <li data-interest="1"><a href="#ApplicantDetails"><i class="fal fa-user fa-fw"></i>Applicant Details</a>
               </li>
-              <li data-interest="3"><a href="#BeneficiaryDetails"><i class="fa fa-users fa-fw"></i>Beneficiary /
+              <li data-interest="3"><a href="#BeneficiaryDetails"><i class="fal fa-users fa-fw"></i>Beneficiary /
                   Request</a></li>
-              <li data-interest="4"><a href="#BuildingsDetails"><i class="fa fa-building-o fa-fw"></i>Buildings
+              <li data-interest="4"><a href="#BuildingsDetails"><i class="fal fa-building fa-fw"></i>Buildings
                   Details</a></li>
-              <li data-interest="6"><a href="#Attachment"><i class="fa fa-paperclip fa-fw"></i>Required Documents</a>
+              <li data-interest="6"><a href="#Attachment"><i class="fal fa-paperclip fa-fw"></i>Required Documents</a>
               </li>
-              <li data-interest="8"><a href="#others"><i class="fa fa-check-square-o fa-fw"></i>Comments</a></li>
-              <li data-interest="7"><a href="#LicenseDetails"><i class="fa fa-credit-card fa-fw"></i>Payments &amp;
+              <li data-interest="8"><a href="#others"><i class="fal fa-check-square-o fa-fw"></i>Comments</a></li>
+              <li data-interest="7"><a href="#LicenseDetails"><i class="fal fa-credit-card fa-fw"></i>Payments &amp;
                   License </a></li>
             </ul>
             <div>
@@ -133,18 +133,20 @@
                     </div>
                     <fieldset>
                       <legend>Request Details</legend>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Request_ser" class="required">Request Type</label>
-                        <select name="Request_ser" id="Request_ser" class="form-control">
-                          <option value="1000">Please select...</option>
-                          <option value="162">Water</option>
-                          <option value="163">Electricity</option>
-                          <option value="164">Water-Electricity</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-3 col-lg-3">
-                        <label for="conLN" class="required">License Number</label>
-                        <input type="text" id="conLN" placeholder="License Number" class="form-control" />
+                      <div class="row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Request_ser" class="required">Request Type</label>
+                          <select name="Request_ser" id="Request_ser" class="form-control">
+                            <option value="1000">Please select...</option>
+                            <option value="162">Water</option>
+                            <option value="163">Electricity</option>
+                            <option value="164">Water-Electricity</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-3 col-lg-3">
+                          <label for="conLN" class="required">License Number</label>
+                          <input type="text" id="conLN" placeholder="License Number" class="form-control" />
+                        </div>
                       </div>
                     </fieldset>
                   </div> <!-- .row -->
@@ -157,37 +159,39 @@
                     </div>
                     <fieldset>
                       <legend>Applicant Details</legend>
-                      <div class="form-group col-sm-6 col-md-4 col-lg-3">
-                        <label for="aid" class="required">Applicant ID </label>
-                        <input type="text" class="form-control" id="aid" placeholder="Applicant ID" />
-                      </div>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3 haserror">
-                        <label for="applcntEpiryDate" class="required">Expiry Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="applcntEpiryDate" placeholder="dd/mm/yyyy" />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                      <div class="row">
+                        <div class="form-group col-sm-6 col-md-4 col-lg-3">
+                          <label for="aid" class="required">Applicant ID </label>
+                          <input type="text" class="form-control" id="aid" placeholder="Applicant ID" />
                         </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-4 col-lg-3">
-                        <label for="aname" class="required">Applicant Name</label>
-                        <input type="text" class="form-control" id="aname" placeholder="Applicant Name" />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-4 col-lg-3">
-                        <label for="address_app" class="required">Address></label>
-                        <input type="text" class="form-control" id="address_app" placeholder="Address" />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-4 col-lg-3">
-                        <label for="Phnumber_app" class="required">Mobile Number</label>
-                        <input type="text" class="form-control numeric" id="Phnumber_app" placeholder="Mobile Number"
-                          maxlength="8">
-                        <div id="Ph_Error" style="color:red">Please enter a 8-digits Mobile Number</div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-4 col-lg-3">
-                        <label for="Email">Email</label>
-                        <input type="text" class="form-control" id="eMail" placeholder="Email">
-                        <div class="col-sm-12 col-md-12 col-lg-12" id="email_Error" style="color:red">Please Enter Valid
-                          Email</div>
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3 haserror">
+                          <label for="applcntEpiryDate" class="required">Expiry Date</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="applcntEpiryDate" placeholder="dd/mm/yyyy" />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4 col-lg-3">
+                          <label for="aname" class="required">Applicant Name</label>
+                          <input type="text" class="form-control" id="aname" placeholder="Applicant Name" />
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4 col-lg-3">
+                          <label for="address_app" class="required">Address></label>
+                          <input type="text" class="form-control" id="address_app" placeholder="Address" />
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4 col-lg-3">
+                          <label for="Phnumber_app" class="required">Mobile Number</label>
+                          <input type="text" class="form-control numeric" id="Phnumber_app" placeholder="Mobile Number"
+                            maxlength="8">
+                          <div id="Ph_Error" style="color:red">Please enter a 8-digits Mobile Number</div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4 col-lg-3">
+                          <label for="Email">Email</label>
+                          <input type="text" class="form-control" id="eMail" placeholder="Email">
+                          <div class="col-sm-12 col-md-12 col-lg-12" id="email_Error" style="color:red">Please Enter Valid
+                            Email</div>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
@@ -202,62 +206,64 @@
                     </div>
                     <fieldset>
                       <legend>Service Details</legend>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="astatus">Application Status</label>
-                        <input type="text" class="form-control" id="astatus" placeholder="Application Status"
-                          value="In Progress" readonly />
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="srname" class="required">Service Request Name</label>
-                        <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
-                          value="Application for Services Connection to an Existing Building" readonly />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="srdate">Service Request Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="srdate" placeholder="DD/MM/YYYY" disabled />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                      <div class="row">
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="astatus">Application Status</label>
+                          <input type="text" class="form-control" id="astatus" placeholder="Application Status"
+                            value="In Progress" readonly />
                         </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="sdate">Submission Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="sdate" placeholder="DD/MM/YYYY" disabled />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="srname" class="required">Service Request Name</label>
+                          <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
+                            value="Application for Services Connection to an Existing Building" readonly />
                         </div>
-                      </div>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="region_ser" class="required">Governorate</label>
-                        <select name="region_ser" id="region_ser" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="1">Alshaqiya Governorate</option>
-                          <option value="2">Aldhahira Governorate</option>
-                          <option value="3">Mosandam Governorate</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-5 col-md-4 col-lg-3">
-                        <label for="Willayat_ser" class="required">Willayat</label>
-                        <select name="Willayat_ser" id="Willayat_ser" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="1">Suhar </option>
-                          <option value="2">Nizwa</option>
-                          <option value="3">Ibra</option>
-                          <option value="4">Saham</option>
-                          <option value="5">Nakhal</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Municiplity_ser" class="required">Municipality</label>
-                        <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="461">Sohar Municipality</option>
-                          <option value="463">Saham Municipality</option>
-                          <option value="464">Ibra Municipality</option>
-                          <option value="465">Duqum Municipality</option>
-                          <option value="466">Nizwa Municipality</option>
-                        </select>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="srdate">Service Request Date</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="srdate" placeholder="DD/MM/YYYY" disabled />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="sdate">Submission Date</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="sdate" placeholder="DD/MM/YYYY" disabled />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="region_ser" class="required">Governorate</label>
+                          <select name="region_ser" id="region_ser" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="1">Alshaqiya Governorate</option>
+                            <option value="2">Aldhahira Governorate</option>
+                            <option value="3">Mosandam Governorate</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-5 col-md-4 col-lg-3">
+                          <label for="Willayat_ser" class="required">Willayat</label>
+                          <select name="Willayat_ser" id="Willayat_ser" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="1">Suhar </option>
+                            <option value="2">Nizwa</option>
+                            <option value="3">Ibra</option>
+                            <option value="4">Saham</option>
+                            <option value="5">Nakhal</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Municiplity_ser" class="required">Municipality</label>
+                          <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="461">Sohar Municipality</option>
+                            <option value="463">Saham Municipality</option>
+                            <option value="464">Ibra Municipality</option>
+                            <option value="465">Duqum Municipality</option>
+                            <option value="466">Nizwa Municipality</option>
+                          </select>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
@@ -407,68 +413,70 @@
                     </div>
                     <fieldset>
                       <legend>Plot Data</legend>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="PSN_Plot" class="required">Plot Serial Number</label>
-                        <input type="text" class="form-control" id="PSN_Plot" placeholder="Plot Serial Number">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="PSN" class="required">Plot Number</label>
-                        <input type="number" class="form-control numeric" id="PSN" placeholder="Plot Number" min="0">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="region_Ld" class="required">Governorate</label>
-                        <select name="region_Ld" id="region_Ld" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="1">Alshaqiya Governorate</option>
-                          <option value="2">Aldhahira Governorate</option>
-                          <option value="3">Mosandam Governorate</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Willayat_Ld" class="required">Willayat</label>
-                        <select name="Willayat_Ld" id="Willayat_Ld" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="1">Suhar </option>
-                          <option value="2">Nizwa</option>
-                          <option value="3">Ibra</option>
-                          <option value="3">Saham</option>
-                          <option value="3">Nakhal</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="village_Ld" class="required">Village</label>
-                        <select name="village_Ld" id="village_Ld" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="461">Hay elain</option>
-                          <option value="463">Suaal</option>
-                          <option value="464">Karsha</option>
-                          <option value="465">Eliqir</option>
-                          <option value="466">Daris</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="square_Ld" class="required">Blcok</label>
-                        <input type="number" class="form-control numeric" id="square_Ld" placeholder="Block" min="0" />
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Plotsurface_Ld" class="required">Plot Area</label>
-                        <input type="number" class="form-control numeric" id="Plotsurface_Ld" placeholder="Plot Area"
-                          min="0">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="StreetNumber_Ld" class="required">Street Name</label>
-                        <input type="number" class="form-control numeric" id="StreetNumber_Ld" placeholder="Street Name"
-                          min="0">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="typeUse_Ld" class="required">Type of Use</label>
-                        <select name="typeUse_Ld" id="typeUse_Ld" class="form-control">
-                          <option value="0">Please select...</option>
-                          <option value="463">Residential</option>
-                          <option value="461">Residential Commercial</option>
-                          <option value="464">Industrial</option>
-                          <option value="465">Commercial</option>
-                        </select>
+                      <div class="row">
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="PSN_Plot" class="required">Plot Serial Number</label>
+                          <input type="text" class="form-control" id="PSN_Plot" placeholder="Plot Serial Number">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="PSN" class="required">Plot Number</label>
+                          <input type="number" class="form-control numeric" id="PSN" placeholder="Plot Number" min="0">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="region_Ld" class="required">Governorate</label>
+                          <select name="region_Ld" id="region_Ld" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="1">Alshaqiya Governorate</option>
+                            <option value="2">Aldhahira Governorate</option>
+                            <option value="3">Mosandam Governorate</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Willayat_Ld" class="required">Willayat</label>
+                          <select name="Willayat_Ld" id="Willayat_Ld" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="1">Suhar </option>
+                            <option value="2">Nizwa</option>
+                            <option value="3">Ibra</option>
+                            <option value="3">Saham</option>
+                            <option value="3">Nakhal</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="village_Ld" class="required">Village</label>
+                          <select name="village_Ld" id="village_Ld" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="461">Hay elain</option>
+                            <option value="463">Suaal</option>
+                            <option value="464">Karsha</option>
+                            <option value="465">Eliqir</option>
+                            <option value="466">Daris</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="square_Ld" class="required">Blcok</label>
+                          <input type="number" class="form-control numeric" id="square_Ld" placeholder="Block" min="0" />
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Plotsurface_Ld" class="required">Plot Area</label>
+                          <input type="number" class="form-control numeric" id="Plotsurface_Ld" placeholder="Plot Area"
+                            min="0">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="StreetNumber_Ld" class="required">Street Name</label>
+                          <input type="number" class="form-control numeric" id="StreetNumber_Ld" placeholder="Street Name"
+                            min="0">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="typeUse_Ld" class="required">Type of Use</label>
+                          <select name="typeUse_Ld" id="typeUse_Ld" class="form-control">
+                            <option value="0">Please select...</option>
+                            <option value="463">Residential</option>
+                            <option value="461">Residential Commercial</option>
+                            <option value="464">Industrial</option>
+                            <option value="465">Commercial</option>
+                          </select>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
@@ -520,7 +528,7 @@
               <div id="BuildingsDetails" class="">
                 <div class="form-group">
                   <div class="row">
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
                       <div class="padtopbot">
                         <!--//validations added for Units & storeys-Kiran 9/5/2017-->
                         <div id="ExtBuildingDetails_Err" class="Error">Please fill all required fields of Existing
@@ -530,68 +538,70 @@
                         <div id="ExtBuilding_StoreyssDetails_Err" class="Error">Please Add Storeys under Existing
                           building Details </div>
                       </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne" style="background: rgb(184, 150, 87);">
-                          <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
+                      <div class="card border-0">
+                        <div class="card-header ts-panel" role="tab" id="headingOne">
+                          <h4 class="card-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
                               href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <i
-                                class="more-less glyphicon glyphicon-chevron-down pull-right"></i>Existing Buildings
+                                class="more-less fal fa-chevron-down float-right"></i>Existing Buildings
                               Details </a> </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        <div id="collapseOne" class="accordion-collapse collapse show" role="tabpanel"
                           aria-labelledby="headingOne">
-                          <div class="panel-body">
+                          <div class="card-body p-0">
                             <fieldset>
                               <!-- <legend>Existing Buildings Details</legend> -->
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="BuildingNo" class="required">Building Number</label>
-                                <input type="number" class="form-control numeric" id="BuildingNo"
-                                  placeholder="Building Number" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Buildingname" class="required">Building Name</label>
-                                <input type="text" class="form-control" id="Buildingname" placeholder="Building Name" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Btype" class="required">Type of Use</label>
-                                <select name="Btype" id="Btype" class="form-control">
-                                  <option value="0">Please select...</option>
-                                  <option value="463">Residential</option>
-                                  <option value="461">Residential Commercial</option>
-                                  <option value="464">Industrial</option>
-                                  <option value="465">Commercial</option>
-                                </select>
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Bstatus" class="required">Building Status</label>
-                                <select name="Bstatus" id="Bstatus" class="form-control">
-                                  <option value="0">Please select...</option>
-                                  <option value="1">New</option>
-                                  <option value="2">Approved For Construction</option>
-                                  <option value="3">Final</option>
-                                  <option value="4">Construction Started</option>
-                                </select>
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="BuildingNumberofunits" class="required">Number of Units</label>
-                                <input type="number" class="form-control numeric" id="BuildingNumberofunits"
-                                  placeholder="Number of Units" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="BuildingNumberoffloors" class="required">Number of Floors</label>
-                                <input type="number" class="form-control numeric" id="BuildingNumberoffloors"
-                                  placeholder="Number of Floors" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Buildingtotalarea">Total Builtup Area(m2)</label>
-                                <input type="number" class="form-control numeric" id="Buildingtotalarea"
-                                  placeholder="Total Builtup Area(m2)" />
-                              </div>
-                              <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                <label for="Footprint_ExBld" class="required">Plot Area(m2)</label>
-                                <input type="number" class="form-control numeric" id="Footprint_ExBld"
-                                  placeholder="Plot Area(m2)" />
-                                <div id="Total_PlotError" style="color:red">Please enter less than Total Builtup
-                                  Area(m2)</div>
+                              <div class="row">
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="BuildingNo" class="required">Building Number</label>
+                                  <input type="number" class="form-control numeric" id="BuildingNo"
+                                    placeholder="Building Number" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Buildingname" class="required">Building Name</label>
+                                  <input type="text" class="form-control" id="Buildingname" placeholder="Building Name" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Btype" class="required">Type of Use</label>
+                                  <select name="Btype" id="Btype" class="form-control">
+                                    <option value="0">Please select...</option>
+                                    <option value="463">Residential</option>
+                                    <option value="461">Residential Commercial</option>
+                                    <option value="464">Industrial</option>
+                                    <option value="465">Commercial</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Bstatus" class="required">Building Status</label>
+                                  <select name="Bstatus" id="Bstatus" class="form-control">
+                                    <option value="0">Please select...</option>
+                                    <option value="1">New</option>
+                                    <option value="2">Approved For Construction</option>
+                                    <option value="3">Final</option>
+                                    <option value="4">Construction Started</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="BuildingNumberofunits" class="required">Number of Units</label>
+                                  <input type="number" class="form-control numeric" id="BuildingNumberofunits"
+                                    placeholder="Number of Units" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="BuildingNumberoffloors" class="required">Number of Floors</label>
+                                  <input type="number" class="form-control numeric" id="BuildingNumberoffloors"
+                                    placeholder="Number of Floors" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Buildingtotalarea">Total Builtup Area(m2)</label>
+                                  <input type="number" class="form-control numeric" id="Buildingtotalarea"
+                                    placeholder="Total Builtup Area(m2)" />
+                                </div>
+                                <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                                  <label for="Footprint_ExBld" class="required">Plot Area(m2)</label>
+                                  <input type="number" class="form-control numeric" id="Footprint_ExBld"
+                                    placeholder="Plot Area(m2)" />
+                                  <div id="Total_PlotError" style="color:red">Please enter less than Total Builtup
+                                    Area(m2)</div>
+                                </div>
                               </div>
                               <div class="row">
                                 <div class="form-group col-sm-4 col-md-4 col-lg-3">

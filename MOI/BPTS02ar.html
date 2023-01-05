@@ -137,31 +137,33 @@
                     </div>
                     <fieldset>
                       <legend>تفاصيل نوع الطلب</legend>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Request_ser" class="required">نوع الطلب</label>
-                        <select name="Request_ser" id="Request_ser" class="form-control">
-                          <option value="0">الرجاء تحديد </option>
-                          <option value="162" selected>جديد</option>
-                          <option value="163">تجديد</option>
-                          <option value="166">تعديل</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3" id="lichide">
-                        <label for="PermitNo">رقم الإباحة</label>
-                        <input type="number" class="form-control numeric" id="PermitNo" placeholder="رقم الإباحة" />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Minor_Permit" class="required">نوع إباحة بناء صغرى</label>
-                        <select name="Minor_Permit" id="Minor_Permit" class="form-control">
-                          <option value="1000">الرجاء تحديد</option>
-                          <option value="169">تسوير</option>
-                          <option value="170">صيانة وترميم</option>
-                          <option value="171">إضافة صغيرة</option>
-                        </select>
-                      </div>
-                      <div class="form-group top-25">
-                        <button type="button" class="btn btn-ts">ايقاف</button>
-                        <button type="button" class="btn btn-ts">استئناف الايقاف</button>
+                      <div class="row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Request_ser" class="required">نوع الطلب</label>
+                          <select name="Request_ser" id="Request_ser" class="form-control">
+                            <option value="0">الرجاء تحديد </option>
+                            <option value="162" selected>جديد</option>
+                            <option value="163">تجديد</option>
+                            <option value="166">تعديل</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3" id="lichide">
+                          <label for="PermitNo">رقم الإباحة</label>
+                          <input type="number" class="form-control numeric" id="PermitNo" placeholder="رقم الإباحة" />
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Minor_Permit" class="required">نوع إباحة بناء صغرى</label>
+                          <select name="Minor_Permit" id="Minor_Permit" class="form-control">
+                            <option value="1000">الرجاء تحديد</option>
+                            <option value="169">تسوير</option>
+                            <option value="170">صيانة وترميم</option>
+                            <option value="171">إضافة صغيرة</option>
+                          </select>
+                        </div>
+                        <div class="form-group top-25">
+                          <button type="button" class="btn btn-ts">ايقاف</button>
+                          <button type="button" class="btn btn-ts">استئناف الايقاف</button>
+                        </div>
                       </div>
                     </fieldset>
                   </div> <!-- .row -->
@@ -174,36 +176,38 @@
                     </div>
                     <fieldset>
                       <legend>بيانات مقدم الطلب</legend>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="aid" class="required">الرقم المدني</label>
-                        <input type="text" class="form-control" id="aid" placeholder="الرقم المدني">
-                      </div>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3 haserror">
-                        <label for="applcntEpiryDate" class="required">تاريخ الانتهاء</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="applcntEpiryDate" placeholder="dd/mm/yyyy" />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                      <div class="row">
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="aid" class="required">الرقم المدني</label>
+                          <input type="text" class="form-control" id="aid" placeholder="الرقم المدني">
                         </div>
-                      </div>
-                      <div class="form-group  col-sm-5 col-md-4 col-lg-3">
-                        <label for="aname" class="required">اسم مقدم الطلب</label>
-                        <input type="text" class="form-control" id="aname" placeholder="اسم مقدم الطلب">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="address_app" class="required">العنوان</label>
-                        <input type="text" class="form-control" id="address_app" placeholder="العنوان" required>
-                      </div>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="Phnumber_app" class="required">رقم الهاتف</label>
-                        <input type="text" class="form-control numeric" id="Phnumber_app" placeholder="رقم الهاتف">
-                        <div id="Ph_Error" style="color:red">الرجاء إدخال رقم جوال مكون من 8 أرقام</div>
-                      </div>
-                      <div class="form-group col-sm-5 col-md-4 col-lg-3">
-                        <label for="eMail">البريد الإلكتروني</label>
-                        <input type="text" class="form-control" id="eMail" placeholder="البريد الإلكتروني">
-                        <div class="col-sm-12 col-md-12 col-lg-12" id="email_Error" style="color:red">الرجاء إدخال
-                          البريد الإلكتروني</div>
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3 haserror">
+                          <label for="applcntEpiryDate" class="required">تاريخ الانتهاء</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="applcntEpiryDate" placeholder="dd/mm/yyyy" />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group  col-sm-5 col-md-4 col-lg-3">
+                          <label for="aname" class="required">اسم مقدم الطلب</label>
+                          <input type="text" class="form-control" id="aname" placeholder="اسم مقدم الطلب">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="address_app" class="required">العنوان</label>
+                          <input type="text" class="form-control" id="address_app" placeholder="العنوان" required>
+                        </div>
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="Phnumber_app" class="required">رقم الهاتف</label>
+                          <input type="text" class="form-control numeric" id="Phnumber_app" placeholder="رقم الهاتف">
+                          <div id="Ph_Error" style="color:red">الرجاء إدخال رقم جوال مكون من 8 أرقام</div>
+                        </div>
+                        <div class="form-group col-sm-5 col-md-4 col-lg-3">
+                          <label for="eMail">البريد الإلكتروني</label>
+                          <input type="text" class="form-control" id="eMail" placeholder="البريد الإلكتروني">
+                          <div class="col-sm-12 col-md-12 col-lg-12" id="email_Error" style="color:red">الرجاء إدخال
+                            البريد الإلكتروني</div>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
@@ -218,62 +222,64 @@
                     </div>
                     <fieldset>
                       <legend>بيانات الطلب</legend>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="astatus">حالة الطلب</label>
-                        <input type="text" class="form-control" id="astatus" placeholder="حالة الطلب"
-                          value="In Progress" readonly>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="srname" class="required">اسم الخدمة المطلوبة</label>
-                        <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
-                          value="طلب إباحة بناء صغرى ( جديد / تجديد / إيقاف (مؤقت) / الغاء الإيقاف )" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="srdate">تاريخ تقديم الطلب</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="srdate" placeholder="يوم/شهر/سنة" disabled />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                      <div class="row">
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="astatus">حالة الطلب</label>
+                          <input type="text" class="form-control" id="astatus" placeholder="حالة الطلب"
+                            value="In Progress" readonly>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="sdate">تاريخ تسليم الطلب</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="sdate" placeholder="يوم/شهر/سنة" disabled />
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="srname" class="required">اسم الخدمة المطلوبة</label>
+                          <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
+                            value="طلب إباحة بناء صغرى ( جديد / تجديد / إيقاف (مؤقت) / الغاء الإيقاف )" readonly>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                        <label for="region_ser" class="required">المحافظة</label>
-                        <select name="region_ser" id="region_ser" class="form-control">
-                          <option value="0">الرجاء الإختيار</option>
-                          <option value="1">ولاية صحار</option>
-                          <option value="2">محافظة الظاهرة</option>
-                          <option value="3">محافظة مسندم</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-5 col-md-4 col-lg-3">
-                        <label for="Willayat_ser" class="required">الولاية</label>
-                        <select name="Willayat_ser" id="Willayat_ser" class="form-control">
-                          <option value="0">الرجاء الإختيار</option>
-                          <option value="1">ولاية صحار </option>
-                          <option value="2">ولاية صحم</option>
-                          <option value="3">ولاية ابرا</option>
-                          <option value="3">ولاية نزوى</option>
-                          <option value="3">ولاية نخل</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Municiplity_ser" class="required">البلدية</label>
-                        <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
-                          <option value="0">الرجاء الإختيار</option>
-                          <option value="461">بلدية صحار</option>
-                          <option value="463">بلدية صحم</option>
-                          <option value="464">بلدية إبرا</option>
-                          <option value="465">بلدية الدقم</option>
-                          <option value="466">بلدية نزوى</option>
-                        </select>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="srdate">تاريخ تقديم الطلب</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="srdate" placeholder="يوم/شهر/سنة" disabled />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="sdate">تاريخ تسليم الطلب</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="sdate" placeholder="يوم/شهر/سنة" disabled />
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                          <label for="region_ser" class="required">المحافظة</label>
+                          <select name="region_ser" id="region_ser" class="form-control">
+                            <option value="0">الرجاء الإختيار</option>
+                            <option value="1">ولاية صحار</option>
+                            <option value="2">محافظة الظاهرة</option>
+                            <option value="3">محافظة مسندم</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-5 col-md-4 col-lg-3">
+                          <label for="Willayat_ser" class="required">الولاية</label>
+                          <select name="Willayat_ser" id="Willayat_ser" class="form-control">
+                            <option value="0">الرجاء الإختيار</option>
+                            <option value="1">ولاية صحار </option>
+                            <option value="2">ولاية صحم</option>
+                            <option value="3">ولاية ابرا</option>
+                            <option value="3">ولاية نزوى</option>
+                            <option value="3">ولاية نخل</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Municiplity_ser" class="required">البلدية</label>
+                          <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
+                            <option value="0">الرجاء الإختيار</option>
+                            <option value="461">بلدية صحار</option>
+                            <option value="463">بلدية صحم</option>
+                            <option value="464">بلدية إبرا</option>
+                            <option value="465">بلدية الدقم</option>
+                            <option value="466">بلدية نزوى</option>
+                          </select>
+                        </div>
                       </div>
                     </fieldset>
                   </div>
@@ -291,30 +297,30 @@
                     </div>
                     <fieldset>
                       <legend>بيانات المستفيد</legend>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Beneficiary_select" class="required">المستفيد</label>
-                        <select name="Beneficiary_select" id="Beneficiary_select" class="form-control">
-                          <option value="1000">الرجاء الأختيار...</option>
-                          <option value="Owner" selected>المالك</option>
-                          <option value="Investor">مستثمر</option>
-                          <option value="Usufructer">منتفع</option>
-                          <option value="Attorney">الوكيل الشرعي</option>
-                          <option value="Heirs">ورثة</option>
-                          <option value="waqf">وقف</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="AuthorizationNo">
-                        <label for="Authorization_No" class="required">رقم التوكيل</label>
-                        <input type="text" class="form-control numeric" id="Authorization_No"
-                          placeholder="رقم التوكيل" />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="InvestorNo">
-                        <label for="Investor_No" class="required">رقم عقد الاستثمار</label>
-                        <input type="text" class="form-control numeric" id="Investor_No"
-                          placeholder="رقم عقد الاستثمار" />
-                      </div>
-                      <div id="benradio1">
-                        <div class="form-group col-sm-6 col-md-4 col-lg-3" id="benradio">
+                      <div class="row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Beneficiary_select" class="required">المستفيد</label>
+                          <select name="Beneficiary_select" id="Beneficiary_select" class="form-control">
+                            <option value="1000">الرجاء الأختيار...</option>
+                            <option value="Owner" selected>المالك</option>
+                            <option value="Investor">مستثمر</option>
+                            <option value="Usufructer">منتفع</option>
+                            <option value="Attorney">الوكيل الشرعي</option>
+                            <option value="Heirs">ورثة</option>
+                            <option value="waqf">وقف</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="AuthorizationNo">
+                          <label for="Authorization_No" class="required">رقم التوكيل</label>
+                          <input type="text" class="form-control numeric" id="Authorization_No"
+                            placeholder="رقم التوكيل" />
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="InvestorNo">
+                          <label for="Investor_No" class="required">رقم عقد الاستثمار</label>
+                          <input type="text" class="form-control numeric" id="Investor_No"
+                            placeholder="رقم عقد الاستثمار" />
+                        </div>
+                        <div class="form-group col-sm-6 col-md-4 col-lg-3 benradio1" id="benradio">
                           <label for="optradio" class="required">نوع المستفيد</label>
                           <div class="form-control" id="orgtypeID">
                             <label class="radio-inline">
@@ -325,33 +331,33 @@
                               مؤسسة </label>
                           </div>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3" id="samehide">
-                        <label for="optradio1" class="required">نفس مقدم الطلب</label>
-                        <div class="form-control">
-                          <label class="radio-inline">
-                            <input type="radio" name="optradio1" value="Yes">
-                            نعم </label>
-                          <label class="radio-inline">
-                            <input type="radio" name="optradio1" value="No" checked>
-                            لا</label>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3" id="samehide">
+                          <label for="optradio1" class="required">نفس مقدم الطلب</label>
+                          <div class="form-control">
+                            <label class="radio-inline">
+                              <input type="radio" name="optradio1" value="Yes">
+                              نعم </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="optradio1" value="No" checked>
+                              لا</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="GCC_div">
-                        <label for="gccRadio1" class="required">هو المقيم الخليجي</label>
-                        <div class="form-control">
-                          <label class="radio-inline"> <input type="radio" id="gccRadio1" name="gccRadio"
-                              value="True" /> نعم </label>
-                          <label class="radio-inline"> <input type="radio" id="gccRadio2" name="gccRadio"
-                              checked="checked" value="False" /> لا</label>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="GCC_div">
+                          <label for="gccRadio1" class="required">هو المقيم الخليجي</label>
+                          <div class="form-control">
+                            <label class="radio-inline"> <input type="radio" id="gccRadio1" name="gccRadio"
+                                value="True" /> نعم </label>
+                            <label class="radio-inline"> <input type="radio" id="gccRadio2" name="gccRadio"
+                                checked="checked" value="False" /> لا</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3" id="benhide">
                           <label for="optradio2">نوع المستفيد </label>
                           <input type="text" class="form-control" id="optradio2" placeholder="نوع المستفيد" readonly>
                         </div>
-                        <div id="benType" class="">
+                      </div>
+                        
+                        <div id="benType" class="row">
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
                             <label for="BeneficiaryID" class="required">الرقم المدني للمستفيد</label>
                             <input type="text" class="form-control numeric" id="BeneficiaryID"
@@ -391,8 +397,7 @@
                         </div>
                         <!-- End Beneficiary Details -->
 
-                        <div id="OrganizationDetails" class="">
-                          <div class="row">
+                        <div id="OrganizationDetails" class="row">
                             <div class="form-group col-sm-6 col-md-3 col-lg-3">
                               <label for="crid" class="required">رقم السجل التجاري</label>
                               <input type="text" class="form-control" id="crid" placeholder="رقم السجل التجاري">
@@ -412,8 +417,6 @@
                               <div class="col-sm-12 col-md-12 col-lg-12" id="Cemail_Error" style="color:red">الرجاء
                                 إدخال البريد الإلكتروني</div>
                             </div>
-                          </div>
-                          <!-- .row -->
                         </div>
                         <!-- OrganizationDetails -->
 
@@ -421,8 +424,6 @@
                           <button type="button" class="btn btn-ts" onclick="Beneficiary1()" id="form1Submit"><i
                               class="fa fa-plus"></i>&nbsp;اضافة مستفيد</button>
                         </div>
-                      </div>
-                      <!-- .row -->
                       <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="table-responsive">
@@ -450,69 +451,71 @@
                     </div>
                     <fieldset>
                       <legend>بيانات قطعة الأرض</legend>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="PSN_Plot" class="required">الرقم المتسلسل لقطعة الأرض </label>
-                        <input type="text" class="form-control" id="PSN_Plot" placeholder="الرقم المتسلسل لقطعة الأرض">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="PSN" class="required">رقم قطعة الأرض</label>
-                        <input type="number" class="form-control numeric" id="PSN" placeholder="رقم قطعة الأرض" min="0">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="region_Ld" class="required">المحافظة </label>
-                        <select name="region_Ld" id="region_Ld" class="form-control">
-                          <option value="0">الرجاء الإختيار</option>
-                          <option value="1">بركاء</option>
-                          <option value="2">محافظة الظاهرة</option>
-                          <option value="3">محافظة مسندم</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Willayat_Ld" class="required">الولاية</label>
-                        <select name="Willayat_Ld" id="Willayat_Ld" class="form-control">
-                          <option value="0">الرجاءالإختيار</option>
-                          <option value="1">بركاء</option>
-                          <option value="2">ولاية صحم</option>
-                          <option value="3">ولاية ابرا</option>
-                          <option value="3">ولاية نزوى</option>
-                          <option value="3">ولاية نخل</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="village_Ld" class="required">القرية</label>
-                        <select name="village_Ld" id="village_Ld" class="form-control">
-                          <option value="0">الرجاء الإختيار</option>
-                          <option value="461">بركاء</option>
-                          <option value="463">العقر</option>
-                          <option value="464"> حي العين</option>
-                          <option value="465">سعال </option>
-                          <option value="466"> دارس </option>
-                        </select>
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="square_Ld" class="required">المربع</label>
-                        <input type="number" class="form-control numeric" id="square_Ld" placeholder="المربع" min="0" />
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="Plotsurface_Ld" class="required">مساحة الأرض </label>
-                        <input type="number" class="form-control numeric" id="Plotsurface_Ld" placeholder="مساحة الأرض"
-                          min="0">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="StreetNumber_Ld" class="required">اسم الشارع</label>
-                        <input type="number" class="form-control numeric" id="StreetNumber_Ld" placeholder="اسم الشارع"
-                          min="0">
-                      </div>
-                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                        <label for="typeUse_Ld" class="required">نوع الاستعمال </label>
-                        <select name="" id="typeUse_Ld" class="form-control">
-                          <option value="0">الرجاء الأختيار</option>
-                          <option value="461">الإسكان</option>
-                          <option value="463">بلدية صحم</option>
-                          <option value="464">بلدية إبرا</option>
-                          <option value="465">بلدية الدقم</option>
-                          <option value="466">بلدية نزوى</option>
-                        </select>
+                      <div class="row">
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="PSN_Plot" class="required">الرقم المتسلسل لقطعة الأرض </label>
+                          <input type="text" class="form-control" id="PSN_Plot" placeholder="الرقم المتسلسل لقطعة الأرض">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="PSN" class="required">رقم قطعة الأرض</label>
+                          <input type="number" class="form-control numeric" id="PSN" placeholder="رقم قطعة الأرض" min="0">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="region_Ld" class="required">المحافظة </label>
+                          <select name="region_Ld" id="region_Ld" class="form-control">
+                            <option value="0">الرجاء الإختيار</option>
+                            <option value="1">بركاء</option>
+                            <option value="2">محافظة الظاهرة</option>
+                            <option value="3">محافظة مسندم</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Willayat_Ld" class="required">الولاية</label>
+                          <select name="Willayat_Ld" id="Willayat_Ld" class="form-control">
+                            <option value="0">الرجاءالإختيار</option>
+                            <option value="1">بركاء</option>
+                            <option value="2">ولاية صحم</option>
+                            <option value="3">ولاية ابرا</option>
+                            <option value="3">ولاية نزوى</option>
+                            <option value="3">ولاية نخل</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="village_Ld" class="required">القرية</label>
+                          <select name="village_Ld" id="village_Ld" class="form-control">
+                            <option value="0">الرجاء الإختيار</option>
+                            <option value="461">بركاء</option>
+                            <option value="463">العقر</option>
+                            <option value="464"> حي العين</option>
+                            <option value="465">سعال </option>
+                            <option value="466"> دارس </option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="square_Ld" class="required">المربع</label>
+                          <input type="number" class="form-control numeric" id="square_Ld" placeholder="المربع" min="0" />
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="Plotsurface_Ld" class="required">مساحة الأرض </label>
+                          <input type="number" class="form-control numeric" id="Plotsurface_Ld" placeholder="مساحة الأرض"
+                            min="0">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="StreetNumber_Ld" class="required">اسم الشارع</label>
+                          <input type="number" class="form-control numeric" id="StreetNumber_Ld" placeholder="اسم الشارع"
+                            min="0">
+                        </div>
+                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                          <label for="typeUse_Ld" class="required">نوع الاستعمال </label>
+                          <select name="" id="typeUse_Ld" class="form-control">
+                            <option value="0">الرجاء الأختيار</option>
+                            <option value="461">الإسكان</option>
+                            <option value="463">بلدية صحم</option>
+                            <option value="464">بلدية إبرا</option>
+                            <option value="465">بلدية الدقم</option>
+                            <option value="466">بلدية نزوى</option>
+                          </select>
+                        </div>
                       </div>
                     </fieldset>
                     <div class="padtopbot">
@@ -605,7 +608,8 @@
                           aria-labelledby="headingOne">
                           <div class="panel-body">
                             <fieldset>
-                              <!-- <legend>بيانات المبنى القائم </legend> -->
+                                <div class="row">
+                                  <!-- <legend>بيانات المبنى القائم </legend> -->
                               <div class="form-group col-sm-4 col-md-4 col-lg-3">
                                 <label for="Building Number" class="required">رقم المبنى</label>
                                 <input type="number" class="form-control numeric" id="BuildingNo"
@@ -714,6 +718,7 @@
                                       <input type="radio" name="optradio3" value="No" checked>
                                       لا</label>
                                   </div>
+                                </div>
                                 </div>
                                 <div class="form-group pull-right top-25">
                                   <button type="button" class="btn btn-ts" onclick="addbuilding()" id="addbuildingid">

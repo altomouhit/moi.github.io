@@ -87,7 +87,7 @@
         <div class="panel panel-default panel-dm-theme">
           <div class="panel-head-services d-flex align-items-center justify-content-between ts-panel">
             <div class="panel-title mt-0 d-flex align-items-center">
-              <img src="img/Services/ts-new-white.svg" class="mr-2" alt="Technical Services">
+              <img src="img/New_sub_services_icons/general-services.svg" class="mr-2" alt="Technical Services">
               <span id="requestTypeChange">طلب خدمات عامة</span>
             </div>
             <div>
@@ -112,17 +112,17 @@
         <!-- SmartWizard html -->
         <div id="smartwizard">
           <ul id="credit" class="p-0">
-            <li data-interest="1"><a href="#ApplicantDetails"><i class="fa fa-user fa-fw"></i>&nbsp; بيانات مقدم
+            <li data-interest="1"><a href="#ApplicantDetails"><i class="fal fa-user fa-fw"></i>&nbsp; بيانات مقدم
                 الطلب</a></li>
-            <li data-interest="2" id="Generalhide"><a href="#General"><i class="fa fa-gear fa-fw"></i>الخدمات العامة</a>
+            <li data-interest="2" id="Generalhide"><a href="#General"><i class="fal fa-gear fa-fw"></i>الخدمات العامة</a>
             </li>
-            <li data-interest="3"><a href="#BeneficiaryDetails"><i class="fa fa-users fa-fw"></i>&nbsp; بيانات
+            <li data-interest="3"><a href="#BeneficiaryDetails"><i class="fal fa-users fa-fw"></i>&nbsp; بيانات
                 المستفيد</a></li>
-            <li data-interest="4"><a href="#ConsultantDetails"><i class="fa fa-user-secret fa-fw"></i>&nbsp;بيانات
+            <li data-interest="4"><a href="#ConsultantDetails"><i class="fal fa-user-secret fa-fw"></i>&nbsp;بيانات
                 الأستشاري /المقاول</a></li>
-            <li data-interest="5"><a href="#Attachment"><i class="fa fa-paperclip fa-fw"></i>&nbsp; المرفقات</a></li>
-            <li data-interest="6"><a href="#others"><i class="fa fa-check-square-o fa-fw"></i>تعليقات</a></li>
-            <li data-interest="7"><a href="#LicenseDetails"><i class="fa fa-credit-card fa-fw"></i>الدفع والمخرجات </a>
+            <li data-interest="5"><a href="#Attachment"><i class="fal fa-paperclip fa-fw"></i>&nbsp; المرفقات</a></li>
+            <li data-interest="6"><a href="#others"><i class="fal fa-comment-alt-lines fa-fw"></i>تعليقات</a></li>
+            <li data-interest="7"><a href="#LicenseDetails"><i class="fal fa-credit-card fa-fw"></i>الدفع والمخرجات </a>
             </li>
           </ul>
           <div>
@@ -134,27 +134,29 @@
                   </div>
                   <fieldset>
                     <legend>بيانات الطلب</legend>
-                    <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                      <label for="conLN" class="required">نوع المستفيد</label>
-                      <select name="conLN" id="conLN" class="form-control">
-                        <option value="1000">الرجاء الإختيار</option>
-                        <option value="1301">تشجير خارج المنزل </option>
-                        <option value="1305">تركيب بلاط متشابك (انترلوك)</option>
-                        <option value="1303">تصريح قطع جبل</option>
-                        <option value="1307">مظلات السيارات خارج المنزل</option>
-                        <option value="1302">تصريح هدم</option>
-                        <option value="1308">تركيب لوحة اعلانات فوق المبنى</option>
-                        <option value="1309">تسوية الارض</option>
-                        <!-- <option value="1312">إنارة الطرق الداخلية</option>
-                      <option value="1311">رصف الطرق الداخلية/المواقف</option> -->
-                        <option value="1306">إقامة سكن عمال مؤقت</option>
-                        <option value="1304">عمل مطبات</option>
-                        <option value="1310">تركيب لوحة اعلانات/لوحة المشروع بجانب الطريق</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-sm-4 col-md-4 col-lg-3" id="lichide">
-                      <label for="PermitNo">رقم الإباحة </label>
-                      <input type="number" class="form-control numeric" id="PermitNo" placeholder="رقم الإباحة" />
+                    <div class="row">
+                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <label for="conLN" class="required">نوع المستفيد</label>
+                        <select name="conLN" id="conLN" class="form-control">
+                          <option value="1000">الرجاء الإختيار</option>
+                          <option value="1301">تشجير خارج المنزل </option>
+                          <option value="1305">تركيب بلاط متشابك (انترلوك)</option>
+                          <option value="1303">تصريح قطع جبل</option>
+                          <option value="1307">مظلات السيارات خارج المنزل</option>
+                          <option value="1302">تصريح هدم</option>
+                          <option value="1308">تركيب لوحة اعلانات فوق المبنى</option>
+                          <option value="1309">تسوية الارض</option>
+                          <!-- <option value="1312">إنارة الطرق الداخلية</option>
+                        <option value="1311">رصف الطرق الداخلية/المواقف</option> -->
+                          <option value="1306">إقامة سكن عمال مؤقت</option>
+                          <option value="1304">عمل مطبات</option>
+                          <option value="1310">تركيب لوحة اعلانات/لوحة المشروع بجانب الطريق</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-4 col-md-4 col-lg-3" id="lichide">
+                        <label for="PermitNo">رقم الإباحة </label>
+                        <input type="number" class="form-control numeric" id="PermitNo" placeholder="رقم الإباحة" />
+                      </div>
                     </div>
                   </fieldset>
                 </div> <!-- End .row -->
@@ -167,36 +169,38 @@
                   </div>
                   <fieldset>
                     <legend>بيانات مقدم الطلب</legend>
-                    <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                      <label for="aid" class="required">الرقم المدني</label>
-                      <input type="text" class="form-control" id="aid" placeholder="الرقم المدني">
-                    </div>
-                    <div class="form-group col-sm-3 col-md-4 col-lg-3 haserror">
-                      <label for="applcntEpiryDate" class="required">تاريخ الانتهاء</label>
-                      <div class="date">
-                        <input type="text" class="form-control" id="applcntEpiryDate" placeholder="dd/mm/yyyy" />
-                        <span class="input-group-addon" style="display: none;"><i
-                            class="glyphicon glyphicon-calendar"></i></span>
+                    <div class="row">
+                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                        <label for="aid" class="required">الرقم المدني</label>
+                        <input type="text" class="form-control" id="aid" placeholder="الرقم المدني">
                       </div>
-                    </div>
-                    <div class="form-group  col-sm-5 col-md-4 col-lg-3">
-                      <label for="aname" class="required">اسم مقدم الطلب</label>
-                      <input type="text" class="form-control" id="aname" placeholder="اسم مقدم الطلب">
-                    </div>
-                    <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                      <label for="address_app" class="required">العنوان</label>
-                      <input type="text" class="form-control" id="address_app" placeholder="العنوان" required>
-                    </div>
-                    <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                      <label for="Phnumber_app" class="required">رقم الهاتف</label>
-                      <input type="text" class="form-control numeric" id="Phnumber_app" placeholder="رقم الهاتف">
-                      <div id="Ph_Error" style="color:red">الرجاء إدخال رقم جوال مكون من 8 أرقام</div>
-                    </div>
-                    <div class="form-group col-sm-5 col-md-4 col-lg-3">
-                      <label for="eMail">البريد الإلكتروني</label>
-                      <input type="text" class="form-control" id="eMail" placeholder="البريد الإلكتروني">
-                      <div class="col-sm-12 col-md-12 col-lg-12" id="email_Error" style="color:red">الرجاء إدخال البريد
-                        الإلكتروني</div>
+                      <div class="form-group col-sm-3 col-md-4 col-lg-3 haserror">
+                        <label for="applcntEpiryDate" class="required">تاريخ الانتهاء</label>
+                        <div class="date">
+                          <input type="text" class="form-control" id="applcntEpiryDate" placeholder="dd/mm/yyyy" />
+                          <span class="input-group-addon" style="display: none;"><i
+                              class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                      </div>
+                      <div class="form-group  col-sm-5 col-md-4 col-lg-3">
+                        <label for="aname" class="required">اسم مقدم الطلب</label>
+                        <input type="text" class="form-control" id="aname" placeholder="اسم مقدم الطلب">
+                      </div>
+                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <label for="address_app" class="required">العنوان</label>
+                        <input type="text" class="form-control" id="address_app" placeholder="العنوان" required>
+                      </div>
+                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                        <label for="Phnumber_app" class="required">رقم الهاتف</label>
+                        <input type="text" class="form-control numeric" id="Phnumber_app" placeholder="رقم الهاتف">
+                        <div id="Ph_Error" style="color:red">الرجاء إدخال رقم جوال مكون من 8 أرقام</div>
+                      </div>
+                      <div class="form-group col-sm-5 col-md-4 col-lg-3">
+                        <label for="eMail">البريد الإلكتروني</label>
+                        <input type="text" class="form-control" id="eMail" placeholder="البريد الإلكتروني">
+                        <div class="col-sm-12 col-md-12 col-lg-12" id="email_Error" style="color:red">الرجاء إدخال البريد
+                          الإلكتروني</div>
+                      </div>
                     </div>
                   </fieldset>
                 </div>
@@ -211,62 +215,64 @@
                   </div>
                   <fieldset>
                     <legend>بيانات الطلب</legend>
-                    <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                      <label for="astatus">حالة الطلب</label>
-                      <input type="text" class="form-control" id="astatus" placeholder="حالة الطلب" value="In Progress"
-                        readonly>
-                    </div>
-                    <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                      <label for="srname" class="required">اسم الخدمة المطلوبة</label>
-                      <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
-                        value="طلب خدمات عامة خارج حدود القطعة" readonly>
-                    </div>
-                    <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                      <label for="srdate">تاريخ تقديم الطلب</label>
-                      <div class="date">
-                        <input type="text" class="form-control" id="srdate" placeholder="يوم/شهر/سنة" disabled />
-                        <span class="input-group-addon" style="display: none;"><i
-                            class="glyphicon glyphicon-calendar"></i></span>
+                    <div class="row">
+                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                        <label for="astatus">حالة الطلب</label>
+                        <input type="text" class="form-control" id="astatus" placeholder="حالة الطلب" value="In Progress"
+                          readonly>
                       </div>
-                    </div>
-                    <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                      <label for="sdate">تاريخ تسليم الطلب</label>
-                      <div class="date">
-                        <input type="text" class="form-control" id="sdate" placeholder="يوم/شهر/سنة" disabled />
-                        <span class="input-group-addon" style="display: none;"><i
-                            class="glyphicon glyphicon-calendar"></i></span>
+                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <label for="srname" class="required">اسم الخدمة المطلوبة</label>
+                        <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
+                          value="طلب خدمات عامة خارج حدود القطعة" readonly>
                       </div>
-                    </div>
-                    <div class="form-group col-sm-3 col-md-4 col-lg-3">
-                      <label for="region_ser" class="required">المحافظة</label>
-                      <select name="region_ser" id="region_ser" class="form-control">
-                        <option value="0">الرجاء الإختيار</option>
-                        <option value="1">ولاية صحار</option>
-                        <option value="2">محافظة الظاهرة</option>
-                        <option value="3">محافظة مسندم</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-sm-5 col-md-4 col-lg-3">
-                      <label for="Willayat_ser" class="required">الولاية</label>
-                      <select name="Willayat_ser" id="Willayat_ser" class="form-control">
-                        <option value="0">الرجاء الإختيار</option>
-                        <option value="1">ولاية صحار </option>
-                        <option value="2">ولاية صحم</option>
-                        <option value="3">ولاية ابرا</option>
-                        <option value="3">ولاية نزوى</option>
-                        <option value="3">ولاية نخل</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                      <label for="Municiplity_ser" class="required">البلدية</label>
-                      <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
-                        <option value="0">الرجاء الإختيار</option>
-                        <option value="461">بلدية صحار</option>
-                        <option value="463">بلدية صحم</option>
-                        <option value="464">بلدية إبرا</option>
-                        <option value="465">بلدية الدقم</option>
-                        <option value="466">بلدية نزوى</option>
-                      </select>
+                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                        <label for="srdate">تاريخ تقديم الطلب</label>
+                        <div class="date">
+                          <input type="text" class="form-control" id="srdate" placeholder="يوم/شهر/سنة" disabled />
+                          <span class="input-group-addon" style="display: none;"><i
+                              class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                      </div>
+                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                        <label for="sdate">تاريخ تسليم الطلب</label>
+                        <div class="date">
+                          <input type="text" class="form-control" id="sdate" placeholder="يوم/شهر/سنة" disabled />
+                          <span class="input-group-addon" style="display: none;"><i
+                              class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                      </div>
+                      <div class="form-group col-sm-3 col-md-4 col-lg-3">
+                        <label for="region_ser" class="required">المحافظة</label>
+                        <select name="region_ser" id="region_ser" class="form-control">
+                          <option value="0">الرجاء الإختيار</option>
+                          <option value="1">ولاية صحار</option>
+                          <option value="2">محافظة الظاهرة</option>
+                          <option value="3">محافظة مسندم</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-5 col-md-4 col-lg-3">
+                        <label for="Willayat_ser" class="required">الولاية</label>
+                        <select name="Willayat_ser" id="Willayat_ser" class="form-control">
+                          <option value="0">الرجاء الإختيار</option>
+                          <option value="1">ولاية صحار </option>
+                          <option value="2">ولاية صحم</option>
+                          <option value="3">ولاية ابرا</option>
+                          <option value="3">ولاية نزوى</option>
+                          <option value="3">ولاية نخل</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <label for="Municiplity_ser" class="required">البلدية</label>
+                        <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
+                          <option value="0">الرجاء الإختيار</option>
+                          <option value="461">بلدية صحار</option>
+                          <option value="463">بلدية صحم</option>
+                          <option value="464">بلدية إبرا</option>
+                          <option value="465">بلدية الدقم</option>
+                          <option value="466">بلدية نزوى</option>
+                        </select>
+                      </div>
                     </div>
                   </fieldset>
                 </div>
