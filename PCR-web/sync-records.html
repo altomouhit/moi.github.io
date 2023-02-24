@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg" data-sidebar="light"
-    data-sidebar-image="none" data-preloader="disable">
+<html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg">
 
 <head>
 
@@ -24,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/colors.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap5.css" />
     <style>
-        .badge {
+        .list-inline-item .badge {
             width: 125px;
         }
     </style>
@@ -182,7 +181,7 @@
                                                                 ready!
                                                             </h6>
                                                         </a>
-                                                        <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                        <p class="mb-0 fs-11 fw-medium text-uppercase ">
                                                             <span><i class="mdi mdi-clock-outline"></i> Just 30 sec
                                                                 ago</span>
                                                         </p>
@@ -206,7 +205,7 @@
                                                                 conversation
                                                             </h6>
                                                         </a>
-                                                        <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
+                                                        <p class="mb-0 fs-11 fw-medium text-uppercase ">
                                                             <span><i class="mdi mdi-clock-outline"></i> 2 hrs ago</span>
                                                         </p>
                                                     </div>
@@ -235,7 +234,7 @@
                                     <span class="text-start ms-xl-2">
                                         <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Ahlam Hilal
                                             Khamis Alrasbi</span>
-                                        <!-- <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">Super User</span> -->
+                                        <!-- <span class="d-none d-xl-block ms-1 fs-12  user-name-sub-text">Super User</span> -->
                                     </span>
                                 </span>
                             </button>
@@ -243,10 +242,10 @@
                                 <!-- item-->
                                 <h6 class="dropdown-header">Welcome!</h6>
                                 <a class="dropdown-item" href="lockscreen.html">
-                                    <i class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i>
+                                    <i class="mdi mdi-lock  fs-16 align-middle me-1"></i>
                                     <span class="align-middle">Lock screen</span></a>
                                 <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logOut">
-                                    <i class="mdi mdi-power text-muted fs-16 align-middle me-1"></i>
+                                    <i class="mdi mdi-power  fs-16 align-middle me-1"></i>
                                     <span class="align-middle" data-key="t-logout">Logout</span></a>
                             </div>
                         </div>
@@ -381,7 +380,7 @@
                     <div class="row align-items-center mb-4 g-3">
                         <div class="col-sm-3">
                             <div class="d-flex align-items-center gap-2">
-                                <span class="text-muted flex-shrink-0">Sort by: </span>
+                                <span class=" flex-shrink-0">Sort by: </span>
                                 <select class="form-control mb-0" data-choices data-choices-search-false name="choices-single-default" id="choices-single-default">
                                     <option value="All" selected>All</option>
                                     <option value="1">Sync Records</option>
@@ -406,7 +405,7 @@
                         <div class="card-body">
                             <div class="table-responsive table-card">
                                 <table class="table align-middle table-nowrap" id="customerTable">
-                                    <thead class="table-light text-muted">
+                                    <thead class="table-light">
                                         <tr>
                                             <th scope="col">S.No</th>
                                             <th scope="col">Incident Number</th>
@@ -498,7 +497,7 @@
                                             colors="primary:#405189,secondary:#0ab39c" style="width:75px;height:75px">
                                         </lord-icon>
                                         <h5 class="mt-2">Sorry! No Result Found</h5>
-                                        <p class="text-muted mb-0">We've searched more than 150+ transactions We did not
+                                        <p class=" mb-0">We've searched more than 150+ transactions We did not
                                             find any
                                             transactions for you search.</p>
                                     </div>
@@ -554,13 +553,13 @@
     <!--end back-to-top-->
 
     <!--preloader-->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="status">
             <div class="spinner-border text-primary avatar-sm" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- <div class="customizer-setting d-none d-md-block">
         <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2" data-bs-toggle="offcanvas" data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
