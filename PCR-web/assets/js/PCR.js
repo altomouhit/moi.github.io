@@ -1,6 +1,6 @@
 window.onload = function () {
     $("#pastMedicalHistoryTxt, #pComments, #transportDiv, #nonTransportDiv, #hospitalDiv, #nonTransportCrimeDiv").hide();
-    $("#mAirwayCommentDiv, #oxygenLPMDiv, #immoblazatiomDiv, #splintingDiv, #defibrillationDiv, #IVIODiv, #mOthersDiv").hide();
+    $("#mAirwayCommentDiv, #oxygenLPMDiv, #immoblazatiomDiv, #splintingDiv, #defibrillationDiv, #IVIODiv, #mOthersDiv, #timeDiv").hide();
     //$('.selector').editableSelect();
     $('.selector').editableSelect({
         // enable filter
@@ -96,5 +96,43 @@ $("#immoblazatiom").on('change', function() {
     } else {
         $("#immoblazatiomDiv").hide();
         $("#immoblazatiomDoneByDiv").show();
+    }
+});
+$("#splinting").on('change', function() {
+    if(this.value == 3) {
+        $("#splintingDiv").show();
+    } else {
+        $("#splintingDiv").hide();
+    }
+});
+$("#defibrillation").on('change', function() {
+    if(this.value == 5) {
+        $("#defibrillationDiv").show();
+        $("#defibrillationDoneByDiv").hide();
+    } else {
+        $("#defibrillationDiv").hide();
+        $("#defibrillationDoneByDiv").show();
+    }
+});
+$("#IVIO").on('change', function() {
+    if(this.value == 1 || this.value == 3 || this.value == 5) {
+        $("#IVIODoneByDiv").show();
+        $("#IVIODiv, #timeDiv").hide();
+    } else if(this.value == 2) {
+        $("#timeDiv").show();
+        $("#IVIODoneByDiv, #IVIODiv").hide();
+    } else if(this.value == 4) {
+        $("#IVIODiv").show();
+        $("#IVIODoneByDiv, #timeDiv").hide();
+    } else {
+        $("#IVIODiv, #timeDiv").hide();
+        $("#IVIODoneByDiv").show();
+    }
+});
+$("#mOthers").on('change', function() {
+    if(this.value == 9) {
+        $("#mOthersDiv").show();
+    } else {
+        $("#mOthersDiv").hide();
     }
 });

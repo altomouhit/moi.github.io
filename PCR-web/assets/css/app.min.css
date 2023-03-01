@@ -50,7 +50,7 @@
 	--vz-input-disabled-bg: #eff2f7;
 	--vz-input-group-addon-bg: #eff2f7;
 	--vz-input-check-border: var(--vz-input-border);
-	--vz-sw-bg: #f8f9fa;
+	--vz-sw-bg: #E4F1F5;
 }
 :root .nav-tabs {
 	--vz-nav-tabs-link-active-bg: #f3f6f9
@@ -533,7 +533,8 @@
 }
 @media (min-width: 1024.1px) {
 	[data-layout=horizontal] .page-content {
-		margin-top: 70px
+		/* margin-top: 70px; */
+		margin-top: 10px;
 	}
 }
 @media (min-width: 1024.1px) {
@@ -6112,7 +6113,7 @@ a, button {
 	z-index: 1
 }
 .table th {
-	font-weight: 500
+	font-weight: 700;
 }
 .table>thead {
 	border-color: var(--vz-border-color)

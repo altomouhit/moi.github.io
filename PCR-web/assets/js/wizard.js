@@ -35,9 +35,9 @@ $(function() {
 	// Smart Wizard
 	$('#smartwizard').smartWizard({
 		selected: 0,
-		autoAdjustHeight: true,
+		autoAdjustHeight: false,
 		theme: 'dots', // basic, arrows, square, round, dots
-        enableUrlHash: false,
+        enableUrlHash: true,
 		transition: {
 			animation: 'slideSwing' // none|fade|slideHorizontal|slideVertical|slideSwing|css
 		},

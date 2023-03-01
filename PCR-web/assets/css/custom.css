@@ -591,10 +591,14 @@ hr.horizontal.dark {
     margin-right: 8px;
 }
 
-/* .modal:nth-of-type(even) {
-    z-index: 1062 !important;
+.form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select {
+    height: calc(2.5rem + calc(var(--vz-border-width) * 1));
+    line-height: 1.25;
 }
-.modal-backdrop.show:nth-of-type(even) {
-    z-index: 1061 !important;
-} */
-   
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.3rem) translateX(0.015rem);
+}
+.form-floating > label {
+    top: -9px;
+}
