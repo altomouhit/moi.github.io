@@ -821,7 +821,9 @@
 }
 @media (max-width: 767.98px) {
 	.navbar-brand-box {
-		display: none
+		/* display: none; */
+		display: block;
+		padding: 0 !important;
 	}
 }
 .hamburger-icon {

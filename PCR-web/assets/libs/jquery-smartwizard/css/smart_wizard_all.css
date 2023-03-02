@@ -257,7 +257,7 @@
     content: "";
     position: absolute;
     pointer-events: none;
-    height: 2px;
+    height: 3px;
     width: 0;
     left: 0px;
     bottom: -1px;
@@ -277,6 +277,20 @@
 .sw-theme-basic > .nav .nav-link.active {
     color: var(--sw-anchor-active-primary-color) !important;
     cursor: pointer;
+}
+
+.sw-theme-basic > .nav .nav-link.active:before {
+    content: "";
+    position: absolute;
+    border: 1rem solid transparent;
+    bottom: -30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    border-top-color: var(--sw-anchor-active-primary-color);
+    z-index: 1;
 }
 
 .sw-theme-basic > .nav .nav-link.active::after {
