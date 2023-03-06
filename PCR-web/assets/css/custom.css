@@ -537,7 +537,7 @@ hr.horizontal.dark {
     font-family: "themify";
 }
 .expandable-table tr td {
-    padding: 14px !important;;
+    /* padding: 14px !important;; */
     font-size: 14px;
 }
 .expandable-table tr td .cell-hilighted {
@@ -595,10 +595,20 @@ hr.horizontal.dark {
     height: calc(2.5rem + calc(var(--vz-border-width) * 1));
     line-height: 1.25;
 }
+.form-floating > textarea.form-control {
+    height: calc(3.5rem + calc(var(--vz-border-width) * 2));
+}
 .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
     opacity: 0.65;
     transform: scale(0.85) translateY(-0.3rem) translateX(0.015rem);
 }
 .form-floating > label {
     top: -9px;
+}
+.form-floating > .form-select {
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+.w-5 {
+    width: 5%;
 }

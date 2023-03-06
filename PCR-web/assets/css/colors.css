@@ -3,7 +3,7 @@
     background: linear-gradient(45deg,#36929b 0%,#34c2d0 100%);
 }
 
-.gradient-blue,.alert.alert-info {
+.gradient-blue {
     background: #0066e0;
     background: linear-gradient(45deg,#0066e0 0%,#00d0ff 100%);
 }

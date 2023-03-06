@@ -1945,8 +1945,8 @@ progress {
 }
 
 .table-success {
-  --vz-table-color: #000;
-  --vz-table-bg: #d1e7dd;
+  --vz-table-color: #fff;
+  --vz-table-bg: #55856F;
   --vz-table-border-color: #bcd0c7;
   --vz-table-striped-bg: #c7dbd2;
   --vz-table-striped-color: #000;
@@ -1960,7 +1960,7 @@ progress {
 
 .table-info {
   --vz-table-color: #000;
-  --vz-table-bg: #cff4fc;
+  --vz-table-bg: #2da9c9;
   --vz-table-border-color: #badce3;
   --vz-table-striped-bg: #c5e8ef;
   --vz-table-striped-color: #000;

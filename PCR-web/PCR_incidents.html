@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg">
+<html lang="en" data-layout="vertical" data-topbar="dark" data-sidebar-size="sm-hover">
 
 <head>
 
@@ -64,7 +64,7 @@
                                 <span></span>
                             </span>
                         </button>
-                        <div class="ms-1 header-item d-none d-sm-flex">
+                        <!-- <div class="ms-1 header-item d-none d-sm-flex">
                             <a href="dashboard.html" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="bottom" title="Dashboard" 
                                 class="text-white btn bg-gradient-info mx-2">
                                 <i class="fa-light fa-house-blank fa-lg"></i></a>
@@ -74,7 +74,7 @@
                             <a href="PCR_incidents.html" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="bottom" title="Show PCR / Incidents" 
                                 class="btn btn-chartreuse mx-2">
                                 <i class="fa-light fa-file-invoice fa-lg"></i></a>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="d-flex align-items-center">
@@ -181,15 +181,12 @@
                                                     <div class="flex-1">
                                                         <a href="#!" class="stretched-link">
                                                             <h6 class="mt-0 mb-2 lh-base">Your <b>Elite</b> author
-                                                                Graphic
-                                                                Optimization <span class="text-secondary">reward</span>
-                                                                is
-                                                                ready!
+                                                                Graphic Optimization <span class="text-secondary">reward</span>
+                                                                is ready!
                                                             </h6>
                                                         </a>
                                                         <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
-                                                            <span><i class="mdi mdi-clock-outline"></i> Just 30 sec
-                                                                ago</span>
+                                                            <span><i class="mdi mdi-clock-outline"></i> Just 30 sec ago</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -206,9 +203,8 @@
                                                     </div>
                                                     <div class="flex-1">
                                                         <a href="#!" class="stretched-link">
-                                                            <h6 class="mt-0 mb-2 fs-13 lh-base">You have received <b
-                                                                    class="text-success">20</b> new messages in the
-                                                                conversation
+                                                            <h6 class="mt-0 mb-2 fs-13 lh-base">You have received 
+                                                                <b class="text-success">20</b> new messages in the conversation
                                                             </h6>
                                                         </a>
                                                         <p class="mb-0 fs-11 fw-medium text-uppercase text-muted">
@@ -219,10 +215,8 @@
                                             </div>
 
                                             <div class="my-3 text-center view-all">
-                                                <button type="button"
-                                                    class="btn btn-soft-success waves-effect waves-light">View
-                                                    All Notifications <i
-                                                        class="ri-arrow-right-line align-middle"></i></button>
+                                                <button type="button" class="btn btn-soft-success waves-effect waves-light">View All Notifications 
+                                                    <i class="ri-arrow-right-line align-middle"></i></button>
                                             </div>
                                         </div>
 
@@ -287,7 +281,7 @@
                 </button>
             </div>
 
-            <div id="scrollbar" class="d-md-none d-xs-block">
+            <div id="scrollbar" class="d-md-none1 d-xs-block1">
                 <div class="container-fluid">
                     <div id="two-column-menu">
                     </div>
@@ -295,7 +289,7 @@
                         <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="dashboard.html" aria-controls="sidebarDashboards">
-                                <i class="bx bxs-dashboard"></i> <span data-key="t-dashboards">Dashboards</span>
+                                <i class="bi bi-columns-gap"></i> <span data-key="t-dashboards">Dashboards</span>
                             </a>
                         </li>
                         <!-- end Dashboard Menu -->
@@ -332,7 +326,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="dashboard.html">
-                                                <i class="bx bxs-dashboard fa-lg" style="color: var(--vz-topnav-item-color-active);"></i> Dashboard</a>
+                                                <i class="bi bi-columns-gap fa-lg" style="color: var(--vz-topnav-item-color-active);"></i> Dashboard</a>
                                         </li>
                                         <li class="breadcrumb-item active">PCR / Incident</li>
                                     </ol>
@@ -364,7 +358,7 @@
                             <div class="card" id="leadsList">
                                 <div class="card-body">
                                     <div class="table-responsive table-card">
-                                        <table id="example" class="table align-middle table-nowrap mb-0 mt-0 table-bordered table-hover display expandable-table w-100" aria-hidden="true">
+                                        <table id="example" class="table align-middle table-nowrap mb-0 mt-0 table-bordered display expandable-table w-100" aria-hidden="true">
                                           <thead class="table-success">
                                             <tr>
                                               <th>Incident No#</th>
@@ -1009,12 +1003,12 @@
         $(document).ready(function() {
             function format(d) {
                 // `d` is the original data object for the row
-                return '<table class="table align-middle table-nowrap mb-0 table-bordered w-100">'+
+                return '<table class="table align-middle table-nowrap mb-0 table-bordered table-striped w-100">'+
                         '<thead>'+
                             '<tr>'+
                                 '<th>PCR</th>'+
                                 '<th>Name</th>'+
-                                '<th></th>'+
+                                '<th class="w-5"></th>'+
                             '</tr>'+
                         '</thead>'+
                         '<tbody>'+

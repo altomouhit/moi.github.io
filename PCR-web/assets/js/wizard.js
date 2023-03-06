@@ -37,7 +37,7 @@ $(function() {
 		selected: 0,
 		autoAdjustHeight: false,
 		theme: 'basic', // basic, arrows, square, round, dots
-        enableUrlHash: false,
+        enableUrlHash: true,
 		transition: {
 			animation: 'slideSwing' // none|fade|slideHorizontal|slideVertical|slideSwing|css
 		},

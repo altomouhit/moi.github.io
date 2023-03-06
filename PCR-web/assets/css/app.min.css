@@ -696,7 +696,7 @@
 	padding: .625rem 1.5rem;
 	color: var(--vz-vertical-menu-item-color);
 	font-size: .925rem;
-	font-family: Rubik, sans-serif
+	
 }
 .navbar-menu .navbar-nav .nav-link.active {
 	color: var(--vz-vertical-menu-item-active-color)
@@ -770,7 +770,7 @@
 	white-space: none;
 	position: relative;
 	font-size: .875rem;
-	font-family: Rubik, sans-serif
+	
 }
 .navbar-menu .navbar-nav .nav-sm .nav-link:before {
 	content: "";
@@ -814,7 +814,7 @@
 	display: none
 }
 .navbar-brand-box {
-	padding: 0 1.3rem;
+	padding: 0 0.5rem;
 	text-align: center;
 	-webkit-transition: all .1s ease-out;
 	transition: all .1s ease-out
@@ -1233,7 +1233,10 @@
 	color: var(--vz-vertical-menu-item-color-dark)
 }
 [data-layout=vertical][data-sidebar=dark] .navbar-nav .nav-link.active {
-	color: var(--vz-vertical-menu-item-active-color-dark)
+	color: var(--vz-vertical-menu-item-active-color-dark);
+	background: rgba(255, 255, 255, 0.1);
+    color: #9ce9fd;
+    border-left: 5px solid #9ce9fd;
 }
 [data-layout=vertical][data-sidebar=dark] .navbar-nav .nav-link[data-bs-toggle=collapse]:after {
 	color: inherit
@@ -3849,16 +3852,16 @@ code {
 	border-top: 10px solid
 }
 .ribbon-three-primary span {
-	background: #6691e7
+	background: #0d6efd
 }
 .ribbon-three-primary span:before {
-	background: #6691e7
+	background: #0d6efd
 }
 .ribbon-three-primary span:after {
 	background: #3a71e0
 }
 .ribbon-three-primary::after {
-	border-top-color: #6691e7
+	border-top-color: #0d6efd
 }
 .ribbon-three-secondary span {
 	background: #865ce2
@@ -4040,9 +4043,9 @@ label {
 	font-weight: 400;
 	margin-bottom: .5rem
 }
-b, strong {
+/* b, strong {
 	font-weight: 500
-}
+} */
 .blockquote {
 	padding: 10px 20px;
 	border-left: 4px solid var(--vz-gray-300)
@@ -5522,7 +5525,7 @@ a, button {
 .nav-tabs-custom .nav-item .nav-link::after {
 	content: "";
 	background: #6691e7;
-	height: 1px;
+	height: 3px;
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -5814,14 +5817,18 @@ a, button {
 	background-color: var(--vz-card-bg-custom)
 }
 .nav-success.nav-tabs-custom .nav-link.active {
-	color: #13c56b;
-	background-color: var(--vz-card-bg-custom)
+	/* color: #13c56b;
+	background-color: var(--vz-card-bg-custom); */
+	color: purple;
+    background-color: transparent;
+    font-weight: bold;
 }
 .nav-success.nav-tabs-custom .nav-link.active::after {
-	background-color: #13c56b
+	/* background-color: #13c56b */
+	background-color: purple;
 }
 .nav-success.arrow-navtabs .nav-link.active::before {
-	border-top-color: purple
+	border-top-color: purple;
 }
 .nav-success.custom-verti-nav-pills .nav-link.active::before {
 	border-left-color: #13c56b
@@ -9227,7 +9234,7 @@ button.gridjs-sort-asc, button.gridjs-sort-desc {
 }
 .leaflet-map.leaflet-container {
 	z-index: 0;
-	font-family: Rubik, sans-serif
+	
 }
 .fc td, .fc th {
 	border: 1px solid var(--vz-border-color)

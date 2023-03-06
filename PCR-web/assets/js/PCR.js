@@ -1,6 +1,7 @@
 window.onload = function () {
     $("#pastMedicalHistoryTxt, #pComments, #transportDiv, #nonTransportDiv, #hospitalDiv, #nonTransportCrimeDiv").hide();
     $("#mAirwayCommentDiv, #oxygenLPMDiv, #immoblazatiomDiv, #splintingDiv, #defibrillationDiv, #IVIODiv, #mOthersDiv, #timeDiv").hide();
+    $("#PDOADiv, #refused").hide();
     //$('.selector').editableSelect();
     $('.selector').editableSelect({
         // enable filter
@@ -36,37 +37,41 @@ $(document).ready(function() {
             $("#pComments").hide();
         }
     });
-    $('#tansportCategory').editableSelect().on('select.editable-select', function(e, li) {
-        //$('#afterSelect').html(li.val() + '. ' + li.text());
-        if (li.val() == 1) {
-            $("#transportDiv").show();
-            $("#nonTransportDiv").hide();
-        } else if (li.val() == 2) {
-            $("#transportDiv").hide();
-            $("#nonTransportDiv").show();
-        } else {
-            $("#transportDiv").hide();
-            $("#nonTransportDiv").hide();
-        }
-    });
-    $('#tansport').editableSelect().on('select.editable-select', function(e, li) {
-        //$('#afterSelect').html(li.val() + '. ' + li.text());
-        if (li.val() == 5) {
-            $("#hospitalDiv").show();
-        } else {
-            $("#hospitalDiv").hide();
-        }
-    });
-    $('#nonTansport').editableSelect().on('select.editable-select', function(e, li) {
-        //$('#afterSelect').html(li.val() + '. ' + li.text());
-        if (li.val() == 8) {
-            $("#nonTransportCrimeDiv").show();
-        } else {
-            $("#nonTransportCrimeDiv").hide();
-        }
-    });
+    
 });
-
+$("#tansportCategory").on('change', function() {
+    if (this.value == 1) {
+        $("#transportDiv").show();
+        $("#nonTransportDiv, #nonTransportCrimeDiv, #PDOADiv, #refused").hide();
+    } else if (this.value == 2) {
+        $("#transportDiv, #hospitalDiv").hide();
+        $("#nonTransportDiv").show();
+    } else {
+        $("#transportDiv").hide();
+        $("#nonTransportDiv").hide();
+    }
+});
+$('#tansport').on('change', function() {
+    if (this.value == 5) {
+        $("#hospitalDiv").show();
+    } else {
+        $("#hospitalDiv").hide();
+    }
+});
+$('#nonTansport').on('change', function() {
+    if (this.value == 8) {
+        $("#nonTransportCrimeDiv").show();
+        $("#PDOADiv, #refused").hide();
+    } else if (this.value == 4) {
+        $("#PDOADiv").show();
+        $("#nonTransportCrimeDiv, #refused").hide();
+    } else if (this.value == 7) {
+        $("#refused").show();
+        $("#nonTransportCrimeDiv, #PDOADiv").hide();
+    } else {
+        $("#nonTransportCrimeDiv, #PDOADiv, #refused").hide();
+    }
+});
 $("#mAirway").on('change', function() {
     if(this.value == 5) {
         $("#mAirwayCommentDiv, #mAirwayDoneByDiv").show();
