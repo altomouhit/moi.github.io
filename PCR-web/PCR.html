@@ -2204,7 +2204,7 @@
                                                                                 <div class="row align-items-center">
                                                                                     <label for="signureReceived" class="col-sm-5 col-form-label d-flex align-items-center justify-content-end fw-bold">Signature:</label>
                                                                                     <div class="col-sm-7 d-flex justify-content-between">
-                                                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="signatureBtn" data-bs-target="#signatureModal">
+                                                                                        <button type="button" class="btn btn-primary" id="signatureBtn" data-bs-toggle="modal" data-bs-target="#signatureModal">
                                                                                             <i class="fa-light fa-signature fa-lg"></i></button>
                                                                                     </div>
                                                                                 </div>
@@ -3321,7 +3321,7 @@
                                                             <td><input type="text" class="form-control" id="witnessesName1" placeholder="Witnesses Name" /></td>
                                                             <td><input type="text" class="form-control" id="placeWork1" placeholder="Place of work" /></td>
                                                             <td><input type="text" class="form-control" id="relativeRelation1" placeholder="Relative Relation"></td>
-                                                            <td><button type="button" class="btn btn-primary"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signatureModal"><i class="fa-light fa-signature fa-lg"></i></button></td>
                                                         </tr>
                                                         <tr>
                                                             <td class="text-muted">2</td>
@@ -3329,7 +3329,7 @@
                                                             <td><input type="text" class="form-control" id="witnessesName2" placeholder="Witnesses Name" /></td>
                                                             <td><input type="text" class="form-control" id="placeWork2" placeholder="Place of work" /></td>
                                                             <td><input type="text" class="form-control" id="relativeRelation2" placeholder="Relative Relation"></td>
-                                                            <td><button type="button" class="btn btn-success"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                            <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signatureDoneModal"><i class="fa-light fa-signature fa-lg"></i></button></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -3362,14 +3362,14 @@
                                                             <td><input type="text" class="form-control" id="ambulanceMilitaryID1" placeholder="Military ID"></td>
                                                             <td><input type="text" class="form-control" id="ambulanceName1" placeholder="Name" /></td>
                                                             <td><input type="text" class="form-control" id="jobTitle1" placeholder="Job title" /></td>
-                                                            <td><button type="button" class="btn btn-success"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                            <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signatureDoneModal"><i class="fa-light fa-signature fa-lg"></i></button></td>
                                                         </tr>
                                                         <tr>
                                                             <td class="text-muted">2</td>
                                                             <td><input type="text" class="form-control" id="ambulanceMilitaryID2" placeholder="Military ID"></td>
                                                             <td><input type="text" class="form-control" id="ambulanceName2" placeholder="Name" /></td>
                                                             <td><input type="text" class="form-control" id="jobTitle2" placeholder="Job title" /></td>
-                                                            <td><button type="button" class="btn btn-primary"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signatureModal"><i class="fa-light fa-signature fa-lg"></i></button></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -3555,7 +3555,8 @@
                                         <!--end col-->
                                         <div class="col-lg-3 col-sm-6 mb-2">
                                             <label for="signatureRecipient">Signature</label>
-                                            <input type="text" class="form-control" id="signatureRecipient" placeholder="Signature">
+                                            <!-- <input type="text" class="form-control" id="signatureRecipient" placeholder="Signature"> -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signatureModal"><i class="fa-light fa-signature fa-lg"></i></button>
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -3579,7 +3580,8 @@
                                         <!--end col-->
                                         <div class="col-lg-3 col-sm-6 mb-2">
                                             <label for="signatureRecipient">Signature</label>
-                                            <input type="text" class="form-control" id="signatureRecipient" placeholder="Signature">
+                                            <!-- <input type="text" class="form-control" id="signatureRecipient" placeholder="Signature"> -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signatureModal"><i class="fa-light fa-signature fa-lg"></i></button>
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -3601,8 +3603,9 @@
                                         </div>
                                         <!--end col-->
                                         <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="ambulanceSignature">Signature</label>
-                                            <input type="text" class="form-control" id="ambulanceSignature" placeholder="Signature">
+                                             <label for="ambulanceSignature">Signature</label>
+                                            <!-- <input type="text" class="form-control" id="ambulanceSignature" placeholder="Signature"> -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signatureModal"><i class="fa-light fa-signature fa-lg"></i></button>
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -3621,7 +3624,8 @@
                                         <!--end col-->
                                         <div class="col-lg-3 col-sm-6 mb-2">
                                             <label for="ambulanceSignature2">Signature</label>
-                                            <input type="text" class="form-control" id="ambulanceSignature2" placeholder="Signature">
+                                             <!--<input type="text" class="form-control" id="ambulanceSignature2" placeholder="Signature"> -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signatureModal"><i class="fa-light fa-signature fa-lg"></i></button>
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -3815,7 +3819,10 @@
                             <fieldset>
                                 <div class="row">
                                     <div class="col-12 p-1 text-center">
-                                        <i class="fa-light fa-signature fa-10x"></i>
+                                        <!-- <i class="fa-light fa-signature fa-10x"></i> -->
+                                        <lord-icon src="https://cdn.lordicon.com/puvaffet.json" trigger="loop"
+                                            style="width:150px;height:150px">
+                                        </lord-icon>
                                     </div>
                                 </div>
                             </fieldset>
