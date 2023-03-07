@@ -530,11 +530,17 @@ hr.horizontal.dark {
  }
 
  .expandable-table tr.shown td.details-control:before {
-    content: '\e648';
+    content: '\e622';
 }
 .expandable-table tr td.details-control:before {
-    content: '\e64b';
+    content: '\e61a';
     font-family: "themify";
+    background: rebeccapurple;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-transition: all .1s ease-out;
+	transition: all .1s ease-out
 }
 .expandable-table tr td {
     /* padding: 14px !important;; */
