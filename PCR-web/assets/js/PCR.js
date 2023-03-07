@@ -23,7 +23,7 @@ window.onload = function () {
 $(document).ready(function() {
     $('#pastMedicalHistory').editableSelect().on('select.editable-select', function(e, li) {
         //$('#afterSelect').html(li.val() + '. ' + li.text());
-        if (li.val() == 5) {
+        if (li.val() == 12) {
             $("#pastMedicalHistoryTxt").show();
         } else {
             $("#pastMedicalHistoryTxt").hide();

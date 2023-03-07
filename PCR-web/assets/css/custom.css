@@ -612,3 +612,6 @@ hr.horizontal.dark {
 .w-5 {
     width: 5%;
 }
+.text-justify {
+    text-align: justify;
+}

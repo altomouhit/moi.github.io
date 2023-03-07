@@ -10,6 +10,9 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/img/Khanjar.png" />
 
+    <!-- Plugins css -->
+    <link href="assets/libs/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
+
     <!-- Layout config Js -->
     <script src="assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
@@ -283,6 +286,12 @@
                             </a>
                         </li>
                         <!-- end Show PCR / Incidents Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="PCR.html" aria-controls="sidebarCreateNew">
+                                <img src="assets/img/create.svg" class="me-1" alt="create" width="21" /> <span data-key="t-CreateNew">Create New</span>
+                            </a>
+                        </li>
+                        <!-- end Create New Menu -->
                     </ul>
                 </div>
                 <!-- Sidebar -->
@@ -388,12 +397,10 @@
                                                         </div>
                                                         <div class="col-lg-3">
                                                             <div class="form-floating">
-                                                                <select class="form-select selector" id="callType" aria-label="Floating label">
+                                                                <select class="form-select" id="callType" aria-label="Floating label">
                                                                     <option value="">Please select</option>
-                                                                    <option value="1">option 1</option>
-                                                                    <option value="2">option 2</option>
-                                                                    <option value="3">option 3</option>
-                                                                    <option value="4">option 4</option>
+                                                                    <option value="1">Truma</option>
+                                                                    <option value="2">Medical</option>
                                                                 </select>
                                                                 <label for="callType">Call Type</label>
                                                             </div>
@@ -402,10 +409,12 @@
                                                             <div class="form-floating">
                                                                 <select class="form-select selector" id="callCategory" aria-label="Floating label">
                                                                     <option value="">Please select</option>
-                                                                    <option value="1">option 1</option>
-                                                                    <option value="2">option 2</option>
-                                                                    <option value="3">option 3</option>
-                                                                    <option value="4">option 4</option>
+                                                                    <option value="1">Assault</option>
+                                                                    <option value="2">Auto/Truck</option>
+                                                                    <option value="3">Drowning/ Nera drowning</option>
+                                                                    <option value="4">Falls</option>
+                                                                    <option value="5">Others injury</option>
+                                                                    <option value="6">other transport injuries</option>
                                                                 </select>
                                                                 <label for="callCategory">Call Category</label>
                                                             </div>
@@ -504,7 +513,7 @@
                                                         <div class="col-lg-3">
                                                             <div class="input-group">
                                                                 <div class="form-floating">
-                                                                    <select class="form-select selector" id="gender" aria-label="Floating label">
+                                                                    <select class="form-select" id="gender" aria-label="Floating label">
                                                                         <option value="">Please select</option>
                                                                         <option value="1">Male</option>
                                                                         <option value="2">Female</option>
@@ -519,8 +528,198 @@
                                                                 <div class="form-floating">
                                                                     <select class="form-select selector" id="nationality" aria-label="Floating label">
                                                                         <option value="">Please select</option>
-                                                                        <option value="1">Omani</option>
-                                                                        <option value="2">Indian</option>
+                                                                        <option value="afghan">Afghan</option>
+                                                                        <option value="albanian">Albanian</option>
+                                                                        <option value="algerian">Algerian</option>
+                                                                        <option value="american">American</option>
+                                                                        <option value="andorran">Andorran</option>
+                                                                        <option value="angolan">Angolan</option>
+                                                                        <option value="antiguans">Antiguans</option>
+                                                                        <option value="argentinean">Argentinean</option>
+                                                                        <option value="armenian">Armenian</option>
+                                                                        <option value="australian">Australian</option>
+                                                                        <option value="austrian">Austrian</option>
+                                                                        <option value="azerbaijani">Azerbaijani</option>
+                                                                        <option value="bahamian">Bahamian</option>
+                                                                        <option value="bahraini">Bahraini</option>
+                                                                        <option value="bangladeshi">Bangladeshi</option>
+                                                                        <option value="barbadian">Barbadian</option>
+                                                                        <option value="barbudans">Barbudans</option>
+                                                                        <option value="batswana">Batswana</option>
+                                                                        <option value="belarusian">Belarusian</option>
+                                                                        <option value="belgian">Belgian</option>
+                                                                        <option value="belizean">Belizean</option>
+                                                                        <option value="beninese">Beninese</option>
+                                                                        <option value="bhutanese">Bhutanese</option>
+                                                                        <option value="bolivian">Bolivian</option>
+                                                                        <option value="bosnian">Bosnian</option>
+                                                                        <option value="brazilian">Brazilian</option>
+                                                                        <option value="british">British</option>
+                                                                        <option value="bruneian">Bruneian</option>
+                                                                        <option value="bulgarian">Bulgarian</option>
+                                                                        <option value="burkinabe">Burkinabe</option>
+                                                                        <option value="burmese">Burmese</option>
+                                                                        <option value="burundian">Burundian</option>
+                                                                        <option value="cambodian">Cambodian</option>
+                                                                        <option value="cameroonian">Cameroonian</option>
+                                                                        <option value="canadian">Canadian</option>
+                                                                        <option value="cape verdean">Cape Verdean</option>
+                                                                        <option value="central african">Central African</option>
+                                                                        <option value="chadian">Chadian</option>
+                                                                        <option value="chilean">Chilean</option>
+                                                                        <option value="chinese">Chinese</option>
+                                                                        <option value="colombian">Colombian</option>
+                                                                        <option value="comoran">Comoran</option>
+                                                                        <option value="congolese">Congolese</option>
+                                                                        <option value="costa rican">Costa Rican</option>
+                                                                        <option value="croatian">Croatian</option>
+                                                                        <option value="cuban">Cuban</option>
+                                                                        <option value="cypriot">Cypriot</option>
+                                                                        <option value="czech">Czech</option>
+                                                                        <option value="danish">Danish</option>
+                                                                        <option value="djibouti">Djibouti</option>
+                                                                        <option value="dominican">Dominican</option>
+                                                                        <option value="dutch">Dutch</option>
+                                                                        <option value="east timorese">East Timorese</option>
+                                                                        <option value="ecuadorean">Ecuadorean</option>
+                                                                        <option value="egyptian">Egyptian</option>
+                                                                        <option value="emirian">Emirian</option>
+                                                                        <option value="equatorial guinean">Equatorial Guinean</option>
+                                                                        <option value="eritrean">Eritrean</option>
+                                                                        <option value="estonian">Estonian</option>
+                                                                        <option value="ethiopian">Ethiopian</option>
+                                                                        <option value="fijian">Fijian</option>
+                                                                        <option value="filipino">Filipino</option>
+                                                                        <option value="finnish">Finnish</option>
+                                                                        <option value="french">French</option>
+                                                                        <option value="gabonese">Gabonese</option>
+                                                                        <option value="gambian">Gambian</option>
+                                                                        <option value="georgian">Georgian</option>
+                                                                        <option value="german">German</option>
+                                                                        <option value="ghanaian">Ghanaian</option>
+                                                                        <option value="greek">Greek</option>
+                                                                        <option value="grenadian">Grenadian</option>
+                                                                        <option value="guatemalan">Guatemalan</option>
+                                                                        <option value="guinea-bissauan">Guinea-Bissauan</option>
+                                                                        <option value="guinean">Guinean</option>
+                                                                        <option value="guyanese">Guyanese</option>
+                                                                        <option value="haitian">Haitian</option>
+                                                                        <option value="herzegovinian">Herzegovinian</option>
+                                                                        <option value="honduran">Honduran</option>
+                                                                        <option value="hungarian">Hungarian</option>
+                                                                        <option value="icelander">Icelander</option>
+                                                                        <option value="indian">Indian</option>
+                                                                        <option value="indonesian">Indonesian</option>
+                                                                        <option value="iranian">Iranian</option>
+                                                                        <option value="iraqi">Iraqi</option>
+                                                                        <option value="irish">Irish</option>
+                                                                        <option value="israeli">Israeli</option>
+                                                                        <option value="italian">Italian</option>
+                                                                        <option value="ivorian">Ivorian</option>
+                                                                        <option value="jamaican">Jamaican</option>
+                                                                        <option value="japanese">Japanese</option>
+                                                                        <option value="jordanian">Jordanian</option>
+                                                                        <option value="kazakhstani">Kazakhstani</option>
+                                                                        <option value="kenyan">Kenyan</option>
+                                                                        <option value="kittian and nevisian">Kittian and Nevisian</option>
+                                                                        <option value="kuwaiti">Kuwaiti</option>
+                                                                        <option value="kyrgyz">Kyrgyz</option>
+                                                                        <option value="laotian">Laotian</option>
+                                                                        <option value="latvian">Latvian</option>
+                                                                        <option value="lebanese">Lebanese</option>
+                                                                        <option value="liberian">Liberian</option>
+                                                                        <option value="libyan">Libyan</option>
+                                                                        <option value="liechtensteiner">Liechtensteiner</option>
+                                                                        <option value="lithuanian">Lithuanian</option>
+                                                                        <option value="luxembourger">Luxembourger</option>
+                                                                        <option value="macedonian">Macedonian</option>
+                                                                        <option value="malagasy">Malagasy</option>
+                                                                        <option value="malawian">Malawian</option>
+                                                                        <option value="malaysian">Malaysian</option>
+                                                                        <option value="maldivan">Maldivan</option>
+                                                                        <option value="malian">Malian</option>
+                                                                        <option value="maltese">Maltese</option>
+                                                                        <option value="marshallese">Marshallese</option>
+                                                                        <option value="mauritanian">Mauritanian</option>
+                                                                        <option value="mauritian">Mauritian</option>
+                                                                        <option value="mexican">Mexican</option>
+                                                                        <option value="micronesian">Micronesian</option>
+                                                                        <option value="moldovan">Moldovan</option>
+                                                                        <option value="monacan">Monacan</option>
+                                                                        <option value="mongolian">Mongolian</option>
+                                                                        <option value="moroccan">Moroccan</option>
+                                                                        <option value="mosotho">Mosotho</option>
+                                                                        <option value="motswana">Motswana</option>
+                                                                        <option value="mozambican">Mozambican</option>
+                                                                        <option value="namibian">Namibian</option>
+                                                                        <option value="nauruan">Nauruan</option>
+                                                                        <option value="nepalese">Nepalese</option>
+                                                                        <option value="new zealander">New Zealander</option>
+                                                                        <option value="ni-vanuatu">Ni-Vanuatu</option>
+                                                                        <option value="nicaraguan">Nicaraguan</option>
+                                                                        <option value="nigerien">Nigerien</option>
+                                                                        <option value="north korean">North Korean</option>
+                                                                        <option value="northern irish">Northern Irish</option>
+                                                                        <option value="norwegian">Norwegian</option>
+                                                                        <option value="omani">Omani</option>
+                                                                        <option value="pakistani">Pakistani</option>
+                                                                        <option value="palauan">Palauan</option>
+                                                                        <option value="panamanian">Panamanian</option>
+                                                                        <option value="papua new guinean">Papua New Guinean</option>
+                                                                        <option value="paraguayan">Paraguayan</option>
+                                                                        <option value="peruvian">Peruvian</option>
+                                                                        <option value="polish">Polish</option>
+                                                                        <option value="portuguese">Portuguese</option>
+                                                                        <option value="qatari">Qatari</option>
+                                                                        <option value="romanian">Romanian</option>
+                                                                        <option value="russian">Russian</option>
+                                                                        <option value="rwandan">Rwandan</option>
+                                                                        <option value="saint lucian">Saint Lucian</option>
+                                                                        <option value="salvadoran">Salvadoran</option>
+                                                                        <option value="samoan">Samoan</option>
+                                                                        <option value="san marinese">San Marinese</option>
+                                                                        <option value="sao tomean">Sao Tomean</option>
+                                                                        <option value="saudi">Saudi</option>
+                                                                        <option value="scottish">Scottish</option>
+                                                                        <option value="senegalese">Senegalese</option>
+                                                                        <option value="serbian">Serbian</option>
+                                                                        <option value="seychellois">Seychellois</option>
+                                                                        <option value="sierra leonean">Sierra Leonean</option>
+                                                                        <option value="singaporean">Singaporean</option>
+                                                                        <option value="slovakian">Slovakian</option>
+                                                                        <option value="slovenian">Slovenian</option>
+                                                                        <option value="solomon islander">Solomon Islander</option>
+                                                                        <option value="somali">Somali</option>
+                                                                        <option value="south african">South African</option>
+                                                                        <option value="south korean">South Korean</option>
+                                                                        <option value="spanish">Spanish</option>
+                                                                        <option value="sri lankan">Sri Lankan</option>
+                                                                        <option value="sudanese">Sudanese</option>
+                                                                        <option value="surinamer">Surinamer</option>
+                                                                        <option value="swazi">Swazi</option>
+                                                                        <option value="swedish">Swedish</option>
+                                                                        <option value="swiss">Swiss</option>
+                                                                        <option value="syrian">Syrian</option>
+                                                                        <option value="taiwanese">Taiwanese</option>
+                                                                        <option value="tajik">Tajik</option>
+                                                                        <option value="tanzanian">Tanzanian</option>
+                                                                        <option value="thai">Thai</option>
+                                                                        <option value="togolese">Togolese</option>
+                                                                        <option value="tongan">Tongan</option>
+                                                                        <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                                                                        <option value="tunisian">Tunisian</option>
+                                                                        <option value="turkish">Turkish</option>
+                                                                        <option value="tuvaluan">Tuvaluan</option>
+                                                                        <option value="ugandan">Ugandan</option>
+                                                                        <option value="ukrainian">Ukrainian</option>
+                                                                        <option value="uruguayan">Uruguayan</option>
+                                                                        <option value="uzbekistani">Uzbekistani</option>
+                                                                        <option value="venezuelan">Venezuelan</option>
+                                                                        <option value="vietnamese">Vietnamese</option>
+                                                                        <option value="welsh">Welsh</option>
+                                                                        <option value="yemenite">Yemenite</option>
+                                                                        <option value="zambian">Zambian</option>
+                                                                        <option value="zimbabwean">Zimbabwean</option>
                                                                     </select>
                                                                     <label for="nationality">Nationality</label>
                                                                 </div>
@@ -733,10 +932,12 @@
                                                                     <div class="form-floating">
                                                                         <select class="form-select selector" id="airway" aria-label="Floating label">
                                                                             <option value="">Please select</option>
-                                                                            <option value="1">option 1</option>
-                                                                            <option value="2">option 2</option>
-                                                                            <option value="3">option 3</option>
-                                                                            <option value="4">option 4</option>
+                                                                            <option value="1">Blood</option>
+                                                                            <option value="2">Clear</option>
+                                                                            <option value="3">Hoarseness</option>
+                                                                            <option value="4">Secretions</option>
+                                                                            <option value="5">Snoring</option>
+                                                                            <option value="6">Stridor</option>
                                                                         </select>
                                                                         <label for="airway">Airway</label>
                                                                     </div>
@@ -745,10 +946,13 @@
                                                                     <div class="form-floating">
                                                                         <select class="form-select selector" id="breathing" aria-label="Floating label">
                                                                             <option value="">Please select</option>
-                                                                            <option value="1">option 1</option>
-                                                                            <option value="2">option 2</option>
-                                                                            <option value="3">option 3</option>
-                                                                            <option value="4">option 4</option>
+                                                                            <option value="1">Decreased Air Movement</option>
+                                                                            <option value="2">Equal Air Entry Both Side</option>
+                                                                            <option value="3">Gasping</option>
+                                                                            <option value="4">Increase Respiratory Rate and Effort</option>
+                                                                            <option value="5">Irregular Respiration Pattern</option>
+                                                                            <option value="6">No Breathing Effort</option>
+                                                                            <option value="7">Normal Air Movement</option>
                                                                         </select>
                                                                         <label for="breathing">Breathing</label>
                                                                     </div>
@@ -757,10 +961,18 @@
                                                                     <div class="form-floating">
                                                                         <select class="form-select selector" id="circulation" aria-label="Floating label">
                                                                             <option value="">Please select</option>
-                                                                            <option value="1">option 1</option>
-                                                                            <option value="2">option 2</option>
-                                                                            <option value="3">option 3</option>
-                                                                            <option value="4">option 4</option>
+                                                                            <option value="1">Cool Skin</option>
+                                                                            <option value="2">Cyanosis</option>
+                                                                            <option value="3">Delayed</option>
+                                                                            <option value="4">Fast</option>
+                                                                            <option value="5">Mottling</option>
+                                                                            <option value="6">Normal</option>
+                                                                            <option value="7">Pallor</option>
+                                                                            <option value="8">Pink</option>
+                                                                            <option value="9">Present</option>
+                                                                            <option value="10">Slow</option>
+                                                                            <option value="11">Warm Skin</option>
+                                                                            <option value="12">Weak</option>
                                                                         </select>
                                                                         <label for="circulation">Circulation</label>
                                                                     </div>
@@ -777,8 +989,16 @@
                                                                                                 <div class="form-floating">
                                                                                                     <select class="form-select selector" id="head" aria-label="Floating label ">
                                                                                                         <option value="">Please select</option>
-                                                                                                        <option value="1">Left</option>
-                                                                                                        <option value="2">Right</option>
+                                                                                                        <option value="1">Deformities</option>
+                                                                                                        <option value="2">Contusions</option>
+                                                                                                        <option value="3">Abrasions</option>
+                                                                                                        <option value="4">Punctures Penetrations</option>
+                                                                                                        <option value="5">Burns</option>
+                                                                                                        <option value="6">Tenderness</option>
+                                                                                                        <option value="7">Lacerations</option>
+                                                                                                        <option value="8">Swellings</option>
+                                                                                                        <option value="9">NO _DCAP_BTLS</option>
+                                                                                                        <option value="10">OTHER</option>
                                                                                                     </select>
                                                                                                     <label for="head">Head</label>
                                                                                                 </div>
@@ -796,8 +1016,16 @@
                                                                                                 <div class="form-floating">
                                                                                                     <select class="form-select selector" id="neck" aria-label="Floating label ">
                                                                                                         <option value="">Please select</option>
-                                                                                                        <option value="1">Left</option>
-                                                                                                        <option value="2">Right</option>
+                                                                                                        <option value="1">Deformities</option>
+                                                                                                        <option value="2">Contusions</option>
+                                                                                                        <option value="3">Abrasions</option>
+                                                                                                        <option value="4">Punctures Penetrations</option>
+                                                                                                        <option value="5">Burns</option>
+                                                                                                        <option value="6">Tenderness</option>
+                                                                                                        <option value="7">Lacerations</option>
+                                                                                                        <option value="8">Swellings</option>
+                                                                                                        <option value="9">NO _DCAP_BTLS</option>
+                                                                                                        <option value="10">OTHER</option>
                                                                                                     </select>
                                                                                                     <label for="neck">Neck</label>
                                                                                                 </div>
@@ -815,8 +1043,18 @@
                                                                                                 <div class="form-floating">
                                                                                                     <select class="form-select selector" id="abdomen" aria-label="Floating label ">
                                                                                                         <option value="">Please select</option>
-                                                                                                        <option value="1">Left</option>
-                                                                                                        <option value="2">Right</option>
+                                                                                                        <option value="1">Deformities</option>
+                                                                                                        <option value="2">Contusions</option>
+                                                                                                        <option value="3">Abrasions</option>
+                                                                                                        <option value="4">Punctures Penetrations</option>
+                                                                                                        <option value="5">Burns</option>
+                                                                                                        <option value="6">Tenderness</option>
+                                                                                                        <option value="7">Lacerations</option>
+                                                                                                        <option value="8">Swellings</option>
+                                                                                                        <option value="9">Soft Nontender</option>
+                                                                                                        <option value="10">Rigid Guarding</option>
+                                                                                                        <option value="11">NO_DCAP_BTLS</option>
+                                                                                                        <option value="12">OTHER</option>
                                                                                                     </select>
                                                                                                     <label for="abdomen">Abdomen</label>
                                                                                                 </div>
@@ -838,8 +1076,18 @@
                                                                                                 <div class="form-floating">
                                                                                                     <select class="form-select selector" id="pelvic" aria-label="Floating label ">
                                                                                                         <option value="">Please select</option>
-                                                                                                        <option value="1">Left</option>
-                                                                                                        <option value="2">Right</option>
+                                                                                                        <option value="1">Deformities</option>
+                                                                                                        <option value="2">Contusions</option>
+                                                                                                        <option value="3">Abrasions</option>
+                                                                                                        <option value="4">Punctures Penetrations</option>
+                                                                                                        <option value="5">Burns</option>
+                                                                                                        <option value="6">Tenderness</option>
+                                                                                                        <option value="7">Lacerations</option>
+                                                                                                        <option value="8">Swellings</option>
+                                                                                                        <option value="9">Stable</option>
+                                                                                                        <option value="10">Unstable</option>
+                                                                                                        <option value="11">NO DCAP_BTLS</option>
+                                                                                                        <option value="12">OTHER</option>
                                                                                                     </select>
                                                                                                     <label for="pelvic">Pelvic</label>
                                                                                                 </div>
@@ -857,8 +1105,22 @@
                                                                                                 <div class="form-floating">
                                                                                                     <select class="form-select selector" id="chest" aria-label="Floating label ">
                                                                                                         <option value="">Please select</option>
-                                                                                                        <option value="1">Left</option>
-                                                                                                        <option value="2">Right</option>
+                                                                                                        <option value="1">Deformities</option>
+                                                                                                        <option value="2">Contusions</option>
+                                                                                                        <option value="3">Abrasions</option>
+                                                                                                        <option value="4">Punctures Penetrations</option>
+                                                                                                        <option value="5">Burns</option>
+                                                                                                        <option value="6">Tenderness</option>
+                                                                                                        <option value="7">Lacerations</option>
+                                                                                                        <option value="8">Swellings</option>
+                                                                                                        <option value="9">Equal Bilateral</option>
+                                                                                                        <option value="10">Decreased Left Right</option>
+                                                                                                        <option value="11">Rales Crepitation</option>
+                                                                                                        <option value="12">Wheeze</option>
+                                                                                                        <option value="13">Rhonchi</option>
+                                                                                                        <option value="14">Sling</option>
+                                                                                                        <option value="15">NO _DCAP_BTLS</option>
+                                                                                                        <option value="16">OTHER</option>
                                                                                                     </select>
                                                                                                     <label for="chest">Chest</label>
                                                                                                 </div>
@@ -876,8 +1138,17 @@
                                                                                                 <div class="form-floating">
                                                                                                     <select class="form-select selector" id="back" aria-label="Floating label ">
                                                                                                         <option value="">Please select</option>
-                                                                                                        <option value="1">Left</option>
-                                                                                                        <option value="2">Right</option>
+                                                                                                        <option value="1">Deformities</option>
+                                                                                                        <option value="2">Contusions</option>
+                                                                                                        <option value="3">Abrasions</option>
+                                                                                                        <option value="4">Punctures Penetrations</option>
+                                                                                                        <option value="5">Burns</option>
+                                                                                                        <option value="6">Tenderness</option>
+                                                                                                        <option value="7">Lacerations</option>
+                                                                                                        <option value="8">Swellings</option>
+                                                                                                        <option value="9">NO DCAP_BTLS</option>
+                                                                                                        <option value="10">OTHER</option>
+
                                                                                                     </select>
                                                                                                     <label for="back">Back</label>
                                                                                                 </div>
@@ -917,9 +1188,17 @@
                                                                                             <div class="form-floating">
                                                                                                 <select class="form-select selector" id="upperEXTLeft" aria-label="Floating label ">
                                                                                                     <option value="">Please select</option>
-                                                                                                    <option value="1">Option 1</option>
-                                                                                                    <option value="2">Option 2</option>
-                                                                                                    <option value="3">Option 3</option>
+                                                                                                    <option value="1">Deformities</option>
+                                                                                                    <option value="2">Contusions</option>
+                                                                                                    <option value="3">Abrasions</option>
+                                                                                                    <option value="4">Punctures Penetrations</option>
+                                                                                                    <option value="5">Burns</option>
+                                                                                                    <option value="6">Tenderness</option>
+                                                                                                    <option value="7">Lacerations</option>
+                                                                                                    <option value="8">Swellings</option>
+                                                                                                    <option value="9">NO DCAP_BTLS</option>
+                                                                                                    <option value="10">OTHER</option>
+
                                                                                                 </select>
                                                                                                 <label for="upperEXTLeft">Upper EXT Left</label>
                                                                                             </div>
@@ -934,9 +1213,8 @@
                                                                                             <div class="form-floating">
                                                                                                 <select class="form-select selector" id="upperPMS" aria-label="Floating label ">
                                                                                                     <option value="">Please select</option>
-                                                                                                    <option value="1">Option 1</option>
-                                                                                                    <option value="2">Option 2</option>
-                                                                                                    <option value="3">Option 3</option>
+                                                                                                    <option value="1">Absent</option>
+                                                                                                    <option value="2">Present</option>
                                                                                                 </select>
                                                                                                 <label for="upperPMS">PMS</label>
                                                                                             </div>
@@ -956,9 +1234,16 @@
                                                                                             <div class="form-floating">
                                                                                                 <select class="form-select selector" id="upperEXTRight" aria-label="Floating label ">
                                                                                                     <option value="">Please select</option>
-                                                                                                    <option value="1">Option 1</option>
-                                                                                                    <option value="2">Option 2</option>
-                                                                                                    <option value="3">Option 3</option>
+                                                                                                    <option value="1">Deformities</option>
+                                                                                                    <option value="2">Contusions</option>
+                                                                                                    <option value="3">Abrasions</option>
+                                                                                                    <option value="4">Punctures Penetrations</option>
+                                                                                                    <option value="5">Burns</option>
+                                                                                                    <option value="6">Tenderness</option>
+                                                                                                    <option value="7">Lacerations</option>
+                                                                                                    <option value="8">Swellings</option>
+                                                                                                    <option value="9">NO DCAP_BTLS</option>
+                                                                                                    <option value="10">Other</option>
                                                                                                 </select>
                                                                                                 <label for="upperEXTRight">Upper EXT Right</label>
                                                                                             </div>
@@ -996,9 +1281,16 @@
                                                                                             <div class="form-floating">
                                                                                                 <select class="form-select selector" id="lwEXTLeft" aria-label="Floating label ">
                                                                                                     <option value="">Please select</option>
-                                                                                                    <option value="1">Option 1</option>
-                                                                                                    <option value="2">Option 2</option>
-                                                                                                    <option value="3">Option 3</option>
+                                                                                                    <option value="1">Deformities</option>
+                                                                                                    <option value="2">Contusions</option>
+                                                                                                    <option value="3">Abrasions</option>
+                                                                                                    <option value="4">Punctures Penetrations</option>
+                                                                                                    <option value="5">Burns</option>
+                                                                                                    <option value="6">Tenderness</option>
+                                                                                                    <option value="7">Lacerations</option>
+                                                                                                    <option value="8">Swellings</option>
+                                                                                                    <option value="9">NO DCAP_BTLS</option>
+                                                                                                    <option value="10">Other</option>
                                                                                                 </select>
                                                                                                 <label for="lwEXTLeft">Lw EXT Left</label>
                                                                                             </div>
@@ -1013,9 +1305,8 @@
                                                                                             <div class="form-floating">
                                                                                                 <select class="form-select selector" id="LWPMS" aria-label="Floating label ">
                                                                                                     <option value="">Please select</option>
-                                                                                                    <option value="1">Option 1</option>
-                                                                                                    <option value="2">Option 2</option>
-                                                                                                    <option value="3">Option 3</option>
+                                                                                                    <option value="1">Absent</option>
+                                                                                                    <option value="2">Present</option>
                                                                                                 </select>
                                                                                                 <label for="LWPMS">PMS</label>
                                                                                             </div>
@@ -1040,9 +1331,16 @@
                                                                                             <div class="form-floating">
                                                                                                 <select class="form-select selector" id="lwEXTRight" aria-label="Floating label ">
                                                                                                     <option value="">Please select</option>
-                                                                                                    <option value="1">Option 1</option>
-                                                                                                    <option value="2">Option 2</option>
-                                                                                                    <option value="3">Option 3</option>
+                                                                                                    <option value="1">Deformities</option>
+                                                                                                    <option value="2">Contusions</option>
+                                                                                                    <option value="3">Abrasions</option>
+                                                                                                    <option value="4">Punctures Penetrations</option>
+                                                                                                    <option value="5">Burns</option>
+                                                                                                    <option value="6">Tenderness</option>
+                                                                                                    <option value="7">Lacerations</option>
+                                                                                                    <option value="8">Swellings</option>
+                                                                                                    <option value="9">NO DCAP_BTLS</option>
+                                                                                                    <option value="10">Other</option>
                                                                                                 </select>
                                                                                                 <label for="lwEXTRight">Lw EXT Right</label>
                                                                                             </div>
@@ -1138,11 +1436,18 @@
                                                                                         <div class="col">
                                                                                             <select class="form-select selector" id="pastMedicalHistory">
                                                                                                 <option value="">Please select</option>
-                                                                                                <option value="1">option 1</option>
-                                                                                                <option value="2">option 2</option>
-                                                                                                <option value="3">option 3</option>
-                                                                                                <option value="4">option 4</option>
-                                                                                                <option value="5">Other</option>
+                                                                                                <option value="1">COPD</option>
+                                                                                                <option value="2">MI</option>
+                                                                                                <option value="3">DM</option>
+                                                                                                <option value="4">HTN</option>
+                                                                                                <option value="5">CAD</option>
+                                                                                                <option value="6">SICKLE CELL</option>
+                                                                                                <option value="7">ASTHMA</option>
+                                                                                                <option value="8">SMOKING</option>
+                                                                                                <option value="9">ALCOHOL CONSUMPTION</option>
+                                                                                                <option value="10">RF</option>
+                                                                                                <option value="11">ID</option>
+                                                                                                <option value="12">Other</option>
                                                                                             </select>
                                                                                         </div>
                                                                                         <div class="col" id="pastMedicalHistoryTxt">
@@ -1263,7 +1568,7 @@
                                                                                     </tr>
                                                                                     <!--end tr-->
                                                                                 </thead>
-                                                                                <tbody class="list form-check-all">
+                                                                                <tbody>
                                                                                     <tr>
                                                                                         <td>1</td>
                                                                                         <td>Verbel</td>
@@ -1274,7 +1579,37 @@
                                                                                         <td>887</td>
                                                                                         <td class="text-danger-emphasis fw-bold">9</td>
                                                                                         <td class="text-primary-emphasis fw-bold">6</td>
-                                                                                        <td><a href="javascript:void(0)"><i class="fa-light fa-link-simple fa-lg text-decoration-underline"></i></a></td>
+                                                                                        <td><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#ECGAttachmentData">
+                                                                                            <i class="fa-light fa-link-simple fa-lg text-decoration-underline"></i></a>
+                                                                                            <span>PDOA_Logo.png</span>
+                                                                                        </td>
+                                                                                        <td class="text-info-emphasis fw-bold">9</td>
+                                                                                        <td>
+                                                                                            <ul class="list-inline hstack gap-2 mb-0">
+                                                                                                <li class="list-inline-item" data-bs-placement="top" title="Edit" data-bs-toggle="modal" data-bs-target="#addTime">
+                                                                                                    <a class="edit-item-btn"><i class="ri-pencil-fill align-bottom text-white btn btn-info"></i></a>
+                                                                                                </li>
+                                                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Delete">
+                                                                                                    <a class="remove-item-btn">
+                                                                                                        <i class="ri-delete-bin-fill align-bottom text-white btn btn-danger"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <!--end tr-->
+                                                                                    <tr>
+                                                                                        <td>2</td>
+                                                                                        <td>Verbel</td>
+                                                                                        <td>120/80</td>
+                                                                                        <td>20</td>
+                                                                                        <td>3</td>
+                                                                                        <td>6</td>
+                                                                                        <td>887</td>
+                                                                                        <td class="text-danger-emphasis fw-bold">9</td>
+                                                                                        <td class="text-primary-emphasis fw-bold">6</td>
+                                                                                        <td><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#ECGAttachment">
+                                                                                            <i class="fa-light fa-link-simple fa-lg text-decoration-underline"></i></a></td>
                                                                                         <td class="text-info-emphasis fw-bold">9</td>
                                                                                         <td>
                                                                                             <ul class="list-inline hstack gap-2 mb-0">
@@ -1467,7 +1802,7 @@
                                                                 </div>
                                                                 <div class="col-xs-12 col-xsm-6 col-sm-6 col-xxlg-4">
                                                                     <fieldset>
-                                                                        <legend>Oxygen/ LPM (Drop)</legend>
+                                                                        <legend>Oxygen/ LPM </legend>
                                                                         <div class="row mb-2">
                                                                             <div class="col">
                                                                                 <div class="form-floating">
@@ -1480,7 +1815,7 @@
                                                                                         <option value="5">Other</option>
                                                                                         <option value="6">None</option>
                                                                                     </select>
-                                                                                    <label for="oxygenLPM">Oxygen/ LPM (Drop)</label>
+                                                                                    <label for="oxygenLPM">Oxygen/ LPM </label>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col" id="oxygenLPMDoneByDiv">
@@ -1505,7 +1840,7 @@
                                                                 </div>
                                                                 <div class="col-xs-12 col-xsm-6 col-sm-6 col-xxlg-4">
                                                                     <fieldset>
-                                                                        <legend>Immobilization (Drop)</legend>
+                                                                        <legend>Immobilization </legend>
                                                                         <div class="row mb-2">
                                                                             <div class="col">
                                                                                 <div class="form-floating">
@@ -1518,7 +1853,7 @@
                                                                                         <option value="5">Other</option>
                                                                                         <option value="6">None</option>
                                                                                     </select>
-                                                                                    <label for="immoblazatiom">Immobilization (Drop)</label>
+                                                                                    <label for="immoblazatiom">Immobilization </label>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col" id="immoblazatiomDoneByDiv">
@@ -1543,7 +1878,7 @@
                                                                 </div>
                                                                 <div class="col-xs-12 col-xsm-6 col-sm-6 col-xxlg-4">
                                                                     <fieldset>
-                                                                        <legend>Splinting (Drop)</legend>
+                                                                        <legend>Splinting</legend>
                                                                         <div class="row mb-2">
                                                                             <div class="col">
                                                                                 <div class="form-floating">
@@ -1553,7 +1888,7 @@
                                                                                         <option value="2">Traction</option>
                                                                                         <option value="3">Other</option>
                                                                                     </select>
-                                                                                    <label for="splinting">Splinting (Drop)</label>
+                                                                                    <label for="splinting">Splinting</label>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col">
@@ -1578,7 +1913,7 @@
                                                                 </div>
                                                                 <div class="col-xs-12 col-xsm-6 col-sm-6 col-xxlg-4">
                                                                     <fieldset>
-                                                                        <legend>Defibrillation (Drop)</legend>
+                                                                        <legend>Defibrillation</legend>
                                                                         <div class="row mb-2">
                                                                             <div class="col">
                                                                                 <div class="form-floating">
@@ -1590,7 +1925,7 @@
                                                                                         <option value="4">TCP</option>
                                                                                         <option value="5">ECG</option>
                                                                                     </select>
-                                                                                    <label for="defibrillation">Defibrillation (Drop)</label>
+                                                                                    <label for="defibrillation">Defibrillation </label>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col" id="defibrillationDoneByDiv">
@@ -1611,49 +1946,6 @@
                                                                                         <option value="2">12L</option>
                                                                                     </select>
                                                                                     <label for="defibrillationComments">ECG</label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </fieldset>
-                                                                </div>
-                                                                <div class="col-xs-12 col-xsm-6 col-sm-6 col-xxlg-4">
-                                                                    <fieldset>
-                                                                        <legend>I.V / IO (Grid Data)</legend>
-                                                                        <div class="row mb-2">
-                                                                            <div class="col">
-                                                                                <div class="form-floating">
-                                                                                    <select class="form-select" id="IVIO" aria-label="Floating label">
-                                                                                        <option value="">Please select</option>
-                                                                                        <option value="1">Site</option>
-                                                                                        <option value="2">Time</option>
-                                                                                        <option value="3">Size</option>
-                                                                                        <option value="4">Attempt No</option>
-                                                                                        <option value="5">Done by</option>
-                                                                                    </select>
-                                                                                    <label for="IVIO">I.V / IO (Grid Data)</label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col" id="IVIODoneByDiv">
-                                                                                <div class="form-floating">
-                                                                                    <select class="form-select" id="IVIODoneBy" aria-label="Floating label">
-                                                                                        <option value="">Please select</option>
-                                                                                        <option value="1">option 1</option>
-                                                                                        <option value="2">option 2</option>
-                                                                                        <option value="3">option 3</option>
-                                                                                    </select>
-                                                                                    <!-- <label for="IVIODoneBy">Done by</label> -->
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col" id="IVIODiv">
-                                                                                <div class="form-floating">
-                                                                                    <input type="text" class="form-control" id="IVIOComments" placeholder="Attempt No" />
-                                                                                    <label for="IVIOComments">Attempt No</label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col" id="timeDiv">
-                                                                                <div class="form-floating">
-                                                                                    <input type="text" class="form-control" id="IVIOTime" placeholder="Attempt No" data-provider="timepickr" data-time-basic="true" />
-                                                                                    <label for="IVIOTime">Time</label>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1689,6 +1981,78 @@
                                                                         </div>
                                                                     </fieldset>
                                                                 </div>
+                                                                <div class="col-xs-12 col-xsm-12 col-sm-12 col-xxlg-12">
+                                                                    <fieldset>
+                                                                        <div class="row align-items-center mt-1">
+                                                                            <div class="col-sm-3">
+                                                                                <div class="d-flex align-items-center gap-2">
+                                                                                    <label for="" class="text-success-emphasis fw-bold fs-8">I.V / IO</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-auto ms-auto">
+                                                                                <div class="hstack">
+                                                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="addBtnIVIO" data-bs-target="#addIVIO">
+                                                                                        <i class="ri-add-line align-bottom me-1"></i>Add</button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--end col-->
+                                                                        </div>
+                                                                        <!--end row-->
+                                                    
+                                                                        <div class="card p-0 mt-2 shadow-none">
+                                                                            <div class="card-body">
+                                                                                <div class="table-responsive table-card">
+                                                                                    <table class="table align-middle table-nowrap table-bordered mb-0" id="IVIOTable">
+                                                                                        <thead class="table-success fw-bold">
+                                                                                            <tr>
+                                                                                                <th>Site</th>
+                                                                                                <th>Time</th>
+                                                                                                <th>Size</th>
+                                                                                                <th>Attempt No</th>
+                                                                                                <th>Done by</th>
+                                                                                                <th style="width: 5%;"></th>
+                                                                                            </tr>
+                                                                                            <!--end tr-->
+                                                                                        </thead>
+                                                                                        <tbody class="list form-check-all">
+                                                                                            <tr>
+                                                                                                <td>Loc</td>
+                                                                                                <td>12:00 PM</td>
+                                                                                                <td>2</td>
+                                                                                                <td>2</td>
+                                                                                                <td>EMT1</td>
+                                                                                                <td>
+                                                                                                    <ul class="list-inline hstack gap-2 mb-0">
+                                                                                                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
+                                                                                                            <a class="edit-item-btn"><i class="ri-pencil-fill align-bottom text-white btn btn-info"></i></a>
+                                                                                                        </li>
+                                                                                                        <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Delete">
+                                                                                                            <a class="remove-item-btn">
+                                                                                                                <i class="ri-delete-bin-fill align-bottom text-white btn btn-danger"></i>
+                                                                                                            </a>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!--end tr-->
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <!--end table-->
+                                                                                    <div class="noresult" style="display: none">
+                                                                                        <div class="text-center">
+                                                                                            <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                                                                                colors="primary:#405189,secondary:#0ab39c" style="width:75px;height:75px">
+                                                                                            </lord-icon>
+                                                                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--end card-body-->
+                                                                        </div>
+                                                                        <!--end card-->
+                                                                    </fieldset>
+                                                                </div>
                                                             </div> <!-- /.row -->
                                                         </div>
                                                     </div> <!-- /.ribbon-box -->
@@ -1711,7 +2075,7 @@
                                                             <div class="card p-0 mt-2 shadow-none">
                                                                 <div class="card-body">
                                                                     <div class="table-responsive table-card">
-                                                                        <table class="table align-middle table-nowrap table-bordered" id="medicationsTable">
+                                                                        <table class="table align-middle table-nowrap table-bordered mb-0" id="medicationsTable">
                                                                             <thead class="table-success fw-bold">
                                                                                 <tr>
                                                                                     <th scope="col">Time</th>
@@ -1807,7 +2171,7 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <fieldset>
-                                                                        <div class="row mb-3">
+                                                                        <div class="row mb-3 mt-1">
                                                                             <div class="col-md-5">
                                                                                 <div class="row align-items-center">
                                                                                     <label for="" class="col-sm-5 col-form-label d-flex align-items-center fw-bold">Written By</label>
@@ -1820,7 +2184,8 @@
                                                                                 <div class="row align-items-center">
                                                                                     <label for="signureWritten" class="col-sm-5 col-form-label d-flex align-items-center justify-content-end fw-bold">Signature:</label>
                                                                                     <div class="col-sm-7 d-flex justify-content-between">
-                                                                                        <span class="fs-6" id="signureWritten">Ahlam Hilal Khamis Alrasbi</span>
+                                                                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" id="signatureDone" data-bs-target="#signatureDoneModal">
+                                                                                            <i class="fa-light fa-signature fa-lg"></i></button>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1838,7 +2203,8 @@
                                                                                 <div class="row align-items-center">
                                                                                     <label for="signureReceived" class="col-sm-5 col-form-label d-flex align-items-center justify-content-end fw-bold">Signature:</label>
                                                                                     <div class="col-sm-7 d-flex justify-content-between">
-                                                                                        <span class="fs-6" id="signureReceived">Ahlam Hilal Khamis Alrasbi</span>
+                                                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="signatureBtn" data-bs-target="#signatureModal">
+                                                                                            <i class="fa-light fa-signature fa-lg"></i></button>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1856,7 +2222,8 @@
                                                                                 <div class="row align-items-center">
                                                                                     <label for="signureMD" class="col-sm-5 col-form-label d-flex align-items-center justify-content-end fw-bold">Signature:</label>
                                                                                     <div class="col-sm-7 d-flex justify-content-between">
-                                                                                        <span class="fs-6" id="signureMD">Ahlam Hilal Khamis Alrasbi</span>
+                                                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="signatureBtn" data-bs-target="#signatureModal">
+                                                                                            <i class="fa-light fa-signature fa-lg"></i></button>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -2391,7 +2758,37 @@
                                     </div>
                                     <div class="col-lg-4 mb-2">
                                         <label for="ECG_txt" class="form-label">ECG</label>
-                                        <input type="text" id="ECG_txt" name="ECG_txt" class="form-control" placeholder="Enter ECG" />
+                                        <!-- <input type="text" id="ECG_txt" name="ECG_txt" class="form-control" placeholder="Enter ECG" /> -->
+                                        <select name="ECG_txt" id="ECG_txt" class="form-select">
+                                            <option value="">Please select</option>
+                                            <option value="">Asystole</option>
+                                            <option value="1">Atrial Fibrillation</option>
+                                            <option value="2">Atrial flutter</option>
+                                            <option value="3">First Degree AV Block</option>
+                                            <option value="4">Junctional Rhythm</option>
+                                            <option value="5">Left Bundle Block</option>
+                                            <option value="6">Multiple focal Atrial Tachycardia</option>
+                                            <option value="7">Normal Sinus Rhythm</option>
+                                            <option value="8">PEA</option>
+                                            <option value="9">Premature Atrial Contraction</option>
+                                            <option value="10">Premature Ventricular Contraction</option>
+                                            <option value="11">Proxysmal SupraVentricularTachycardia</option>
+                                            <option value="12">Right Bundle Branch Block</option>
+                                            <option value="13">Sick Sinus Syndrome</option>
+                                            <option value="14">Sinus Arrest</option>
+                                            <option value="15">Sinus Arrythmia</option>
+                                            <option value="16">Sinus Block</option>
+                                            <option value="17">Sinus Tachycardia</option>
+                                            <option value="18">Sinus Bradycardia</option>
+                                            <option value="19">SupraVentricularTachcardia</option>
+                                            <option value="20">Third Degree AV Block</option>
+                                            <option value="21">Torsadede Pointes</option>
+                                            <option value="22">Type 1 Second Degree AV Block</option>
+                                            <option value="23">Type 2 Second Degree AV Block</option>
+                                            <option value="24">Ventricular Escape Rhythm</option>
+                                            <option value="25">Ventricular Fibrillation</option>
+                                            <option value="26">Ventricular Tachycardia</option>
+                                        </select>
                                     </div>
                                 </div>
                             </fieldset>
@@ -2497,8 +2894,7 @@
         </div>
     </div>
     <!--end Time create modal-->
-
-
+    
     <!-- addTimeMedications modal -->
     <div class="modal fade zoomIn" id="addTimeMedications" tabindex="-1" aria-labelledby="addTimeMedicationsLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
@@ -2605,6 +3001,71 @@
     </div>
     <!--end addTimeMedications modal-->
 
+    <!-- addIVIO modal -->
+    <div class="modal fade zoomIn" id="addIVIO" tabindex="-1" aria-labelledby="addIVIOLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content border-0">
+                <!-- <div class="modal-header bg-soft-info p-3">
+                    <h5 class="modal-title" id="addIVIOLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                </div> -->
+                <form class="tablelist-form" autocomplete="off">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <fieldset>
+                                <!-- <legend>Glasgow Coma Scale</legend> -->
+                                <div class="row my-2">
+                                    <div class="col-lg-4">
+                                        <label for="siteList" class="form-label">Site</label>
+                                        <select name="siteList" id="siteList" class="form-select">
+                                            <option value="">Please select</option>
+                                            <option value="1">option 1</option>
+                                            <option value="2">option 2</option>
+                                            <option value="3">option 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="IVIOTime" class="form-label">Time</label>
+                                        <input type="text" class="form-control" id="IVIOTime" placeholder="HH:SS" data-provider="timepickr" data-time-basic="true" />
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="sizeList" class="form-label">Size</label>
+                                        <select name="sizeList" id="sizeList" class="form-select">
+                                            <option value="">Please select</option>
+                                            <option value="1">option 1</option>
+                                            <option value="2">option 2</option>
+                                            <option value="3">option 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="attemptNo" class="form-label">Attempt No</label>
+                                        <input type="text" class="form-control" id="attemptNo" placeholder="Attempt No"/>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="IVIOdoneBy" class="form-label">Done By</label>
+                                        <select name="IVIOdoneBy" id="IVIOdoneBy" class="form-select">
+                                            <option value="">Please select</option>
+                                            <option value="1">EMT1</option>
+                                            <option value="2">EMT2</option>
+                                            <option value="3">EMT3</option>
+                                        </select>
+                                    </div>
+                                </div> <!-- /.row -->
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success"><i class="fa-light fa-paper-plane fa-lg"></i>&nbsp;Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--end addIVIO modal-->
+    
     <!-- addTreatment modal -->
     <div class="modal fade zoomIn" id="addTreatment" tabindex="-1" aria-labelledby="addTreatmentLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
@@ -2838,120 +3299,83 @@
                             <div class="card-body p-2 border-top border-top-dashed">
                                 <fieldset>
                                     <legend>Witnesses</legend>
-                                    <div class="alert alert-info p-1 mb-1" role="alert">1</div>
-                                    <div class="row">
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="witnessesCivilID">Civil/Military ID</label>
-                                            <input type="text" class="form-control" id="witnessesCivilID" placeholder="Civil/Military ID">
+                                    <div class="row"> 
+                                        <div class="col-lg-12 col-sm-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered align-middle">
+                                                    <thead class="table-info text-white">
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Civil/Military ID</th>
+                                                            <th>Witnesses Name</th>
+                                                            <th>Place of work</th>
+                                                            <th>Relative Relation</th>
+                                                            <th>Signature</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-muted">1</td>
+                                                            <td><input type="text" class="form-control" id="witnessesCivilID1" placeholder="Civil/Military ID" /></td>
+                                                            <td><input type="text" class="form-control" id="witnessesName1" placeholder="Witnesses Name" /></td>
+                                                            <td><input type="text" class="form-control" id="placeWork1" placeholder="Place of work" /></td>
+                                                            <td><input type="text" class="form-control" id="relativeRelation1" placeholder="Relative Relation"></td>
+                                                            <td><button type="button" class="btn btn-primary"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">2</td>
+                                                            <td><input type="text" class="form-control" id="witnessesCivilID2" placeholder="Civil/Military ID" /></td>
+                                                            <td><input type="text" class="form-control" id="witnessesName2" placeholder="Witnesses Name" /></td>
+                                                            <td><input type="text" class="form-control" id="placeWork2" placeholder="Place of work" /></td>
+                                                            <td><input type="text" class="form-control" id="relativeRelation2" placeholder="Relative Relation"></td>
+                                                            <td><button type="button" class="btn btn-success"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                         <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="witnessesName">Witnesses Name</label>
-                                            <input type="text" class="form-control" id="witnessesName" placeholder="Witnesses Name" />
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="placeWork">Place of work</label>
-                                            <input type="text" class="form-control" id="placeWork" placeholder="Place of work" />
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="relativeRelation">Relative Relation</label>
-                                            <input type="text" class="form-control" id="relativeRelation" placeholder="Relative Relation">
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="witnessesSignature">Signature</label>
-                                            <input type="text" class="form-control" id="witnessesSignature" placeholder="Signature">
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                    <!--end row-->
-                                    <div class="alert alert-info p-1 mb-1" role="alert">2</div>
-                                    <div class="row">
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="witnessesCivilID">Civil/Military ID</label>
-                                            <input type="text" class="form-control" id="witnessesCivilID" placeholder="Civil/Military ID">
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="witnessesName">Witnesses Name</label>
-                                            <input type="text" class="form-control" id="witnessesName" placeholder="Witnesses Name" />
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="placeWork">Place of work</label>
-                                            <input type="text" class="form-control" id="placeWork" placeholder="Place of work" />
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="relativeRelation">Relative Relation</label>
-                                            <input type="text" class="form-control" id="relativeRelation" placeholder="Relative Relation">
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="witnessesSignature">Signature</label>
-                                            <input type="text" class="form-control" id="witnessesSignature" placeholder="Signature">
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                    <!--end row-->
+                                    </div> <!-- /.row -->
                                 </fieldset>
                             </div> <!-- /.card-body -->
 
                             <div class="card-body p-2 border-top border-top-dashed">
                                 <fieldset>
                                     <legend>Ambulance staff</legend>
-                                    <div class="alert alert-info p-1 mb-1" role="alert">1</div>
-                                    <div class="row">
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="ambulanceName">Name</label>
-                                            <input type="text" class="form-control" id="ambulanceName" placeholder="Name" />
+                                    <div class="row"> 
+                                        <div class="col-lg-12 col-sm-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered align-middle">
+                                                    <thead class="table-info text-white">
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Military ID</th>
+                                                            <th>Name</th>
+                                                            <th>Job title</th>
+                                                            <th>Signature</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-muted">1</td>
+                                                            <td><input type="text" class="form-control" id="ambulanceMilitaryID1" placeholder="Military ID"></td>
+                                                            <td><input type="text" class="form-control" id="ambulanceName1" placeholder="Name" /></td>
+                                                            <td><input type="text" class="form-control" id="jobTitle1" placeholder="Job title" /></td>
+                                                            <td><button type="button" class="btn btn-success"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">2</td>
+                                                            <td><input type="text" class="form-control" id="ambulanceMilitaryID2" placeholder="Military ID"></td>
+                                                            <td><input type="text" class="form-control" id="ambulanceName2" placeholder="Name" /></td>
+                                                            <td><input type="text" class="form-control" id="jobTitle2" placeholder="Job title" /></td>
+                                                            <td><button type="button" class="btn btn-primary"><i class="fa-light fa-signature fa-lg"></i></button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                         <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="ambulanceMilitaryID">Military ID</label>
-                                            <input type="text" class="form-control" id="ambulanceMilitaryID" placeholder="Military ID">
-                                        </div>
-                                        <!--end col-->
-                                        
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="jobTitle">Job title</label>
-                                            <input type="text" class="form-control" id="jobTitle" placeholder="Job title" />
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="ambulanceSignature">Signature</label>
-                                            <input type="text" class="form-control" id="ambulanceSignature" placeholder="Signature">
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                    <!--end row-->
-                                    <div class="alert alert-info p-1 mb-1" role="alert">2</div>
-                                    <div class="row">
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="ambulanceName">Name</label>
-                                            <input type="text" class="form-control" id="ambulanceName" placeholder="Name" />
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="ambulanceMilitaryID">Military ID</label>
-                                            <input type="text" class="form-control" id="ambulanceMilitaryID" placeholder="Military ID">
-                                        </div>
-                                        <!--end col-->
-                                        
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="jobTitle">Job title</label>
-                                            <input type="text" class="form-control" id="jobTitle" placeholder="Job title" />
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-sm-6 mb-2">
-                                            <label for="ambulanceSignature">Signature</label>
-                                            <input type="text" class="form-control" id="ambulanceSignature" placeholder="Signature">
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                    <!--end row-->
+                                    </div> <!-- /.row -->
                                 </fieldset>
                             </div> <!-- /.card-body -->
 
@@ -3029,13 +3453,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                 </div> -->
                 
-                <div class="modal-body">
-                    <div class="card border-0 shadow-none">
+                <div class="modal-body pt-1 pb-1">
+                    <div class="card border-0 shadow-none mb-0">
                         <form class="needs-validation" novalidate id="invoice_form">
                             <div class="card-body border-bottom border-bottom-dashed p-0">
                                 <div class="row">
                                     <div class="col-lg-6 mx-auto text-center">
-                                        <div class="profile-user mx-auto mb-3">
+                                        <div class="profile-user mx-auto mb-1">
                                             <input id="profile-img-file-input" type="file" class="profile-img-file-input" />
                                             <label for="profile-img-file-input" class="d-block" tabindex="0">
                                                 <span class="d-flex align-items-center justify-content-center rounded">
@@ -3051,72 +3475,57 @@
 
                             <div class="card-body p-2 border-top border-top-dashed">
                                 <div class="row justify-content-between">
-                                    <div class="col-lg-4 col-sm-6 mb-2 row align-items-center">
-                                        <label for="dateField" class="col-md-3 p-0 mb-0">Date:</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control" id="dateField" data-provider="flatpickr" data-time="true" placeholder="Select Date-time">
-                                        </div>
+                                    <div class="col-md-6">
+                                        <table>
+                                            <tr>
+                                                <th class="text-primary">Date:</th>
+                                                <td><input type="text" class="form-control" id="dateField" data-provider="flatpickr" data-time="true" placeholder="Select Date-time"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-primary">Time</th>
+                                                <td><input type="text" class="form-control" id="fieldTime" placeholder="HH:SS" data-provider="timepickr" data-time-basic="true"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="col-md-6 text-primary">Incident No</th>
+                                                <td><input type="text" class="form-control" id="incidentNo" placeholder="Incident No"></td>
+                                            </tr>
+                                        </table>
                                     </div>
-                                    <!--end col-->
-                                    <div class="col-lg-3 col-sm-6 mb-2 row align-items-center">
-                                        <label for="fieldTime" class="col-md-3 p-0 mb-0">Time</label>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control" id="fieldTime" placeholder="HH:SS" data-provider="timepickr" data-time-basic="true">
-                                        </div>
+                                    <div class="col-md-6">
+                                        <table>
+                                            <tr>
+                                                <th class="text-primary">Call Location</th>
+                                                <td><input type="text" class="form-control" id="callLocation" placeholder="Call Location"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-primary">Ambulance Station</th>
+                                                <td><input type="text" class="form-control" id="ambulanceStation" placeholder="Ambulance Station"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="col-md-6 text-primary">CDAA Directorate</th>
+                                                <td><input type="text" class="form-control" id="CDAADirectorate" placeholder="CDAA Directorate"></td>
+                                            </tr>
+                                        </table>
                                     </div>
-                                    <!--end col-->
-                                    <div class="col-lg-5 col-sm-6 mb-2 row align-items-center">
-                                        <label for="incidentNo" class="col-md-3 p-0 mb-0">Incident No</label>
-                                        <div class="col-md-9 p-0">
-                                            <input type="text" class="form-control" id="incidentNo" placeholder="Incident No">
-                                        </div>
-                                    </div>
-                                    <!--end col-->
                                 </div>
-                                <!--end row-->
-
-                                <div class="row justify-content-between">
-                                    <div class="col-lg-4 col-sm-6 mb-2 row align-items-center">
-                                        <label for="callLocation" class="col-md-6 p-0 mb-0">Call Location</label>
-                                        <div class="col-md-6 p-0">
-                                            <input type="text" class="form-control" id="callLocation" placeholder="Call Location">
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-lg-4 col-sm-6 mb-2 row align-items-center">
-                                        <label for="ambulanceStation" class="col-md-6 p-0 mb-0">Ambulance Station</label>
-                                        <div class="col-md-6 p-0">
-                                            <input type="text" class="form-control" id="ambulanceStation" placeholder="Ambulance Station">
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-lg-4 col-sm-6 mb-2 row align-items-center">
-                                        <label for="CDAADirectorate" class="col-md-6 p-0 mb-0">CDAA Directorate</label>
-                                        <div class="col-md-6 p-0">
-                                            <input type="text" class="form-control" id="CDAADirectorate" placeholder="CDAA Directorate">
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                </div>
-                                <!--end row-->
                             </div> <!-- /.card-body -->
 
                             <div class="card-body p-2">
                                 <div class="row">
-                                    <div class="col-md-4 row align-items-center">
-                                      <label for="staticEmail2" class="col-sm-1">I</label>
+                                    <div class="col-md-4 row align-items-end">
+                                      <label for="staticEmail2" class="col-sm-1 mb-0">I</label>
                                       <div class="col-sm-11">
-                                        <input type="text" class="form-control" id="staticEmail2" />
+                                        <input type="text" class="form-control border-top-0 border-start-0 border-end-0 rounded-0 border-bottom-dashed" id="staticEmail2" />
                                       </div>
                                     </div> <!--end col-->
-                                    <div class="col-md-8 row align-items-center">
-                                      <label for="guardianNationality" class="col-sm-6">Relationship: Patient / Guardian Nationality:</label>
+                                    <div class="col-md-8 row align-items-end">
+                                      <label for="guardianNationality" class="col-sm-6 mb-0">Relationship: Patient / Guardian Nationality:</label>
                                       <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="guardianNationality" placeholder="">
+                                        <input type="text" class="form-control border-top-0 border-start-0 border-end-0 rounded-0 border-bottom-dashed" id="guardianNationality" placeholder="">
                                       </div>
                                     </div> <!--end col-->
-                                    <div class="col-auto">
-                                      <label for="">That through my signature below on behalf of myself or whoever I entrusted with his/ her care, that I confirm my refusal to 
+                                    <div class="col-auto mt-1">
+                                      <label for="" class="text-justify">That through my signature below on behalf of myself or whoever I entrusted with his/ her care, that I confirm my refusal to 
                                         receive any of medical care or transport from the medical staff of the ambulance service despite of my  full awareness and capacity of 
                                         its importance, despite the explanations and advice  provided to me about my health by ambulance team, and I shall legally bear all 
                                         the consequences  resulting from this refusal, and I do not hold the ambulance medical team or the ambulance service any responsibility 
@@ -3231,6 +3640,254 @@
         </div>
     </div>
     <!-- refusedForm modal-->
+
+
+    <!-- ECGAttachment modal -->
+    <div class="modal fade zoomIn" id="ECGAttachment" tabindex="-1" aria-labelledby="ECGAttachmentLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-soft-info p-3">
+                    <h5 class="modal-title" id="ECGAttachmentLabel">ECG Attachment</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button> -->
+                </div>
+                
+                <div class="modal-body p-0">
+                    <div class="card border-0 shadow-none mb-0">
+                        <form class="needs-validation" novalidate id="invoice_form">
+
+                            <div class="card-body p-2 border-top border-top-dashed">
+                                <div>
+                                    <div class="dropzone">
+                                        <div class="fallback">
+                                            <input name="file" type="file">
+                                        </div>
+                                        <div class="dz-message needsclick">
+                                            <div class="mb-3">
+                                                <i class="display-4 text-muted ri-upload-cloud-2-fill"></i>
+                                            </div>
+                                            <h5>Drop files here or click to upload.</h5>
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-unstyled mb-0" id="dropzone-preview">
+                                        <li class="mt-2" id="dropzone-preview-list">
+                                            <!-- This is used as the file preview template -->
+                                            <div class="border rounded">
+                                                <div class="d-flex p-2">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <div class="avatar-sm bg-light rounded">
+                                                            <img data-dz-thumbnail class="img-fluid rounded d-block" src="#" alt="Product-Image" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <div class="pt-1">
+                                                            <h5 class="fs-13 mb-1" data-dz-name>&nbsp;</h5>
+                                                            <p class="fs-13 text-muted mb-0" data-dz-size></p>
+                                                            <strong class="error text-danger" data-dz-errormessage></strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 ms-3">
+                                                        <button data-dz-remove class="btn btn-sm btn-danger">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- end dropzon-preview -->
+                                </div>
+                            </div> <!-- /.card-body -->
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-1">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success"><i class="ri-printer-line align-bottom me-1"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ECGAttachment modal-->
+
+    <!-- ECGAttachmentData modal -->
+    <div class="modal fade zoomIn" id="ECGAttachmentData" tabindex="-1" aria-labelledby="ECGAttachmentDataLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-soft-info p-3">
+                    <h5 class="modal-title" id="ECGAttachmentDataLabel">ECG Attachment</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button> -->
+                </div>
+                
+                <div class="modal-body p-0">
+                    <div class="card border-0 shadow-none mb-0">
+                        <form class="needs-validation" novalidate id="invoice_form">
+
+                            <div class="card-body p-2 border-top border-top-dashed">
+                                <div>
+                                    <div class="dropzone dz-clickable">
+                                        <div class="fallback d-none">
+                                            <input name="file" type="file">
+                                        </div>
+                                        <div class="dz-message needsclick">
+                                            <div class="mb-3">
+                                                <i class="display-4 text-muted ri-upload-cloud-2-fill"></i>
+                                            </div>
+                                            <h5>Drop files here or click to upload.</h5>
+                                        </div>
+                                    </div>
+
+                                    <ul class="list-unstyled mb-0" id="dropzone-preview">
+                                        <li class="mt-2" id="dropzone-preview-list">
+                                            <!-- This is used as the file preview template -->
+                                            <div class="border rounded">
+                                                <div class="d-flex p-2 align-items-center">
+                                                    <div class="flex-shrink-0 me-3 mb-1">
+                                                        <div class="avatar-sm bg-light rounded">
+                                                            <img class="img-fluid rounded d-block" src="assets/img/PDOA_Logo.png" alt="Product-Image" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <div class="pt-1">
+                                                            <h5 class="fs-13 mb-1" data-dz-name>PDOA_Logo.png</h5>
+                                                            <p class="fs-13 text-muted mb-0" data-dz-size=""><strong>61.3</strong> KB</p>
+                                                            <strong class="error text-danger" data-dz-errormessage></strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 ms-3">
+                                                        <button data-dz-remove class="btn btn-sm btn-danger">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- end dropzon-preview -->
+                                </div>
+                            </div> <!-- /.card-body -->
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-1">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success"><i class="ri-printer-line align-bottom me-1"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ECGAttachmentData modal-->
+
+    <!-- signatureModal modal -->
+    <div class="modal fade zoomIn" id="signatureModal" tabindex="-1" aria-labelledby="signatureModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <!-- <div class="modal-header bg-soft-info p-3">
+                    <h5 class="modal-title" id="signatureModalLabel">Signature</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                </div> -->
+                
+                <div class="modal-body p-0">
+                    <div class="card border-0 shadow-none mb-0">
+
+                        <div class="card-body p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Date: </label>
+                                    <label for="">07-03-2023 12:50 PM</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Image format: </label>
+                                    <label for="">png</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Device ID: </label>
+                                    <label for="">Desktop</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Signature verified by: </label>
+                                    <label for="">Ahlam Hilal Khamis Alrasbi</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 p-1 text-center">
+                                    <fieldset style="height: calc(100% - 0px);">
+                                        <legend>Signature</legend>
+                                        <i class="fa-light fa-signature fa-10x"></i>
+                                    </fieldset>
+                                </div>
+                                <div class="col-sm-12 col-md-6 p-1 text-center">
+                                    <fieldset style="height: calc(100% - 0px);">
+                                        <legend>Preview</legend>
+                                        <img src="assets/img/signature-sample.png" class="img-fluid" alt="" width="249">
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div> <!-- /.card-body -->
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-1">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success"><i class="ri-printer-line align-bottom me-1"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signatureModal modal-->
+    
+    <!-- signatureDoneModal modal -->
+    <div class="modal fade zoomIn" id="signatureDoneModal" tabindex="-1" aria-labelledby="signatureDoneModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <!-- <div class="modal-header bg-soft-info p-3">
+                    <h5 class="modal-title" id="signatureDoneModalLabel">Signature</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                </div> -->
+                
+                <div class="modal-body p-0">
+                    <div class="card border-0 shadow-none mb-0">
+
+                        <div class="card-body p-3">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Date: </label>
+                                    <label for="">07-03-2023 12:50 PM</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Image format: </label>
+                                    <label for="">png</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Device ID: </label>
+                                    <label for="">Desktop</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="text-primary fw-bold">Signature verified by: </label>
+                                    <label for="">Ahlam Hilal Khamis Alrasbi</label>
+                                </div>
+                            </div>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-12 p-1 text-center">
+                                        <img src="assets/img/signature-sample.png" class="img-fluid" alt="" width="249px">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div> <!-- /.card-body -->
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-1">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signatureDoneModal modal-->
 
      <!-- <div class="customizer-setting d-none d-md-block">
         <div class="btn-primary btn-rounded shadow-lg btn btn-icon btn-lg p-2 text-white" data-bs-toggle="offcanvas" data-bs-target="#menu-offcanvas" aria-controls="theme-settings-offcanvas">
@@ -3833,8 +4490,12 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.11/sweetalert2.js"></script>
 
+    <!-- dropzone js -->
+    <script type="text/javascript" src="assets/libs/dropzone/dropzone-min.js"></script>
+
     <script type="text/javascript" src="assets/libs/dataTables/jquery.dataTables.js"></script>
     <script type="text/javascript" src="assets/libs/dataTables/dataTables.bootstrap5.js"></script>
+
     <!-- editable-Select -->
     <!-- <script src="//code.jquery.com/jquery-latest.min.js"></script> -->
     <script type="text/javascript" src="assets/libs/editable-Select/jquery-editable-select.js"></script>
@@ -3844,9 +4505,9 @@
     <script type="text/javascript" src="assets/libs/jquery-smartwizard/js/jquery.smartWizard.js"></script>
     <script type="text/javascript" src="assets/js/wizard.js"></script>
 
-    
-
     <script type="text/javascript" src="assets/js/PCR.js"></script>
+
+    <script type="text/javascript" src="assets/js/image.js"></script>
 </body>
 
 </html>

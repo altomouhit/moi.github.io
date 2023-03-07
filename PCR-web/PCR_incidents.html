@@ -299,6 +299,12 @@
                             </a>
                         </li>
                         <!-- end Show PCR / Incidents Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="PCR.html" aria-controls="sidebarCreateNew">
+                                <img src="assets/img/create.svg" class="me-1" alt="create" width="21" /> <span data-key="t-CreateNew">Create New</span>
+                            </a>
+                        </li>
+                        <!-- end Create New Menu -->
                     </ul>
                 </div>
                 <!-- Sidebar -->
@@ -358,10 +364,16 @@
                             <div class="card" id="leadsList">
                                 <div class="card-body">
                                     <div class="table-responsive table-card">
-                                        <table id="example" class="table align-middle table-nowrap mb-0 mt-0 table-bordered display expandable-table w-100" aria-hidden="true">
-                                          <thead class="table-success">
+                                        <table id="example" class="table align-middle table-nowrap table-bordered display expandable-table w-100" aria-hidden="true" 
+                                            style="margin: 0 !important;">
+                                          <thead class="table-secondary">
                                             <tr>
                                               <th>Incident No#</th>
+                                              <th>Call Date</th>
+                                              <th>Call Type</th>
+                                              <th>Call Sub category</th>
+                                              <th>Station Name</th>
+                                              <th>Incident Location</th>
                                               <th></th>
                                             </tr>
                                           </thead>
@@ -1070,6 +1082,11 @@
                 "ajax": "assets/js/data.txt",
                 "columns": [
                     { "data": "Quote" },
+                    { "data": "Date" },
+                    { "data": "callType" },
+                    { "data": "subCategory" },
+                    { "data": "stationName" },
+                    { "data": "incidentLocation" },
                     { "className": 'details-control', "orderable": false, "data": null, "defaultContent": '' }],
                 "order": [[1, 'asc']],
                 "paging": false,
