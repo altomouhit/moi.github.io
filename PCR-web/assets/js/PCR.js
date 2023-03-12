@@ -2,6 +2,7 @@ window.onload = function () {
     $("#pastMedicalHistoryTxt, #pComments, #transportDiv, #nonTransportDiv, #hospitalDiv, #nonTransportCrimeDiv").hide();
     $("#mAirwayCommentDiv, #oxygenLPMDiv, #immoblazatiomDiv, #splintingDiv, #defibrillationDiv, #IVIODiv, #mOthersDiv, #timeDiv").hide();
     $("#PDOADiv, #refused").hide();
+    $("#resuscitationDiv").hide();
     //$('.selector').editableSelect();
     $('.selector').editableSelect({
         // enable filter
@@ -139,5 +140,12 @@ $("#mOthers").on('change', function() {
         $("#mOthersDiv").show();
     } else {
         $("#mOthersDiv").hide();
+    }
+});
+$("#resuscitationRequired").on('change', function() {
+    if(this.value == 1) {
+        $("#resuscitationDiv").show();
+    } else {
+        $("#resuscitationDiv").hide();
     }
 });
