@@ -552,14 +552,22 @@ function scrollFunction() {
 
 function topFunction() {
 	document.body.scrollTop = 0,
-		document.documentElement.scrollTop = 0
+	document.documentElement.scrollTop = 0
 }
 window.onscroll = function() {
 	scrollFunction()
 };
-//.................................. tooltip by balaram on 18/04/2022..................................//
+//.................................. tooltip by Balaram on 18/02/2023..................................//
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 	return new bootstrap.Tooltip(tooltipTriggerEl)
 })
-//.................................. tooltip by balaram on 18/04/2022..................................//
+//.................................. tooltip by balaram on 18/02/2023..................................//
+// preloader
+$(window).on('load', function() {
+    $('#preloader').fadeOut(); // fade out the loading animation
+    $('#status').delay(350).fadeOut('slow'); // fade out the white DIV that covers the website.
+    $('body').delay(350).css({
+        'overflow': 'hide'
+    });
+});

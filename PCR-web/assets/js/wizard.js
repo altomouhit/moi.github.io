@@ -12,14 +12,14 @@ $(function() {
 		$("#next-btn").removeClass('disabled').prop('disabled', false);
 		if (stepPosition === 'first') {
 			$("#prev-btn").addClass('disabled').prop('disabled', true);
-            $("#btnSave").hide();
+            $("#btnSubmit").hide();
 		} else if (stepPosition === 'last') {
-            $("#btnSave").show();
+            $("#btnSubmit").show();
 			$("#next-btn").addClass('disabled').prop('disabled', true);
 		} else {
 			$("#prev-btn").removeClass('disabled').prop('disabled', false);
 			$("#next-btn").removeClass('disabled').prop('disabled', false);
-            $("#btnSave").hide();
+            $("#btnSubmit").hide();
 		}
 		// Get step info from Smart Wizard
 		let stepInfo = $('#smartwizard').smartWizard("getStepInfo");
@@ -45,7 +45,8 @@ $(function() {
 			showNextButton: true, // show/hide a Next button
 			showPreviousButton: true, // show/hide a Previous button
 			position: 'bottom', // none/ top/ both bottom
-			extraHtml: `<button class="btn btn-success" id="btnSave" onclick="onFinish()">Save</button>`
+			extraHtml: `<button class="btn btn-success float-start me-1" id="btnSave"">Save</button>
+						<button class="btn btn-danger float-start" id="btnSubmit" onclick="onFinish()">Submit</button>`
 		},
 		anchor: {
 			enableNavigation: true, // Enable/Disable anchor navigation 
