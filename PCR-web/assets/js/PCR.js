@@ -1,5 +1,5 @@
 window.onload = function () {
-    $("#pastMedicalHistoryTxt, #pComments, #transportDiv, #nonTransportDiv, #hospitalDiv, #nonTransportCrimeDiv").hide();
+    $("#pastMedicalHistoryTxt, #pComments, #transportDiv, #nonTransportDiv, #hospitalDiv, #nonTransportCrimeDiv, #transportTypeDiv, #DNRDiv").hide();
     $("#mAirwayCommentDiv, #oxygenLPMDiv, #immoblazatiomDiv, #splintingDiv, #defibrillationDiv, #IVIODiv, #mOthersDiv, #timeDiv").hide();
     $("#PDOADiv, #refused").hide();
     $("#resuscitationDiv").hide();
@@ -22,14 +22,14 @@ window.onload = function () {
 }
 
 $(document).ready(function() {
-    $('#pastMedicalHistory').editableSelect().on('select.editable-select', function(e, li) {
-        //$('#afterSelect').html(li.val() + '. ' + li.text());
-        if (li.val() == 12) {
-            $("#pastMedicalHistoryTxt").show();
-        } else {
-            $("#pastMedicalHistoryTxt").hide();
-        }
-    });
+    // $('#pastMedicalHistory').editableSelect().on('select.editable-select', function(e, li) {
+    //     //$('#afterSelect').html(li.val() + '. ' + li.text());
+    //     if (li.val() == 12) {
+    //         $("#pastMedicalHistoryTxt").show();
+    //     } else {
+    //         $("#pastMedicalHistoryTxt").hide();
+    //     }
+    // });
     $('#pregnancy').editableSelect().on('select.editable-select', function(e, li) {
         //$('#afterSelect').html(li.val() + '. ' + li.text());
         if (li.val() == 1) {
@@ -40,12 +40,20 @@ $(document).ready(function() {
     });
     
 });
+$('#pastMedicalHistory').on('change', function() {
+    //$('#afterSelect').html(li.val() + '. ' + li.text());
+    if (this.value == 12) {
+        $("#pastMedicalHistoryTxt").show();
+    } else {
+        $("#pastMedicalHistoryTxt").hide();
+    }
+});
 $("#tansportCategory").on('change', function() {
     if (this.value == 1) {
         $("#transportDiv").show();
-        $("#nonTransportDiv, #nonTransportCrimeDiv, #PDOADiv, #refused").hide();
+        $("#nonTransportDiv, #nonTransportCrimeDiv, #PDOADiv, #refused, #DNRDiv").hide();
     } else if (this.value == 2) {
-        $("#transportDiv, #hospitalDiv").hide();
+        $("#transportDiv, #hospitalDiv, #transportTypeDiv").hide();
         $("#nonTransportDiv").show();
     } else {
         $("#transportDiv").hide();
@@ -55,22 +63,29 @@ $("#tansportCategory").on('change', function() {
 $('#tansport').on('change', function() {
     if (this.value == 5) {
         $("#hospitalDiv").show();
-    } else {
+        $("#transportTypeDiv").hide();
+    } else if (this.value == 6) {
+        $("#transportTypeDiv").show();
         $("#hospitalDiv").hide();
+    } else {
+        $("#hospitalDiv, #transportTypeDiv").hide();
     }
 });
 $('#nonTansport').on('change', function() {
     if (this.value == 8) {
         $("#nonTransportCrimeDiv").show();
-        $("#PDOADiv, #refused").hide();
+        $("#PDOADiv, #refused, #DNRDiv").hide();
     } else if (this.value == 4) {
         $("#PDOADiv").show();
-        $("#nonTransportCrimeDiv, #refused").hide();
+        $("#nonTransportCrimeDiv, #refused, #DNRDiv").hide();
     } else if (this.value == 7) {
         $("#refused").show();
-        $("#nonTransportCrimeDiv, #PDOADiv").hide();
-    } else {
+        $("#nonTransportCrimeDiv, #PDOADiv, #DNRDiv").hide();
+    } else if (this.value == 9) {
+        $("#DNRDiv").show();
         $("#nonTransportCrimeDiv, #PDOADiv, #refused").hide();
+    } else {
+        $("#nonTransportCrimeDiv, #PDOADiv, #refused, #DNRDiv").hide();
     }
 });
 $("#mAirway").on('change', function() {
@@ -148,4 +163,21 @@ $("#resuscitationRequired").on('change', function() {
     } else {
         $("#resuscitationDiv").hide();
     }
+});
+
+$(document).ready(function() {
+	$('#approvers').multiselect({
+		enableFiltering: true,
+		includeSelectAllOption: true,
+		maxHeight: 400,
+		dropUp: true,
+		nonSelectedText: 'Please Select from the List',
+	});
+	$('.multiSelect').multiselect({
+		enableFiltering: true,
+		includeSelectAllOption: true,
+		maxHeight: 400,
+		dropUp: true,
+		nonSelectedText: 'Please select',
+	});
 });
