@@ -99,7 +99,9 @@
 
 .gradient-yellow {
     background: #e78000;
-    background: linear-gradient(45deg,#e78000 0%,#ffd26a 100%);
+    background:  url(../img/mask.svg), transparent linear-gradient(70deg, #ef473a 0%, #e78000 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0 10px 20px -8px #ced4da !important;
+    height: 118px;
 }
 
 .gradient-violet {
@@ -456,7 +458,7 @@
 }
 
 .bg-gradient-warning {
-    background-image: linear-gradient(195deg,#ffa726,#fb8c00);
+    background-image: linear-gradient(90deg, #cb5218 0%, #e78000 100%);
     box-shadow: 0 10px 20px -8px #fb8c00;
 }
 
