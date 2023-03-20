@@ -498,11 +498,6 @@ hr.horizontal.dark {
     transform: translate(0px, -10px);
 }
 
-.page-title-box h4 {
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
 #myTasks_wrapper .dataTables_length {
     display: none;
 }

@@ -159,6 +159,7 @@ $("#mOthers").on('change', function() {
 });
 $("#resuscitationRequired").on('change', function() {
     if(this.value == 1) {
+        $("#resuscitationRequiredModal").modal('show');
         $("#resuscitationDiv").show();
     } else {
         $("#resuscitationDiv").hide();
