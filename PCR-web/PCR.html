@@ -394,7 +394,7 @@
                                                     <div class="col-lg-3">
                                                         <div class="input-group">
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" id="dispatchTime" placeholder="Dispatch Time">
+                                                                <input type="text" class="form-control" id="dispatchTime" data-provider="timepickr" data-time-basic="true" placeholder="HH:SS">
                                                                 <label for="dispatchTime">Dispatch Time</label>
                                                             </div>
                                                             <span class="input-group-text"><i class="fa-light fa-calendar-clock fa-lg"></i></span>
@@ -403,7 +403,7 @@
                                                     <div class="col-lg-3">
                                                         <div class="input-group">
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" id="onSceneTime" placeholder="On Scene Time">
+                                                                <input type="text" class="form-control" id="onSceneTime" data-provider="timepickr" data-time-basic="true" placeholder="HH:SS">
                                                                 <label for="onSceneTime">On Scene Time</label>
                                                             </div>
                                                             <span class="input-group-text"><i class="fa-light fa-calendar-clock fa-lg"></i></span>
@@ -451,7 +451,20 @@
                                                     <div class="col-lg-3">
                                                         <div class="input-group">
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" id="regionID" placeholder="Region Name">
+                                                                <select class="form-select" id="regionID" aria-label="Floating label">
+                                                                    <option value="">Please select</option>
+                                                                    <option value="1">Muscat</option>
+                                                                    <option value="2">Al Batinah South</option>
+                                                                    <option value="3">Al Batinah North</option>
+                                                                    <option value="4">Al Burimi</option>
+                                                                    <option value="5">Al Dakhiliyah</option>
+                                                                    <option value="6">Al Dhahira</option>
+                                                                    <option value="7">Al Sharqyah North</option>
+                                                                    <option value="8">Al Sharqyah South</option>
+                                                                    <option value="9">AL Wusta</option>
+                                                                    <option value="10">Dhofar</option>
+                                                                    <option value="11">Musandam</option>
+                                                                </select>
                                                                 <label for="regionID">Region Name</label>
                                                             </div>
                                                             <span class="input-group-text"><i class="fa-light fa-fort fa-lg"></i></span>
@@ -460,7 +473,19 @@
                                                     <div class="col-lg-3">
                                                         <div class="input-group">
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" id="stationId" placeholder="Station Name">
+                                                                <select class="form-select" id="stationId" aria-label="Floating label">
+                                                                    <option value="">Please select</option>
+                                                                    <option value="1">Darsate</option>
+                                                                    <option value="2">Al Watayah</option>
+                                                                    <option value="3">Boshar-1</option>
+                                                                    <option value="4">Boshar-2</option>
+                                                                    <option value="5">AL Athaiba</option>
+                                                                    <option value="6">Al Khudh1</option>
+                                                                    <option value="7">Al Khudh2</option>
+                                                                    <option value="8">Al Amirat</option>
+                                                                    <option value="9">Quriat</option>
+                                                                    <option value="10">Standby</option>
+                                                                </select>
                                                                 <label for="stationId">Station Name</label>
                                                             </div>
                                                             <span class="input-group-text"><i class="fa-light fa-thumbtack fa-lg"></i></span>
@@ -502,7 +527,7 @@
                                                     <div class="col-lg-3">
                                                         <div class="input-group">
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" data-provider="timepickr" data-time-basic="true" id="totalTime" placeholder="HH:SS">
+                                                                <input type="text" class="form-control" id="totalTime" data-provider="timepickr" data-time-basic="true" placeholder="HH:SS">
                                                                 <label for="totalTime">Total Time</label>
                                                             </div>
                                                             <span class="input-group-text"><i class="fa-light fa-clock fa-lg"></i></span>
@@ -511,7 +536,25 @@
                                                     <div class="col-lg-3">
                                                         <div class="input-group">
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" id="factorsAffectingEMS" placeholder="Factors Affecting EMS">
+                                                                <select class="form-select" id="factorsAffectingEMS" aria-label="Floating label">
+                                                                    <option value="">Please select</option>
+                                                                    <option value="1">Adverse Round Condition</option>
+                                                                    <option value="2">Adverse Weather</option>
+                                                                    <option value="3">Crowd Control</option>
+                                                                    <option value="4">Hazardous Material</option>
+                                                                    <option value="5">Language Barrier</option>
+                                                                    <option value="6">Prolonged Extrication </option>
+                                                                    <option value="7">Unsafe Scene</option>
+                                                                    <option value="8">Vehicle Problems</option>
+                                                                    <option value="9">Not Applicable</option>
+                                                                    <option value="10">Directions</option>
+                                                                    <option value="11">Ambulance Crash</option>
+                                                                    <option value="12">Ambulance Failure</option>
+                                                                    <option value="13">Distance</option>
+                                                                    <option value="14">Diversion</option>
+                                                                    <option value="15">Others</option>
+                                                                    <option value="16">None</option>
+                                                                </select>
                                                                 <label for="factorsAffectingEMS">Factors Affecting EMS</label>
                                                             </div>
                                                             <span class="input-group-text"><i class="fa-light fa-notes-medical fa-lg"></i></span>

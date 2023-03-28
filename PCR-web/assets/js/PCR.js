@@ -167,13 +167,6 @@ $("#resuscitationRequired").on('change', function() {
 });
 
 $(document).ready(function() {
-	$('#approvers').multiselect({
-		enableFiltering: true,
-		includeSelectAllOption: true,
-		maxHeight: 400,
-		dropUp: true,
-		nonSelectedText: 'Please Select from the List',
-	});
 	$('.multiSelect').multiselect({
 		enableFiltering: true,
 		includeSelectAllOption: true,
