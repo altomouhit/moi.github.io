@@ -1736,7 +1736,7 @@
                                                                 <div class="col-md-12">
                                                                     <fieldset>
                                                                         <div class="row my-3">
-                                                                            <div class="col-lg-3 mb-3">
+                                                                            <div class="col-lg-3 mb-3" id="pregnancyDiv">
                                                                                 <div class="form-floating">
                                                                                     <select class="form-select" id="pregnancy" aria-label="Floating label">
                                                                                         <option value="">Please select</option>
@@ -1748,8 +1748,20 @@
                                                                             </div>
                                                                             <div class="col-lg-3" id="pComments">
                                                                                 <div class="form-floating">
-                                                                                    <input type="text" class="form-control" placeholder="comments" id="pCommentsTxt" />
-                                                                                    <label for="pCommentsTxt">Pregnancy comments</label>
+                                                                                    <input type="text" class="form-control" placeholder="Weeks" id="pCommentsTxt" />
+                                                                                    <label for="pCommentsTxt">Weeks</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-3">
+                                                                                <div class="form-floating">
+                                                                                    <select class="form-select" id="impactedPerson" aria-label="Floating label">
+                                                                                        <option value="">Please select</option>
+                                                                                        <option value="1">Driver</option>
+                                                                                        <option value="2">Front Passenger</option>
+                                                                                        <option value="3">Rear Passenger</option>
+                                                                                        <option value="4">Pedestrian</option>
+                                                                                    </select>
+                                                                                    <label for="impactedPerson">Impacted Person</label>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-lg-3">
@@ -1792,7 +1804,16 @@
                                                                                     <label for="airBag">Airbag</label>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                        </div> <!-- /.row -->
+                                                                        <div class="row mb-3">
+                                                                            <div class="col-lg-6">
+                                                                                <label for="personPicture" class="mb-0">Person Picture</label>
+                                                                                <div class="input-group">
+                                                                                    <input class="form-control" id="personPicture" type="file" accept="image/png, image/gif, image/jpeg" />
+                                                                                    <span class="input-group-text"><i class="fa-light fa-camera-viewfinder fa-lg"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- /.row -->
                                                                     </fieldset>
                                                                 </div>
                                                             </div>
@@ -3550,7 +3571,7 @@
     
     <!-- Time create modal -->
     <div class="modal fade zoomIn" id="addTime" tabindex="-1" aria-labelledby="addTimeModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content border-0">
                 <!-- <div class="modal-header bg-soft-info p-3">
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
@@ -3558,196 +3579,506 @@
                 </div> -->
                 <form class="tablelist-form" autocomplete="off">
                     <div class="modal-body">
-                        <div class="row g-3">
+                        <div class="row">
                             <fieldset class="bg-light-subtle">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <label for="timetxt" class="form-label"> Time \ Vs</label>
-                                        <input type="text" class="form-control" id="timetxt" data-provider="timepickr" data-time-basic="true" />
+                                <div class="row g-3 mt-1">
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="timetxt" data-provider="timepickr" data-time-basic="true" />
+                                            <label for="timetxt" class="form-label"> Time \ Vs</label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="AVPU_select" class="form-label">AVPU</label>
-                                        <select name="AVPU_select" id="AVPU_select" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="1">Alert</option>
-                                            <option value="2">Verbel</option>
-                                            <option value="3">Pain</option>
-                                            <option value="4">Unresponsive</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <select name="AVPU_select" id="AVPU_select" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="1">Alert</option>
+                                                <option value="2">Verbel</option>
+                                                <option value="3">Pain</option>
+                                                <option value="4">Unresponsive</option>
+                                            </select>
+                                            <label for="AVPU_select" class="form-label">AVPU</label>
+                                        </div>  
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="BP_txt" class="form-label">BP</label>
-                                        <input type="text" id="BP_txt" name="BP_txt" class="form-control" placeholder="Enter BP" />
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <input type="text" id="BP_txt" name="BP_txt" class="form-control" placeholder="Enter BP" />
+                                            <label for="BP_txt" class="form-label">BP</label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="Pulse_txt" class="form-label">Pulse </label>
-                                        <input type="text" id="Pulse_txt" name="Pulse_txt" class="form-control" placeholder="Enter Pulse" />
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <input type="text" id="Pulse_txt" name="Pulse_txt" class="form-control" placeholder="Enter Pulse" />
+                                            <label for="Pulse_txt" class="form-label">Pulse </label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="RR_txt" class="form-label">R.R</label>
-                                        <input type="text" id="RR_txt" name="Pulse_txt" class="form-control" placeholder="Enter R.R" />
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <input type="text" id="RR_txt" name="Pulse_txt" class="form-control" placeholder="Enter R.R" />
+                                            <label for="RR_txt" class="form-label">R.R</label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="o2_txt" class="form-label">O<sup>2</sup></label>
-                                        <input type="text" id="o2_txt" name="o2_txt" class="form-control" placeholder="Enter O2" />
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <input type="text" id="o2_txt" name="o2_txt" class="form-control" placeholder="Enter O2" />
+                                            <label for="o2_txt" class="form-label">O<sup>2</sup></label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4 mb-2">
-                                        <label for="ECG_txt" class="form-label">ECG</label>
-                                        <!-- <input type="text" id="ECG_txt" name="ECG_txt" class="form-control" placeholder="Enter ECG" /> -->
-                                        <select name="ECG_txt" id="ECG_txt" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="">Asystole</option>
-                                            <option value="1">Atrial Fibrillation</option>
-                                            <option value="2">Atrial flutter</option>
-                                            <option value="3">First Degree AV Block</option>
-                                            <option value="4">Junctional Rhythm</option>
-                                            <option value="5">Left Bundle Block</option>
-                                            <option value="6">Multiple focal Atrial Tachycardia</option>
-                                            <option value="7">Normal Sinus Rhythm</option>
-                                            <option value="8">PEA</option>
-                                            <option value="9">Premature Atrial Contraction</option>
-                                            <option value="10">Premature Ventricular Contraction</option>
-                                            <option value="11">Proxysmal SupraVentricularTachycardia</option>
-                                            <option value="12">Right Bundle Branch Block</option>
-                                            <option value="13">Sick Sinus Syndrome</option>
-                                            <option value="14">Sinus Arrest</option>
-                                            <option value="15">Sinus Arrythmia</option>
-                                            <option value="16">Sinus Block</option>
-                                            <option value="17">Sinus Tachycardia</option>
-                                            <option value="18">Sinus Bradycardia</option>
-                                            <option value="19">SupraVentricularTachcardia</option>
-                                            <option value="20">Third Degree AV Block</option>
-                                            <option value="21">Torsadede Pointes</option>
-                                            <option value="22">Type 1 Second Degree AV Block</option>
-                                            <option value="23">Type 2 Second Degree AV Block</option>
-                                            <option value="24">Ventricular Escape Rhythm</option>
-                                            <option value="25">Ventricular Fibrillation</option>
-                                            <option value="26">Ventricular Tachycardia</option>
-                                        </select>
+                                    <div class="col-lg-3 mb-2">
+                                        <div class="form-floating">
+                                            <!-- <input type="text" id="ECG_txt" name="ECG_txt" class="form-control" placeholder="Enter ECG" /> -->
+                                            <select name="ECG_txt" id="ECG_txt" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="">Asystole</option>
+                                                <option value="1">Atrial Fibrillation</option>
+                                                <option value="2">Atrial flutter</option>
+                                                <option value="3">First Degree AV Block</option>
+                                                <option value="4">Junctional Rhythm</option>
+                                                <option value="5">Left Bundle Block</option>
+                                                <option value="6">Multiple focal Atrial Tachycardia</option>
+                                                <option value="7">Normal Sinus Rhythm</option>
+                                                <option value="8">PEA</option>
+                                                <option value="9">Premature Atrial Contraction</option>
+                                                <option value="10">Premature Ventricular Contraction</option>
+                                                <option value="11">Proxysmal SupraVentricularTachycardia</option>
+                                                <option value="12">Right Bundle Branch Block</option>
+                                                <option value="13">Sick Sinus Syndrome</option>
+                                                <option value="14">Sinus Arrest</option>
+                                                <option value="15">Sinus Arrythmia</option>
+                                                <option value="16">Sinus Block</option>
+                                                <option value="17">Sinus Tachycardia</option>
+                                                <option value="18">Sinus Bradycardia</option>
+                                                <option value="19">SupraVentricularTachcardia</option>
+                                                <option value="20">Third Degree AV Block</option>
+                                                <option value="21">Torsadede Pointes</option>
+                                                <option value="22">Type 1 Second Degree AV Block</option>
+                                                <option value="23">Type 2 Second Degree AV Block</option>
+                                                <option value="24">Ventricular Escape Rhythm</option>
+                                                <option value="25">Ventricular Fibrillation</option>
+                                                <option value="26">Ventricular Tachycardia</option>
+                                            </select>
+                                            <label for="ECG_txt" class="form-label">ECG</label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4 mb-2">
-                                        <label for="RHYTHM" class="form-label">RHYTHM</label>
-                                        <select name="RHYTHM" id="RHYTHM" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="">Asystole</option>
-                                            <option value="">Atrial Fibrillation</option>
-                                            <option value="">Atrial flutter</option>
-                                            <option value="">First Degree AV Block</option>
-                                            <option value="">Junctional Rhythm</option>
-                                            <option value="">Left Bundle Block</option>
-                                            <option value="">Muliplefocal Atrial Tachycardia</option>
-                                            <option value="">Normal Sinus Rhythm</option>
-                                            <option value="">PEA</option>
-                                            <option value="">Premature Atrial Contraction</option>
-                                            <option value="">Premature Ventricular Contraction</option>
-                                            <option value="">Proxysmal SupraVentricularTachycardia</option>
-                                            <option value="">Right Bundle Branch Block</option>
-                                            <option value="">Sick Sinus Syndrome</option>
-                                            <option value="">Sinus Arrest</option>
-                                            <option value="">Sinus Arrythmia</option>
-                                            <option value="">Sinus Block</option>
-                                            <option value="">Sinus Tachycardia</option>
-                                            <option value="">Sinus Bradycardia</option>
-                                            <option value="">SupraVentricularTachcardia</option>
-                                            <option value="">Third Degree AV Block</option>
-                                            <option value="">Torsadede Pointes</option>
-                                            <option value="">Type 1 Second Degree AV Block</option>
-                                            <option value="">Type 2 Second Degree AV Block</option>
-                                            <option value="">Ventricular Escape Rhythm</option>
-                                            <option value="">Ventricular Fibrillation</option>
-                                            <option value="">Ventricular Tachycardia</option>
-                                            <option value="">Unable to Identify</option>
-                                            <option value="">Not Applicable</option>
-                                        </select>
+                                    <div class="col-lg-3 mb-2">
+                                        <div class="form-floating">
+                                            <select name="RHYTHM" id="RHYTHM" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="1">Asystole</option>
+                                                <option value="2">Atrial Fibrillation</option>
+                                                <option value="3">Atrial flutter</option>
+                                                <option value="4">First Degree AV Block</option>
+                                                <option value="5">Junctional Rhythm</option>
+                                                <option value="6">Left Bundle Block</option>
+                                                <option value="7">Muliplefocal Atrial Tachycardia</option>
+                                                <option value="8">Normal Sinus Rhythm</option>
+                                                <option value="9">PEA</option>
+                                                <option value="10">Premature Atrial Contraction</option>
+                                                <option value="11">Premature Ventricular Contraction</option>
+                                                <option value="12">Proxysmal SupraVentricularTachycardia</option>
+                                                <option value="13">Right Bundle Branch Block</option>
+                                                <option value="14">Sick Sinus Syndrome</option>
+                                                <option value="15">Sinus Arrest</option>
+                                                <option value="16">Sinus Arrythmia</option>
+                                                <option value="17">Sinus Block</option>
+                                                <option value="18">Sinus Tachycardia</option>
+                                                <option value="19">Sinus Bradycardia</option>
+                                                <option value="20">SupraVentricularTachcardia</option>
+                                                <option value="21">Third Degree AV Block</option>
+                                                <option value="22">Torsadede Pointes</option>
+                                                <option value="23">Type 1 Second Degree AV Block</option>
+                                                <option value="24">Type 2 Second Degree AV Block</option>
+                                                <option value="25">Ventricular Escape Rhythm</option>
+                                                <option value="26">Ventricular Fibrillation</option>
+                                                <option value="27">Ventricular Tachycardia</option>
+                                                <option value="28">Unable to Identify</option>
+                                                <option value="29">Not Applicable</option>
+                                            </select>
+                                            <label for="RHYTHM" class="form-label">RHYTHM</label>
+                                        </div>
                                     </div>
                                 </div>
                             </fieldset>
-                            <fieldset class="bg-soft-info">
+
+                            <fieldset class="bg-soft-info mt-3">
                                 <legend>Glasgow Coma Scale</legend>
                                 <div class="row mb-3">
-                                    <div class="col-lg-4">
-                                        <label for="eyeOpeninp" class="form-label">Eye Openinp</label>
-                                        <select name="eyeOpeninp" id="eyeOpeninp" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="4">Spontaneous</option>
-                                            <option value="3">To Voice</option>
-                                            <option value="2">To Pain</option>
-                                            <option value="1">None</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <select name="eyeOpeninp" id="eyeOpeninp" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="4">Spontaneous</option>
+                                                <option value="3">To Voice</option>
+                                                <option value="2">To Pain</option>
+                                                <option value="1">None</option>
+                                            </select>
+                                            <label for="eyeOpeninp" class="form-label">Eye Openinp</label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="verbalResponse" class="form-label">Verbal Response</label>
-                                        <select name="verbalResponse" id="verbalResponse" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="5">Oriented</option>
-                                            <option value="4">Confused</option>
-                                            <option value="3">Inappropriate Words</option>
-                                            <option value="2">Incomperhensiblesounds</option>
-                                            <option value="1">None</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <select name="verbalResponse" id="verbalResponse" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="5">Oriented</option>
+                                                <option value="4">Confused</option>
+                                                <option value="3">Inappropriate Words</option>
+                                                <option value="2">Incomperhensiblesounds</option>
+                                                <option value="1">None</option>
+                                            </select>
+                                            <label for="verbalResponse" class="form-label">Verbal Response</label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="motorResponse" class="form-label">Motor Response</label>
-                                        <select name="motorResponse" id="motorResponse" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="6">Obey Commands</option>
-                                            <option value="5">Local Pain</option>
-                                            <option value="4">Withdraw (Pain)</option>
-                                            <option value="3">Flexion (Pain)</option>
-                                            <option value="2">Extension (Pain)</option>
-                                            <option value="1">None</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <select name="motorResponse" id="motorResponse" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="6">Obey Commands</option>
+                                                <option value="5">Local Pain</option>
+                                                <option value="4">Withdraw (Pain)</option>
+                                                <option value="3">Flexion (Pain)</option>
+                                                <option value="2">Extension (Pain)</option>
+                                                <option value="1">None</option>
+                                            </select>
+                                            <label for="motorResponse" class="form-label">Motor Response</label>
+                                        </div>
                                     </div>
                                 </div> <!-- /.row -->
                             </fieldset>
 
-                            <fieldset class="bg-soft-primary">
+                            <fieldset class="bg-soft-primary mt-3">
                                 <legend>APGAR SCORE (Determiners 1 & 5 Min)</legend>
+                                <div class="row">
+                                    <div class="col-lg-3 mb-3">
+                                        <div class="form-floating">
+                                            <select name="skinColor" id="skinColor" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="0">Blue , Pale</option>
+                                                <option value="1">Body Pink , Extremities Blue</option>
+                                                <option value="2">Completely Pink</option>
+                                            </select>
+                                            <label for="skinColor" class="form-label">Appearance (Skin Color)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 mb-3">
+                                        <div class="form-floating">
+                                            <select name="heartRate" id="heartRate" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="0">Absent</option>
+                                                <option value="1">Below 100/ min</option>
+                                                <option value="2">Above 100/min</option>
+                                            </select>
+                                            <label for="heartRate" class="form-label">Pulse Rate (Heart Rate)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 mb-3">
+                                        <div class="form-floating">
+                                            <select name="grimace" id="grimace" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="0">No Response</option>
+                                                <option value="1">Grimace</option>
+                                                <option value="2">Cries</option>
+                                            </select>
+                                            <label for="grimace" class="form-label">Grimace (irritability)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 mb-3">
+                                        <div class="form-floating">
+                                            <select name="muscleTone" id="muscleTone" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="0">Limp</option>
+                                                <option value="1">Some Flexion of Extremities</option>
+                                                <option value="2">Active Motion</option>
+                                            </select>
+                                            <label for="muscleTone" class="form-label">Activity (Muscle Tone)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 mb-3">
+                                        <div class="form-floating">
+                                            <select name="respiratioryEffort" id="respiratioryEffort" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="0">Absent</option>
+                                                <option value="1">Slow and Irregular</option>
+                                                <option value="2">Strong Cry</option>
+                                            </select>
+                                            <label for="respiratioryEffort" class="form-label">Respiratory Effort</label>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.row -->
+                            </fieldset>
+
+                            <fieldset class="mt-3">
+                                <legend class="text-danger-emphasis">Burn Percentage</legend>
                                 <div class="row mb-3">
-                                    <div class="col-lg-4">
-                                        <label for="skinColor" class="form-label">Appearance (Skin Color)</label>
-                                        <select name="skinColor" id="skinColor" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="0">Blue , Pale</option>
-                                            <option value="1">Body Pink , Extremities Blue</option>
-                                            <option value="2">Completely Pink</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <div class="form-floating">
+                                            <select name="burnType" id="burnType" class="form-select">
+                                                <option value="">Please select</option>
+                                                <option value="1">Adult</option>
+                                                <option value="2">Peditric</option>
+                                            </select>
+                                            <label for="burnType" class="form-label">Burn Type</label>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="heartRate" class="form-label">Pulse Rate (Heart Rate)</label>
-                                        <select name="heartRate" id="heartRate" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="0">Absent</option>
-                                            <option value="1">Below 100/ min</option>
-                                            <option value="2">Above 100/min</option>
-                                        </select>
+                                </div> <!-- /.row -->
+
+                                <div class="row" id="adultDiv">
+                                    <div class="col-lg-12">
+                                        <h6 class="fw-bold text-primary-emphasis">Adult</h6>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered border-danger">
+                                                <thead class="table-danger">
+                                                    <tr>
+                                                        <th>Head</th>
+                                                        <th>Chest</th>
+                                                        <th>Abdominal</th>
+                                                        <th>Genitalia</th>
+                                                        <th>RT Upper EXT</th>
+                                                        <th>LF Upper EXT</th>
+                                                        <th>RT Lower EXT</th>
+                                                        <th>LF Lower EXT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <label for="grimace" class="form-label">Grimace (irritability)</label>
-                                        <select name="grimace" id="grimace" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="0">No Response</option>
-                                            <option value="1">Grimace</option>
-                                            <option value="2">Cries</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <label for="muscleTone" class="form-label">Activity (Muscle Tone)</label>
-                                        <select name="muscleTone" id="muscleTone" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="0">Limp</option>
-                                            <option value="1">Some Flexion of Extremities</option>
-                                            <option value="2">Active Motion</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <label for="respiratioryEffort" class="form-label">Respiratory Effort</label>
-                                        <select name="respiratioryEffort" id="respiratioryEffort" class="form-select">
-                                            <option value="">Please select</option>
-                                            <option value="0">Absent</option>
-                                            <option value="1">Slow and Irregular</option>
-                                            <option value="2">Strong Cry</option>
-                                        </select>
+                                </div> <!-- /.row -->
+
+                                <div class="row" id="peditricDiv">
+                                    <div class="col-lg-12">
+                                        <h6 class="fw-bold text-primary-emphasis">Peditric</h6>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered border-danger">
+                                                <thead class="table-danger">
+                                                    <tr>
+                                                        <th>Head</th>
+                                                        <th>Chest</th>
+                                                        <th>Abdominal</th>
+                                                        <th>RT Upper EXT</th>
+                                                        <th>LF Upper EXT</th>
+                                                        <th>RT Lower EXT</th>
+                                                        <th>LF Lower EXT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                            <option value="10">10%</option>
+                                                            <option value="11">11%</option>
+                                                            <option value="12">12%</option>
+                                                            <option value="13">13%</option>
+                                                            <option value="14">14%</option>
+                                                            <option value="15">15%</option>
+                                                            <option value="16">16%</option>
+                                                            <option value="17">17%</option>
+                                                            <option value="18">18%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                            <option value="10">10%</option>
+                                                            <option value="11">11%</option>
+                                                            <option value="12">12%</option>
+                                                            <option value="13">13%</option>
+                                                            <option value="14">14%</option>
+                                                            <option value="15">15%</option>
+                                                            <option value="16">16%</option>
+                                                            <option value="17">17%</option>
+                                                            <option value="18">18%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                            <option value="10">10%</option>
+                                                            <option value="11">11%</option>
+                                                            <option value="12">12%</option>
+                                                            <option value="13">13%</option>
+                                                            <option value="14">14%</option>
+                                                            <option value="15">15%</option>
+                                                            <option value="16">16%</option>
+                                                            <option value="17">17%</option>
+                                                            <option value="18">18%</option>
+                                                        </select></td>
+                                                        
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                            <option value="10">10%</option>
+                                                            <option value="11">11%</option>
+                                                            <option value="12">12%</option>
+                                                            <option value="13">13%</option>
+                                                            <option value="14">14%</option>
+                                                        </select></td>
+                                                        <td><select name="" id="" class="form-select">
+                                                            <option value="">Please select</option>
+                                                            <option value="1">1%</option>
+                                                            <option value="2">2%</option>
+                                                            <option value="3">3%</option>
+                                                            <option value="4">4%</option>
+                                                            <option value="5">5%</option>
+                                                            <option value="6">6%</option>
+                                                            <option value="7">7%</option>
+                                                            <option value="8">8%</option>
+                                                            <option value="9">9%</option>
+                                                            <option value="10">10%</option>
+                                                            <option value="11">11%</option>
+                                                            <option value="12">12%</option>
+                                                            <option value="13">13%</option>
+                                                            <option value="14">14%</option>
+                                                        </select></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div> <!-- /.row -->
                             </fieldset>

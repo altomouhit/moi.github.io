@@ -19,6 +19,8 @@ window.onload = function () {
     //Patient & Incident Info > Resuscitation Management > Indication Procedures > Tube Type
     $("#ETtubeSizeDiv, #COMBItubeSizeDiv, #LMAtubeSizeDiv").hide();
     $("#RTLFDiv").hide();
+    //Total Burn Score
+    $("#adultDiv, #peditricDiv").hide();
     //$('.selector').editableSelect();
     $('.selector').editableSelect({
         // enable filter
@@ -358,6 +360,18 @@ $("#breathSound").on('change', function() {
         $("#RTLFDiv").show();
     }
 });
+$("#burnType").on('change', function() {
+    if(this.value == 1) {
+        $("#adultDiv").show();
+        $("#peditricDiv").hide();
+    } else if(this.value == 2) {
+        $("#adultDiv").hide();
+        $("#peditricDiv").show();
+    } else {
+        $("#adultDiv, #peditricDiv").hide();
+    }
+});
+
 $(document).ready(function() {
 	$('.multiSelect').multiselect({
 		enableFiltering: true,
