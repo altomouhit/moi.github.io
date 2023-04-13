@@ -50,7 +50,7 @@ $(function() {
 		},
 		anchor: {
 			enableNavigation: true, // Enable/Disable anchor navigation 
-			enableNavigationAlways: false, // Activates all anchors clickable always
+			enableNavigationAlways: true, // Activates all anchors clickable always
 			enableDoneState: true, // Add done state on visited steps
 			markPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
 			unDoneOnBackNavigation: false, // While navigate back, done state will be cleared

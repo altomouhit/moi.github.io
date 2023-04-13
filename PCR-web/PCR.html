@@ -2607,28 +2607,36 @@
 
                                                                     <div class="row align-items-center" id="actualDeliveryDiv">
                                                                         <label for="actualDelivery" class="text-primary">Actual Delivery</label>
-                                                                        <div class="col-sm-12">
-                                                                            <div class="form-check form-check-inline">
-                                                                                <input class="form-check-input actualDelivery" type="radio" name="actualDelivery" id="timeDeliveryRadio" value="1">
-                                                                                <label class="form-check-label" for="timeDeliveryRadio">Time of Delivery</label>
+                                                                        <div class="col-lg-4 mb-2">
+                                                                            <div class="input-group">
+                                                                                <div class="form-floating">
+                                                                                    <input type="text" class="form-control" id="timeDeliveryRadio" data-provider="timepickr" data-time-basic="true" placeholder="HH:SS">
+                                                                                    <label for="timeDeliveryRadio">Time of Delivery</label>
+                                                                                </div>
+                                                                                <span class="input-group-text"><i class="fa-light fa-calendar-clock fa-lg"></i></span>
                                                                             </div>
-                                                                            <div class="form-check form-check-inline">
-                                                                                <input class="form-check-input actualDelivery" type="radio" name="actualDelivery" id="deadRadio" value="2">
-                                                                                <label class="form-check-label" for="deadRadio">Dead</label>
+                                                                        </div>
+                                                                        <div class="col-lg-4 mb-2">
+                                                                            <div class="form-floating">
+                                                                                <select name="aliveRadio" id="aliveRadio" class="form-select">
+                                                                                    <option value="">Please select</option>
+                                                                                    <option value="1">Dead</option>
+                                                                                    <option value="2">A live</option>
+                                                                                </select>
+                                                                                <label for="aliveRadio">Type</label>
                                                                             </div>
-                                                                            <div class="form-check form-check-inline">
-                                                                                <input class="form-check-input actualDelivery" type="radio" name="actualDelivery" id="aliveRadio" value="3">
-                                                                                <label class="form-check-label" for="aliveRadio">A live</label>
+                                                                        </div>
+                                                                        <div class="col-lg-4 mb-2">
+                                                                            <div class="form-floating">
+                                                                                <select name="genderRadio" id="genderRadio" class="form-select">
+                                                                                    <option value="">Please select</option>
+                                                                                    <option value="1">Male</option>
+                                                                                    <option value="2">Female</option>
+                                                                                </select>
+                                                                                <label for="genderRadio">Gender</label>
                                                                             </div>
-
-                                                                            <div class="form-check form-check-inline">
-                                                                                <input class="form-check-input actualDelivery" type="radio" name="actualDelivery" id="maleRadio" value="4">
-                                                                                <label class="form-check-label" for="maleRadio">Male</label>
-                                                                            </div>
-                                                                            <div class="form-check form-check-inline">
-                                                                                <input class="form-check-input actualDelivery" type="radio" name="actualDelivery" id="feMaleRadio" value="5">
-                                                                                <label class="form-check-label" for="feMaleRadio">Female</label>
-                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-12">
                                                                             <div class="form-check form-check-inline">
                                                                                 <input class="form-check-input actualDelivery" type="radio" name="actualDelivery" id="resuscitationRadio" value="6">
                                                                                 <label class="form-check-label" for="resuscitationRadio">Resuscitation</label>
@@ -3246,7 +3254,7 @@
                                                             <div class="col-lg-12">
                                                                 <div class="table-responsive">
                                                                     <table class="table table-bordered">
-                                                                        <thead class="table-danger align-middle">
+                                                                        <thead class="table-danger">
                                                                             <tr>
                                                                                 <th rowspan="2">Time</th>
                                                                                 <th rowspan="2">B.P</th>
