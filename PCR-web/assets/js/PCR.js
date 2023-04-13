@@ -21,6 +21,8 @@ window.onload = function () {
     $("#RTLFDiv").hide();
     //Total Burn Score
     $("#adultDiv, #peditricDiv").hide();
+    //Upper EXT > Upper EXT Left Burns
+    $("#upperEXTLeftBurnsDiv, #upperEXTRightBurnsDiv,#lwEXTLeftBurnsDiv, #lwEXTRightBurnsDiv").hide();
     //$('.selector').editableSelect();
     $('.selector').editableSelect({
         // enable filter
@@ -92,7 +94,7 @@ $("#circulation").on('change', function() {
 });
 //Patient Assessment > head
 $('#head').on('change', function() {
-    if (this.value == 5) {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
         $("#headBurnsDiv").show();
     } else {
         $("#headBurnsDiv").hide();
@@ -100,7 +102,7 @@ $('#head').on('change', function() {
 });
 //Patient Assessment > Neck
 $('#neck').on('change', function() {
-    if (this.value == 5) {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
         $("#neckBurnsDiv").show();
     } else {
         $("#neckBurnsDiv").hide();
@@ -108,7 +110,7 @@ $('#neck').on('change', function() {
 });
 //Patient Assessment > Abdomen
 $('#abdomen').on('change', function() {
-    if (this.value == 5) {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
         $("#abdomenBurnsDiv").show();
     } else {
         $("#abdomenBurnsDiv").hide();
@@ -116,7 +118,7 @@ $('#abdomen').on('change', function() {
 });
 //Patient Assessment > Pelvic
 $('#pelvic').on('change', function() {
-    if (this.value == 5) {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
         $("#pelvicBurnsDiv").show();
     } else {
         $("#pelvicBurnsDiv").hide();
@@ -124,7 +126,7 @@ $('#pelvic').on('change', function() {
 });
 //Patient Assessment > Chest
 $('#chest').on('change', function() {
-    if (this.value == 5) {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
         $("#chestBurnsDiv").show();
     } else {
         $("#chestBurnsDiv").hide();
@@ -132,10 +134,42 @@ $('#chest').on('change', function() {
 });
 //Patient Assessment > Back
 $('#back').on('change', function() {
-    if (this.value == 5) {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
         $("#backBurnsDiv").show();
     } else {
         $("#backBurnsDiv").hide();
+    }
+});
+
+//Upper EXT > Upper EXT Left Burns
+$('#upperEXTLeft').on('change', function() {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
+        $("#upperEXTLeftBurnsDiv").show();
+    } else {
+        $("#upperEXTLeftBurnsDiv").hide();
+    }
+});
+$('#upperEXTRight').on('change', function() {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
+        $("#upperEXTRightBurnsDiv").show();
+    } else {
+        $("#upperEXTRightBurnsDiv").hide();
+    }
+});
+
+//Lw EXT > Lw EXT Left Burns
+$('#lwEXTLeft').on('change', function() {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
+        $("#lwEXTLeftBurnsDiv").show();
+    } else {
+        $("#lwEXTLeftBurnsDiv").hide();
+    }
+});
+$('#lwEXTRight').on('change', function() {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
+        $("#lwEXTRightBurnsDiv").show();
+    } else {
+        $("#lwEXTRightBurnsDiv").hide();
     }
 });
 
@@ -148,7 +182,7 @@ $('#pregnancy').on('change', function() {
 });
 $('#pastMedicalHistory').on('change', function() {
     //$('#afterSelect').html(li.val() + '. ' + li.text());
-    if (this.value == 12) {
+    if (this.value == 12 || this.value == 12 && this.value != "") {
         $("#pastMedicalHistoryTxt").show();
     } else {
         $("#pastMedicalHistoryTxt").hide();
@@ -170,7 +204,7 @@ $("#transportCategory").on('change', function() {
     }
 });
 $('#transport').on('change', function() {
-    if (this.value == 5) {
+    if (this.value == 5 || this.value == 5 && this.value != "") {
         $("#hospitalDiv").show();
         $("#transportTypeDiv, #locationTypeDiv").hide();
     } else if (this.value == 6) {
@@ -371,7 +405,17 @@ $("#burnType").on('change', function() {
         $("#adultDiv, #peditricDiv").hide();
     }
 });
-
+$(".actualDelivery").change(function() {
+    if ($("#resuscitationRadio").prop("checked") == true) {
+        $("#resuscitationManagementDiv").show();
+        $("#obstetricCareDiv").hide();
+    } else if ($("#obstetricRadio").prop("checked") == true) {
+        $("#resuscitationManagementDiv").hide();
+        $("#obstetricCareDiv").show();
+    } else {
+        $("#resuscitationManagementDiv, #obstetricCareDiv").hide();
+    }
+});
 $(document).ready(function() {
 	$('.multiSelect').multiselect({
 		enableFiltering: true,
