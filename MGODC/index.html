@@ -18,7 +18,7 @@
     <link type='text/css' rel="stylesheet" href="css/fontawesome-6.3.0/fontawesome.6.3.0.css" />
     <!-- Animate -->
     <link type='text/css' rel="stylesheet" href="css/animate.css">
-    <link type='text/css' rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.css">
+    <link type='text/css' rel="stylesheet" href="css/dataTables.bootstrap5.css">
     <!-- custom -->
     <link type='text/css' rel="stylesheet" href="css/custom.css" />
 </head>
@@ -95,7 +95,7 @@
 
     <header>
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-light fixed-top  border-bottom shadow-lg">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top  border-bottom shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="img/SOS-logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -128,10 +128,10 @@
                         <div class="card-body">
                             <!-- <h5 class="card-title"></h5> -->
                             <div class="row">
-                                <div class="col-6 mb-3">
+                                <div class="col-6 wow fadeInUp" data-wow-delay=".20s">
                                     <input type="file" name="" id="" class="form-control">
                                 </div>
-                                <div class="col">
+                                <div class="col wow fadeInDown" data-wow-delay=".40s">
                                     <a href="#" class="btn btn-danger">Generate</a>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
             <div class="row mt-3">
                 <div class="col">
                     <div class="card ">
-                        <div class="card-body">
+                        <div class="card-body p-0 pt-1">
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <div class="table-responsive">
@@ -152,11 +152,36 @@
                                                 <tr>
                                                     <th>#</th>
                                                     <th>Month Name</th>
-                                                    <th>Total Water Production Per day</th>
-                                                    <th>Requested Dispatch Per day </th>
+                                                    <th>Total Water Production Per day (Average)</th>
+                                                    <th>Requested Dispatch Per day (Average)</th>
                                                     <th>Total Water Production for the Month</th>
                                                     <th>Requested Dispatch for the Month </th>
                                                     <th>Variance in Production </th>
+                                                </tr>
+                                            </thead>
+                                         </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /.row -->
+
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card ">
+                        <div class="card-body p-0 pt-1">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="table-responsive">
+                                         <table class="table table-bordered table-striped" id="generateDayTable">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Day</th>
+                                                    <th>Water Production Per day</th>
+                                                    <th>Requested Dispatch Per day</th>
                                                 </tr>
                                             </thead>
                                          </table>
@@ -186,11 +211,17 @@
     <script type='text/javascript' src="js/wow.js"></script>
     <script type='text/javascript' src="js/color-modes.js"></script>
     
-    <script type='text/javascript' src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
-    <script type='text/javascript' src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.js"></script>
+    <script type='text/javascript' src="js/jquery.dataTables.js"></script>
+    <script type='text/javascript' src="js/dataTables.bootstrap5.js"></script>
     <script type='text/javascript'>
         $(document).ready(function () {
-            $('#generateTable').DataTable();
+            $('#generateTable, #generateDayTable').DataTable({
+                "destroy": true,
+                "dom": '<"top"f>rt<"bottom"ilp>',
+                "oLanguage": {
+                    "sLengthMenu": "Items per page: _MENU_",
+                },
+            });
         });
     </script>
 </body>
