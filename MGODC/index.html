@@ -11,7 +11,8 @@
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="img/favicon.png">
     <title>:: Home ::</title>
-
+    <!-- loader -->
+    <link type='text/css' rel="stylesheet" href="css/loader.css" />
     <!-- Bootstrap -->
     <link type='text/css' rel="stylesheet" href="css/bootstrap.css" />
     <!-- font awesome -->
@@ -24,6 +25,17 @@
 </head>
 
 <body class="d-flex flex-column h-100">
+
+    <div id="ct-loadding" class="ct-loader style13">
+        <div class="ct-loading-ito">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+        </div>
+    </div>
+    <div class="ct-page-loading-bg"></div>
+    
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="check2" viewBox="0 0 16 16">
             <path
@@ -95,7 +107,7 @@
 
     <header>
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-light fixed-top  border-bottom shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white border-bottom shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="img/SOS-logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -168,7 +180,7 @@
                 </div>
             </div> <!-- /.row -->
 
-            <div class="row mt-3">
+            <div class="row my-3">
                 <div class="col">
                     <div class="card ">
                         <div class="card-body p-0 pt-1">
@@ -213,6 +225,7 @@
     
     <script type='text/javascript' src="js/jquery.dataTables.js"></script>
     <script type='text/javascript' src="js/dataTables.bootstrap5.js"></script>
+    <script type='text/javascript' src="js/custom.js"></script>
     <script type='text/javascript'>
         $(document).ready(function () {
             $('#generateTable, #generateDayTable').DataTable({
