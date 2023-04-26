@@ -157,7 +157,7 @@
                     <div class="card ">
                         <div class="card-body p-0 pt-1">
                             <div class="row">
-                                <div class="col-12 mb-3">
+                                <div class="col-sm-12 col-md-6 mb-3">
                                     <div class="table-responsive">
                                          <table class="table table-bordered table-striped" id="generateTable">
                                             <thead class="table-info">
@@ -174,7 +174,22 @@
                                          </table>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="table-responsive">
+                                         <table class="table table-bordered table-striped" id="generateDayTable">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Day</th>
+                                                    <th>Water Production Per day</th>
+                                                    <th>Requested Dispatch Per day</th>
+                                                    <th>Variance Per day</th>
+                                                </tr>
+                                            </thead>
+                                         </table>
+                                    </div>
+                                </div>
+                            </div> <!-- /.row -->
                         </div>
                     </div>
                 </div>
@@ -187,14 +202,13 @@
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <div class="table-responsive">
-                                         <table class="table table-bordered table-striped" id="generateDayTable">
-                                            <thead class="table-primary">
+                                         <table class="table table-bordered table-striped" id="generateHourTable">
+                                            <thead class="table-success">
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Day</th>
-                                                    <th>Water Production Per day</th>
-                                                    <th>Requested Dispatch Per day</th>
-                                                    <th>Variance Per day</th>
+                                                    <th>Form Hour</th>
+                                                    <th>To Hour</th>
+                                                    <th>Water Production Per Hour</th>
                                                 </tr>
                                             </thead>
                                          </table>
@@ -229,7 +243,7 @@
     <script type='text/javascript' src="js/custom.js"></script>
     <script type='text/javascript'>
         $(document).ready(function () {
-            $('#generateTable, #generateDayTable').DataTable({
+            $('#generateTable, #generateDayTable, #generateHourTable').DataTable({
                 "destroy": true,
                 "dom": '<"top"f>rt<"bottom"ilp>',
                 "oLanguage": {
