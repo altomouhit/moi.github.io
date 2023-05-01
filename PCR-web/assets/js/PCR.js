@@ -15,7 +15,7 @@ window.onload = function () {
     //Patient & Incident Info > Patient Management > Management> immobilization
     $("#immobilizationAdultDiv").hide();
     //
-    $("#assistDeliveryDiv, #actualDeliveryDiv, #resuscitationManagementDiv, #obstetricCareDiv").hide();
+    $("#assistDeliveryDiv, #actualDeliveryDiv, #resuscitationManagementDiv, #obstetricCareDiv, #NGTSizeDiv").hide();
     //Patient & Incident Info > Resuscitation Management > Indication Procedures > Tube Type
     $("#ETtubeSizeDiv, #COMBItubeSizeDiv, #LMAtubeSizeDiv").hide();
     $("#RTLFDiv").hide();
@@ -23,6 +23,7 @@ window.onload = function () {
     $("#adultDiv, #peditricDiv").hide();
     //Upper EXT > Upper EXT Left Burns
     $("#upperEXTLeftBurnsDiv, #upperEXTRightBurnsDiv,#lwEXTLeftBurnsDiv, #lwEXTRightBurnsDiv").hide();
+    $("#downTimeDiv, #handoverDiv").hide();
     //$('.selector').editableSelect();
     $('.selector').editableSelect({
         // enable filter
@@ -63,33 +64,33 @@ $(document).ready(function() {
 //Patient Assessment > Airway
 $("#airway").on('change', function() {
     if(this.value == 2) {
-        $("#airwayNotClearDiv").show('slow');
+        $("#airwayNotClearDiv").show();
     } else {
-        $("#airwayNotClearDiv").hide('slow');
+        $("#airwayNotClearDiv").hide();
     }
 });
 //Patient Assessment > Breathing
 $("#breathing").on('change', function() {
     if(this.value == 1) {
-        $("#breathingNormalDiv").show('slow');
+        $("#breathingNormalDiv").show();
         $("#breathingAbnormalDiv").hide('slow')
     } else if(this.value == 2) {
-        $("#breathingNormalDiv").hide('slow');
+        $("#breathingNormalDiv").hide();
         $("#breathingAbnormalDiv").show('slow')
     } else {
-        $("#breathingNormalDiv, #breathingAbnormalDiv").hide('slow');
+        $("#breathingNormalDiv, #breathingAbnormalDiv").hide();
     }
 });
 //Patient Assessment > Circulation
 $("#circulation").on('change', function() {
     if(this.value == 1) {
-        $("#circulationPulseDiv").show('slow');
+        $("#circulationPulseDiv").show();
         $("#circulationSkinDiv").hide('slow')
     } else if(this.value == 2) {
-        $("#circulationPulseDiv").hide('slow');
+        $("#circulationPulseDiv").hide();
         $("#circulationSkinDiv").show('slow')
     } else {
-        $("#circulationPulseDiv, #circulationSkinDiv").hide('slow');
+        $("#circulationPulseDiv, #circulationSkinDiv").hide();
     }
 });
 //Patient Assessment > head
@@ -249,38 +250,41 @@ $('#nonTansport').on('change', function() {
 });
 $("#mAirway").on('change', function() {
     if(this.value == 1) {
-        $("#oralSizeDiv").show('slow');
-        $("#ETTSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide('slow');
+        $("#oralSizeDiv").show();
+        $("#ETTSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
     } else if(this.value == 2) {
-        $("#nasalSizeDiv").show('slow');
-        $("#oralSizeDiv, #ETTSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide('slow');
+        $("#nasalSizeDiv").show();
+        $("#oralSizeDiv, #ETTSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
     } else if(this.value == 4) {
-        $("#ETTSizeDiv").show('slow');
-        $("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide('slow');
+        $("#ETTSizeDiv").show();
+        $("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
     } else if(this.value == 5) {
-        $("#mAirwayCommentDiv, #mAirwayDoneByDiv").show('slow');
-        $("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv").hide('slow');
+        $("#mAirwayCommentDiv, #mAirwayDoneByDiv").show();
+        $("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv").hide();
+    } else if(this.value == 6) {
+        $("#LMASizeDiv").show();
+        $("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #ETTSizeDiv").hide();
     } else {
-        $("#mAirwayDoneByDiv").show('slow');
-        $("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv, #mAirwayCommentDiv").hide('slow');
+        $("#mAirwayDoneByDiv").show();
+        $("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv, #mAirwayCommentDiv").hide();
     }
 });
 
 $("#oxygenLPM").on('change', function() {
     if(this.value == 5) {
         $("#oxygenLPMDiv, #oxygenLPMDoneByDiv").show();
-        $("#oxygenLPMAdultDiv").hide('slow');
+        $("#oxygenLPMAdultDiv").hide();
     } else {
         $("#oxygenLPMDiv").hide();
-        $("#oxygenLPMDoneByDiv, #oxygenLPMAdultDiv").show('slow');
+        $("#oxygenLPMDoneByDiv, #oxygenLPMAdultDiv").show();
     }
 });
 $("#immoblazatiom").on('change', function() {
     if(this.value == 1) {
-        $("#immobilizationAdultDiv, #immoblazatiomDoneByDiv").show('slow');
-        $("#immoblazatiomDiv").hide('slow');
+        $("#immobilizationAdultDiv, #immoblazatiomDoneByDiv").show();
+        $("#immoblazatiomDiv").hide();
     } else if(this.value == 5) {
-        $("#immoblazatiomDiv, #immoblazatiomDoneByDiv").show('slow');
+        $("#immoblazatiomDiv, #immoblazatiomDoneByDiv").show();
         $("#immobilizationAdultDiv").hide('slow')
     } else {
         $("#immoblazatiomDiv, #immobilizationAdultDiv").hide();
@@ -321,12 +325,15 @@ $("#IVIO").on('change', function() {
 $("#mOthers").on('change', function() {
     if(this.value == 3) {
         $("#assistDeliveryDiv").show();
-        $("#mOthersDiv").hide();
+        $("#mOthersDiv, #NGTSizeDiv").hide();
     } else if(this.value == 9) {
         $("#mOthersDiv").show();
-        $("#assistDeliveryDiv, #actualDeliveryDiv, #resuscitationManagementDiv, #obstetricCareDiv").hide();
+        $("#assistDeliveryDiv, #actualDeliveryDiv, #resuscitationManagementDiv, #obstetricCareDiv, #NGTSizeDiv").hide();
+    } else if(this.value == 7) {
+        $("#NGTSizeDiv").show();
+        $("#assistDeliveryDiv, #actualDeliveryDiv, #resuscitationManagementDiv, #obstetricCareDiv, #mOthersDiv").hide();
     } else {
-        $("#mOthersDiv, #assistDeliveryDiv, #actualDeliveryDiv, #resuscitationManagementDiv, #obstetricCareDiv").hide();
+        $("#mOthersDiv, #assistDeliveryDiv, #actualDeliveryDiv, #resuscitationManagementDiv, #obstetricCareDiv, #NGTSizeDiv").hide();
     }
 });
 $("#assistDelivery").on('change', function() {
@@ -366,9 +373,9 @@ $("#resuscitation").on('change', function() {
 
 $("#presentIllness").on('change', function() {
     if(this.value == 1) {
-        $("#painDiv").show('slow');
+        $("#painDiv").show();
     } else {
-        $("#painDiv").hide('slow');
+        $("#painDiv").hide();
     }
 });
 
@@ -403,6 +410,20 @@ $("#burnType").on('change', function() {
         $("#peditricDiv").show();
     } else {
         $("#adultDiv, #peditricDiv").hide();
+    }
+});
+$("#preEMSArrival").on('change', function() {
+    if(this.value == 1) {
+        $("#downTimeDiv").show();
+    } else {
+        $("#downTimeDiv").hide();
+    }
+});
+$("#belongingHandover").on('change', function() {
+    if(this.value == 1) {
+        $("#handoverDiv").show();
+    } else {
+        $("#handoverDiv").hide();
     }
 });
 $(".actualDelivery").change(function() {
