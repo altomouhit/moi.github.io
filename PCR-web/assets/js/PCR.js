@@ -94,12 +94,44 @@ $("#circulation").on('change', function() {
     }
 });
 //Patient Assessment > head
-$('#head').on('change', function() {
-    if (this.value == 5 || this.value == 5 && this.value != "") {
-        $("#headBurnsDiv").show();
-    } else {
-        $("#headBurnsDiv").hide();
-    }
+// $('#head').on('change', function() {
+//     if (this.value == 5 || this.value == 5 && this.value != "") {
+//         $("#headBurnsDiv").show();
+//     } else {
+//         $("#headBurnsDiv").hide();
+//     }
+// }).trigger("change");
+
+$(document).ready(function() {
+    $('#head').multiselect({
+        onChange: function(option, checked, select) {
+            var value = $(option).text();
+            //var team_id = $(option).attr('id');
+            var selectedValue = $(option).val().split(",");
+            console.log(value, selectedValue)
+            if (selectedValue == 5) {
+                $("#headBurnsDiv").show();
+            } else {
+                $("#headBurnsDiv").hide();
+            }
+            // var selected_values = $("#remove_team_block_" + team_id + " .team_list .multiselect-native-select .multiselect").attr("title");
+            // if (selected_values == '' || selected_values == 'Select Team Member') {
+            //     if ($("#remove_team_block_" + team_id + " .team_list .multiselect-native-select .multiselect .multiselect-selected-text").text() == '') {
+            //         $("#remove_team_block_" + team_id + " .team_list .multiselect-native-select .multiselect .multiselect-selected-text").text(value);
+            //     } else {
+            //         $("#remove_team_block_" + team_id + " .team_list .multiselect-native-select .multiselect .multiselect-selected-text").text(value)
+            //     }
+            // }
+            // if (selected_values != '' && selected_values != 'Select Team Member') {
+            //     $("#remove_team_block_" + team_id + " .team_list .multiselect-native-select .multiselect .multiselect-selected-text").append("," + selected_values)
+            // }
+        },
+        enableFiltering: true,
+        includeSelectAllOption: true,
+        maxHeight: 400,
+        dropUp: true,
+        nonSelectedText: 'Please select',
+    });
 });
 //Patient Assessment > Neck
 $('#neck').on('change', function() {
