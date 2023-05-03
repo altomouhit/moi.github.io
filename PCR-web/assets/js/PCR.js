@@ -250,25 +250,96 @@ $('#nonTansport').on('change', function() {
 		$("#nonTransportCrimeDiv, .PDOADiv, #refused, #DNRDiv").hide();
 	}
 });
+// $("#mAirway").on('change', function() {
+// 	if (this.value == 1) {
+// 		$("#oralSizeDiv").show();
+// 		$("#ETTSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
+// 	} else if (this.value == 2) {
+// 		$("#nasalSizeDiv").show();
+// 		$("#oralSizeDiv, #ETTSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
+// 	} else if (this.value == 4) {
+// 		$("#ETTSizeDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
+// 	} else if (this.value == 5) {
+// 		$("#mAirwayCommentDiv, #mAirwayDoneByDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv").hide();
+// 	} else if (this.value == 6) {
+// 		$("#LMASizeDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #ETTSizeDiv").hide();
+// 	} else {
+// 		$("#mAirwayDoneByDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv, #mAirwayCommentDiv").hide();
+// 	}
+// });
+
+// $("#mAirway").on('change', function() {
+// 	var Value = $(this).val();
+// 	if (Value.indexOf("1") > -1) {
+// 		$("#oralSizeDiv").show();
+// 		$("#ETTSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
+// 	} 
+// 	if (Value.indexOf("2") > -1) {
+// 		$("#nasalSizeDiv").show();
+// 		$("#oralSizeDiv, #ETTSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
+// 	}
+// 	if (Value.indexOf("4") > -1) {
+// 		$("#ETTSizeDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
+// 	} 
+// 	if (Value.indexOf("5") > -1) {
+// 		$("#mAirwayCommentDiv, #mAirwayDoneByDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv").hide();
+// 	} 
+// 	if (Value.indexOf("6") > -1) {
+// 		$("#LMASizeDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #ETTSizeDiv").hide();
+// 	} 
+// 	if (Value.indexOf("1") > -1 && Value.indexOf("2") > -1 && Value.indexOf("4") > -1 && Value.indexOf("5") > -1 && Value.indexOf("6")) {
+// 		$("#mAirwayDoneByDiv").hide();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv, #mAirwayCommentDiv").show();
+// 	}
+// 	if (!(Value.indexOf("1") > -1) && !(Value.indexOf("2") > -1) && !(Value.indexOf("4") > -1) && !(Value.indexOf("5") > -1) && !(Value.indexOf("6") > -1)) {
+// 		$("#mAirwayDoneByDiv").show();
+// 		$("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv, #mAirwayCommentDiv").hide();
+// 	}
+// });
 $("#mAirway").on('change', function() {
-	if (this.value == 1) {
+	var Value = $(this).val();
+	if (Value.indexOf("1") > -1) {
 		$("#oralSizeDiv").show();
-		$("#ETTSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
-	} else if (this.value == 2) {
+	}
+	if (!(Value.indexOf("1") > -1)) {
+		$("#oralSizeDiv").hide();
+	}
+	if (Value.indexOf("2") > -1) {
 		$("#nasalSizeDiv").show();
-		$("#oralSizeDiv, #ETTSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
-	} else if (this.value == 4) {
-		$("#ETTSizeDiv").show();
-		$("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #LMASizeDiv").hide();
-	} else if (this.value == 5) {
-		$("#mAirwayCommentDiv, #mAirwayDoneByDiv").show();
-		$("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv").hide();
-	} else if (this.value == 6) {
-		$("#LMASizeDiv").show();
-		$("#oralSizeDiv, #nasalSizeDiv, #mAirwayCommentDiv, #ETTSizeDiv").hide();
-	} else {
+	}
+	if (!(Value.indexOf("2") > -1)) {
+		$("#nasalSizeDiv").hide();
+	}
+	if (Value.indexOf("3") > -1) {
 		$("#mAirwayDoneByDiv").show();
-		$("#oralSizeDiv, #nasalSizeDiv, #ETTSizeDiv, #LMASizeDiv, #mAirwayCommentDiv").hide();
+	}
+	if (Value.indexOf("4") > -1) {
+		$("#ETTSizeDiv").show();
+	}
+	if (!(Value.indexOf("4") > -1)) {
+		$("#ETTSizeDiv").hide();
+	}
+	if (Value.indexOf("5") > -1) {
+		$("#mAirwayCommentDiv, #mAirwayDoneByDiv").show();
+	}
+	if (!(Value.indexOf("5") > -1)) {
+		$("#mAirwayCommentDiv").hide();
+	}
+	if (!(Value.indexOf("3") > -1) && !(Value.indexOf("5") > -1)) {
+		$("#mAirwayDoneByDiv").hide();
+	}
+	if (Value.indexOf("6") > -1) {
+		$("#LMASizeDiv").show();
+	}
+	if (!(Value.indexOf("6") > -1)) {
+		$("#LMASizeDiv").hide();
 	}
 });
 $("#oxygenLPM").on('change', function() {
