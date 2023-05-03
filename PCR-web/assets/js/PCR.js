@@ -469,6 +469,11 @@ $(".actualDelivery").change(function() {
         $("#resuscitationManagementDiv, #obstetricCareDiv").hide();
     }
 });
+$("#resuscitationRequiredBtn").click(function() {
+    $('.nav-tabs-custom a[href="#resuscitationManagement"]').tab('show');
+    $("#resuscitationRequiredModal").modal('hide');
+});
+
 $(document).ready(function() {
 	$('.multiSelect').multiselect({
 		enableFiltering: true,
