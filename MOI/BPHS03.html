@@ -65,7 +65,7 @@
                 Log in</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-sm btn-laguage btn-icon ml-3" href="BPHS04ar.html">
+              <a class="btn btn-sm btn-laguage btn-icon ml-3" href="BPHS03ar.html">
                 <span class="btn-inner--icon"><i class="fal fa-globe fa-fw fa-lg"></i></span>
                 <span class="btn-inner--text">
                   <?xml version="1.0" encoding="ISO-8859-1" ?> &#1593;&#1585;&#1576;&#1610;
@@ -195,9 +195,14 @@
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="optradio_RT">&nbsp;</label>
                           <div class="form-control">
-                            <label class="radio-inline"><input checked name="optradio_RT" type="radio" value="7217">
-                              New</label>
-                            <label class="radio-inline"> <input name="optradio_RT" type="radio" value="7218">Renew</label>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio_RT" value="7217" checked />
+                              <label class="form-check-label" for="optradio_RT">New</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio_RT" value="7218" />
+                              <label class="form-check-label" for="optradio_RT">Renew</label>
+                            </div>
                           </div>
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3" id="ReqType">
@@ -205,7 +210,7 @@
                           <input class="form-control" id="Contact_req" placeholder="License Number" type="text"
                             validate-group="form-step-02">
                         </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="typeid">
+                        <!-- <div class="form-group col-sm-6 col-md-3 col-lg-3" id="typeid">
                           <label for="InspectionCNo" class="required">Advertisement Type</label>
                           <select class="form-control" name="InspectionCNo" id="InspectionCNo">
                             <option>Please select</option>
@@ -215,13 +220,13 @@
                           <label for="NOC_exp">Expiry Date</label>
                           <input type="text" class="form-control" id="NOC_exp" placeholder="dd/mm/yyyy"
                             readonly="readonly">
-                        </div>
+                        </div> -->
                       </div>
                     </fieldset>
                   </div> <!-- .row -->
                 </div> <!-- .form-group -->
 
-                <div class="form-group" id="form-step-03">
+                <div class="form-group" id="form-step-031">
                   <div class="row">
                     <div class="padtopbot">
                       <div id="form-step-03-err" class="Error"> Please fill all required fields of Service Details
@@ -333,29 +338,44 @@
                           <input type="text" class="form-control numeric" id="Investor_No"
                             placeholder="Investment Contract Number" validate-group="form-step-11" />
                         </div>
+                        
                         <div class="form-group col-sm-6 col-md-4 col-lg-3 benradio1" id="benradio">
                           <label for="optradio" class="required">Beneficiary Type</label>
                           <div class="form-control" id="orgtypeID">
-                            <label class="radio-inline"> <input type="radio" name="optradio" value="Individual" checked>
-                              Individual </label>
-                            <label class="radio-inline"> <input type="radio" name="optradio" value="Organization">
-                              Organization </label>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio" value="Individual" checked />
+                              <label class="form-check-label" for="optradio">Individual</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio" value="Organization" />
+                              <label class="form-check-label" for="optradio">Organization</label>
+                            </div>
                           </div>
                         </div>
                         <div class="form-group col-sm-6 col-md-4 col-lg-3" id="sameowner">
                           <label for="optradio3" class="required">Same as Owner</label>
                           <div class="form-control">
-                            <label class="radio-inline"> <input type="radio" name="optradio3" value="117" checked> Yes
-                            </label>
-                            <label class="radio-inline"> <input type="radio" name="optradio3" value="118"> No</label>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio3" value="117" checked />
+                              <label class="form-check-label" for="optradio3">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio3" value="118" />
+                              <label class="form-check-label">No</label>
+                            </div>
                           </div>
                         </div>
                         <div class="form-group col-sm-6 col-md-4 col-lg-3" id="samehide">
                           <label for="Same as Applicant" class="required">Same as Applicant</label>
                           <div class="form-control">
-                            <label class="radio-inline"> <input type="radio" name="optradio1" value="117"> Yes </label>
-                            <label class="radio-inline"> <input type="radio" name="optradio1" value="118" checked>
-                              No</label>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio1" value="117">
+                              <label class="form-check-label">Yes </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input type="radio" name="optradio1" value="118" checked>
+                              <label class="form-check-label">No</label>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -555,7 +575,7 @@
                         </div> -->
 
                       <!-- // * Vehicle License Details & Peddler License *// -->
-                      <div id="Vehicleshow" class="Vehicleshow">
+                      <div id="Vehicleshow" class="Vehicleshow row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="baseNumber" class="required">Base number (Alshasi)</label>
                           <input type="text" class="form-control" id="baseNumber" placeholder="Base number (Alshasi)"
@@ -632,7 +652,7 @@
                       </div>
 
                       <!-- // * Peddler Details *// -->
-                      <div id="Peddlershow">
+                      <div id="Peddlershow" class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="Inventorynumber">Inventory number </label>
                           <input type="text" class="form-control" id="Inventorynumber" placeholder="Inventory number"
@@ -648,15 +668,15 @@
                           </select>
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="LSNO_water">Land Serial Number</label>
-                          <input type="text" class="form-control" id="LSNO_water" placeholder="Land Serial Number"
+                          <label for="LSNO_water">Plot Serial Number</label>
+                          <input type="text" class="form-control" id="LSNO_water" placeholder="Plot Serial Number"
                             validate-group="form-step-12">
                         </div>
                       </div>
                       <!-- // * Peddler Details *// -->
 
                       <!-- // * Peddler Details and Drinking water well License * // -->
-                      <div id="BothID" class="BothID">
+                      <div id="BothID" class="BothID row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="region_water" class="required">Governorate</label>
                           <select name="region_water" id="region_water" class="form-control">
@@ -685,48 +705,50 @@
                       </div>
                       <!-- // * Peddler Details and Drinking water well License * // -->
 
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="ValidityTime" class="required">Validity</label>
-                        <select class="form-control" id="ValidityTime" name="ValidityTime">
-                          <option value="1000">Please select</option>
-                          <option>1 Year </option>
-                          <option>2 Year </option>
-                        </select>
-                      </div>
-
-                      <!-- // * Municipal License Details * // -->
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Municipality_Activity">
-                        <label for="ActivityType_RT" class="required">Activity</label>
-                        <select class="form-control" id="ActivityType_RT" multiple="multiple" name="ActivityType_RT">
-                          <option value="201">Iron </option>
-                          <option value="202">Clothes Washing </option>
-                          <option value="203">Sales of Clothes </option>
-                          <option value="204">Stitching Clothes </option>
-                        </select>
-                      </div>
-
-                      <!-- // * Peddler Details * // -->
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Peddler_Activity">
-                        <label for="Activity_car" class="required">Activity</label>
-                        <!-- <input type="text" class="form-control" id="Activity_car" placeholder="Activity" validate-group="form-step-12"> -->
-                        <select class="form-control" id="Activity_car" validate-group="form-step-12">
-                          <option value="1000">Please select</option>
-                          <option value="1">Meat Barbecue (Meshakeek)</option>
-                          <option value="2">Selling Sweet Corns</option>
-                          <option value="3">Sale of Vegetables, Fruits &amp; Dates</option>
-                          <option value="4">Sale of Refreshments &amp; Beverages</option>
-                          <option value="5">Sale of Honey</option>
-                          <option value="6">Trade of Perfumes, Cosmetics, Beauty Soap &amp; Incense</option>
-                          <option value="7">Sale of silverware &amp; gifts</option>
-                          <option value="8">Trade of textiles &amp; fabrics</option>
-                          <option value="9">Sale of gas</option>
-                          <option value="10">Electrical installations work &amp; installation of alarm system</option>
-                          <option value="11">Services of photocopying &amp; typing of documents</option>
-                          <option value="12">Organization of tourist trips</option>
-                          <option value="13">Pottery &amp; handicraft trade</option>
-                          <option value="14">Repair &amp; polishing of motors vehicles</option>
-                        </select>
-                      </div>
+                      <div class="row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="ValidityTime" class="required">Validity</label>
+                          <select class="form-control" id="ValidityTime" name="ValidityTime">
+                            <option value="1000">Please select</option>
+                            <option>1 Year </option>
+                            <option>2 Year </option>
+                          </select>
+                        </div>
+  
+                        <!-- // * Municipal License Details * // -->
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Municipality_Activity">
+                          <label for="ActivityType_RT" class="required">Activity</label>
+                          <select class="form-control" id="ActivityType_RT" multiple="multiple" name="ActivityType_RT">
+                            <option value="201">Iron </option>
+                            <option value="202">Clothes Washing </option>
+                            <option value="203">Sales of Clothes </option>
+                            <option value="204">Stitching Clothes </option>
+                          </select>
+                        </div>
+  
+                        <!-- // * Peddler Details * // -->
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Peddler_Activity">
+                          <label for="Activity_car" class="required">Activity</label>
+                          <!-- <input type="text" class="form-control" id="Activity_car" placeholder="Activity" validate-group="form-step-12"> -->
+                          <select class="form-control" id="Activity_car" validate-group="form-step-12">
+                            <option value="1000">Please select</option>
+                            <option value="1">Meat Barbecue (Meshakeek)</option>
+                            <option value="2">Selling Sweet Corns</option>
+                            <option value="3">Sale of Vegetables, Fruits &amp; Dates</option>
+                            <option value="4">Sale of Refreshments &amp; Beverages</option>
+                            <option value="5">Sale of Honey</option>
+                            <option value="6">Trade of Perfumes, Cosmetics, Beauty Soap &amp; Incense</option>
+                            <option value="7">Sale of silverware &amp; gifts</option>
+                            <option value="8">Trade of textiles &amp; fabrics</option>
+                            <option value="9">Sale of gas</option>
+                            <option value="10">Electrical installations work &amp; installation of alarm system</option>
+                            <option value="11">Services of photocopying &amp; typing of documents</option>
+                            <option value="12">Organization of tourist trips</option>
+                            <option value="13">Pottery &amp; handicraft trade</option>
+                            <option value="14">Repair &amp; polishing of motors vehicles</option>
+                          </select>
+                        </div>
+                      </div> <!-- /.row -->
                     </fieldset>
                   </div> <!-- .row -->
                 </div> <!-- .form-group -->

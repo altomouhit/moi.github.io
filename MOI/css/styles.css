@@ -170,9 +170,9 @@ img:visited {
 /*---------------Start Over write buttons -----------------------*/
 
 .btn {
-	padding: 6px 12px;
-	margin-bottom: 5px;
-	/* font-size: 12px; */
+	/* padding: 0.75rem 1.75rem; */
+    margin-bottom: 5px;
+    font-size: 0.875rem;
 }
 .btn-circle {
 	width: 30px;

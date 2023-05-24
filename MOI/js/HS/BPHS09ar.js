@@ -374,6 +374,8 @@ $(document).ready(function() {
 	//{ "mDataProp": "CProduct_type", sTitle: " نوع المنتج", sType: "numeric" },
 	{ "mDataProp": "CEqui_id", sTitle: "عدد المعدات", sType: "numeric" },
 	{ "mDataProp": "CPrice_advt", sTitle: "المبلغ(ريال عماني)", width: "10%", sType: "numeric" },
+	{ "mDataProp": "CNo_Parking", sTitle: "رقم المركبة", sType: "string" },
+    { "mDataProp": "CNo_Parking", sTitle: "الموديل", sType: "string" },
 	{ "mDataProp": "Actions",
 	    sTitle: "الاجراء", width: "7%", sType: "string",
 	    "defaultContent": "<a id = 'editAdvdetails' href='javascript:;' class='text-green'><i class='fa fa-edit'></i></a><a id = 'removeAdvdetails' href='javascript:;' class='text-red'><i class='fa fa-trash-o'></i></a>"
@@ -384,7 +386,7 @@ $(document).ready(function() {
 			"searchable": false,
 			"orderable": false,
 			"visible": false,
-			"targets": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], // hiding td
+			"targets": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], // hiding td
 		}],
 		"order": [
 			[1, 'asc']

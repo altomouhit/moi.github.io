@@ -561,6 +561,9 @@ $("#Municipal_Shisha").change(function() {
   var Municipal_Shisha = $("#Municipal_Shisha option:selected").text();
   var Municipal_Shisha_val = $("#Municipal_Shisha option:selected").val();
   var req_type = $('input[name=optradio_RT]:checked').val(); //Request Type
+  
+  $('#Licenselabel').text(Municipal_Shisha);
+  
   if ((Municipal_Shisha_val == "7222" || Municipal_Shisha_val == "7224" || Municipal_Shisha_val == "7225" || Municipal_Shisha_val == "7226")) {
     $("#Licenselabel").text(Municipal_Shisha);
     $("#Contact_req").attr("placeholder", $("#Licenselabel").html());

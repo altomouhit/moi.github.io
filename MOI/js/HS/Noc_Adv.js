@@ -58,12 +58,12 @@ $(document).ready(function() {
 	});
 	$("#request_type").change(function() {
 		if (this.value == 7218) {
-			$("#InspectionID, #typeid, #ExpiryID , #Update_Adv").show();
+			$("#InspectionID, #typeid, #Expiry_ID , #Update_Adv").show();
 			$("#form1Submit").hide();
 			Advclick("remove");
 			$("#Button").prop("disabled", true);
 		} else if (this.value == 7254) {
-			$("#InspectionID, #typeid, #ExpiryID , #Update_Adv").show();
+			$("#InspectionID, #typeid, #Expiry_ID , #Update_Adv").show();
 			$("#form1Submit").hide();
 			Advclick("add");
 		} else {
@@ -84,5 +84,5 @@ $(document).ready(function() {
 
 function hide_id() {
 	$("#Sides_id, #Update_Adv").hide();
-	$("#InspectionID, #typeid, #ExpiryID").hide();
+	$("#InspectionID, #typeid, #Expiry_ID").hide();
 }

@@ -110,17 +110,12 @@
           <!-- SmartWizard html -->
           <div id="smartwizard">
             <ul id="credit" name="credit">
-              <li data-interest="1"><a href="#ApplicantDetails"><i class="fal fa-user fa-fw"></i> Applicant Details</a>
-              </li>
-              <li data-interest="2"><a href="#BeneficiaryDetails"><i class="fal fa-users fa-fw"></i> Beneficiary /
-                  Request</a></li>
+              <li data-interest="1"><a href="#ApplicantDetails"><i class="fal fa-user fa-fw"></i> Applicant Details</a></li>
+              <li data-interest="2"><a href="#BeneficiaryDetails"><i class="fal fa-users fa-fw"></i> Beneficiary / Request</a></li>
               <!-- <li data-interest = "3" id="BuildingsDetails_id"><a href="#BuildingsDetails"><i class="fa fa-building-o fa-fw"></i>Property Data</a></li> -->
-              <li data-interest="4"> <a href="#Advertisement"><i class="fal fa-bullhorn fa-fw"></i> Advertisements</a>
-              </li>
-              <li data-interest="5"><a href="#Attachment"><i class="fal fa-paperclip fa-fw"></i> Required Documents</a>
-              </li>
-              <li data-interest="6"><a href="#Payment"><i class="fal fa-credit-card fa-fw"></i> Payments &amp;
-                  Licenses</a></li>
+              <!-- <li data-interest="4"> <a href="#Advertisement"><i class="fal fa-bullhorn fa-fw"></i> Advertisements</a></li> -->
+              <li data-interest="5"><a href="#Attachment"><i class="fal fa-paperclip fa-fw"></i> Required Documents</a></li>
+              <li data-interest="6"><a href="#Payment"><i class="fal fa-credit-card fa-fw"></i> Payments &amp; Licenses</a></li>
             </ul>
             <div>
               <div id="ApplicantDetails" class="">
@@ -188,16 +183,25 @@
                       <legend>Cancel License</legend>
                       <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="PreviousLicenceNo" class="required">Municipal License Number</label>
-                          <input type="text" class="form-control" id="PreviousLicenceNo"
-                            placeholder="Municipal License Number">
+                          <label for="LeaseCancel"> Request Type</label>
+                          <input type="text" class="form-control" id="LeaseCancel" placeholder="Request Type" value="Cancel" readonly="">
                         </div>
-                        <div class="col-sm-6 col-md-3 col-lg-3">
-                          <label for="Municipal_Shisha">License Type</label>
-                          <input type="text" class="form-control" id="Municipal_Shisha" placeholder="License Type"
-                            value="Municipal License" readonly="only">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Municipal_Shisha" class="required">License Type</label>
+                          <select class="form-control" id="Municipal_Shisha" name="Municipal_Shisha" required>
+                            <option value="1000">Please select</option>
+                            <!-- <option value="7222">Municipal License </option> -->
+                            <!-- <option value="7227">Mobile Coffee Shop</option> -->
+                            <option value="7224">Vehicle License </option>
+                            <option value="7225">Peddler License </option>
+                            <option value="7226">Drinking Water Well License </option>
+                          </select>
                         </div>
-                      </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="PreviousLicenceNo" class="required">License Number</label>
+                          <input type="text" class="form-control" id="PreviousLicenceNo" placeholder="License Number">
+                        </div>
+                      </div> <!-- /.row -->
                     </fieldset>
                   </div> <!-- .row -->
                 </div> <!-- .form-group -->
@@ -232,8 +236,6 @@
                                 class="glyphicon glyphicon-calendar"></i></span>
                           </div>
                         </div>
-                      </div>
-                      <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="sdate" class="required">Submission Date</label>
                           <div class="date">
@@ -242,10 +244,13 @@
                                 class="glyphicon glyphicon-calendar"></i></span>
                           </div>
                         </div>
+                      </div> <!-- /.row -->
+
+                      <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="region_ser" class="required">Governorate</label>
                           <select name="region_ser" id="region_ser" class="form-control">
-                            <option value="0">Please select...</option>
+                            <option value="0">Please select</option>
                             <option value="1">Alshaqiya Governorate</option>
                             <option value="2">Aldhahira Governorate</option>
                             <option value="3">Mosandam Governorate</option>
@@ -254,7 +259,7 @@
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="Willayat_ser" class="required">Willayat</label>
                           <select name="Willayat_ser" id="Willayat_ser" class="form-control">
-                            <option value="0">Please select...</option>
+                            <option value="0">Please select</option>
                             <option value="1">Suhar</option>
                             <option value="2">Nizwa</option>
                             <option value="3">Ibra</option>
@@ -265,7 +270,7 @@
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="Municiplity_ser" class="required">Municipality</label>
                           <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
-                            <option value="0">Please select...</option>
+                            <option value="0">Please select</option>
                             <option value="461">Sohar Municipality</option>
                             <option value="463">Saham Municipality</option>
                             <option value="464">Ibra Municipality</option>
@@ -292,7 +297,7 @@
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="Beneficiary_select">Beneficiary <span style="color:red">*</span></label>
                           <select name="Beneficiary_select" id="Beneficiary_select" class="form-control">
-                            <option value="1000">Please select...</option>
+                            <option value="1000">Please select</option>
                             <!-- <option value="Organization">Organization</option> -->
                             <option value="Attorney" selected>Authorized</option>
                           </select>
@@ -376,8 +381,8 @@
 
                       <div id="OrganizationDetails" class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="crid">Commerical Registration ID <span style="color:red">*</span></label>
-                          <input type="text" class="form-control" id="crid" placeholder="Commerical Registration ID">
+                          <label for="crid">Commercial Registration ID <span style="color:red">*</span></label>
+                          <input type="text" class="form-control" id="crid" placeholder="Commercial Registration ID">
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="cname">Commercial Name</label>
@@ -415,252 +420,271 @@
                   </div> <!-- .row -->
                 </div> <!-- .form-group -->
 
-                <div class="form-group" id="MunicipalCancel">
+                <div class="form-group" id="form-step-12">
                   <div class="row">
                     <div class="padtopbot">
-                      <div id="reqTypeDetails_Err" class="Error">Please fill all required fields of License Details
-                      </div>
+                      <div class="Error" id="form-step-12-err"> Please fill all required fields of Request Type </div>
                     </div>
                     <fieldset>
-                      <legend>License Details</legend>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="OwnerType_CR">Ownership Type</label>
-                        <input type="text" class="form-control" id="OwnerType_CR" placeholder="Ownership Type" readonly>
+                      <legend id="legendlabel">License Details</legend>
+                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Municipal_owner">
+                        <label for="Municiplity_RT" class="required">Ownership Type</label>
+                        <select class="form-control" id="Municiplity_RT" name="Municiplity_RT">
+                          <option value="1000">Please select </option>
+                          <option value="7229">Owner </option>
+                          <option value="7230">Lease Contract </option>
+                          <option value="7231">Usufruct Contract </option>
+                        </select>
                       </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="ContractNo_CR">Contract Number</label>
-                        <input type="text" class="form-control" id="ContractNo_CR" placeholder="Contract Number"
-                          readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="MunicipalLCEndDate_CR">Expiry Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="MunicipalLCEndDate_CR" placeholder="Expiry Date"
-                            disabled>
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                      <!-- // * Municipal License Details *// -->
+                      <div id="ContractNumber">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Leaseshow">
+                          <label for="ContractNumber_PD" class="required" id="Contractlabel">Lease Contract
+                            Number</label>
+                          <input class="form-control numeric" id="ContractNumber_PD" placeholder="Contract Number"
+                            type="text" validate-group="form-step-12">
                         </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Cancel_Willayat">Willayat</label>
-                        <input class="form-control" id="Cancel_Willayat" placeholder="Willayat" readonly type="text">
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Cancel_Village">Village</label>
-                        <input class="form-control" id="Cancel_Village" placeholder="Village" readonly type="text">
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Validity_Village">Validity</label>
-                        <input class="form-control" id="Validity_Village" placeholder="Validity" readonly type="text"
-                          readonly>
-                      </div>
-                      <!-- <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                            <label for="MunicipalLNType_CR">Type of Municipal License</label>
-                            <input type="text" class="form-control" id="MunicipalLNType_CR" placeholder="Type of Municipal License" readonly>
-                          </div> -->
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Cancel_Activity">Activity</label>
-                        <input type="text" class="form-control" id="Cancel_Activity" placeholder="Activity" readonly>
-                      </div>
-                    </fieldset>
-                  </div> <!-- .row -->
-                </div> <!-- .form-group -->
-
-                <!-- // * Car Details *// -->
-                <div class="form-group" id="Carcancel">
-                  <div class="row">
-                    <div class="padtopbot">
-                      <div id="Carcancel_Err" class="Error">Please fill all required fields of Request Type </div>
-                    </div>
-                    <fieldset>
-                      <legend>Car Details</legend>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Cancel_Municipaltype">Type of Municipal License</label>
-                        <input type="text" class="form-control" id="Cancel_Municipaltype"
-                          placeholder="Type of Municipal License" value="Transportation of Sewerage" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="baseNumber">Base number (Alshasi)</label>
-                        <input type="text" class="form-control" id="baseNumber" placeholder="Base number (Alshasi)"
-                          readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="CarNumber">Car Number</label>
-                        <input type="text" class="form-control" id="CarNumber" placeholder="Car Number" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="CarType">Type of car </label>
-                        <input type="text" class="form-control" id="CarType" placeholder="Type of car" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="CarModel">Year of manufacture </label>
-                        <input type="text" class="form-control" id="CarModel" placeholder="Year of manufacture"
-                          readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="CarWeight">Maximum load </label>
-                        <input type="text" class="form-control" id="CarWeight" placeholder="Maximum load" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="CCar_ExpiryDate">Car Expiry Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="CCar_ExpiryDate" placeholder="Car Expiry Date"
-                            disabled>
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3 hidden">
+                          <label for="startDate_req">Issue Date</label>
+                          <div class="date">
+                            <input class="form-control" disabled id="startDate_req" placeholder="Issue Date" type="text"
+                              validate-group="form-step-12">
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="MunicipalLicenceType">Insurance Company </label>
-                        <input type="text" class="form-control" id="MunicipalLicenceType"
-                          placeholder="Insurance Company" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Insurance_ExpiryDate">Insurance Expiry Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="Insurance_ExpiryDate"
-                            placeholder="Insurance Expiry Date" disabled>
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
-                        </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Cancel_validity">validity</label>
-                        <input type="text" class="form-control" id="Cancel_validity" placeholder="validity"
-                          value="1 Year" readonly>
-                      </div>
-                    </fieldset>
-                  </div> <!-- .row -->
-                </div> <!-- .form-group -->
-
-                <!-- // * Peddler Details *// -->
-                <div class="form-group" id="Peddlercancel">
-                  <div class="row">
-                    <div class="padtopbot">
-                      <div id="Peddlercancel_Err" class="Error">Please fill all required fields of Request Type </div>
-                    </div>
-                    <fieldset>
-                      <legend>Peddler Details</legend>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PRequestType">Request Type</label>
-                        <input type="text" class="form-control" id="PRequestType" placeholder="Request Type"
-                          value="Car/Booth" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PbaseNumber">Base number (Alshasi)</label>
-                        <input type="text" class="form-control" id="PbaseNumber" placeholder="Base number (Alshasi)"
-                          readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PCarNumber">Car Number</label>
-                        <input type="text" class="form-control" id="PCarNumber" placeholder="Car Number" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PCarType">Type of car</label>
-                        <input type="text" class="form-control" id="PCarType" placeholder="Type of car" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PCarModel">Year of manufacture</label>
-                        <input type="text" class="form-control" id="PCarModel" placeholder="Year of manufacture"
-                          readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PCarWeight">Maximum load</label>
-                        <input type="text" class="form-control" id="PCarWeight" placeholder="Maximum load" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PCar_ExpiryDate">Car Expiry Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="PCar_ExpiryDate" placeholder="Car Expiry Date"
-                            disabled>
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
-                        </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PMunicipalLicenceType">Insurance Company</label>
-                        <input type="text" class="form-control" id="PMunicipalLicenceType"
-                          placeholder="Insurance Company" readonly>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PInsurance_ExpiryDate">Insurance Expiry Date</label>
-                        <div class="date">
-                          <input type="text" class="form-control" id="PInsurance_ExpiryDate"
-                            placeholder="Insurance Expiry Date" disabled>
-                          <span class="input-group-addon" style="display: none;"><i
-                              class="glyphicon glyphicon-calendar"></i></span>
-                        </div>
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Pregion_car">Governorate</label>
-                        <input type="text" class="form-control" id="Pregion_car" placeholder="Mosandam Governorate"
-                          readonly />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PWillayat_car">Willayat</label>
-                        <input type="text" class="form-control" id="PWillayat_car" placeholder="Suhar" readonly />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PVillage_car">Village</label>
-                        <input type="text" class="form-control" id="PVillage_car" placeholder="Village" readonly />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="Pvalidity_txt">validity</label>
-                        <input type="text" class="form-control" id="Pvalidity_txt" placeholder="validity" readonly />
-                      </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                        <label for="PActivity_car">Activity</label>
-                        <input type="text" class="form-control" id="PActivity_car" placeholder="Activity" readonly />
-                      </div>
-                    </fieldset>
-                  </div> <!-- .row -->
-                </div> <!-- .form-group -->
-
-                <!-- // * Well Details *// -->
-                <div class="form-group" id="DrinkingCancel">
-                  <div class="row">
-                    <div class="padtopbot">
-                      <div id="DrinkingCancel_Err" class="Error">Please fill all required fields of Request Type </div>
-                    </div>
-                    <fieldset>
-                      <legend>Well Details</legend>
-                      <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Inventory_Water">Inventory Number</label>
-                          <input type="text" class="form-control" id="Inventory_Water" placeholder="Inventory" readonly>
+                          <label for="endDate_req">Expiry Date</label>
+                          <div class="date">
+                            <input class="form-control" disabled id="endDate_req" placeholder="Expiry Date" type="text"
+                              validate-group="form-step-12">
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="ContractNumber_Willayat">Willayat</label>
+                          <input class="form-control" id="ContractNumber_Willayat" placeholder="Willayat" readonly
+                            type="text" validate-group="form-step-12">
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="ContractNumber_Village">Village</label>
+                          <input class="form-control" id="ContractNumber_Village" placeholder="Village" readonly
+                            type="text" validate-group="form-step-12">
+                        </div>
+                      </div>
+                      <!-- End ContractNumber -->
+
+                      <!-- // * Vehicle License Details *// -->
+                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Type_Municipal">
+                        <label for="MunicipalLicenceType" class="required">Type of Municipal License</label>
+                        <select class="form-control" id="MunicipalLicenceType" name="MunicipalLicenceType">
+                          <option value="1000">Please select </option>
+                          <option>Car transport bakery products</option>
+                          <option>Cars transporting soft Drinks &amp; mineral water</option>
+                          <option>Dry food transport vehicles</option>
+                          <option>Refrigerated &amp; frozen food transport vehicles</option>
+                          <option>Transport &amp; Sale of Drinking Water Tanker</option>
+                          <option>Transport non-potable water tanker</option>
+                          <option>Transport of Sewage tanker</option>
+                          <option>Motorbikes for delivery</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="InspectionID">
+                        <label for="NOCCNo">NOC Certificate Number</label>
+                        <input type="text" class="form-control numeric" id="NOCCNo"
+                          placeholder="NOC Certificate Number">
+                      </div>
+                      <!-- // * Peddler Details *// -->
+                      <!-- <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Peddler_Request">
+                          <label for="car_both">&nbsp;</label>
+                          <select class="form-control" id="car_both" name="car_both">
+                            <option value="1000">Please select</option>
+                            <option value="7238">Car</option>
+                            <option value="7239">Booth</option>
+                          </select>
+                        </div> -->
+
+                      <!-- // * Vehicle License Details & Peddler License *// -->
+                      <div id="Vehicleshow" class="Vehicleshow row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="baseNumber" class="required">Base number (Alshasi)</label>
+                          <input type="text" class="form-control" id="baseNumber" placeholder="Base number (Alshasi)"
+                            validate-group="form-step-12">
+                        </div>
+                        <div class="form-group  col-sm-6 col-md-3 col-lg-3">
+                          <table class="col-lg-12">
+                            <thead>
+                              <tr>
+                                <th><label for="VehicleCharacter" class="required">Vehicle Character</label></th>
+                                <th><label for="CarNumber" class="required">Vehicle Number</label></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input type="text" class="form-control" id="VehicleCharacter"
+                                    placeholder="Vehicle Character" maxlength="3" style="width: 90%"
+                                    validate-group="form-step-12"></td>
+                                <td><input type="text" class="form-control" id="CarNumber" placeholder="Vehicle Number"
+                                    validate-group="form-step-12"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="CarType">Type of Vehicle </label>
+                          <input type="text" class="form-control" id="CarType" placeholder="Type of Vehicle"
+                            validate-group="form-step-12">
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Car_Manuf">Year of Manufacture </label>
+                          <input type="text" class="form-control" id="Car_Manuf" placeholder="Year of Manufacture"
+                            validate-group="form-step-12">
+                          <!-- <select class="form-control" id="Car_Manuf" name="Car_Manuf" validate-group="form-step-12">
+                              <option value="1000">Please select</option>
+                            </select> -->
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Vehicle_Weight" class="required">Vehicle Weight</label>
+                          <input type="text" class="form-control" id="Vehicle_Weight" placeholder="Vehicle Weight"
+                            validate-group="form-step-12">
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="CarWeight">Maximum load </label>
+                          <input type="text" class="form-control" id="CarWeight" placeholder="Maximum load"
+                            validate-group="form-step-12">
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Car_ExpiryDate">Vehicle Expiry Date</label>
+                          <div class="date">
+                            <input type="text" class="form-control" id="Car_ExpiryDate"
+                              placeholder="Vehicle Expiry Date" validate-group="form-step-12">
+                            <span class="input-group-addon" style="display: none;"><i
+                                class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="UsageTypeHide">
+                          <label for="UsageType_VI" class="required">Type of Usage</label>
+                          <select name="UsageType_VI" id="UsageType_VI" class="form-control">
+                            <option value="1000">Please select</option>
+                            <option value="7268">Other Vehicle</option>
+                          </select>
+                        </div>
+                        <!-- <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                            <label for="Insurance_Company">Insurance Company </label>
+                            <input type="text" class="form-control" id="Insurance_Company" placeholder="Insurance Company" validate-group="form-step-12">
+                          </div>
+                          <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                            <label for="Insurance_ExpiryDate">Insurance Expiry Date</label>
+                            <div class="date">
+                              <input type="text" class="form-control" id="Insurance_ExpiryDate" placeholder="Insurance Expiry Date" validate-group="form-step-12">
+                              <span class="input-group-addon" style="display: none;"><i class="glyphicon glyphicon-calendar"></i></span> </div>
+                          </div> -->
+                      </div>
+
+                      <!-- // * Peddler Details *// -->
+                      <div id="Peddlershow" class="row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Inventorynumber">Inventory number </label>
+                          <input type="text" class="form-control" id="Inventorynumber" placeholder="Inventory number"
+                            validate-group="form-step-12">
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="Owner_type">Owner</label>
-                          <input type="text" class="form-control" id="Owner_type" placeholder="Owner" readonly>
+                          <select class="form-control" id="Owner_type" name="Owner_type">
+                            <option value="1000">Please select</option>
+                            <option> Owner 1</option>
+                            <option> Owner 2</option>
+                            <option> Owner 3</option>
+                          </select>
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="region_water">Governorate </label>
-                          <input type="text" class="form-control" id="region_water" placeholder="Governorate" readonly>
+                          <label for="LSNO_water">Plot Serial Number</label>
+                          <input type="text" class="form-control" id="LSNO_water" placeholder="Plot Serial Number"
+                            validate-group="form-step-12">
+                        </div>
+                      </div>
+                      <!-- // * Peddler Details *// -->
+
+                      <!-- // * Peddler Details and Drinking water well License * // -->
+                      <div id="BothID" class="BothID row">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="region_water" class="required">Governorate</label>
+                          <select name="region_water" id="region_water" class="form-control">
+                            <option value="1000">Please select</option>
+                            <option value="1">Alshaqiya Governorate</option>
+                            <option value="2">Aldhahira Governorate</option>
+                            <option value="3">Mosandam Governorate</option>
+                          </select>
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Willayat_water">Willayat</label>
-                          <input type="text" class="form-control" id="Willayat_water" placeholder="Willayat" readonly>
+                          <label for="Willayat_water" class="required">Willayat</label>
+                          <select name="Willayat_water" id="Willayat_water" class="form-control">
+                            <option value="1000">Please select</option>
+                            <option value="1">Suhar</option>
+                            <option value="2">Nizwa</option>
+                            <option value="3">Ibra</option>
+                            <option value="3">Saham</option>
+                            <option value="3">Nakhal</option>
+                          </select>
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="Village_water">Village</label>
-                          <input type="text" class="form-control" id="Village_water" placeholder="Village" readonly>
+                          <input type="text" class="form-control" id="Village_water" placeholder="Village"
+                            validate-group="form-step-12">
                         </div>
+                      </div>
+                      <!-- // * Peddler Details and Drinking water well License * // -->
+
+                      <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="LSNO_water">Land Serial Number</label>
-                          <input type="text" class="form-control" id="LSNO_water" placeholder="Land Serial Number"
-                            readonly>
+                          <label for="ValidityTime" class="required">Validity</label>
+                          <select class="form-control" id="ValidityTime" name="ValidityTime">
+                            <option value="1000">Please select</option>
+                            <option>1 Year </option>
+                            <option>2 Year </option>
+                          </select>
                         </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="validity_Water">Validity</label>
-                          <input type="text" class="form-control" id="validity_Water" placeholder="validity" readonly />
+  
+                        <!-- // * Municipal License Details * // -->
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Municipality_Activity">
+                          <label for="ActivityType_RT" class="required">Activity</label>
+                          <select class="form-control" id="ActivityType_RT" multiple="multiple" name="ActivityType_RT">
+                            <option value="201">Iron </option>
+                            <option value="202">Clothes Washing </option>
+                            <option value="203">Sales of Clothes </option>
+                            <option value="204">Stitching Clothes </option>
+                          </select>
                         </div>
-                      </div> <!-- End .row -->
+  
+                        <!-- // * Peddler Details * // -->
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Peddler_Activity">
+                          <label for="Activity_car" class="required">Activity</label>
+                          <!-- <input type="text" class="form-control" id="Activity_car" placeholder="Activity" validate-group="form-step-12"> -->
+                          <select class="form-control" id="Activity_car" validate-group="form-step-12">
+                            <option value="1000">Please select</option>
+                            <option value="1">Meat Barbecue (Meshakeek)</option>
+                            <option value="2">Selling Sweet Corns</option>
+                            <option value="3">Sale of Vegetables, Fruits &amp; Dates</option>
+                            <option value="4">Sale of Refreshments &amp; Beverages</option>
+                            <option value="5">Sale of Honey</option>
+                            <option value="6">Trade of Perfumes, Cosmetics, Beauty Soap &amp; Incense</option>
+                            <option value="7">Sale of silverware &amp; gifts</option>
+                            <option value="8">Trade of textiles &amp; fabrics</option>
+                            <option value="9">Sale of gas</option>
+                            <option value="10">Electrical installations work &amp; installation of alarm system</option>
+                            <option value="11">Services of photocopying &amp; typing of documents</option>
+                            <option value="12">Organization of tourist trips</option>
+                            <option value="13">Pottery &amp; handicraft trade</option>
+                            <option value="14">Repair &amp; polishing of motors vehicles</option>
+                          </select>
+                        </div>
+                      </div> <!-- /.row -->
                     </fieldset>
                   </div> <!-- .row -->
                 </div> <!-- .form-group -->
+                
               </div> <!-- BeneficiaryDetails -->
-
-              <div id="PropertyData"> </div>
               <!-- End PropertyData -->
 
               <!-- ......... Start BuildingsDetails ......... -->

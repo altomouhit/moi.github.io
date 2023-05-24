@@ -114,6 +114,8 @@ function hide_id() {
         { "mDataProp": "CNo_days", sTitle: "No.of Days", sType: "string" },
         { "mDataProp": "CNo_Parking", sTitle: "No.of Parking", sType: "string" },
         { "mDataProp": "CPrice_advt", sTitle: "Price(OMR)", sType: "numeric" },
+        { "mDataProp": "CNo_Parking", sTitle: "Vehicle Number", sType: "string" },
+        { "mDataProp": "CNo_Parking", sTitle: "Model", sType: "string" },
         { "mDataProp": "Actions", sTitle: "Actions", width: "7%", sType: "string", "defaultContent":
       			"<a id = 'editAdvdetails' href='javascript:;' class='text-green'><i class='fa fa-edit'></i></a>"+
       			"<a id = 'removeAdvdetails' href='javascript:;' class='text-red'><i class='fa fa-trash-o'></i></a>" }
@@ -124,7 +126,7 @@ function hide_id() {
   			"searchable": false,
   			"orderable": false,
   			"visible": false,
-  			"targets": [3, 4, 5, 6],
+  			"targets": [2, 3, 4, 5, 6],
   		}],
   		"order": [
   			[1, 'asc']

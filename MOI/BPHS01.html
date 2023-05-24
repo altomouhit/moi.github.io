@@ -187,7 +187,7 @@
                         <div class="row">
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
                             <label for="optradio_RT" class="required">Request Type</label>
-                            <div class="form-control" id="reqTypeId">
+                            <div class="form-control">
                               <div class="form-check form-check-inline">
                                 <input type="radio" name="optradio_RT" value="7217" checked />
                                 <label class="form-check-label" for="optradio_RT">New</label>
@@ -730,19 +730,19 @@
                         </div> <!-- End .row -->
 
                         <!-- div show Only Type of Renting Contract(BeneficiaryDetails Tab) click on (Industrial/Commercial/Agriculture) otherwise div is hide only on (Second Party Type - Organization) Individual can't show Activity -->
-                        <div id="ActivityType_hidden">
+                        <div id="ActivityType_hidden" class="row">
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                            <label for="license_issued" class="required">License Issued From</label>
-                            <select name="license_issued" id="license_issued" class="form-control"
+                            <label for="license_issued" class="required">MRMWR Municipal License Number</label>
+                            <input type="text" id="license_issued" class="form-control" validate-group="form-step-11" placeholder="MRMWR Municipal License Number" />
+                            <!-- <select name="license_issued" id="license_issued" class="form-control"
                               validate-group="form-step-11">
                               <option value="1000">Please select</option>
                               <option value="251">MRMWR</option>
                               <option value="252">Non MRMWR</option>
-                            </select>
+                            </select> -->
                           </div>
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                            <label for="SecondParty_Muni" id="Municipal_label" class="required">Municipal
-                              License</label>
+                            <label for="SecondParty_Muni" id="Municipal_label" class="required">Municipal License Number</label>
                             <select name="SecondParty_Muni" id="SecondParty_Muni" class="form-control"
                               validate-group="form-step-11">
                               <option value="1000">Please select</option>
@@ -860,12 +860,12 @@
                                   <input type="text" class="form-control" id="Owner_name" placeholder="Owner">
                                 </div>
                               </div>
-                              <div class="row">
+                              <!-- <div class="row">
                                 <div class="text-right">
                                   <button type="button" class="btn btn-hs" onclick="showbuilding()"
                                     id="showbuildingid"><i class="fa fa-plus fa-fw"></i>Show Building</button>
                                 </div>
-                              </div> <!-- /.row -->
+                              </div> /.row -->
                             </fieldset>
                           </div> <!-- End row -->
                         </div> <!-- End form-group -->

@@ -187,10 +187,14 @@
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
                             <label for="optradio_RT">&nbsp;</label>
                             <div class="form-control">
-                              <label class="radio-inline"><input type="radio" name="optradio_RT" value="7217" checked>
-                                جديد </label>
-                              <label class="radio-inline"> <input type="radio" name="optradio_RT" value="7218">تجديد
-                              </label>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio_RT" value="7217" checked />
+                                <label class="form-check-label" for="optradio_RT">جديد</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio_RT" value="7218" />
+                                <label class="form-check-label" for="optradio_RT">تجديد</label>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group col-sm-6 col-md-3 col-lg-3" id="ReqType">
@@ -203,7 +207,7 @@
                     </div> <!-- .row -->
                   </div> <!-- .form-group -->
 
-                  <div class="form-group" id="form-step-03">
+                  <div class="form-group" id="form-step-031">
                     <div class="row">
                       <div class="padtopbot">
                         <div id="form-step-03-err" class="Error"> Please fill all required fields of Service Details
@@ -316,25 +320,40 @@
                           <div class="form-group col-sm-6 col-md-4 col-lg-3 benradio1" id="benradio">
                             <label for="optradio" class="required">نوع المستفيد</label>
                             <div class="form-control" id="orgtypeID">
-                              <label class="radio-inline"> <input type="radio" name="optradio" value="Individual" checked>
-                                فرد </label>
-                              <label class="radio-inline"> <input type="radio" name="optradio" value="Organization"> مؤسسة
-                              </label>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio" value="Individual" checked>
+                                <label class="form-check-label"> فرد </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio" value="Organization">
+                                <label class="form-check-label"> مؤسسة </label>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group col-sm-4 col-md-4 col-lg-3" id="sameowner">
                             <label for="optradio3" class="required">نفس المالك</label>
                             <div class="form-control">
-                              <label class="radio-inline"> <input type="radio" name="optradio3" value="117"> نعم</label>
-                              <label class="radio-inline"> <input type="radio" name="optradio3" value="118"> لا</label>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio3" value="117">
+                                <label class="form-check-label"> نعم</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio3" value="118">
+                                <label class="form-check-label"> لا</label>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group col-sm-4 col-md-4 col-lg-3" id="samehide">
                             <label for="optradio1" class="required">نفس مقدم الطلب</label>
                             <div class="form-control">
-                              <label class="radio-inline"> <input type="radio" name="optradio1" value="117"> نعم </label>
-                              <label class="radio-inline"> <input type="radio" name="optradio1" value="118" checked>
-                                لا</label>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio1" value="117">
+                                <label class="form-check-label">نعم </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input type="radio" name="optradio1" value="118" checked>
+                                <label class="form-check-label"> لا</label>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -532,7 +551,7 @@
                       </div> -->
 
                         <!-- // * Vehicle License Details & Peddler License *// -->
-                        <div id="Vehicleshow" class="Vehicleshow">
+                        <div id="Vehicleshow" class="Vehicleshow row">
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
                             <label for="baseNumber" class="required">رقم القاعدة (الشاصي )</label>
                             <input type="text" class="form-control" id="baseNumber" placeholder="رقم القاعدة (الشاصي )"
@@ -602,7 +621,7 @@
                         </div>
 
                         <!-- // * Peddler Details *// -->
-                        <div id="Peddlershow">
+                        <div id="Peddlershow" class="row">
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
                             <label for="Inventorynumber">رقم الحصر</label>
                             <input type="text" class="form-control" id="Inventorynumber" placeholder="رقم الحصر"
@@ -617,15 +636,15 @@
                             </select>
                           </div>
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                            <label for="LSNO_water">الرقم التسلسلي للارض</label>
-                            <input type="text" class="form-control" id="LSNO_water" placeholder="الرقم التسلسلي للارض"
+                            <label for="LSNO_water">الرقم المتسلسل لقطعة الأرض</label>
+                            <input type="text" class="form-control" id="LSNO_water" placeholder="الرقم المتسلسل لقطعة الأرض"
                               validate-group="form-step-12">
                           </div>
                         </div>
                         <!-- // * Peddler Details *// -->
 
                         <!-- // * Peddler Details  and Drinking water well License * // -->
-                        <div id="BothID" class="BothID">
+                        <div id="BothID" class="BothID row">
                           <div class="form-group col-sm-6 col-md-3 col-lg-3">
                             <label for="region_water" class="required">المحافظة</label>
                             <select name="region_water" id="region_water" class="form-control">
@@ -654,48 +673,50 @@
                         </div>
                         <!-- // * Peddler Details  and Drinking water well License * // -->
 
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="ValidityTime" class="required">الصلاحية</label>
-                          <select class="form-control" id="ValidityTime" name="ValidityTime">
-                            <option value="1000">الرجاء الاختيار</option>
-                            <option value="1">سنه</option>
-                            <option value="2">سنتين</option>
-                          </select>
-                        </div>
-
-                        <!-- // * Municipal License Details * // -->
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Municipality_Activity">
-                          <label for="ActivityType_RT" class="required">النشاط</label>
-                          <select name="ActivityType_RT" id="ActivityType_RT" class="form-control" multiple="multiple">
-                            <option value="201">كي الملابس</option>
-                            <option value="202">غسيل الملابس</option>
-                            <option value="203">بيع الملابس الجاهزة</option>
-                            <option value="204">خياطة الملابس</option>
-                          </select>
-                        </div>
-
-                        <!-- // * Peddler Details * // -->
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Peddler_Activity">
-                          <label for="Activity_car" class="required">النشاط</label>
-                          <!-- <input type="text" class="form-control" id="Activity_car" placeholder="النشاط" validate-group="form-step-12"> -->
-                          <select class="form-control" id="Activity_car" validate-group="form-step-12">
-                            <option value="1000">الرجاء الاختيار</option>
-                            <option value="1">شَيِّ اللحوم (المشاكيك)</option>
-                            <option value="2">بيـع الـذرة</option>
-                            <option value="3">بيع الخضروات والفواكه والتمور</option>
-                            <option value="4">بيع المرطبات والمشروبات</option>
-                            <option value="5">بيع العسل</option>
-                            <option value="6">تجارة العطور ومستحضرات التجميل وصابون الزينة والبخور</option>
-                            <option value="7">بيع الفضيات والهدايا</option>
-                            <option value="8">تجارة المنسوجات والاقمشة</option>
-                            <option value="9">بيع الغاز</option>
-                            <option value="10">تركيب وتمديد وإصلاح الاعمال الكربائية ونظم الإنذار</option>
-                            <option value="11">خدمات نسخ وطباعة الوثائق والمسنتندات</option>
-                            <option value="12">تنظيم الرحلات السياحية</option>
-                            <option value="13">تجارة الفخاريات والمشغولات اليدوية</option>
-                            <option value="14">اصلاح وسمكرة المركبات</option>
-                          </select>
-                        </div>
+                        <div class="row">
+                          <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                            <label for="ValidityTime" class="required">الصلاحية</label>
+                            <select class="form-control" id="ValidityTime" name="ValidityTime">
+                              <option value="1000">الرجاء الاختيار</option>
+                              <option value="1">سنه</option>
+                              <option value="2">سنتين</option>
+                            </select>
+                          </div>
+  
+                          <!-- // * Municipal License Details * // -->
+                          <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Municipality_Activity">
+                            <label for="ActivityType_RT" class="required">النشاط</label>
+                            <select name="ActivityType_RT" id="ActivityType_RT" class="form-control" multiple="multiple">
+                              <option value="201">كي الملابس</option>
+                              <option value="202">غسيل الملابس</option>
+                              <option value="203">بيع الملابس الجاهزة</option>
+                              <option value="204">خياطة الملابس</option>
+                            </select>
+                          </div>
+  
+                          <!-- // * Peddler Details * // -->
+                          <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Peddler_Activity">
+                            <label for="Activity_car" class="required">النشاط</label>
+                            <!-- <input type="text" class="form-control" id="Activity_car" placeholder="النشاط" validate-group="form-step-12"> -->
+                            <select class="form-control" id="Activity_car" validate-group="form-step-12">
+                              <option value="1000">الرجاء الاختيار</option>
+                              <option value="1">شَيِّ اللحوم (المشاكيك)</option>
+                              <option value="2">بيـع الـذرة</option>
+                              <option value="3">بيع الخضروات والفواكه والتمور</option>
+                              <option value="4">بيع المرطبات والمشروبات</option>
+                              <option value="5">بيع العسل</option>
+                              <option value="6">تجارة العطور ومستحضرات التجميل وصابون الزينة والبخور</option>
+                              <option value="7">بيع الفضيات والهدايا</option>
+                              <option value="8">تجارة المنسوجات والاقمشة</option>
+                              <option value="9">بيع الغاز</option>
+                              <option value="10">تركيب وتمديد وإصلاح الاعمال الكربائية ونظم الإنذار</option>
+                              <option value="11">خدمات نسخ وطباعة الوثائق والمسنتندات</option>
+                              <option value="12">تنظيم الرحلات السياحية</option>
+                              <option value="13">تجارة الفخاريات والمشغولات اليدوية</option>
+                              <option value="14">اصلاح وسمكرة المركبات</option>
+                            </select>
+                          </div>
+                        </div> <!-- /.row -->
                       </fieldset>
                     </div> <!-- .row -->
                   </div> <!-- .form-group -->
