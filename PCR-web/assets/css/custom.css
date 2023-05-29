@@ -678,3 +678,8 @@ hr.horizontal.dark {
 #notificationDropdown {
     display: none;
 }
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid;
+}

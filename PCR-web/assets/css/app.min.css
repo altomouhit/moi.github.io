@@ -3095,7 +3095,7 @@ code {
 	opacity: 0;
 	visibility: hidden
 }
-#status {
+#preloader #status {
 	width: 40px;
 	height: 40px;
 	position: absolute;
