@@ -23881,4 +23881,7 @@ span.flatpickr-weekday {
 .ad-login .card {
 	background-color: rgb(236, 231, 227);
 }
+.ad-login {
+	z-index: 99;
+}
 /*# sourceMappingURL=quick-website.css.map */

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/moi-webapp.css?v.1.0" id=stylesheet>
     <link rel="stylesheet" href="css/moi.css" />
     <link rel="stylesheet" href="css/marquee.css" />
+    <link rel="stylesheet" href="css/marquee-vertical.css">
     <link rel="stylesheet" href="css/centerLogo.css" />
 </head>
 
@@ -406,9 +407,9 @@
         </section>
 
         <!-- Announcement -->
-        <section class="slice p-0" style="z-index: 99;">
+        <section class="slice p-0 transparent-background" style="z-index: 99;">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center hidden">
                     <div class="col-12 d-flex align-items-center p-0">
                         <div class="twitter-scroll bg-dark">
                             <div class="dap-tw-logo"> Announcement </div>
@@ -428,8 +429,11 @@
                         </div>
                         <!-- twitter-scroll  -->
                     </div>
-                </div>
-                <!-- /.row -->
+                </div> <!-- /.row -->
+
+                <div class="row">
+                    
+                </div> <!-- /.row -->
             </div>
             <!-- /. container -->
         </section>
@@ -446,8 +450,8 @@
                 </div>
                 <!-- /.row -->
 
-                <div class="row justify-content-center text-center">
-                    <div class="position-relative">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-9 position-relative d-flex justify-content-center text-center">
                         <img src="img/svg/center-logo.png" class="center-logo" alt="" />
                         <div class="media sr-logo">
                             <a href="sr.html">
@@ -479,6 +483,44 @@
                                 <p class="mb-0">Services provided for the citizens and residents to obtain municipal licenses, lease contracts and food safety permits.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="block-hdnews bg-dark card">
+                            <div class="card-header btn-Announcement">
+                                <i class="fal fa-megaphone fa-fw fa-lg"></i><span>&nbsp;Announcement</span>
+                            </div>
+                            <div class="body">
+                                <div class="list-wrpaaer" style="height:333px">
+                                    <ul class="list-aggregate" id="marquee-vertical">
+                                      <li>
+                                        <a href="announcement.html">Announcement 1</a>
+                                        <p>
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                      </li>
+                              
+                                      <li>
+                                        <a href="announcement.html">Announcement 2</a>
+                                        <p>Aliquam consequat nibh in sollicitudin semper. Nam convallis sapien nisi, ac vulputate nisi auctor blandit.
+                                          Donec tincidunt varius suscipit. </p>
+                                      </li>
+                              
+                                      <li>
+                                        <a href="announcement.html">Announcement 3</a>
+                                        <p>Ut ut felis suscipit sem porta molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                                          posuere cubilia Curae/p>
+                                      </li>
+                              
+                                      <li>
+                                        <a href="announcement.html" title="">Announcement 4</a>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse
+                                          platea dictumst. </p>
+                                      </li>
+                              
+                                    </ul>
+                                  </div><!-- list-wrpaaer -->
+                            </div>
+                        </div> <!-- block-hdnews -->
                     </div>
                     <div class="col-10 col-sm-6 col-lg-4 my-4 d-none">
                         <a href="TServices.html" class="text-gray">
@@ -1042,19 +1084,23 @@
     <script src="js/moi-webapp.js"></script>
     <script src="js/main.js"></script>
     <!-- <script src="js/ticker.js"></script> -->
-    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/jquery.marquee.js"></script>
     <script>
-        $('.twitter-scroll').marquee({
-            //speed in milliseconds of the marquee
-            duration: 30000,
-            //gap in pixels between the tickers
-            gap: 150,
-            //time in milliseconds before the marquee will start animating
-            delayBeforeStart: 0,
-            direction: 'left',
-            //true or false - should the marquee be duplicated to show an effect of continues flow
-            duplicated: true,
-            pauseOnHover: true
+        // $('.twitter-scroll').marquee({
+        //     //speed in milliseconds of the marquee
+        //     duration: 30000,
+        //     //gap in pixels between the tickers
+        //     gap: 150,
+        //     //time in milliseconds before the marquee will start animating
+        //     delayBeforeStart: 0,
+        //     direction: 'left',
+        //     //true or false - should the marquee be duplicated to show an effect of continues flow
+        //     duplicated: true,
+        //     pauseOnHover: true
+        // });
+
+        $(function () {
+            $('#marquee-vertical').marquee();
         });
         $(window).on('load', function() {
             $('#mociError').modal('hide');

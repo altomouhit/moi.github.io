@@ -504,6 +504,18 @@ body.loaded>div.preloader {
     color: #ffffff;
 }
 
+.btn-Announcement {
+    transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out, margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
+    background: transparent linear-gradient(164deg, #1e2248 0%, #1a51a0 31%, #39bde1 100%) 0% 0% no-repeat padding-box;
+    /* New color change on 25/05/2022 */
+    background: transparent linear-gradient(164deg, #43535b 0%, #515d63 31%, #576f7b 100%) 0% 0% no-repeat padding-box;
+    -webkit-box-shadow: 4px 4px 4px #333;
+    -moz-box-shadow: 4px 4px 4px #333;
+    box-shadow: 4px 4px 4px #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px 4px 12px 4px;
+}
 .divider-line {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fbd9da+0,fadbd9+0,fcdcdf+0,fbdddd+1,fde3e4+1,fbe6e5+2,fee5e8+2,fde8e7+2,feeaeb+2,fdebeb+3,fef0f0+3,fdf3f2+5,fff5f6+5,fef5f6+6,fef8f8+6,fef8f8+7,fffafa+7,fffbfa+9,fef8f8+9,fffbfa+10,fff7f8+11,fefaf9+11,fff7f8+11,fff7f8+13,fff5f4+13,fff1f1+16,feeaeb+18,feecec+18,fee9e8+18,fde9ea+18,fee4e5+19,fee6e6+19,ffe3e2+20,fde3e4+20,fde1e0+20,fcdad9+22,fed7d8+22,fdd7d6+23,fbcdcd+24,fdcdcd+24,fbc5c5+25,fdb3b4+27,fab0b1+28,fbabac+28,f9a8a7+29,f99f9f+29,fa9f9e+30,fa9696+30,fb8f8f+31,f98b8c+31,fa8a89+32,f78181+32,f97e80+33,f87a7b+33,f87877+33,f96d6e+34,f76b6a+34,f85e5e+36,f65c5c+36,f75b5c+36,f65251+37,f43a3b+39,f53435+40,f42223+42,f32120+42,f31415+44,f41011+45,f20e0d+45,f40a0b+47,f10706+47,f30304+49,f20201+50,f20203+50,f10100+50,f30100+64,ef0703+67,ec0702+67,e80e05+69,d21e03+73,d02305+73,ca2704+74,c92701+74,bf3103+75,c23102+75,bc3203+75,b93801+76,b63700+76,a84702+77,a74600+77,a64b02+78,985400+79,995700+79,8d6100+80,8e6201+80,8b6400+80,896800+81,7b7400+82,7a7801+82,767a00+82,747e01+83,6f8300+83,718200+83,6b8a01+84,648d00+84,659002+85,619100+85,629401+85,5e9400+85,5b9a01+86,559f00+86,579e00+86,54a000+87,52a401+87,4ea500+87,4eaa01+88,4aaa00+88,40b600+89,31c500+92,2dc800+93,2fc700+93,2dca01+93,2acc00+93,2ccb00+94,27cd00+94,27d100+95,23d400+95,25d300+96,22d300+96,22d601+97,19db00+99,1bda00+100 */
     background: #fbd9da;
@@ -1409,3 +1421,34 @@ img#navbar-logo {
     text-align: center;
 }
 /*.............. multiple Selections on 27/12/2017 by Balaram ..............*/
+ul,li {
+    list-style: none;
+    padding: 0px;
+}
+
+.list-aggregate>li {
+    padding: 10px 0;
+    border-bottom: solid 1px transparent;
+    -webkit-transition: ease-in-out background-color .15s .05s;
+    -o-transition: ease-in-out background-color .15s .05s;
+    transition: ease-in-out background-color .15s .05s
+}
+
+.list-aggregate>li>a {
+    width: 85%;
+    height: 25px;
+    line-height: 25px;
+    display: block;
+    text-align: center;
+    margin: 7px auto;
+    font-size: 17px;
+    overflow: hidden;
+    font-family: 'Microsoft Yahei'
+}
+
+.list-aggregate>li>p {
+    height: 35px;
+    line-height: 18px;
+    overflow: hidden;
+    font-size: 13px
+}
