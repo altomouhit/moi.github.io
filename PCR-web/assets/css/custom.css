@@ -683,3 +683,23 @@ hr.horizontal.dark {
     border: 0;
     border-bottom: 3px solid;
 }
+.master .page-title-box {
+    background: transparent linear-gradient(333deg, #1E4B83 0%, #041656 100%, #693FFB 100%) 0% 0% no-repeat padding-box;
+    padding: 2px 1.5rem;
+}
+.master .page-title-box .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #ddde40;
+}
+.master .page-title-box .nav-pills>li>a, .nav-tabs>li>a,
+.breadcrumb-item>a {
+    color: var(--vz-gray-500);
+    font-weight: 400;
+}
+.master .breadcrumb-item.active,.breadcrumb-item + .breadcrumb-item::before {
+    color: #ddde40;
+}
+.master .page-title-box .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border: 0;
+    border-bottom: 2px solid var(--vz-gray-300);
+    color: var(--vz-gray-300);
+}

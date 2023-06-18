@@ -65,8 +65,9 @@ $(document).ready(function() {
         { "mDataProp": "Cstatus", sTitle: "Status", sType: "string", sWidth: "10%", }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "10%", sType: "string", "defaultContent": 
             "<button type='button' id = 'viewDetails' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
-            "<button type='button' id = 'editDetails' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" + 
-            "<button type='button' id = 'removeDetails' class='delete-icon'><i class='fal fa-trash'></i></button>" }
+            "<button type='button' id = 'editDetails' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" 
+          //  + "<button type='button' id = 'removeDetails' class='delete-icon'><i class='fal fa-trash'></i></button>" 
+        }
     ];
     var lookUpTable = $('#lookUpTable').DataTable({
 		processing: true,

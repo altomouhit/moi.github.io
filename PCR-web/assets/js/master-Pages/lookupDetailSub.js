@@ -86,8 +86,9 @@ $(document).ready(function() {
         { "mDataProp": "Cstatus", sTitle: "Status", sType: "string", sWidth: "10%", }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "10%", sType: "string", "defaultContent": 
             "<button type='button' id = 'lookupDetailSubViewBtn' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
-            "<button type='button' id = 'lookupDetailSubEditBtn' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" + 
-            "<button type='button' id = 'lookupDetailSubDelBtn' class='delete-icon'><i class='fal fa-trash'></i></button>" }
+            "<button type='button' id = 'lookupDetailSubEditBtn' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" 
+            //+ "<button type='button' id = 'lookupDetailSubDelBtn' class='delete-icon'><i class='fal fa-trash'></i></button>" 
+        }
     ];
     var lookupDetailSubTable = $('#lookupDetailSubTable').DataTable({
 		processing: true,
