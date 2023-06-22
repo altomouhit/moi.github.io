@@ -424,21 +424,21 @@
 		}), sessionStorage.setItem("defaultAttribute", JSON.stringify(a)), B(a), (e = document.querySelector('.btn[data-bs-target="#theme-settings-offcanvas"]')) && e.click()),
 		b(),
 		t = document.getElementById("search-close-options"),
-		o = document.getElementById("search-dropdown"), (n = document.getElementById("search-options")).addEventListener("focus", function() {
-			0 < n.value.length ? (o.classList.add("show"), t.classList.remove("d-none")) : (o.classList.remove("show"), t.classList.add("d-none"))
-		}),
-		n.addEventListener("keyup", function(e) {
-			var a;
-			0 < n.value.length ? (o.classList.add("show"), t.classList.remove("d-none"), a = n.value.toLowerCase(), document.getElementsByClassName("notify-item").forEach(function(e) {
-				var t = e.getElementsByTagName("span")[0].innerText.toLowerCase();
-				e.style.display = t.includes(a) ? "block" : "none"
-			})) : (o.classList.remove("show"), t.classList.add("d-none"))
-		}),
-		t.addEventListener("click", function() {
-			n.value = "",
-				o.classList.remove("show"),
-				t.classList.add("d-none")
-		}),
+		//o = document.getElementById("search-dropdown"), (n = document.getElementById("search-options")).addEventListener("focus", function() {
+			//0 < n.value.length ? (o.classList.add("show"), t.classList.remove("d-none")) : (o.classList.remove("show"), t.classList.add("d-none"))
+		//}),
+		// n.addEventListener("keyup", function(e) {
+		// 	var a;
+		// 	0 < n.value.length ? (o.classList.add("show"), t.classList.remove("d-none"), a = n.value.toLowerCase(), document.getElementsByClassName("notify-item").forEach(function(e) {
+		// 		var t = e.getElementsByTagName("span")[0].innerText.toLowerCase();
+		// 		e.style.display = t.includes(a) ? "block" : "none"
+		// 	})) : (o.classList.remove("show"), t.classList.add("d-none"))
+		// }),
+		// t.addEventListener("click", function() {
+		// 	n.value = "",
+		// 		o.classList.remove("show"),
+		// 		t.classList.add("d-none")
+		// }),
 		document.body.addEventListener("click", function(e) {
 			"search-options" !== e.target.getAttribute("id") && (o.classList.remove("show"), t.classList.add("d-none"))
 		}), (e = document.querySelector('[data-toggle="fullscreen"]')) && e.addEventListener("click", function(e) {

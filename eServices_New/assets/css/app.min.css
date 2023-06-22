@@ -223,7 +223,8 @@
 }
 
 .app-search {
-    padding: calc(32px / 2) 0
+    padding: calc(32px / 2) 0;
+    display: none !important;
 }
 
 .app-search .form-control {
@@ -528,7 +529,7 @@
 
 .page-title-box h4 {
     font-weight: 700;
-    font-size: 15px!important;
+    font-size: 15px;
     text-transform: uppercase
 }
 
@@ -1636,7 +1637,8 @@
 [data-layout=horizontal] .navbar-menu .navbar-nav .nav-link {
     color: var(--vz-topnav-item-color);
     /* color: var(--vz-topnav-bg); */
-    padding: .75rem 1.5rem;
+    /* padding: .75rem 1.5rem; */
+    padding: .75rem 1rem;
     font-weight: 700;
 }
 [data-layout=horizontal] .navbar-menu .navbar-nav .nav-sm .nav-link {

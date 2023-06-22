@@ -242,6 +242,9 @@ legend {
 
 .bottom {
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .table-bt-pd .bottom {
     padding: 0 0.5rem 0.5rem 0.5rem;
@@ -251,11 +254,11 @@ legend {
     right: 229px;
     z-index: 11;
 }
-.data_table div.dataTables_length {
+/* .data_table div.dataTables_length {
     position: absolute;
     right: 449px;
     z-index: 11;
-}
+} */
 
 .smart-Wizard label, .custom-tab-1 label {
     color: var(--vz-topnav-item-color-active);
@@ -487,4 +490,22 @@ hr.horizontal.dark {
     background: linear-gradient(90deg,#34a853 4%,#4285f4 0%) top/100% 34% no-repeat,linear-gradient(90deg,#fbbc04 50%,#4285f4 0%) top/100% 82% no-repeat,linear-gradient(90deg,#fbbc04 10%,#ea4335 0%) top/100% 100%;
     border: 0;
     box-shadow: 0 1px 6px rgba(60,64,67,.3)
+}
+@media (min-width: 1228px) and (max-width: 1399px) {
+    .navbar-menu .navbar-nav .nav-link, .form-select, div.dataTables_wrapper div.dataTables_info,
+    div.dataTables_wrapper div.dataTables_length label, .page-link, body, .navbar-menu .navbar-nav .nav-sm .nav-link,
+    .form-control, .input-group-navbar .form-control, .btn-chartreuse, .btn {
+        margin:0;
+        font-size: 0.625rem;
+    }
+    .h4, h4 {
+        font-size: 0.8375rem !important;
+    }
+    .btn-height {
+        height: 36px;
+        width: 89px;
+    }
+    .contest_input_block .top_header_bar .btn {
+        height: 36px;
+    }
 }

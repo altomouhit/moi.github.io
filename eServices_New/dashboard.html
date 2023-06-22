@@ -71,95 +71,6 @@
                                 <span></span>
                             </span>
                         </button>
-
-                        <!-- App Search-->
-                        <form class="app-search d-none d-md-block">
-                            <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search..." autocomplete="off" id="search-options" value="">
-                                <span class="mdi mdi-magnify search-widget-icon"></span>
-                                <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none" id="search-close-options"></span>
-                            </div>
-                            <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
-                                <div data-simplebar style="max-height: 320px;">
-                                    <!-- item-->
-                                    <div class="dropdown-header">
-                                        <h6 class="text-overflow text-muted mb-0 text-uppercase">Recent Searches</h6>
-                                    </div>
-
-                                    <div class="dropdown-item bg-transparent text-wrap">
-                                        <a href="index.html" class="btn btn-soft-secondary btn-sm btn-rounded">how to
-                                            setup <i class="mdi mdi-magnify ms-1"></i></a>
-                                        <a href="index.html" class="btn btn-soft-secondary btn-sm btn-rounded">buttons
-                                            <i class="mdi mdi-magnify ms-1"></i></a>
-                                    </div>
-                                    <!-- item-->
-                                    <div class="dropdown-header mt-2">
-                                        <h6 class="text-overflow text-muted mb-1 text-uppercase">Pages</h6>
-                                    </div>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ri-bubble-chart-line align-middle fs-18 text-muted me-2"></i>
-                                        <span>Analytics Dashboard</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ri-lifebuoy-line align-middle fs-18 text-muted me-2"></i>
-                                        <span>Help Center</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="ri-user-settings-line align-middle fs-18 text-muted me-2"></i>
-                                        <span>My account settings</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <div class="dropdown-header mt-2">
-                                        <h6 class="text-overflow text-muted mb-2 text-uppercase">Members</h6>
-                                    </div>
-
-                                    <div class="notification-list">
-                                        <!-- item -->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
-                                            <div class="d-flex">
-                                                <img src="assets/img/avatar.svg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                                <div class="flex-1">
-                                                    <h6 class="m-0">Angela Bernier</h6>
-                                                    <span class="fs-11 mb-0 text-muted">Manager</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- item -->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
-                                            <div class="d-flex">
-                                                <img src="assets/img/avatar.svg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                                <div class="flex-1">
-                                                    <h6 class="m-0">David Grasso</h6>
-                                                    <span class="fs-11 mb-0 text-muted">Web Designer</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- item -->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item py-2">
-                                            <div class="d-flex">
-                                                <img src="assets/img/avatar.svg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                                <div class="flex-1">
-                                                    <h6 class="m-0">Mike Bunch</h6>
-                                                    <span class="fs-11 mb-0 text-muted">React Developer</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="text-center pt-3 pb-1">
-                                    <a href="pages-search-results.html" class="btn btn-primary btn-sm">View All Results
-                                        <i class="ri-arrow-right-line ms-1"></i></a>
-                                </div>
-                            </div>
-                        </form>
                     </div>
 
                     <div class="d-flex align-items-center">
@@ -335,58 +246,69 @@
                             </a>
                         </li>
                         <!-- end Dashboard Menu -->
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link globalMasters" href="#sidebarGlobalMasters" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarGlobalMasters">
-                                <i class="fal fa-users-crown"></i> <span data-key="t-global">Global Masters</span>
+                            <a href="#sidebarEmail" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                                aria-controls="sidebarEmail" data-key="t-global">
+                                <i class="fal fa-chalkboard-teacher"></i> <span>Masters</span>
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarGlobalMasters">
+                            <div class="collapse menu-dropdown" id="sidebarEmail">
                                 <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item"><a href="complaint-type.html" class="nav-link" data-key="t-complaintype">Complaint Type</a></li>
-                                    <li class="nav-item"><a href="channel.html" class="nav-link" data-key="t-channel">Channel</a></li>
-                                    <li class="nav-item"><a href="complaint-category.html" class="nav-link" data-key="t-category">Complaint Category</a></li>
-                                    <li class="nav-item"><a href="region.html" class="nav-link" data-key="t-region">Region</a></li>
-                                    <li class="nav-item"><a href="branch.html" class="nav-link" data-key="t-branch">Branch</a></li>
-                                    <li class="nav-item"><a href="enquiry.html" class="nav-link" data-key="t-enquiry">Enquiry</a></li>
-                                    <li class="nav-item"><a href="finalized.html" class="nav-link" data-key="t-finalized">Finalized SMS</a></li>
-                                    <li class="nav-item"><a href="holiday.html" class="nav-link" data-key="t-holiday">Holiday</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- end Global Masters Menu -->
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link masters" href="#sidebarMasters" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMasters">
-                                <i class="fal fa-user-graduate"></i> <span data-key="t-masters">Masters</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarMasters">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item"><a href="complaint-desc.html" class="nav-link" data-key="t-complaindesc">Complaint Description</a></li>
-                                    <li class="nav-item"><a href="channel-master.html" class="nav-link" data-key="t-mchannel">Channel</a></li>
-                                    <li class="nav-item"><a href="more-info.html" class="nav-link" data-key="t-moreinfo">More Info</a></li>
-                                    <li class="nav-item"><a href="routing-criteria.html" class="nav-link" data-key="t-routing">Routing Criteria</a></li>
+                                    <li class="nav-item">
+                                        <a class="nav-link menu-link globalMasters" href="#sidebarGlobalMasters" data-bs-toggle="collapse"
+                                            role="button" aria-expanded="false" aria-controls="sidebarGlobalMasters">
+                                            <i class="fal fa-users-crown"></i> <span data-key="t-global">Global Masters</span>
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarGlobalMasters">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item"><a href="complaint-type.html" class="nav-link" data-key="t-complaintype">Complaint Type</a></li>
+                                                <li class="nav-item"><a href="channel.html" class="nav-link" data-key="t-channel">Channel</a></li>
+                                                <li class="nav-item"><a href="complaint-category.html" class="nav-link" data-key="t-category">Complaint Category</a></li>
+                                                <li class="nav-item"><a href="region.html" class="nav-link" data-key="t-region">Region</a></li>
+                                                <li class="nav-item"><a href="branch.html" class="nav-link" data-key="t-branch">Branch</a></li>
+                                                <li class="nav-item"><a href="enquiry.html" class="nav-link" data-key="t-enquiry">Enquiry</a></li>
+                                                <li class="nav-item"><a href="finalized.html" class="nav-link" data-key="t-finalized">Finalized SMS</a></li>
+                                                <li class="nav-item"><a href="holiday.html" class="nav-link" data-key="t-holiday">Holiday</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- end Global Masters Menu -->
+                                    <li class="nav-item">
+                                        <a class="nav-link menu-link masters" href="#sidebarMasters" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarMasters">
+                                            <i class="fal fa-user-graduate"></i> <span data-key="t-masters">Masters</span>
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarMasters">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item"><a href="complaint-desc.html" class="nav-link" data-key="t-complaindesc">Complaint Description</a></li>
+                                                <li class="nav-item"><a href="channel-master.html" class="nav-link" data-key="t-mchannel">Channel</a></li>
+                                                <li class="nav-item"><a href="more-info.html" class="nav-link" data-key="t-moreinfo">More Info</a></li>
+                                                <li class="nav-item"><a href="routing-criteria.html" class="nav-link" data-key="t-routing">Routing Criteria</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- end Masters Menu -->
+                        
+                                    <li class="nav-item">
+                                        <a class="nav-link menu-link groupMasters" href="#sidebarGroupMasters" data-bs-toggle="collapse"
+                                            role="button" aria-expanded="false" aria-controls="sidebarGroupMasters">
+                                            <i class="fal fa-users-class"></i> <span data-key="t-groupmasters">Group Masters</span>
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarGroupMasters">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item"><a href="group-masters.html" class="nav-link" data-key="t-groupmasters">Group Masters</a></li>
+                                                <li class="nav-item"><a href="group-branch.html" class="nav-link" data-key="t-branch">Branch</a></li>
+                                                <li class="nav-item"><a href="offsite.html" class="nav-link" data-key="t-offsite">Offsite</a></li>
+                                                <li class="nav-item"><a href="user.html" class="nav-link" data-key="t-user">User</a></li>
+                                                <li class="nav-item"><a href="remove-ticket.html" class="nav-link" data-key="t-ticket">Remove Ticket</a></li>
+                                                <li class="nav-item"><a href="ticket-history.html" class="nav-link" data-key="t-History">Ticket History</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- end Group Masters Menu -->
                                 </ul>
                             </div>
                         </li>
                         <!-- end Masters Menu -->
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link groupMasters" href="#sidebarGroupMasters" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarGroupMasters">
-                                <i class="fal fa-chalkboard-teacher"></i> <span data-key="t-groupmasters">Group Masters</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarGroupMasters">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item"><a href="group-masters.html" class="nav-link" data-key="t-groupmasters">Group Masters</a></li>
-                                    <li class="nav-item"><a href="group-branch.html" class="nav-link" data-key="t-branch">Branch</a></li>
-                                    <li class="nav-item"><a href="offsite.html" class="nav-link" data-key="t-offsite">Offsite</a></li>
-                                    <li class="nav-item"><a href="user.html" class="nav-link" data-key="t-user">User</a></li>
-                                    <li class="nav-item"><a href="remove-ticket.html" class="nav-link" data-key="t-ticket">Remove Ticket</a></li>
-                                    <li class="nav-item"><a href="ticket-history.html" class="nav-link" data-key="t-History">Ticket History</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- end Group Masters Menu -->
-
                         <li class="nav-item">
                             <a class="nav-link menu-link sysAdmin" href="#sidebarSystemAdmin" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSystemAdmin">
                                 <i class="fal fa-users-cog"></i> <span data-key="t-systemadmin">System Admin</span>
