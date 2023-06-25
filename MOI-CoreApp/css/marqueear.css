@@ -4,31 +4,30 @@
   overflow: hidden;
   position: relative;
 }
+
 .dap-tw-logo {
-  background-color: rgb(200, 16, 46);
-  box-shadow: 1px 0px 0px 0px #fff;
+  background-color: rgb(226, 220, 209);
+  box-shadow: 1px 0px 0px 0px #000;
   right: 0;
   position: absolute;
   text-align: center;
   top: 0;
-  color: white;
-  width: 10%;
+  width: 38px;
 }
 .dap-tw-logo:after {
-  border-bottom: 17px solid transparent;
-  border-right: 17px solid rgb(200, 16, 46);
-  border-top: 17px solid transparent;
-  -webkit-filter: drop-shadow(-2px 0px 0px #fff);
-          filter: drop-shadow(-2px 0px 0px #fff);
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid rgb(226, 220, 209);
+  border-top: 6px solid transparent;
+  -webkit-filter: drop-shadow(2px 0px 0px #000);
+          filter: drop-shadow(2px 0px 0px #000);
   content: "";
   height: 0;
-  margin-top: -17px;
+  margin-top: -6px;
   position: absolute;
-  left: -17px;
+  left: -5px;
   top: 50%;
   width: 0;
 }
-
 .dap-tw-logo img {
   vertical-align: text-bottom;
 }
@@ -42,7 +41,7 @@ a.dap-tw-item {
   text-decoration: none;
   -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
-  font-size: 1rem;
+  font-size: 12px;
 }
 a.dap-tw-item:hover {
   /*background-color: rgb(247, 200, 60);*/

@@ -1,42 +1,116 @@
-window.addEventListener("load", function() {
-	setTimeout(function() {
-		document.querySelector("body").classList.add("loaded")
-	}, 300)
+/*******************************
+ * ACCORDION WITH TOGGLE ICONS
+ *******************************/
+function toggleIcon(e) {
+  $(e.target).prev('.panel-heading').find(".more-less").toggleClass('glyphicon glyphicon-chevron-down glyphicon glyphicon-chevron-right');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+$(document).ready(function() {
+  var table = $('#GIS').DataTable();
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
 });
-// Text-Resize - Start here
-$(document).ready(function () {
-    var originalSize = $('div,ul li,a,h1,h2,h3,h4,h5,h6,p,span,legend,input,.form-control,.btn').css('font-size');
-    // reset
-    $("#lnkNormal").click(function () {
-        $('div,ul li,a,h1,h2,h3,h4,h5,h6,p,span,input,legend,.form-control,.btn').css('font-size', originalSize);
-    });
-    //Increase
-    $('#lnkIncrease').click(function () {
-        curSize = parseInt($('div,ul li,a,h1,h2,h3,h4,h5,h6,p,span,legend,input,.form-control,.btn').css('font-size')) + 1;
-        if (curSize <= 18)
-            $('div,ul li,a,h1,h2,h3,h4,h5,h6,p,span,legend,input,.form-control,.btn').css('font-size', curSize);
-    });
-    //Decrease
-    $('#lnkDecrease').click(function () {
-        curSize = parseInt($('div,ul li,a,h1,h2,h3,h4,h5,h6,p,span,legend,input,.form-control,.btn').css('font-size')) - 1;
-        if (curSize >= 9)
-            $('div,ul li,a,h1,h2,h3,h4,h5,h6,p,span,input,legend,.form-control,.btn').css('font-size', curSize);
-    });
+$(document).ready(function() {
+  var table = $('#Existing').DataTable();
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#Proposed').DataTable();
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#BUnits').DataTable();
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#BStoreys').DataTable();
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#Commentstable').DataTable();  
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#Paymentstable').DataTable();  
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#SiteInspectiontable').DataTable();
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#VDetails').DataTable();
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+});
+$(document).ready(function() {
+  var table = $('#InspectionList').DataTable();  
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+  $('#InspectionList').parent().addClass('table-responsive');
 });
 
-$(function () {
-    var nua = navigator.userAgent
-    var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
-    if (isAndroid) {
-        $('select.form-control').removeClass('form-control').css('width', '100%')
-    }
+$(document).ready(function() {
+  var table = $('#BStoreys2, #BUnits2').DataTable();  
+  table.page.len(5).draw();
+  $(".dataTables_length").replaceWith("<div style='display:none;'> <label>Show</label>  <input type=text  class='page form-control' value='5'>  <label>entries</label> </div>");
+  $(".page").keyup(function() {
+    table.page.len(eval($(".page").val())).draw();
+  });
+  $('#BStoreys2, #BUnits2').parent().addClass('table-responsive');
+});
+
+function TitleDeed() {
+  var iframe = document.getElementById('');
+  iframe.setAttribute("src", "docs/Portal Enhancements v1.1.pdf");
+}
+
+function SurveySketch() {
+  var iframe = document.getElementById('iframe');
+  iframe.setAttribute("src", "docs/Portal Enhancements v1.1.pdf");
+}
+
+/* Avilable Dates Script */
+$('.days li span.active').click(function(){	
+	$(this).addClass('selected-date');
+	$(this).parent('li').siblings().find('span.active').removeClass('selected-date');
 })
-
-var highestBox = 0;
-$('.flickity-viewport-visible .card').each(function () {
-    if ($(this).height() > highestBox) {
-        highestBox = $(this).height();
-    }
-});
-$('.flickity-viewport-visible .card').height(highestBox);
-
