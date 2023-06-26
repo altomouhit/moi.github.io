@@ -204,7 +204,7 @@ img:visited {
     border: none;
     /*border-radius: 0;*/
     color: #fff;
-    font-size: 12px;
+    /* font-size: 12px; */
     text-align: left;
 }
 /*---------------End Over write buttons -----------------------*/
