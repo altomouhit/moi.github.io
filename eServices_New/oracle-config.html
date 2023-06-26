@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Oracle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -390,7 +391,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="javascript: void(0);">
-                                                <i class="fal fa-users-cog fa-lg" style="color: var(--vz-topnav-item-color-active);"></i>&nbsp; System Admin</a>
+                                                <i class="fal fa-users-cog fa-lg"></i>&nbsp; System Admin</a>
                                         </li>
                                         <li class="breadcrumb-item active">Oracle Configuration</li>
                                     </ol>
@@ -440,7 +441,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
-                                                <button type="reset" class="btn btn-text" id="cancelid" style="width: auto; margin-left: 0; color: #868700">
+                                                <button type="reset" class="btn btn-text cancelBtn" id="cancelid">
                                                     Cancel
                                                 </button>
 
@@ -481,9 +482,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> Copyright &copy; Design & Develop by
+                            2000 -
+                            <span id="fullYear"></span> Copyright &copy; Design & Develop by
                             <a href="https://altomouhit.com/" target="_blank">AL Tomouh IT LLC</a>.
                         </div>
                     </div>

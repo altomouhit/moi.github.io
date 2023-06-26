@@ -12,11 +12,18 @@ function routingFn() {
     var compDesc = $("#compDesc option:selected").text();
 	var compDesc_val = $("#compDesc option:selected").val();
 
+    var productCategory = $("#productCategory option:selected").text();
+	var productCategory_val = $("#productCategory option:selected").val();
+
     var branch = $("#branch option:selected").text();
 	var branch_val = $("#branch option:selected").val();
     
     var group = $("#group option:selected").text();
 	var group_val = $("#group option:selected").val();
+
+    var serviceProvider = $("#serviceProvider option:selected").text();
+	var serviceProvider_val = $("#serviceProvider option:selected").val();
+
     var SLATime = $("#SLATime").val();
     var channel = $("#channel option:selected").text();
 	var channel_val = $("#channel option:selected").val();
@@ -28,11 +35,18 @@ function routingFn() {
     routing_object.dcompDesc = compDesc;
     routing_object.dcompDesc_val = compDesc_val;
 
+    routing_object.dproductCategory = productCategory;
+    routing_object.dproductCategory_val = productCategory_val;
+
     routing_object.dbranch = branch;
     routing_object.dbranch_val = branch_val;
 
     routing_object.dgroup = group;
     routing_object.dgroup_val = group_val;
+
+    routing_object.dserviceProvider = serviceProvider;
+    routing_object.dserviceProvider_val = serviceProvider_val;
+
     routing_object.dSLATime = SLATime;
     routing_object.dchannel = channel;
     routing_object.dchannel_val = channel_val;
@@ -47,6 +61,8 @@ function routingFn() {
     $("#compType").val('');
     $("#compDesc").val('');
     $("#branch").val('');
+    $("#productCategory").val('');
+    $("#serviceProvider").val('');
 }
 //edit routingFn details
 function adveditfunction(data1) {
@@ -60,6 +76,8 @@ function adveditfunction(data1) {
     $("#compType").val(data.dcompType_val);
     $("#compDesc").val(data.dcompDesc_val);
     $("#branch").val(data.dbranch_val);
+    $("#productCategory").val(data.dproductCategory_val);
+    $("#serviceProvider").val(data.dserviceProvider_val);
 }
 //View routingFn details
 function Faqviewfunction(data1) {
@@ -72,6 +90,8 @@ function Faqviewfunction(data1) {
     $("#compType").val(data.dcompType_val);
     $("#compDesc").val(data.dcompDesc_val);
     $("#branch").val(data.dbranch_val);
+    $("#productCategory").val(data.dproductCategory_val);
+    $("#serviceProvider").val(data.dserviceProvider_val);
 }
 //Add FAQ
 $(document).ready(function() {
@@ -86,6 +106,8 @@ $(document).ready(function() {
         $("#compDesc").attr('readonly', true);
         $('#branch').attr('readonly', true);
         $('#compType').attr('readonly', true);
+        $("#productCategory").attr('readonly', true);
+        $("#serviceProvider").attr('readonly', true);
         Faqviewfunction(data);
     });
     $('#routingTable tbody').on('click', '#editDetails', function() {
@@ -100,8 +122,10 @@ $(document).ready(function() {
     });
     var comp_cols = [
         { "mDataProp": "dcompType", sTitle: "Complaint Type", sType: "string" },
-        { "mDataProp": "dcompDesc", sTitle: "Complaint Sub Description", sType: "string" }, 
-        { "mDataProp": "dchannel", sTitle: "Channel", sType: "string" }, 
+        { "mDataProp": "dcompDesc", sTitle: "Complaint Description", sType: "string" }, 
+        { "mDataProp": "dproductCategory", sTitle: "Product Category", sType: "string" }, 
+        { "mDataProp": "dchannel", sTitle: "Channel", sType: "string" },
+        { "mDataProp": "dserviceProvider", sTitle: "Service Provider", sType: "string" },
         { "mDataProp": "dgroup", sTitle: "Group", sType: "string" }, 
         { "mDataProp": "dSLATime", sTitle: "SLA Time", sType: "string" }, 
         { "mDataProp": "dbranch", sTitle: "Branch", sType: "string" },

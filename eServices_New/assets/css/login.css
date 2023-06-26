@@ -2,6 +2,8 @@
 @import url(Nunito/Nunito.css);
 :root {
     --primary: #0361ae;
+    --vz-input-border: #ced4da;
+    --vz-input-check-border: var(--vz-input-border);
 }
 
 * {
@@ -14,7 +16,9 @@ body {
     font-family: "Nunito Sans", sans-serif;
     overflow: hidden;
 }
-
+.loginBg {
+    background: linear-gradient(226deg, rgba(133, 206, 255, 0.95) -20.62%, rgba(231, 245, 255, 0.9) 42.04%);
+}
 .wave {
     position: fixed;
     bottom: 0;
@@ -261,4 +265,10 @@ a:hover {
     border-radius: 0;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%);
+}
+.poweredBy-FS {
+    font-size: 0.825rem;
+}
+.alt-logo {
+    height: auto !important;
 }

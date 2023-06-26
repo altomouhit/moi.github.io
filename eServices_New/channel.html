@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Channel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -25,9 +26,9 @@
     <!-- font awesome -->
     <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.5.15.4/fontawesome.5.15.4.css" />
     <!-- App Css-->
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/app.min.css" />
     <!-- custom Css-->
-    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.min.css"/>
     <link rel="stylesheet" href="assets/css/eSevice.css" />
     <link rel="stylesheet" href="assets/css/colors.css" />
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.css" />
@@ -390,7 +391,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="javascript: void(0);">
-                                                <i class="fal fa-users-crown fa-lg" style="color: var(--vz-topnav-item-color-active);"></i> Global Masters</a>
+                                                <i class="fal fa-users-crown fa-lg"></i> Global Masters</a>
                                         </li>
                                         <li class="breadcrumb-item active">Channel</li>
                                     </ol>
@@ -408,12 +409,12 @@
                                     <fieldset class="mb-2 p-3">
                                         <div class="row">
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="channelEn" class="">Channel(En)</label>
+                                                <label for="channelEn" class="required">Channel(En)</label>
                                                 <input type="text" class="form-control" id="channelEn" placeholder="Channel(En)" />
                                             </div>
 
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="channelAr" class="">channel(Ar)</label>
+                                                <label for="channelAr" class="required">channel(Ar)</label>
                                                 <input type="text" class="form-control" id="channelAr" placeholder="Channel(Ar)" />
                                             </div>
                                         </div>
@@ -421,7 +422,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
-                                                <button type="reset" class="btn btn-text" id="cancelid" style="width: auto; margin-left: 0; color: #868700">
+                                                <button type="reset" class="btn btn-text cancelBtn" id="cancelid">
                                                     Cancel
                                                 </button>
 
@@ -462,9 +463,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> Copyright &copy; Design & Develop by
+                            2000 -
+                            <span id="fullYear"></span> Copyright &copy; Design & Develop by
                             <a href="https://altomouhit.com/" target="_blank">AL Tomouh IT LLC</a>.
                         </div>
                     </div>

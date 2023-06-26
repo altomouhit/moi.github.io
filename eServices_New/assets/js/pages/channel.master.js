@@ -12,8 +12,8 @@ function channelFn() {
     var channelEn = $("#channelEn option:selected").text();
 	var channelEn_val = $("#channelEn option:selected").val();
 
-    var channelAr = $("#channelAr option:selected").text();
-	var channelAr_val = $("#channelAr option:selected").val();
+    // var channelAr = $("#channelAr option:selected").text();
+	// var channelAr_val = $("#channelAr option:selected").val();
 
 
     channel_object.dcompType = compType;
@@ -22,8 +22,8 @@ function channelFn() {
     channel_object.dchannelEn = channelEn;
     channel_object.dchannelEn_val = channelEn_val;
 
-    channel_object.dchannelAr = channelAr;
-    channel_object.dchannelAr_val = channelAr_val;
+    // channel_object.dchannelAr = channelAr;
+    // channel_object.dchannelAr_val = channelAr_val;
 
 
     var channelTable = $('#channelTable').DataTable();
@@ -31,7 +31,7 @@ function channelFn() {
 
     $("#compType").val('');
     $("#channelEn").val('');
-    $("#channelAr").val('');
+   // $("#channelAr").val('');
 }
 //edit channelFn details
 function adveditfunction(data1) {
@@ -39,14 +39,14 @@ function adveditfunction(data1) {
     $("#form1Submit").text("Update");
     $("#compType").val(data.dcompType_val);
     $("#channelEn").val(data.dchannelEn_val);
-    $("#channelAr").val(data.dchannelAr_val);
+    //$("#channelAr").val(data.dchannelAr_val);
 }
 //View channelFn details
 function Faqviewfunction(data1) {
     var data = data1.data();
     $("#compType").val(data.dcompType_val);
     $("#channelEn").val(data.dchannelEn_val);
-    $("#channelAr").val(data.dchannelAr_val);
+    //$("#channelAr").val(data.dchannelAr_val);
 }
 //Add FAQ
 $(document).ready(function() {
@@ -56,7 +56,7 @@ $(document).ready(function() {
         $("#form1Submit").hide();
         $("#FAQClear").show();
         $("#channelEn").attr('readonly', true);
-        $('#channelAr').attr('readonly', true);
+       // $('#channelAr').attr('readonly', true);
         $('#compType').attr('readonly', true);
         Faqviewfunction(data);
     });
@@ -72,8 +72,8 @@ $(document).ready(function() {
     });
     var comp_cols = [
         { "mDataProp": "dcompType", sTitle: "Complaint Type", sType: "string" },
-        { "mDataProp": "dchannelEn", sTitle: "Channel(EN)", sType: "string" }, 
-        { "mDataProp": "dchannelAr", sTitle: "Channel(AR)", sType: "string" },
+        { "mDataProp": "dchannelEn", sTitle: "Channel", sType: "string" }, 
+        //{ "mDataProp": "dchannelAr", sTitle: "Channel(AR)", sType: "string" },
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "11%", 
             sType: "string", "defaultContent": 
             "<button type='button' id = 'viewDetails' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
@@ -89,7 +89,7 @@ $(document).ready(function() {
 		"columnDefs": [{
 			"searchable": false,
 			"orderable": false,
-			"targets": [3]
+			"targets": [2]
 		}],
 		"order": [[0, 'asc']]
 	});
@@ -111,9 +111,9 @@ $("#cancelid").click(function() {
     $("#form1Submit").show();
     $("#FAQClear").hide();
     $("#channelEn").val('');
-    $("#channelAr").val('');
+    //$("#channelAr").val('');
     $("#compType").val('');
     $("#channelEn").removeAttr('readonly');
-    $('#channelAr').removeAttr('readonly');
+    //$('#channelAr').removeAttr('readonly');
     $('#compType').removeAttr('readonly');
 });

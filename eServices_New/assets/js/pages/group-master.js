@@ -79,7 +79,7 @@ $(document).ready(function() {
         { "mDataProp": "dsupportLine", sTitle: "Support Line", sType: "string" },
         { "mDataProp": "dgroupNameEn", sTitle: "Group Name (EN)", sType: "string" }, 
         { "mDataProp": "dgroupNameAr", sTitle: "Group Name (AR)", sType: "string" },
-        { "mDataProp": "dgroupTo", sTitle: "Group Belongs To", sType: "string" }, 
+        { "mDataProp": "dgroupTo", sTitle: "Group Type", sType: "string" }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "11%", sType: "string", "defaultContent": 
             "<button type='button' id = 'viewDetails' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
             "<button type='button' id = 'editDetails' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" + 

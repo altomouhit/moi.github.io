@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Holiday</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -395,7 +396,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="javascript: void(0);">
-                                                <i class="fal fa-users-crown fa-lg" style="color: var(--vz-topnav-item-color-active);"></i> Global Masters</a>
+                                                <i class="fal fa-users-crown fa-lg"></i> Global Masters</a>
                                         </li>
                                         <li class="breadcrumb-item active">Holiday</li>
                                     </ol>
@@ -413,21 +414,21 @@
                                     <fieldset class="mb-2 p-3">
                                         <div class="row">
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="fromDate" class="">From Date</label>
+                                                <label for="fromDate" class="required">From Date</label>
                                                 <div class="input-group">
                                                     <input name="datepicker" class="datepicker-default form-control" id="fromDate">
                                                     <span class="input-group-text"><i class="fal fa-calendar-alt"></i></span>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="toDate" class="">To Date</label>
+                                                <label for="toDate" class="required">To Date</label>
                                                 <div class="input-group">
                                                     <input name="datepicker" class="datepicker-default form-control" id="toDate">
                                                     <span class="input-group-text"><i class="fal fa-calendar-alt"></i></span>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="comments" class="">Comments</label>
+                                                <label for="comments" class="required">Comments</label>
                                                 <textarea name="" id="comments" cols="30" rows="3" class="form-control"></textarea>
                                             </div>
                                         </div>
@@ -435,7 +436,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
-                                                <button type="reset" class="btn btn-text" id="cancelid" style="width: auto; margin-left: 0; color: #868700">
+                                                <button type="reset" class="btn btn-text cancelBtn" id="cancelid">
                                                     Cancel
                                                 </button>
 
@@ -476,9 +477,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> Copyright &copy; Design & Develop by
+                            2000 -
+                            <span id="fullYear"></span> Copyright &copy; Design & Develop by
                             <a href="https://altomouhit.com/" target="_blank">AL Tomouh IT LLC</a>.
                         </div>
                     </div>
@@ -523,22 +523,7 @@
     <!-- App js -->
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/pages/holiday.js"></script>
-    <script type="text/javascript">
-        // (function($) {
-        //     "use strict"
-        //     //date picker classic default
-        //     $('.datepicker-default').pickadate({
-        //         selectMonths: true,
-        //         selectYears: true
-        //     });
-        // })(jQuery);
-        "use strict"
-        $('.datepicker-default').pickadate({
-            selectMonths: true,
-            selectYears: true,
-            formatSubmit: 'yyyy/mm/dd'
-        });
-    </script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
 </body>
 
 </html>

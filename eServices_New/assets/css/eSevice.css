@@ -491,6 +491,26 @@ hr.horizontal.dark {
     border: 0;
     box-shadow: 0 1px 6px rgba(60,64,67,.3)
 }
+.breadcrumb-item a i {
+    color: var(--vz-topnav-item-color-active);
+}
+.userNameColor {
+    color: var(--vz-link-color);
+}
+.cancelBtn {
+    width: auto; 
+    margin-left: 0; 
+    color: #868700;
+}
+.bright-pink {
+    color: 	#B24592 !important;
+}
+.vivid-green {
+    color: #00BF72 !important;
+}
+.strong-purple {
+    color: #5614B0 !important;
+}
 @media (min-width: 1228px) and (max-width: 1399px) {
     .navbar-menu .navbar-nav .nav-link, .form-select, div.dataTables_wrapper div.dataTables_info,
     div.dataTables_wrapper div.dataTables_length label, .page-link, body, .navbar-menu .navbar-nav .nav-sm .nav-link,

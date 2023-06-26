@@ -63,10 +63,8 @@ $(document).ready(function() {
         table.row($(this).parents('tr')).remove().draw();
     });
     var comp_cols = [
-        { "mDataProp": "dbranch", sTitle: "Branch Name (En)", sType: "string" }, 
-        { "mDataProp": "dbranch", sTitle: "Branch Name (Ar)", sType: "string" }, 
-        { "mDataProp": "dgroup", sTitle: "Group Name (EN)", sType: "string" }, 
-        { "mDataProp": "dgroup", sTitle: "Group Name (AR)", sType: "string" }, 
+        { "mDataProp": "dbranch", sTitle: "Branch", sType: "string" }, 
+        { "mDataProp": "dgroup", sTitle: "Group", sType: "string" }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "11%", sType: "string", "defaultContent": 
             "<button type='button' id = 'viewDetails' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
             "<button type='button' id = 'editDetails' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" + 
@@ -81,7 +79,7 @@ $(document).ready(function() {
 		"columnDefs": [{
 			"searchable": false,
 			"orderable": false,
-			"targets": [4]
+			"targets": [2]
 		}],
 		"order": [[0, 'asc']]
 	});

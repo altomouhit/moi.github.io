@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Complaint Description</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -390,7 +391,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="javascript: void(0);">
-                                                <i class="fal fa-user-graduate fa-lg" style="color: var(--vz-topnav-item-color-active);"></i>&nbsp; Masters</a>
+                                                <i class="fal fa-user-graduate fa-lg"></i>&nbsp; Masters</a>
                                         </li>
                                         <li class="breadcrumb-item active">Complaint Description</li>
                                     </ol>
@@ -408,7 +409,7 @@
                                     <fieldset class="mb-2 p-3">
                                         <div class="row">
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="compType" class="">Complaint Type</label>
+                                                <label for="compType" class="required">Complaint Type</label>
                                                 <select name="" id="compType" class="form-select">
                                                     <option value="">Please select</option>
                                                     <option value="1">Sample 1</option>
@@ -417,28 +418,35 @@
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="compCategory" class="">Complaint Category</label>
-                                                <select name="" id="compCategory" class="form-select">
-                                                    <option value="">Please select</option>
-                                                    <option value="1">Sample 1</option>
-                                                    <option value="2">Sample 2</option>
-                                                    <option value="3">Sample 3</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="compDescEn" class="">Complaint Description(En)</label>
+                                                <label for="compDescEn" class="required">Complaint Description(En)</label>
                                                 <input name="datepicker" class="form-control" id="compDescEn" placeholder="Complaint Description(En)" />
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="compDescAr" class="">Complaint Description(Ar)</label>
+                                                <label for="compDescAr" class="required">Complaint Description(Ar)</label>
                                                 <input name="datepicker" class="form-control" id="compDescAr" placeholder="Complaint Description(Ar)" />
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 form-group">
+                                                <label for="compCategory" class="required">Complaint Category</label>
+                                                <select name="" id="compCategory" class="form-select">
+                                                    <option value="">Please select</option>
+                                                    <option value="1">Complaint</option>
+                                                    <option value="2">Request</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 form-group">
+                                                <label for="status" class="required">Status</label>
+                                                <select name="" id="status" class="form-select">
+                                                    <option value="0">Please select</option>
+                                                    <option value="">Active</option>
+                                                    <option value="">In active</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <!-- /.row -->
 
                                         <div class="row">
                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
-                                                <button type="reset" class="btn btn-text" id="cancelid" style="width: auto; margin-left: 0; color: #868700">
+                                                <button type="reset" class="btn btn-text cancelBtn" id="cancelid">
                                                     Cancel
                                                 </button>
 
@@ -479,9 +487,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> Copyright &copy; Design & Develop by
+                            2000 -
+                            <span id="fullYear"></span> Copyright &copy; Design & Develop by
                             <a href="https://altomouhit.com/" target="_blank">AL Tomouh IT LLC</a>.
                         </div>
                     </div>

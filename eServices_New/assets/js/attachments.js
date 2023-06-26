@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	bsCustomFileInput.init()
+});
+
+$(document).ready(function() {
 
 	// var cols;
 	// cols = [

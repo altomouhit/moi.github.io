@@ -1,3 +1,6 @@
+$(document).ready(function() {
+    bsCustomFileInput.init()
+});
 //FAQ Button
 function enquiryFn() {
     if ($("#form1Submit").text() == "Update") {

@@ -440,7 +440,7 @@
 		// 		t.classList.add("d-none")
 		// }),
 		document.body.addEventListener("click", function(e) {
-			"search-options" !== e.target.getAttribute("id") && (o.classList.remove("show"), t.classList.add("d-none"))
+			//"search-options" !== e.target.getAttribute("id") && (o.classList.remove("show"), t.classList.add("d-none"))
 		}), (e = document.querySelector('[data-toggle="fullscreen"]')) && e.addEventListener("click", function(e) {
 			e.preventDefault(),
 				document.body.classList.toggle("fullscreen-enable"),

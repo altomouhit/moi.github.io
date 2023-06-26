@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>:: Complaint Registration ::</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -388,7 +389,7 @@
 
 								<div class="page-title-right">
 									<ol class="breadcrumb m-0">
-										<li class="breadcrumb-item"><a href="flsDashboard"> <i class="fal fa-home" aria-hidden="true"></i> Dashboard</a></li>
+										<li class="breadcrumb-item"><a href="flsDashboard"> <i class="fal fa-home fa-lg fa-fw" aria-hidden="true"></i> Dashboard</a></li>
 										<li class="breadcrumb-item active">Complaint Registration</li>
 									</ol>
 								</div>
@@ -405,13 +406,13 @@
 										<li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#complaint"> 
 											<i class="fal fa-ballot-check me-2" aria-hidden="true"></i>&nbsp;Complaint
 										</a></li>
-										<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#suggestion" style="color: #CA4246;"> 
+										<li class="nav-item"><a class="nav-link text-danger" data-bs-toggle="tab" href="#suggestion"> 
 											<i class="fal fa-comments-alt me-2 rainbow-text" aria-hidden="true"></i>&nbsp; Suggestions
 										</a></li>
-										<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#compliment" style="color: #43a047;"> 
+										<li class="nav-item"><a class="nav-link text-success" data-bs-toggle="tab" href="#compliment"> 
 											<i class="fal fa-phone me-2 gradient-green-text" aria-hidden="true"></i>&nbsp; Compliment
 										</a></li>
-										<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#enquiry" style="color: #fb8c00;">
+										<li class="nav-item"><a class="nav-link text-warning" data-bs-toggle="tab" href="#enquiry">
 												<i class="fal fa-user-headset me-2 gradient-yellow-text" aria-hidden="true"></i>&nbsp; Enquiries
 										</a></li>
 										<!-- <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#lifeSpan"> 
@@ -424,14 +425,14 @@
 									<div class="tab-content">
 										<div class="tab-pane fade active show" id="complaint" role="tabpanel">
 											<ul class="nav nav-tabs border-bottom-0">
-												<li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#customerDetail" style="color: #B24592"> 
-													<i class="fal fa-user-check me-2" aria-hidden="true" style="color: #B24592"></i>&nbsp;Customer Details
+												<li class="nav-item"><a class="nav-link active bright-pink" data-bs-toggle="tab" href="#customerDetail"> 
+													<i class="fal fa-user-check me-2 bright-pink" aria-hidden="true"></i>&nbsp;Customer Details
 												</a></li>
-												<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#attachment" style="color: #00bf72;"> 
-													<i class="fal fa-paperclip me-2 gradient-green1-text" aria-hidden="true"></i>&nbsp; Attachments
+												<li class="nav-item"><a class="nav-link vivid-green" data-bs-toggle="tab" href="#attachment"> 
+													<i class="fal fa-paperclip me-2 gradient-green-text" aria-hidden="true"></i>&nbsp; Attachments
 												</a></li>
-												<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#lifeSpan" style="color: #5614B0"> 
-													<i class="fal fa-user-clock me-2" aria-hidden="true" style="color: #5614B0"></i>&nbsp;Lifespan
+												<li class="nav-item"><a class="nav-link strong-purple" data-bs-toggle="tab" href="#lifeSpan"> 
+													<i class="fal fa-user-clock me-2 strong-purple" aria-hidden="true"></i>&nbsp;Lifespan
 												</a></li>
 											</ul>
 											<div class="tab-content mt-3">
@@ -597,7 +598,7 @@
 																						<option value="">Please select</option>
 																					</select>
 																				</div>
-																				<div class="col" id="slaTimeDiv" style="display: none">
+																				<div class="col d-none" id="slaTimeDiv">
 																					<label for="slaTime" class="form-label">Exected Closure Time(in Days)</label> 
 																					<input type="text" class="form-control" placeholder="Exected Closure Time(in Days)" id="slaTime" readonly />
 																				</div>
@@ -608,7 +609,7 @@
 																			</div>
 																			<!-- /.row -->
 																		</div>
-																		<div class="col-3" id="moreInfoDiv" style="display: none">
+																		<div class="col-3 d-none" id="moreInfoDiv">
 																			<div class="table-responsive-md">
 																				<table id="moreInfoValueTable" class="table table-bordered table-striped w-100" aria-labelledby="moreInfoTable-table" aria-hidden="true">
 																					<thead class="table-dark">
@@ -711,7 +712,7 @@
 																</div>
 																<div class="col-md-4">
 																	<!-- Parent Branch is hard coded . here it is Muscat - 0334 -->
-																	<input name="ParentBranchId" id="Pbranch" type="text" value="Muscat - 0334" style="display: none" />
+																	<input name="ParentBranchId" id="Pbranch" type="text" class="d-none" value="Muscat - 0334" />
 																</div>
 
 
@@ -1345,12 +1346,7 @@
     <!-- App js -->
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/attachments.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            bsCustomFileInput.init()
-        });
-    </script>
+    <script type="text/javascript" src="assets/js/custom-file-input.js"></script>
 </body>
 
 </html>

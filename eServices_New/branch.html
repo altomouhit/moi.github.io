@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Branch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -390,7 +391,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="javascript: void(0);">
-                                                <i class="fal fa-users-crown fa-lg" style="color: var(--vz-topnav-item-color-active);"></i> Global Masters</a>
+                                                <i class="fal fa-users-crown fa-lg"></i> Global Masters</a>
                                         </li>
                                         <li class="breadcrumb-item active">Branch</li>
                                     </ol>
@@ -408,23 +409,23 @@
                                     <fieldset class="mb-2 p-3">
                                         <div class="row">
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="regionId" class="">Region</label>
+                                                <label for="regionId" class="required">Region</label>
                                                 <select name="" id="regionId" class="form-select">
                                                     <option value="0">Please select</option>
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="branchCode" class="">Branch Code</label>
+                                                <label for="branchCode" class="required">Branch Code</label>
                                                 <input type="text" class="form-control" id="branchCode" placeholder="Branch Code" />
                                             </div>
 
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="branchEn" class="">Branch(En)</label>
+                                                <label for="branchEn" class="required">Branch(En)</label>
                                                 <input type="text" class="form-control" id="branchEn" placeholder="Branch(En)" />
                                             </div>
 
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="branchAr" class="">Branch(Ar)</label>
+                                                <label for="branchAr" class="required">Branch(Ar)</label>
                                                 <input type="text" class="form-control" id="branchAr" placeholder="Branch(Ar)" />
                                             </div>
                                         </div>
@@ -432,7 +433,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
-                                                <button type="reset" class="btn btn-text" id="cancelid" style="width: auto; margin-left: 0; color: #868700">
+                                                <button type="reset" class="btn btn-text cancelBtn" id="cancelid">
                                                     Cancel
                                                 </button>
 
@@ -473,9 +474,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> Copyright &copy; Design & Develop by
+                            2000 -
+                            <span id="fullYear"></span> Copyright &copy; Design & Develop by
                             <a href="https://altomouhit.com/" target="_blank">AL Tomouh IT LLC</a>.
                         </div>
                     </div>

@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Routing Criteria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -390,7 +391,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="javascript: void(0);">
-                                                <i class="fal fa-user-graduate fa-lg" style="color: var(--vz-topnav-item-color-active);"></i>&nbsp; Masters</a>
+                                                <i class="fal fa-user-graduate fa-lg"></i>&nbsp; Masters</a>
                                         </li>
                                         <li class="breadcrumb-item active">Routing Criteria</li>
                                     </ol>
@@ -408,7 +409,7 @@
                                     <fieldset class="mb-2 p-3">
                                         <div class="row">
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="compType" class="">Complaint Type</label>
+                                                <label for="compType" class="required">Complaint Type</label>
                                                 <select name="" id="compType" class="form-select">
                                                     <option value="">Please select</option>
                                                     <option value="1">Sample 1</option>
@@ -417,8 +418,17 @@
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="compDesc" class="">Complaint Sub Description</label>
+                                                <label for="compDesc" class="">Complaint Description</label>
                                                 <select name="" id="compDesc" class="form-select">
+                                                    <option value="">Please select</option>
+                                                    <option value="1">Sample 1</option>
+                                                    <option value="2">Sample 2</option>
+                                                    <option value="3">Sample 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 form-group">
+                                                <label for="productCategory" class="">Product Category</label>
+                                                <select name="" id="productCategory" class="form-select">
                                                     <option value="">Please select</option>
                                                     <option value="1">Sample 1</option>
                                                     <option value="2">Sample 2</option>
@@ -435,7 +445,16 @@
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="group" class="">Group</label>
+                                                <label for="serviceProvider" class="">Service Provider</label>
+                                                <select name="" id="serviceProvider" class="form-select">
+                                                    <option value="">Please select</option>
+                                                    <option value="1">Sample 1</option>
+                                                    <option value="2">Sample 2</option>
+                                                    <option value="3">Sample 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-6 col-md-4 form-group">
+                                                <label for="group" class="required">Group</label>
                                                 <select name="" id="group" class="form-select">
                                                     <option value="">Please select</option>
                                                     <option value="1">Sample 1</option>
@@ -444,11 +463,16 @@
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="SLATime" class="">SLA Time</label>
-                                                <input type="text" id="SLATime" class="form-control" placeholder="SLA Time" />
+                                                <label for="SLATime" class="required">SLA Time</label>
+                                                <select name="" id="SLATime" class="form-select">
+                                                    <option value="">Please select</option>
+                                                    <option value="1">Sample 1</option>
+                                                    <option value="2">Sample 2</option>
+                                                    <option value="3">Sample 3</option>
+                                                </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="branch" class="">Branch</label>
+                                                <label for="branch" class="required">Branch</label>
                                                 <select name="" id="branch" class="form-select">
                                                     <option value="">Please select</option>
                                                     <option value="1">Incident branch</option>
@@ -460,7 +484,7 @@
 
                                         <div class="row">
                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
-                                                <button type="reset" class="btn btn-text" id="cancelid" style="width: auto; margin-left: 0; color: #868700">
+                                                <button type="reset" class="btn btn-text cancelBtn" id="cancelid">
                                                     Cancel
                                                 </button>
 
@@ -501,9 +525,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> Copyright &copy; Design & Develop by
+                            2000 -
+                            <span id="fullYear"></span> Copyright &copy; Design & Develop by
                             <a href="https://altomouhit.com/" target="_blank">AL Tomouh IT LLC</a>.
                         </div>
                     </div>

@@ -91,9 +91,9 @@ $(document).ready(function() {
         { "mDataProp": "from_Date", sTitle: "From Date", sType: "string" }, 
         { "mDataProp": "to_Date", sTitle: "To Date", sType: "string" }, 
         { "mDataProp": "dstatus", sTitle: "Status", sType: "string" },
-        { "mDataProp": "dfeedbackType", sTitle: "Feedback Type", sType: "string" },
-        { "mDataProp": "dfeedbackID", sTitle: "Feedback ID", sType: "string" }, 
-        { "mDataProp": "daccount", sTitle: "Account", sType: "string" },
+        { "mDataProp": "dfeedbackType", sTitle: "Complaint Type", sType: "string" },
+        { "mDataProp": "dfeedbackID", sTitle: "Complaint No", sType: "string" }, 
+        { "mDataProp": "daccount", sTitle: "Account No", sType: "string" },
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "11%", 
             sType: "string", "defaultContent": 
             "<button type='button' id = 'viewDetails' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +

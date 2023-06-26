@@ -1,3 +1,17 @@
+// (function($) {
+//     "use strict"
+//     //date picker classic default
+//     $('.datepicker-default').pickadate({
+//         selectMonths: true,
+//         selectYears: true
+//     });
+// })(jQuery);
+"use strict"
+$('.datepicker-default').pickadate({
+    selectMonths: true,
+    selectYears: true,
+    formatSubmit: 'yyyy/mm/dd'
+});
 //FAQ Button
 function holidayFn() {
     if ($("#form1Submit").text() == "Update") {

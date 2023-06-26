@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';">
     <meta content="e-Service" name="description" />
     <meta content="altomouhit" name="author" />
     <!-- App favicon -->
@@ -84,8 +85,7 @@
                                     <div class="form-group m-0">
                                         <div class="input-group">
                                             <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                            <button class="btn btn-primary" type="submit"><i
-                                                    class="mdi mdi-magnify"></i></button>
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
                                         </div>
                                     </div>
                                 </form>
@@ -268,6 +268,10 @@
                                                 <li class="nav-item"><a href="enquiry.html" class="nav-link" data-key="t-enquiry">Enquiry</a></li>
                                                 <li class="nav-item"><a href="finalized.html" class="nav-link" data-key="t-finalized">Finalized SMS</a></li>
                                                 <li class="nav-item"><a href="holiday.html" class="nav-link" data-key="t-holiday">Holiday</a></li>
+                                                <li class="nav-item"><a href="country.html" class="nav-link" data-key="t-country">Country</a></li>
+                                                <li class="nav-item"><a href="currency.html" class="nav-link" data-key="t-currency">Currency</a></li>
+                                                <li class="nav-item"><a href="Product-master.html" class="nav-link" data-key="t-productCategory">Product Category Master</a></li>
+                                                <li class="nav-item"><a href="service-Provider.html" class="nav-link" data-key="t-ServiceProvider">Service Provider Master</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -283,6 +287,9 @@
                                                 <li class="nav-item"><a href="channel-master.html" class="nav-link" data-key="t-mchannel">Channel</a></li>
                                                 <li class="nav-item"><a href="more-info.html" class="nav-link" data-key="t-moreinfo">More Info</a></li>
                                                 <li class="nav-item"><a href="routing-criteria.html" class="nav-link" data-key="t-routing">Routing Criteria</a></li>
+                                                <li class="nav-item"><a href="productCategory.html" class="nav-link" data-key="t-productCategory">Product Category</a></li>
+                                                <li class="nav-item"><a href="serviceProvider-master.html" class="nav-link" data-key="t-ServiceProvider">Service Provider</a></li>
+                                                <li class="nav-item"><a href="prioritySLA.html" class="nav-link" data-key="t-prioritySLA">Priority SLA</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -398,7 +405,7 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item">
                                             <a href="dashboard.html">
-                                                <i class="bx bxs-dashboard fa-lg" style="color: var(--vz-topnav-item-color-active);"></i> Dashboard</a>
+                                                <i class="bx bxs-dashboard fa-lg"></i> Dashboard</a>
                                         </li>
                                         <li class="breadcrumb-item active">Statistics</li>
                                     </ol>
@@ -510,7 +517,7 @@
                                     <div class="flex-shrink-0 top_header_bar p-0">
                                         <div class="input-group input-group-navbar">
                                             <div class="input-group-append">
-                                                <button class="btn" type="button" style="min-width: auto">
+                                                <button class="btn" type="button">
                                                     <i class="fal fa-search" aria-hidden="true"></i>
                                                 </button>
                                             </div>
@@ -521,14 +528,14 @@
                                 <!-- end card header -->
                                 <div class="card-body">
                                     <div class="table-responsive table-card table-bt-pd">
-                                        <table class="table table-nowrap table-centered align-middle" id="example" style="margin-top: 0 !important;">
+                                        <table class="table table-nowrap table-centered align-middle" id="example">
                                             <thead class="table-light">
                                                 <tr>
                                                     <th scope="col">Ticket ID</th>
                                                     <th scope="col">Case Details</th>
                                                     <th scope="col">Assignee</th>
                                                     <th scope="col">Status</th>
-                                                    <th scope="col" style="width: 10%;">Due Date</th>
+                                                    <th scope="col">Due Date</th>
                                                 </tr>
                                                 <!-- end tr -->
                                             </thead>
@@ -615,7 +622,7 @@
                                     <div class="flex-shrink-0 top_header_bar p-0">
                                         <div class="input-group input-group-navbar">
                                             <div class="input-group-append">
-                                                <button class="btn" type="button" style="min-width: auto">
+                                                <button class="btn" type="button">
                                                     <i class="fal fa-search" aria-hidden="true"></i>
                                                 </button>
                                             </div>
@@ -626,7 +633,7 @@
                                 <!-- end card header -->
                                 <div class="card-body">
                                     <div class="table-responsive table-card table-bt-pd">
-                                        <table class="table table-borderless table-nowrap table-centered align-middle" id="myTasks" style="margin-top: 0 !important;">
+                                        <table class="table table-borderless table-nowrap table-centered align-middle" id="myTasks">
                                             <thead class="table-light">
                                                 <tr>
                                                     <th scope="col">Ticket ID</th>
@@ -722,9 +729,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             2000 -
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> Copyright &copy; Design & Develop by
+                            <span id="fullYear"></span> Copyright &copy; Design & Develop by
                             <a href="https://altomouhit.com/" target="_blank">AL Tomouh IT LLC</a>.
                         </div>
                     </div>
@@ -1258,12 +1263,12 @@
     <div class="modal fade" id="logOut" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="logOutLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body text-center" style="color:#4E5969">
-                    Are you sure you want to logout <strong style="color: var(--vz-link-color);"> Legal User 1</strong> ?
+                <div class="modal-body text-center">
+                    Are you sure you want to logout <strong class="userNameColor"> Legal User 1</strong> ?
                 </div>
                 <div class="modal-footer border-0 justify-content-center pb-5">
-                    <button type="button" class="btn justify-content-center d-block btn-outline-dark" data-bs-dismiss="modal" style="min-width: 100px; display: none;">No</button>
-                    <a href="index.html"><button type="button" class="btn btn-chartreuse justify-content-center" style="min-width:100px">Yes</button></a>
+                    <button type="button" class="btn justify-content-center d-block btn-outline-dark" data-bs-dismiss="modal">No</button>
+                    <a href="index.html"><button type="button" class="btn btn-chartreuse justify-content-center">Yes</button></a>
                 </div>
             </div>
         </div>
@@ -1284,27 +1289,12 @@
     <script type="text/javascript" src="assets/libs/dataTables/jquery.dataTables.js"></script>
     <script type="text/javascript" src="assets/libs/dataTables/dataTables.bootstrap5.js"></script>
 
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
     <!-- projects js -->
     <!-- <script type="text/javascript" src="assets/js/pages/dashboard-projects.init.js"></script> -->
 
     <!-- App js -->
     <script type="text/javascript" src="assets/js/app.js"></script>
-    <script>
-        $(document).ready(function() {
-            var allTasks = $('#example').DataTable({
-                "dom": '<"top"f>rt<"bottom"ilp>',
-            });
-            $('#allTaskSearch').keyup(function() {
-                allTasks.search($(this).val()).draw(); // this  is for customized searchbox with datatable search feature.
-            });
-            var myTasks = $('#myTasks').DataTable({
-                "dom": '<"top"f>rt<"bottom"ilp>',
-            });
-            $('#myTaskSearch').keyup(function() {
-                myTasks.search($(this).val()).draw(); // this  is for customized searchbox with datatable search feature.
-            });
-        });
-    </script>
 </body>
-
 </html>
