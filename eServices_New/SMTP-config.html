@@ -260,6 +260,10 @@
                                                 <li class="nav-item"><a href="enquiry.html" class="nav-link" data-key="t-enquiry">Enquiry</a></li>
                                                 <li class="nav-item"><a href="finalized.html" class="nav-link" data-key="t-finalized">Finalized SMS</a></li>
                                                 <li class="nav-item"><a href="holiday.html" class="nav-link" data-key="t-holiday">Holiday</a></li>
+                                                <li class="nav-item"><a href="country.html" class="nav-link" data-key="t-country">Country</a></li>
+                                                <li class="nav-item"><a href="currency.html" class="nav-link" data-key="t-currency">Currency</a></li>
+                                                <li class="nav-item"><a href="Product-master.html" class="nav-link" data-key="t-productCategory">Product Category Master</a></li>
+                                                <li class="nav-item"><a href="service-Provider.html" class="nav-link" data-key="t-ServiceProvider">Service Provider Master</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -275,6 +279,9 @@
                                                 <li class="nav-item"><a href="channel-master.html" class="nav-link" data-key="t-mchannel">Channel</a></li>
                                                 <li class="nav-item"><a href="more-info.html" class="nav-link" data-key="t-moreinfo">More Info</a></li>
                                                 <li class="nav-item"><a href="routing-criteria.html" class="nav-link" data-key="t-routing">Routing Criteria</a></li>
+                                                <li class="nav-item"><a href="productCategory.html" class="nav-link" data-key="t-productCategory">Product Category</a></li>
+                                                <li class="nav-item"><a href="serviceProvider-master.html" class="nav-link" data-key="t-ServiceProvider">Service Provider</a></li>
+                                                <li class="nav-item"><a href="prioritySLA.html" class="nav-link" data-key="t-prioritySLA">Priority SLA</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -410,16 +417,16 @@
                                         <p class="text-danger">Change the fields only when there is a change in <strong>"SMTP"</strong> Otherwise it will effect the application.</p>
                                         <div class="row">
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="smtpHost" class="">SMTP Host</label>
+                                                <label for="smtpHost" class="required">SMTP Host</label>
                                                 <input name="" class="form-control" id="smtpHost" placeholder="SMTP Host" />
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="smtpPort" class="">SMTP Port</label>
-                                                <input name="" class="form-control" id="smtpPort" placeholder="SMTP Port" />
+                                                <label for="smtpPort" class="required">SMTP Port</label>
+                                                <input type="number" name="" class="form-control" id="smtpPort" placeholder="SMTP Port" />
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="fromAddress" class="">From Address</label>
-                                                <input name="" class="form-control" id="fromAddress" placeholder="From Address" />
+                                                <label for="fromAddress" class="required">From Address</label>
+                                                <input type="email" name="" class="form-control" id="fromAddress" placeholder="From Address" />
                                             </div>
                                         </div>
                                         <!-- /.row -->

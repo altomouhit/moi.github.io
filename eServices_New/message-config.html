@@ -260,6 +260,10 @@
                                                 <li class="nav-item"><a href="enquiry.html" class="nav-link" data-key="t-enquiry">Enquiry</a></li>
                                                 <li class="nav-item"><a href="finalized.html" class="nav-link" data-key="t-finalized">Finalized SMS</a></li>
                                                 <li class="nav-item"><a href="holiday.html" class="nav-link" data-key="t-holiday">Holiday</a></li>
+                                                <li class="nav-item"><a href="country.html" class="nav-link" data-key="t-country">Country</a></li>
+                                                <li class="nav-item"><a href="currency.html" class="nav-link" data-key="t-currency">Currency</a></li>
+                                                <li class="nav-item"><a href="Product-master.html" class="nav-link" data-key="t-productCategory">Product Category Master</a></li>
+                                                <li class="nav-item"><a href="service-Provider.html" class="nav-link" data-key="t-ServiceProvider">Service Provider Master</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -275,6 +279,9 @@
                                                 <li class="nav-item"><a href="channel-master.html" class="nav-link" data-key="t-mchannel">Channel</a></li>
                                                 <li class="nav-item"><a href="more-info.html" class="nav-link" data-key="t-moreinfo">More Info</a></li>
                                                 <li class="nav-item"><a href="routing-criteria.html" class="nav-link" data-key="t-routing">Routing Criteria</a></li>
+                                                <li class="nav-item"><a href="productCategory.html" class="nav-link" data-key="t-productCategory">Product Category</a></li>
+                                                <li class="nav-item"><a href="serviceProvider-master.html" class="nav-link" data-key="t-ServiceProvider">Service Provider</a></li>
+                                                <li class="nav-item"><a href="prioritySLA.html" class="nav-link" data-key="t-prioritySLA">Priority SLA</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -409,51 +416,51 @@
                                     <fieldset class="mb-2 p-3">
                                         <div class="row">
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="notificationType" class="">Notification Type</label>
+                                                <label for="notificationType" class="required">Notification Type</label>
                                                 <select name="" id="notificationType" class="form-select">
                                                     <option value="">Please select</option>
-                                                    <option value="1">Option 1</option>
-                                                    <option value="2">Option 2</option>
-                                                    <option value="3">Option 3</option>
+                                                    <option value="1">Customer</option>
+                                                    <option value="2">SLA</option>
+                                                    <option value="3">User</option>
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="channelType" class="">Channel Type</label>
+                                                <label for="channelType" class="required">Channel Type</label>
                                                 <select name="" id="channelType" class="form-select">
                                                     <option value="">Please select</option>
-                                                    <option value="1">Option 1</option>
-                                                    <option value="2">Option 2</option>
-                                                    <option value="3">Option 3</option>
+                                                    <option value="1">Email</option>
+                                                    <option value="2">SMS</option>
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="channelLang" class="">Channel Language</label>
+                                                <label for="channelLang" class="required">Channel Language</label>
                                                 <select name="" id="channelLang" class="form-select">
                                                     <option value="">Please select</option>
-                                                    <option value="1">Option 1</option>
-                                                    <option value="2">Option 2</option>
-                                                    <option value="3">Option 3</option>
+                                                    <option value="1">English</option>
+                                                    <option value="2">Arabic</option>
+
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="status" class="">Status</label>
+                                                <label for="status" class="required">Status</label>
                                                 <select name="" id="status" class="form-select">
-                                                    <option value="0">Please select</option>
-                                                    <option value="">Active</option>
-                                                    <option value="">In active</option>
+                                                    <option value="">Please select</option>
+                                                    <option value="1">Registered</option>
+                                                    <option value="2">Finalized</option>
+                                                    <option value="3">Closed</option>
+                                                    <option value="4">Suggestions</option>
+                                                    <option value="5">Compliments</option>
+                                                    <option value="6">Enquiry</option>
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="notifyTo" class="">Notify To</label>
+                                                <label for="notifyTo" class="required">Notify To</label>
                                                 <select name="" id="notifyTo" class="form-select">
                                                     <option value="">Please select</option>
-                                                    <option value="1">Option 1</option>
-                                                    <option value="2">Option 2</option>
-                                                    <option value="3">Option 3</option>
                                                 </select>
                                             </div>
                                             <div class="col-sm-6 col-md-4 form-group">
-                                                <label for="message" class="">Message</label>
+                                                <label for="message" class="required">Message</label>
                                                 <textarea name="" id="message" cols="30" rows="5" class="form-control"></textarea>
                                             </div>
                                         </div>

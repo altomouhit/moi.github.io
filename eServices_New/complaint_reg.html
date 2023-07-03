@@ -243,7 +243,7 @@
                                 aria-controls="sidebarEmail" data-key="t-global">
                                 <i class="fal fa-chalkboard-teacher"></i> <span>Masters</span>
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarEmail">
+							<div class="collapse menu-dropdown" id="sidebarEmail">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a class="nav-link menu-link globalMasters" href="#sidebarGlobalMasters" data-bs-toggle="collapse"
@@ -260,6 +260,10 @@
                                                 <li class="nav-item"><a href="enquiry.html" class="nav-link" data-key="t-enquiry">Enquiry</a></li>
                                                 <li class="nav-item"><a href="finalized.html" class="nav-link" data-key="t-finalized">Finalized SMS</a></li>
                                                 <li class="nav-item"><a href="holiday.html" class="nav-link" data-key="t-holiday">Holiday</a></li>
+                                                <li class="nav-item"><a href="country.html" class="nav-link" data-key="t-country">Country</a></li>
+                                                <li class="nav-item"><a href="currency.html" class="nav-link" data-key="t-currency">Currency</a></li>
+                                                <li class="nav-item"><a href="Product-master.html" class="nav-link" data-key="t-productCategory">Product Category Master</a></li>
+                                                <li class="nav-item"><a href="service-Provider.html" class="nav-link" data-key="t-ServiceProvider">Service Provider Master</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -275,6 +279,9 @@
                                                 <li class="nav-item"><a href="channel-master.html" class="nav-link" data-key="t-mchannel">Channel</a></li>
                                                 <li class="nav-item"><a href="more-info.html" class="nav-link" data-key="t-moreinfo">More Info</a></li>
                                                 <li class="nav-item"><a href="routing-criteria.html" class="nav-link" data-key="t-routing">Routing Criteria</a></li>
+                                                <li class="nav-item"><a href="productCategory.html" class="nav-link" data-key="t-productCategory">Product Category</a></li>
+                                                <li class="nav-item"><a href="serviceProvider-master.html" class="nav-link" data-key="t-ServiceProvider">Service Provider</a></li>
+                                                <li class="nav-item"><a href="prioritySLA.html" class="nav-link" data-key="t-prioritySLA">Priority SLA</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -503,19 +510,17 @@
 																</div>
 
 																<div class="col-md-6">
-																	<div class="mb-3 row">
-																		<label class="col-sm-2 col-form-label required">Account No</label>
-																		<div class="col-sm-10">
-																			<div class="input-group">
-																				<input type="text" id="msisdn" class="form-control" placeholder="Account No">
-																				<div class="input-group-text">
-																					<button class="btn" type="button" id="searchAccountButton">
-																						<i class="fal fa-search fa-lg" aria-hidden="true"></i>
-																					</button>
-																				</div>
-																			</div>
+																	<div class="input-group mb-3">
+																		<div class="form-floating">
+																		  <input type="text" class="form-control" id="floatingInputGroup1" placeholder="CIF NO / Account No.">
+																		  <label for="floatingInputGroup1">CIF NO / Account No.</label>
 																		</div>
-																	</div>
+																		<div class="input-group-text">
+																			<button class="btn p-0" type="button" id="searchAccountButton">
+																				<i class="fal fa-search fa-lg" aria-hidden="true"></i>
+																			</button>
+																		</div>
+																	  </div>
 																	<div class="row mb-3">
 																		<div class="col-md-6">
 																			<div class="row">

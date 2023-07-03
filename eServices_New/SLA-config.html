@@ -260,6 +260,10 @@
                                                 <li class="nav-item"><a href="enquiry.html" class="nav-link" data-key="t-enquiry">Enquiry</a></li>
                                                 <li class="nav-item"><a href="finalized.html" class="nav-link" data-key="t-finalized">Finalized SMS</a></li>
                                                 <li class="nav-item"><a href="holiday.html" class="nav-link" data-key="t-holiday">Holiday</a></li>
+                                                <li class="nav-item"><a href="country.html" class="nav-link" data-key="t-country">Country</a></li>
+                                                <li class="nav-item"><a href="currency.html" class="nav-link" data-key="t-currency">Currency</a></li>
+                                                <li class="nav-item"><a href="Product-master.html" class="nav-link" data-key="t-productCategory">Product Category Master</a></li>
+                                                <li class="nav-item"><a href="service-Provider.html" class="nav-link" data-key="t-ServiceProvider">Service Provider Master</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -275,6 +279,9 @@
                                                 <li class="nav-item"><a href="channel-master.html" class="nav-link" data-key="t-mchannel">Channel</a></li>
                                                 <li class="nav-item"><a href="more-info.html" class="nav-link" data-key="t-moreinfo">More Info</a></li>
                                                 <li class="nav-item"><a href="routing-criteria.html" class="nav-link" data-key="t-routing">Routing Criteria</a></li>
+                                                <li class="nav-item"><a href="productCategory.html" class="nav-link" data-key="t-productCategory">Product Category</a></li>
+                                                <li class="nav-item"><a href="serviceProvider-master.html" class="nav-link" data-key="t-ServiceProvider">Service Provider</a></li>
+                                                <li class="nav-item"><a href="prioritySLA.html" class="nav-link" data-key="t-prioritySLA">Priority SLA</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -404,7 +411,46 @@
 
                     <div class="row project-wrapper">
                         <div class="col-xxl-12">
+                            <section class="smart-Wizard">
+                                <form action="" class="smart-form" id="checkout-form" name="checkout-form" novalidate="novalidate">
+                                    <fieldset class="mb-2 p-3">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-4 form-group">
+                                                <label for="cqSlaTxt" class="required">PM/CQ SLA</label>
+                                                <input type="text" class="form-control" id="cqSlaTxt" placeholder="PM/CQ SLA" />
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
 
+                                        <div class="row">
+                                            <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
+                                                <button type="reset" class="btn btn-text cancelBtn" id="cancelid">
+                                                    Cancel
+                                                </button>
+
+                                                <button type="button" class="btn btn-chartreuse btn-height ml-2" onclick="cqSlaFn()" id="form1Submit">
+                                                    <i class="fal fa-check" aria-hidden="true"></i>&nbsp; Save
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- /.row  -->
+                                    </fieldset>
+                                </form>
+                            </section>
+
+                            <div class="row mt-4">
+                                <div class="col-md-12">
+                                    <div class="table-responsive-sm data_table">
+                                        <table class="table table-bordered table-striped w-100" id="cqSlaTable">
+                                            <thead class="table-light">
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row  -->
                         </div>
                         <!-- end col -->
                     </div>
@@ -460,7 +506,7 @@
 
     <!-- App js -->
     <script type="text/javascript" src="assets/js/app.js"></script>
-    <script type="text/javascript" src="assets/js/pages/oracleConfig.js"></script>
+    <script type="text/javascript" src="assets/js/pages/cqSla.js"></script>
 </body>
 
 </html>
