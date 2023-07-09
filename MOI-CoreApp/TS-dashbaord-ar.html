@@ -124,15 +124,15 @@
       </div>
     </div>
   </div>  -->
-  <div class="row announcements-panel">
+  <!-- <div class="row announcements-panel">
     <div class="col-sm-2 ann-panel-title has-arrow-right">الإعلانات</div>
     <div class="col-sm-10 ann-panel-text">مرحبا بكم في وزارة البلديات الإقليمية وموارد المائية</div>
-  </div>
+  </div> -->
   <!--End Main content-->
 
   <form accept-charset="utf-8" action="#" data-toggle="validator" id="myForm" method="post" name="myForm" role="form">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-12 col-md-3">
         <div class="panel-group paddingT10">
           <!-- content here -->
           <div class="dashboard-panel">
@@ -142,46 +142,48 @@
             <div id="collapse674" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
               <div class="db-panel-body">
                 <div class="row">
-                  <div class="col-sm-12">
-                    <div class="table-responsive table-db">
-                      <table class="table table-bordered table-striped">
-                        <thead>
-                          <tr>
-                            <th>رقم الطلب</th>
-                            <th>تاريخ الطلب</th>
-                            <th>اسم مقدم الطلب</th>
-                            <th>الخدمات</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>10/05/2017</td>
-                            <td>عمر أحمد</td>
-                            <td>طلب اباحة بناء كبرى ( جديدة / تجديد / اضافة / تعليه / تعديل / الغاء )</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>10/05/2017</td>
-                            <td>عمر أحمد</td>
-                            <td>طلب اباحة بناء صغرى</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>10/05/2017</td>
-                            <td>عمر أحمد</td>
-                            <td>طلب تصريح الشروع في البناء </td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>10/05/2017</td>
-                            <td>عمر أحمد</td>
-                            <td>طلب متابعة تنفيذ</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <a href="TS-request-list-view-arabic.html" class="btn btn-ts"><i class="fa fa-file-text-o" aria-hidden="true"></i> عرض جميع الطلبات</a> </div>
+                  <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#createViolation">
+                      <div class="sub-menu">
+                        <div class="menu-block">
+                          <i aria-hidden="true" class="fa fa-balance-scale fa-2x"></i>
+                        </div>
+                        <span class="menu-title">خلق الانتهاك</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                    <a href="CATS11-list-view-arabic.html">
+                      <div class="sub-menu">
+                        <div class="menu-block">
+                          <i aria-hidden="true" class="fa fa-search fa-2x"></i>
+                        </div>
+                        <span class="menu-title">البحث الانتهاك</span>
+                      </div>
+                    </a>
+                  </div>
+                
+                  <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                    <a href="javascript:void(0)">
+                      <div class="sub-menu">
+                        <div class="menu-block">
+                          <i aria-hidden="true" class="fa fa-list fa-2x"></i>
+                        </div>
+                        <span class="menu-title">عرض جميع الطلبات</span>
+                      </div>
+                    </a>
+                  </div>
+                
+                  <div class="col-sm-6 d-flex align-items-center justify-content-center">
+                    <a href="TS-finance-report-view.html">
+                      <div class="sub-menu">
+                        <div class="menu-block">
+                          <i aria-hidden="true" class="fa fa-bar-chart fa-2x"></i>
+                        </div>
+                        <span class="menu-title">عرض التقارير</span>
+                      </div>
+                    </a>
+                  </div>
                 </div>
                 <!-- End .row -->
               </div>
@@ -191,7 +193,8 @@
           <!-- End .panel-default -->
         </div>
       </div>
-      <div class="col-sm-6">
+
+      <div class="col-sm-12 col-md-9">
         <div class="panel-group paddingT10">
           <!-- content here -->
           <div class="dashboard-panel">
@@ -256,7 +259,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" style="display: none;">
       <div class="col-sm-12">
         <div class="panel-group paddingT10">
           <!-- content here -->
@@ -285,7 +288,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" style="display: none;">
       <div class="col-sm-9">
         <div class="panel-group paddingT10">
           <!-- content here -->
