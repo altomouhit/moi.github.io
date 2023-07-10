@@ -7111,9 +7111,9 @@ a,button {
     font-weight: 500
 }
 
-.modal-dialog:not(.modal-dialog-scrollable) .modal-header {
+/* .modal-dialog:not(.modal-dialog-scrollable) .modal-header {
     padding-bottom: 0
-}
+} */
 
 .modal-dialog:not(.modal-dialog-scrollable) .modal-header .btn-close {
     margin-top: -1.25rem 1.25rem

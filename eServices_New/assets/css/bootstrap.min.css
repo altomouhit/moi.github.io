@@ -3352,7 +3352,7 @@ fieldset:disabled .btn {
     color: #fff;
     background-color: #6691e7;
     border-color: #6691e7;
-    box-shadow: 0 10px 20px -8px #1b55e2 !important;
+    /* box-shadow: 0 10px 20px -8px #1b55e2 !important; */
 }
 
 .btn-primary:hover {
