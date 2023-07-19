@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="Content-Security-Policy"content="default-src 'self';script-src 'self';style-src 'self';font-src 'self';img-src 'self';"> -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="img/favicon.png">
+  <title>:: Home ::</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap-5.3.0.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="css/carousel.css">
+  <!-- Responsive -->
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="d-flex flex-column h-100 body-bg">
+  <div id="ct-loadding" class="ct-loader style13">
+      <div class="ct-loading-ito">
+          <div class="item item-1"></div>
+          <div class="item item-2"></div>
+          <div class="item item-3"></div>
+          <div class="item item-4"></div>
+      </div>
+  </div>
+  <div class="ct-page-loading-bg"></div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+          <path
+              d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+          <path
+              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+          <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+          <path
+              d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+      </symbol>
+  </svg>
+
+  <!-- <div class="dropdown position-fixed top-0 end-0 mb-3 me-3 bd-mode-toggle" style="z-index: 9999;">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+          aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+          <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+              <use href="#circle-half"></use>
+          </svg>
+          <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                      <use href="#sun-fill"></use>
+                  </svg>
+                  Light
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                      <use href="#check2"></use>
+                  </svg>
+              </button>
+          </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                      <use href="#moon-stars-fill"></use>
+                  </svg>
+                  Dark
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                      <use href="#check2"></use>
+                  </svg>
+              </button>
+          </li>
+      </ul>
+  </div> -->
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-bg border-bottom shadow-sm">
+      <div class="container-fluid">
+        <span class="navbar-brand alt-logo1">
+          <img src="img/AL_TOMOUH-Logo-white.png" alt="" style="height: 59px;">
+        </span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"><i class="fal fa-home fa-lg fa-fw"></i> Home</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <li class="nav-item dropdown"> 
+              <a class="nav-item nav-link dropdown-toggle me-md-2" href="#" id="bd-versions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sridhar Talluri </a>
+              <div class="dropdown-menu animated slideInRight" aria-labelledby="bd-versions">
+                <a class="dropdown-item" href="index.html"><i class="fal fa-sign-out-alt">&nbsp;</i>Logout</a>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <section>
+    <div class="container mt-5 pt-md-18 mb-5">
+      <div class="row ">
+        <div class="col-sm-12 col-lg-9 mx-auto">
+          <article class="app-library" aria-label="Apps" draggable="false">
+            <div class="header"></div>
+            <div class="app-icon-container" aria-hidden="false">
+              <a href="https://altomouhit.github.io/moi.github.io/eServices_New/"
+                class="IconLink app-icon-link" target="_blank" rel="noreferrer" aria-label="Open eServices New"
+                aria-hidden="false">
+                <div class="app-icon" role="presentation">
+                  <img src="img/Services/eServices.svg" aria-hidden="true" alt="" class="iconImg"></div>
+                <div class="app-displayname" role="presentation">eServices</div>
+              </a>
+
+              <a href="#" class="IconLink app-icon-link" target="_blank" rel="noreferrer"
+                aria-label="Open eOffice application" aria-hidden="false">
+                <div class="app-icon" role="presentation">
+                  <img src="img/Services/eOffice.svg" aria-hidden="true" alt="" class="iconImg"></div>
+                <div class="app-displayname" role="presentation">eOffice</div>
+              </a>
+
+              <a href="https://altomouhit.github.io/moi.github.io/MOI/" class="IconLink app-icon-link" target="_blank" rel="noreferrer"
+                aria-label="Open MOI Portal application" aria-hidden="false">
+                <div class="app-icon" role="presentation">
+                  <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImg"></div>
+                <div class="app-displayname" role="presentation">MOI - Portal</div>
+              </a>
+
+              <a href="https://altomouhit.github.io/moi.github.io/MOI-CoreApp/" class="IconLink app-icon-link" target="_blank" rel="noreferrer"
+                aria-label="Open MOI Coreapp application" aria-hidden="false">
+                <div class="app-icon" role="presentation">
+                  <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImg"></div>
+                <div class="app-displayname" role="presentation">MOI - Coreapp</div>
+              </a>
+
+              <a href="https://altomouhit.github.io/moi.github.io/MAFWR/" class="IconLink app-icon-link" target="_blank" rel="noreferrer"
+                aria-label="Open MAFWR Portal application" aria-hidden="false">
+                <div class="app-icon" role="presentation">
+                  <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImg"></div>
+                <div class="app-displayname" role="presentation">MAFWR - Portal</div>
+              </a>
+
+              <a href="https://altomouhit.github.io/moi.github.io/MAFWR-CoreApp/" class="IconLink app-icon-link" target="_blank" rel="noreferrer"
+                aria-label="Open MAFWR Coreapp application" aria-hidden="false">
+                <div class="app-icon" role="presentation">
+                  <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImg"></div>
+                <div class="app-displayname" role="presentation">MAFWR - Coreapp</div>
+              </a>
+              
+              <a href="https://altomouhit.github.io/moi.github.io/PCR-web/" class="IconLink app-icon-link" target="_blank" rel="noreferrer"
+                aria-label="Open PCR application" aria-hidden="false">
+                <div class="app-icon" role="presentation">
+                  <img src="img/ROP-Logo.svg" aria-hidden="true" alt="" class="iconImg"></div>
+                <div class="app-displayname" role="presentation">PACDA - PCR</div>
+              </a>
+              </div>
+            <div class="tile-border"></div>
+          </article>
+        </div>
+      </div> <!-- /.row -->
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-sm-6 col-lg-3">
+          <article aria-label="Notes" class="tile-article" style="user-select: none;">
+            <div class="notes-home-tile tile small" draggable="false">
+              <div class="banner banner-with-primary-action">
+                <a class="link header-content unstyled-link" href="https://www.icloud.com/notes">
+                <div class="icon-wrapper">
+                  <img src="img/favicon.png" alt="" style="height: 45px; width: 45px;">
+                </div>
+                <div class="text" role="presentation">
+                  <div aria-level="2" class="heading" role="heading">
+                    Our Products
+                  </div>
+                  <!-- <div class="description" role="presentation" title="All iCloud">
+                    <span class="description-content">All iCloud</span>
+                  </div> -->
+                </div></a>
+              </div>
+              <div aria-hidden="false" class="content">
+                <table aria-label="Notes" aria-readonly="true" class="home-tile-table" role="grid" tabindex="0">
+                  <tbody role="rowgroup">
+                    <tr class="home-tile-row notes-row" role="row" tabindex="-1">
+                      <td role="gridcell">
+                        <div aria-label="" class="home-tile-row-container" role="group">
+                          
+                          <div class="row-container">
+                            <div class="icon">
+                              <img src="img/Services/eServices.svg" aria-hidden="true" alt="" class="iconImgSer">
+                            </div>
+                            <div class="text">
+                              <div class="first-line">
+                                eServices
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="home-tile-row notes-row" role="row" tabindex="-1">
+                      <td role="gridcell">
+                        <div class="home-tile-row-container" role="group">
+                          <div class="row-container">
+                            <div class="icon">
+                              <img src="img/Services/eOffice.svg" aria-hidden="true" alt="" class="iconImgSer">
+                            </div>
+                            <div class="text">
+                              <div class="first-line">
+                                eOffice
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tile-border"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article aria-label="Notes" class="tile-article" style="user-select: none;">
+            <div class="notes-home-tile tile small" draggable="false">
+              <div class="banner banner-with-primary-action">
+                <a class="link header-content unstyled-link" href="https://www.icloud.com/notes">
+                <div class="icon-wrapper">
+                  <img src="img/khanjar.svg" alt="" style="height: 45px; width: 45px;">
+                </div>
+                <div class="text" role="presentation">
+                  <div aria-level="2" class="heading" role="heading">
+                    Ministry of Interior
+                  </div>
+                  <!-- <div class="description" role="presentation" title="All iCloud">
+                    <span class="description-content">All iCloud</span>
+                  </div> -->
+                </div></a>
+              </div>
+              <div aria-hidden="false" class="content">
+                <table aria-label="Notes" aria-readonly="true" class="home-tile-table" role="grid" tabindex="0">
+                  <tbody role="rowgroup">
+                    <tr class="home-tile-row notes-row" role="row" tabindex="-1">
+                      <td role="gridcell">
+                        <div aria-label="" class="home-tile-row-container" role="group">
+                          
+                          <div class="row-container">
+                            <div class="icon">
+                              <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImgSer">
+                            </div>
+                            <div class="text">
+                              <div class="first-line">
+                                Portal
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="home-tile-row notes-row" role="row" tabindex="-1">
+                      <td role="gridcell">
+                        <div class="home-tile-row-container" role="group">
+                          <div class="row-container">
+                            <div class="icon">
+                              <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImgSer">
+                            </div>
+                            <div class="text">
+                              <div class="first-line">
+                                CoreApp
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tile-border"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article aria-label="Notes" class="tile-article" style="user-select: none;">
+            <div class="notes-home-tile tile small" draggable="false">
+              <div class="banner banner-with-primary-action">
+                <a class="link header-content unstyled-link" href="https://www.icloud.com/notes">
+                <div class="icon-wrapper">
+                  <img src="img/khanjar.svg" alt="" style="height: 45px; width: 45px;">
+                </div>
+                <div class="text" role="presentation">
+                  <div aria-level="2" class="heading" role="heading">
+                    <!-- Ministry of Agriculture, Fisheries and Water Resources -->
+                    MAFWR
+                  </div>
+                  <!-- <div class="description" role="presentation" title="MAFWR">
+                    <span class="description-content">MAFWR</span>
+                  </div> -->
+                </div></a>
+              </div>
+              <div aria-hidden="false" class="content">
+                <table aria-label="Notes" aria-readonly="true" class="home-tile-table" role="grid" tabindex="0">
+                  <tbody role="rowgroup">
+                    <tr class="home-tile-row notes-row" role="row" tabindex="-1">
+                      <td role="gridcell">
+                        <div aria-label="" class="home-tile-row-container" role="group">
+                          
+                          <div class="row-container">
+                            <div class="icon">
+                              <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImgSer">
+                            </div>
+                            <div class="text">
+                              <div class="first-line">
+                                Portal
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="home-tile-row notes-row" role="row" tabindex="-1">
+                      <td role="gridcell">
+                        <div class="home-tile-row-container" role="group">
+                          <div class="row-container">
+                            <div class="icon">
+                              <img src="img/khanjar.svg" aria-hidden="true" alt="" class="iconImgSer">
+                            </div>
+                            <div class="text">
+                              <div class="first-line">
+                                CoreApp
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tile-border"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <article aria-label="Notes" class="tile-article" style="user-select: none;">
+            <div class="notes-home-tile tile small" draggable="false">
+              <div class="banner banner-with-primary-action">
+                <a class="link header-content unstyled-link" href="https://www.icloud.com/notes">
+                <div class="icon-wrapper">
+                  <img src="img/ROP-Logo.svg" alt="" style="height: 45px; width: 45px;">
+                </div>
+                <div class="text" role="presentation">
+                  <div aria-level="2" class="heading" role="heading">
+                    PACDA
+                  </div>
+                  <!-- <div class="description" role="presentation" title="All iCloud">
+                    <span class="description-content">All iCloud</span>
+                  </div> -->
+                </div></a>
+              </div>
+              <div aria-hidden="false" class="content">
+                <table aria-label="Notes" aria-readonly="true" class="home-tile-table" role="grid" tabindex="0">
+                  <tbody role="rowgroup">
+                    <tr class="home-tile-row notes-row" role="row" tabindex="-1">
+                      <td role="gridcell">
+                        <div aria-label="" class="home-tile-row-container" role="group">
+                          
+                          <div class="row-container">
+                            <div class="icon">
+                              <img src="img/ROP-Logo.svg" aria-hidden="true" alt="" class="iconImgSer">
+                            </div>
+                            <div class="text">
+                              <div class="first-line">
+                                PCR
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tile-border"></div>
+            </div>
+          </article>
+        </div>
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="container">
+        <span class="text-body-secondary">&copy; <a href="https://www.altomouhit.com/" target="_blank"> AL TOMOUH IT LLC </a></span>
+        <span>2000 - <span id="fullYear"></span> - All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load falter -->
+  <!-- jQuery -->
+  <script type='text/javascript' src="js/jquery-3.7.0.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap -->
+  <script type='text/javascript' src="js/bootstrap.bundle-5.3.0.js"></script>
+
+  <!-- wow -->
+  <script type='text/javascript' src="js/wow.js"></script>
+  <script type='text/javascript' src="js/color-modes.js"></script>
+
+  <script src="js/getYear.js"></script>
+  <script src="js/custom.js"></script>
+
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <!-- <script src="js/vendor/holder.min.js"></script> -->
+</body>
+
+</html>
