@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/favicon.png">
+  <title>:: Login ::</title>
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/bootstrap-5.3.0.css" type="text/css" media="all">
+  <!---Font Awesome--->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/color.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form class="sign-in-form">
+          <h2 class="title">Sign in</h2>
+          <!-- <p class="error text-danger">Please enter correct Username &amp; Password.</p> -->
+          <div class="input-field">
+            <i class="fa-light fa-user-tie fa-2x"></i>
+            <!-- <img src="img/svg/mail.svg" class="img-fluid" alt=""> -->
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus
+              value="sri@altomouhit.com" />
+          </div>
+          <span class="coruser text-danger">Please enter correct Email</span>
+          <div class="input-field">
+            <i class="fa-light fa-lock-hashtag fa-2x"></i>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required
+              value="sri123" />
+          </div>
+          <span class="corpwd text-danger">Please enter correct Password.</span>
+          <div class="d-grid gap-2 d-block">
+            <button class="btn bg-gradient-info btn-lg" type="submit" id="submit">Sign in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <img src="img/AL_TOMOUH-Logo-white.png" alt="" class="img-fluid">
+        </div>
+        <img src="img/register.svg" class="image" alt="" />
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="mb-3 text-muted text-center">&copy; 2017 - <span id="fullYear"></span></p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.7.0.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle-5.3.0.js"></script>
+  <script type="text/javascript" src="js/getYear.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>

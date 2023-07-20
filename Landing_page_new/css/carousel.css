@@ -221,11 +221,11 @@ body::-webkit-scrollbar-thumb {
 }
 .app-library .app-icon-container {
   display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-template-columns: repeat(5,minmax(0,1fr));
   row-gap: 10px;
-  -webkit-column-gap: 12px;
-  -moz-column-gap: 12px;
-  column-gap: 12px;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
