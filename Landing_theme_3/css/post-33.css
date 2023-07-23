@@ -451,7 +451,8 @@
 
 .elementor-349 .elementor-element.elementor-element-30bff56c {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    padding: 65px 0px 85px 0px;
+    /* padding: 65px 0px 85px 0px; */
+    padding: 15px 0px 3px 0px;
 }
 
 .elementor-349 .elementor-element.elementor-element-30bff56c:not(.elementor-motion-effects-element-type-background),
