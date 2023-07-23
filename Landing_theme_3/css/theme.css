@@ -21247,7 +21247,7 @@ body:not(.elementor-editor-active) .elementor-inner-section .ct-particle-animate
 .ct-fancy-box-layout5 .item--icon {
     line-height: 1;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     position: relative
 }
 
@@ -21263,7 +21263,8 @@ body:not(.elementor-editor-active) .elementor-inner-section .ct-particle-animate
 }
 
 .ct-fancy-box-layout5 .item--icon img {
-    max-height: 90px
+    /* max-height: 90px; */
+    max-height: 80px;
 }
 
 .ct-fancy-box-layout5 .item--title {
@@ -21283,7 +21284,7 @@ body:not(.elementor-editor-active) .elementor-inner-section .ct-particle-animate
     text-align: center;
     background-color: #fff;
     /* padding: 30px 20px; */
-    padding: 10px;
+    padding: 5px;
     -webkit-box-shadow: 0 0 74px rgba(3, 0, 44, .24);
     -khtml-box-shadow: 0 0 74px rgba(3, 0, 44, .24);
     -moz-box-shadow: 0 0 74px rgba(3, 0, 44, .24);
@@ -21405,7 +21406,8 @@ body:not(.elementor-editor-active) .elementor-inner-section .ct-particle-animate
 }
 .ct-fancy-box-layout5 .item--inner:hover .item--icon {
     background: white;
-    border-radius: 50%;
+    border-radius: 5%;
+    padding: 4px;
 }
 .ct-fancy-box-layout6 {
     position: relative;
