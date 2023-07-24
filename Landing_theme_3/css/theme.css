@@ -21263,8 +21263,8 @@ body:not(.elementor-editor-active) .elementor-inner-section .ct-particle-animate
 }
 
 .ct-fancy-box-layout5 .item--icon img {
-    /* max-height: 90px; */
-    max-height: 80px;
+    max-height: 90px;
+    /* max-height: 80px; */
 }
 
 .ct-fancy-box-layout5 .item--title {
@@ -21407,7 +21407,7 @@ body:not(.elementor-editor-active) .elementor-inner-section .ct-particle-animate
 .ct-fancy-box-layout5 .item--inner:hover .item--icon {
     background: white;
     border-radius: 5%;
-    padding: 4px;
+    padding: 0.5px;
 }
 .ct-fancy-box-layout6 {
     position: relative;

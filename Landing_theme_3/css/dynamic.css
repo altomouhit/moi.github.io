@@ -1855,3 +1855,6 @@ h6, .h6  {
 .footer-img {
     width: 455px !important;
 }
+.border_right {
+    border-right: 2px dashed #D5D5DC;
+}
