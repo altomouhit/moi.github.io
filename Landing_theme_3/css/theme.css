@@ -4721,7 +4721,7 @@ input[type=submit]:not([disabled]):not(.disabled):active {
 
     #ct-header-default .ct-header-branding,
     .ct-header-mobile .ct-header-branding {
-        margin: 15px;
+        margin: 0;
         min-height: 50px;
         align-items: center;
         display: flex
@@ -5266,8 +5266,8 @@ ul.menu ul {
     }
 
     .ct-logo-mobile img {
-        max-height: 50px;
-        max-width: 180px
+        max-height: 99px;
+        max-width: 100%;
     }
 
     .header-mobile-search {
@@ -5388,7 +5388,7 @@ ul.menu ul {
     .ct-header-navigation .ct-main-navigation {
         overflow: hidden;
         width: 260px;
-        padding: 58px 0 45px;
+        padding: 0.8rem 0 45px;
         background-color: #fff;
         position: fixed;
         z-index: 1001;
@@ -21263,8 +21263,9 @@ body:not(.elementor-editor-active) .elementor-inner-section .ct-particle-animate
 }
 
 .ct-fancy-box-layout5 .item--icon img {
-    max-height: 90px;
+    max-height: 108px;
     /* max-height: 80px; */
+    border-radius: 0.8rem;
 }
 
 .ct-fancy-box-layout5 .item--title {
