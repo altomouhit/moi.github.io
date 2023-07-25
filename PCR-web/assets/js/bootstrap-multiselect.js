@@ -431,7 +431,7 @@
             nonSelectedText: 'None selected',
             nSelectedText: 'selected',
             allSelectedText: 'All selected',
-            numberDisplayed: 3,
+            numberDisplayed: 1,
             disableIfEmpty: false,
             disabledText: '',
             delimiterText: ', ',

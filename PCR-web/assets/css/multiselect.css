@@ -118,6 +118,11 @@
     /* text-align: left; */
     color: #4e5969;
     /* font-size: 18px; */
+    white-space: nowrap;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .multiselect-native-select .btn-group .multiselect.form-select {
