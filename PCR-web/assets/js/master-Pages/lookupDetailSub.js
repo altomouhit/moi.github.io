@@ -4,17 +4,17 @@
 // 	$(".smart-Wizard").show();
 // });
 function lookupDetailSubFn() {
-    if ($.trim($("#lookupDetailSubbtn").text()) == "Update") {
+    if ($.trim($("#lookupDetailSub_Btn").text()) == "Update") {
         lookupDetailSubEdit.remove().draw();
-        $("#lookupDetailSubbtn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save");
+        $("#lookupDetailSub_Btn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save");
     }
     var lookupDetailSub_object = {};
 
     var lookUpSel = $("#lookUpSel option:selected").text();
 	var lookUpSel_Val = $("#lookUpSel option:selected").val();
 
-    var lookupDetail = $("#lookupDetail option:selected").text();
-	var lookupDetail_val = $("#lookupDetail option:selected").val();
+    var lookupDetailSel = $("#lookupDetailSel option:selected").text();
+	var lookupDetailSel_val = $("#lookupDetailSel option:selected").val();
 
     var lookupDetailSubtxt = $("#lookupDetailSubtxt").val();
 
@@ -24,8 +24,8 @@ function lookupDetailSubFn() {
     lookupDetailSub_object.DlookUpSel = lookUpSel;
     lookupDetailSub_object.DlookUpSel_Val = lookUpSel_Val;
 
-    lookupDetailSub_object.DlookupDetail = lookupDetail;
-    lookupDetailSub_object.DlookupDetail_val = lookupDetail_val;
+    lookupDetailSub_object.DlookupDetailSel = lookupDetailSel;
+    lookupDetailSub_object.DlookupDetailSel_val = lookupDetailSel_val;
 
     lookupDetailSub_object.lookupDetailSubtxt_En = lookupDetailSubtxt;
 
@@ -35,8 +35,10 @@ function lookupDetailSubFn() {
     var lookupDetailSubTable = $('#lookupDetailSubTable').DataTable();
     lookupDetailSubTable.row.add(lookupDetailSub_object).draw();
 
-    $("#lookUpSel").val('');
-    $("#lookupDetail").val('');
+    $("#lookUpSel option:selected").prop("selected", false);
+    $('#lookUpSel').multiselect('refresh');
+    $("#lookupDetailSel option:selected").prop("selected", false);
+    $('#lookupDetailSel').multiselect('refresh');
     $("#lookupDetailSubtxt").val('');
     $("#lookupDetailSubStatus").val('');
 }
@@ -44,17 +46,17 @@ function lookupDetailSubFn() {
 function lookupDetailSubEditFunction(data1) {
     //$(".smart-Wizard").show();
     var data = data1.data();
-    $("#lookupDetailSubbtn").html("<i class='fal fa-check'></i>&nbsp; Update");
-    $("#lookUpSel").val(data.DlookUpSel_Val);
-    $("#lookupDetail").val(data.DlookupDetail_val);
+    $("#lookupDetailSub_Btn").html("<i class='fal fa-check'></i>&nbsp; Update");
+    $("#lookUpSel").val(data.DlookUpSel_Val).multiselect('refresh');
+    $("#lookupDetailSel").val(data.DlookupDetailSel_val).multiselect('refresh');
     $("#lookupDetailSubtxt").val(data.lookupDetailSubtxt_En);
     $("#lookupDetailSubStatus").val(data.Cstatus_val);
 }
 //View lookupDetailSubFn details
-function lookupDetailSubEditFunction(data1) {
+function lookupDetailSubViewFunction(data1) {
     var data = data1.data();
-    $("#lookUpSel").val(data.DlookUpSel_Val);
-    $("#lookupDetail").val(data.DlookupDetail_val);
+    $("#lookUpSel").val(data.DlookUpSel_Val).multiselect('refresh');
+    $("#lookupDetailSel").val(data.DlookupDetailSel_val).multiselect('refresh');
     $("#lookupDetailSubtxt").val(data.lookupDetailSubtxt_En);
     $("#lookupDetailSubStatus").val(data.Cstatus_val);
 }
@@ -63,11 +65,11 @@ $(document).ready(function() {
     $('#lookupDetailSubTable tbody').on('click', '#lookupDetailSubViewBtn', function() {
         var lookupDetailSubTable = $('#lookupDetailSubTable').DataTable();
         var data = lookupDetailSubTable.row($(this).parents('tr'));
-        $("#lookupDetailSubbtn").hide();
+        $("#lookupDetailSub_Btn").hide();
         $("#FAQClear").show();
         $('#lookupDetailSubtxt').attr('readonly', true);
-        $("#lookupDetailSubStatus, #lookUpSel, #lookupDetail").prop('disabled', true);
-        lookupDetailSubEditFunction(data);
+        $("#lookupDetailSubStatus, #lookUpSel, #lookupDetailSel").prop('disabled', true);
+        lookupDetailSubViewFunction(data);
     });
     $('#lookupDetailSubTable tbody').on('click', '#lookupDetailSubEditBtn', function() {
         var table = $('#lookupDetailSubTable').DataTable();
@@ -81,8 +83,8 @@ $(document).ready(function() {
     });
     var lookupDetailSub_cols = [
         { "mDataProp": "DlookUpSel", sTitle: "Lookup", sType: "string" }, 
-        { "mDataProp": "DlookupDetail", sTitle: "Lookup Detail", sType: "string" }, 
-        { "mDataProp": "lookupDetailSubtxt_En", sTitle: "Lookup Detail Subcategory Description", sType: "string" }, 
+        { "mDataProp": "DlookupDetailSel", sTitle: "Lookup Detail", sType: "string" }, 
+        { "mDataProp": "lookupDetailSubtxt_En", sTitle: "Lookup Detail category", sType: "string" }, 
         { "mDataProp": "Cstatus", sTitle: "Status", sType: "string", sWidth: "10%", }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "10%", sType: "string", "defaultContent": 
             "<button type='button' id = 'lookupDetailSubViewBtn' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
@@ -118,9 +120,109 @@ $(document).ready(function() {
 	lookupDetailSubTable.page.len(sessionStorage.getItem("selectedLength")).draw();
 });
 $("#lookupDetailSubid").click(function() {
-    $("#lookupDetailSubbtn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save").show();
+    $("#lookupDetailSub_Btn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save").show();
     $("#lookupDetailSubtxt").val('');
     $('#lookupDetailSubtxt').removeAttr('readonly');
-    $("#lookupDetailSubStatus, #lookUpSel, #lookupDetail").prop('disabled', false);
+    $("#lookupDetailSubStatus, #lookUpSel, #lookupDetailSel").prop('disabled', false);
     //$(".smart-Wizard").hide();
+});
+$(document).ready(function() {
+	$('#lookUpSel').on('change', function() {
+        //alert($(this).find(":selected").val());
+        $('#lookupDetailSel').find('option').remove().end().append('<option value="">Please select</option>').val('').trigger('change');
+        //$('#lookupDetailSel').multiselect('refresh');
+        var storedata;
+        if ($(this).find(":selected").val() == "1") {
+            //alert("1");
+            storedata = [{
+                value: '1',
+                text: 'Trauma'
+            }, {
+                value: '2',
+                text: 'Medical'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+                
+            });
+        } else if ($(this).find(":selected").val() == "2") {
+            //alert("2");
+            storedata = [{
+                value: '3',
+                text: 'Adverse Roud Condition'
+            }, {
+                value: '4',
+                text: 'Adverse Weather'
+            }, {
+                value: '5',
+                text: 'Crowd Control'
+            }, {
+                value: '6',
+                text: 'Hazardous Material'
+            }, {
+                value: '7',
+                text: 'Language Barrier'
+            }, {
+                value: '8',
+                text: 'Obstetrics / Gynecology'
+            }, {
+                value: '9',
+                text: 'Prolonged Extrication'
+            }, {
+                value: '10',
+                text: 'Unsafe Scene'
+            }, {
+                value: '11',
+                text: 'Vehicle Problems'
+            }, {
+                value: '12',
+                text: 'Not Applicable'
+            }, {
+                value: '13',
+                text: 'Directions'
+            }, {
+                value: '14',
+                text: 'Ambulance Crash'
+            }, {
+                value: '15',
+                text: 'Ambulance Failure'
+            }, {
+                value: '16',
+                text: 'Distance'
+            }, {
+                value: '17',
+                text: 'Diversion'
+            }, {
+                value: '18',
+                text: 'Others'
+            }, {
+                value: '19',
+                text: 'None'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+            });
+        } else if ($(this).find(":selected").val() == "3") {
+            //alert("1");
+            storedata = [{
+                value: '20',
+                text: 'Male'
+            }, {
+                value: '21',
+                text: 'Female'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+            });
+        } 
+    });
 });

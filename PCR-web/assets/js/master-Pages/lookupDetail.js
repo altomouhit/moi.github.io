@@ -114,3 +114,12 @@ $("#subCategoryCancelid").click(function() {
     $("#lookupDetailStatus, #lookUp").prop('disabled', false);
     //$(".smart-Wizard").hide();
 });
+$(document).ready(function() {
+	$('.multiSelect').multiselect({
+		enableFiltering: true,
+		includeSelectAllOption: true,
+		maxHeight: 400,
+		dropUp: true,
+		nonSelectedText: 'Please select',
+	});
+});

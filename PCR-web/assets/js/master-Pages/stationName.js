@@ -13,8 +13,8 @@ function stNameFn() {
     var regionIDStn = $("#regionIDStn option:selected").text();
 	var regionIDStn_Val = $("#regionIDStn option:selected").val();
 
-    var incidentLocation = $("#incidentLocation option:selected").text();
-	var incidentLocation_val = $("#incidentLocation option:selected").val();
+    // var incidentLocation = $("#incidentLocation option:selected").text();
+	// var incidentLocation_val = $("#incidentLocation option:selected").val();
 
     var stationNametxt = $("#stationNametxt").val();
 
@@ -36,7 +36,7 @@ function stNameFn() {
     stNameTable.row.add(stn_object).draw();
 
     $("#regionIDStn").val('');
-    $("#incidentLocation").val('');
+    //$("#incidentLocation").val('');
     $("#stationNametxt").val('');
     $("#stnStatus").val('');
 }
@@ -46,7 +46,7 @@ function stnEditFunction(data1) {
     var data = data1.data();
     $("#stnbtn").html("<i class='fal fa-check'></i>&nbsp; Update");
     $("#regionIDStn").val(data.DregionIDStn_Val);
-    $("#incidentLocation").val(data.DincidentLocation_val);
+    //$("#incidentLocation").val(data.DincidentLocation_val);
     $("#stationNametxt").val(data.stationNametxt_En);
     $("#stnStatus").val(data.Cstatus_val);
 }
@@ -54,7 +54,7 @@ function stnEditFunction(data1) {
 function stnViewFunction(data1) {
     var data = data1.data();
     $("#regionIDStn").val(data.DregionIDStn_Val);
-    $("#incidentLocation").val(data.DincidentLocation_val);
+    //$("#incidentLocation").val(data.DincidentLocation_val);
     $("#stationNametxt").val(data.stationNametxt_En);
     $("#stnStatus").val(data.Cstatus_val);
 }
@@ -66,7 +66,7 @@ $(document).ready(function() {
         $("#stnbtn").hide();
         $("#FAQClear").show();
         $('#stationNametxt').attr('readonly', true);
-        $("#stnStatus, #regionIDStn, #incidentLocation").prop('disabled', true);
+        //$("#stnStatus, #regionIDStn, #incidentLocation").prop('disabled', true);
         stnViewFunction(data);
     });
     $('#stNameTable tbody').on('click', '#editDetails', function() {
@@ -80,9 +80,9 @@ $(document).ready(function() {
         table.row($(this).parents('tr')).remove().draw();
     });
     var stn_cols = [
-        { "mDataProp": "DregionIDStn", sTitle: "Call Category", sType: "string" }, 
-        { "mDataProp": "DincidentLocation", sTitle: "Call Sub Category", sType: "string" }, 
-        { "mDataProp": "stationNametxt_En", sTitle: "Call Type", sType: "string" }, 
+        { "mDataProp": "DregionIDStn", sTitle: "Governorate", sType: "string" }, 
+        //{ "mDataProp": "DincidentLocation", sTitle: "Call Sub Category", sType: "string" }, 
+        { "mDataProp": "stationNametxt_En", sTitle: "Station Name", sType: "string" }, 
         { "mDataProp": "Cstatus", sTitle: "Status", sType: "string", sWidth: "10%", }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "10%", sType: "string", "defaultContent": 
             "<button type='button' id = 'viewDetails' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +

@@ -44,7 +44,9 @@
     border-radius: 3px;
     background: #fff;
 }
-
+.singleSelect .multiselect-container>li>a>label:after {
+    border: 0;
+}
 .multiselect-container>li {
     color: #4e5969;
     font-size: 1rem;
@@ -67,7 +69,9 @@
     background: url("../img/check-active.svg") no-repeat center;
     border-color: transparent;
 }
-
+.singleSelect .multiselect-container>li.active>a>label:after {
+    display: none;
+}
 .multiselect-native-select .btn-group .dropdown-menu {
     width: 100%;
     position: absolute !important;

@@ -13,8 +13,8 @@ function lookupDetailSubSubFn() {
     var lookUpSelSub = $("#lookUpSelSub option:selected").text();
 	var lookUpSelSub_Val = $("#lookUpSelSub option:selected").val();
 
-    var lookupDetailSubSet = $("#lookupDetailSubSet option:selected").text();
-	var lookupDetailSubSet_val = $("#lookupDetailSubSet option:selected").val();
+    var lookupDetailSub_Sel = $("#lookupDetailSub_Sel option:selected").text();
+	var lookupDetailSub_Sel_val = $("#lookupDetailSub_Sel option:selected").val();
 
     var lookupDetailSubsel = $("#lookupDetailSubsel option:selected").text();
 	var lookupDetailSubsel_val = $("#lookupDetailSubsel option:selected").val();
@@ -27,8 +27,8 @@ function lookupDetailSubSubFn() {
     lookupDetailSubSub_object.DlookUpSelSub = lookUpSelSub;
     lookupDetailSubSub_object.DlookUpSelSub_Val = lookUpSelSub_Val;
 
-    lookupDetailSubSub_object.DlookupDetailSubSet = lookupDetailSubSet;
-    lookupDetailSubSub_object.DlookupDetailSubSet_val = lookupDetailSubSet_val;
+    lookupDetailSubSub_object.DlookupDetailSub_Sel = lookupDetailSub_Sel;
+    lookupDetailSubSub_object.DlookupDetailSub_Sel_val = lookupDetailSub_Sel_val;
 
     lookupDetailSubSub_object.DlookupDetailSubsel = lookupDetailSubsel;
     lookupDetailSubSub_object.DlookupDetailSubsel_val = lookupDetailSubsel_val;
@@ -42,7 +42,7 @@ function lookupDetailSubSubFn() {
     lookupDetailSubSubTable.row.add(lookupDetailSubSub_object).draw();
 
     $("#lookUpSelSub").val('');
-    $("#lookupDetailSubSet").val('');
+    $("#lookupDetailSub_Sel").val('');
     $("#lookupDetailSubsel").val('');
     $("#lookupDetailSubStxt").val('');
     $("#lookupDetailSubSubStatus").val('');
@@ -53,7 +53,7 @@ function SubSubEditFunction(data1) {
     var data = data1.data();
     $("#lookupDetailSubSub_btn").html("<i class='fal fa-check'></i>&nbsp; Update");
     $("#lookUpSelSub").val(data.DlookUpSelSub_Val);
-    $("#lookupDetailSubSet").val(data.DlookupDetailSubSet_val);
+    $("#lookupDetailSub_Sel").val(data.DlookupDetailSub_Sel_val);
     $("#lookupDetailSubsel").val(data.DlookupDetailSubsel_val);
     $("#lookupDetailSubStxt").val(data.lookupDetailSubStxt_En);
     $("#lookupDetailSubSubStatus").val(data.Cstatus_val);
@@ -62,7 +62,7 @@ function SubSubEditFunction(data1) {
 function SubSubViewFunction(data1) {
     var data = data1.data();
     $("#lookUpSelSub").val(data.DlookUpSelSub_Val);
-    $("#lookupDetailSubSet").val(data.DlookupDetailSubSet_val);
+    $("#lookupDetailSub_Sel").val(data.DlookupDetailSub_Sel_val);
     $("#lookupDetailSubsel").val(data.DlookupDetailSubsel_val);
     $("#lookupDetailSubStxt").val(data.lookupDetailSubStxt_En);
     $("#lookupDetailSubSubStatus").val(data.Cstatus_val);
@@ -75,7 +75,7 @@ $(document).ready(function() {
         $("#lookupDetailSubSub_btn").hide();
         $("#FAQClear").show();
         $('#lookupDetailSubStxt').attr('readonly', true);
-        $("#lookUpSelSub, #lookupDetailSubSet, #lookupDetailSubsel, #lookupDetailSubSubStatus").prop('disabled', true);
+        $("#lookUpSelSub, #lookupDetailSub_Sel, #lookupDetailSubsel, #lookupDetailSubSubStatus").prop('disabled', true);
         SubSubViewFunction(data);
     });
     $('#lookupDetailSubSubTable tbody').on('click', '#SubSubEditBtn', function() {
@@ -90,9 +90,9 @@ $(document).ready(function() {
     });
     var SubSub_cols = [
         { "mDataProp": "DlookUpSelSub", sTitle: "Lookup", sType: "string" }, 
-        { "mDataProp": "DlookupDetailSubSet", sTitle: "Lookup Detail", sType: "string" }, 
-        { "mDataProp": "DlookupDetailSubsel", sTitle: "Lookup Detail Subcategory Description", sType: "string" }, 
-        { "mDataProp": "lookupDetailSubStxt_En", sTitle: "Lookup Detail Sub Subcategory Description", sType: "string" }, 
+        { "mDataProp": "DlookupDetailSub_Sel", sTitle: "Lookup Detail", sType: "string" }, 
+        { "mDataProp": "DlookupDetailSubsel", sTitle: "Lookup Detail category", sType: "string" }, 
+        { "mDataProp": "lookupDetailSubStxt_En", sTitle: "Detail Subcategory Description", sType: "string" }, 
         { "mDataProp": "Cstatus", sTitle: "Status", sType: "string", sWidth: "10%", }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "10%", sType: "string", "defaultContent": 
             "<button type='button' id = 'SubSubViewBtn' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
@@ -131,6 +131,173 @@ $("#lookupDetailSubCancelId").click(function() {
     $("#lookupDetailSubSub_btn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save").show();
     $("#lookupDetailSubStxt").val('');
     $('#lookupDetailSubStxt').removeAttr('readonly');
-    $("#lookUpSelSub, #lookupDetailSubSet, #lookupDetailSubsel, #lookupDetailSubSubStatus").prop('disabled', false);
+    $("#lookUpSelSub, #lookupDetailSub_Sel, #lookupDetailSubsel, #lookupDetailSubSubStatus").prop('disabled', false);
     //$(".smart-Wizard").hide();
+});
+$(document).ready(function() {
+	$('#lookUpSelSub').on('change', function() {
+        //alert($(this).find(":selected").val());
+        $('#lookupDetailSub_Sel').find('option').remove().end().append('<option value="">Please select</option>').val('').trigger('change');
+        //$('#lookupDetailSub_Sel').trigger("chosen:updated");
+        var storedata;
+        if ($(this).find(":selected").val() == "1") {
+            //alert("1");
+            storedata = [{
+                value: '1',
+                text: 'Trauma'
+            }, {
+                value: '2',
+                text: 'Medical'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSub_Sel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+            });
+        } else if ($(this).find(":selected").val() == "2") {
+            //alert("2");
+            storedata = [{
+                value: '3',
+                text: 'Adverse Roud Condition'
+            }, {
+                value: '4',
+                text: 'Adverse Weather'
+            }, {
+                value: '5',
+                text: 'Crowd Control'
+            }, {
+                value: '6',
+                text: 'Hazardous Material'
+            }, {
+                value: '7',
+                text: 'Language Barrier'
+            }, {
+                value: '8',
+                text: 'Obstetrics / Gynecology'
+            }, {
+                value: '9',
+                text: 'Prolonged Extrication'
+            }, {
+                value: '10',
+                text: 'Unsafe Scene'
+            }, {
+                value: '11',
+                text: 'Vehicle Problems'
+            }, {
+                value: '12',
+                text: 'Not Applicable'
+            }, {
+                value: '13',
+                text: 'Directions'
+            }, {
+                value: '14',
+                text: 'Ambulance Crash'
+            }, {
+                value: '15',
+                text: 'Ambulance Failure'
+            }, {
+                value: '16',
+                text: 'Distance'
+            }, {
+                value: '17',
+                text: 'Diversion'
+            }, {
+                value: '18',
+                text: 'Others'
+            }, {
+                value: '19',
+                text: 'None'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSub_Sel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+            });
+        } else if ($(this).find(":selected").val() == "3") {
+            //alert("1");
+            storedata = [{
+                value: '20',
+                text: 'Male'
+            }, {
+                value: '21',
+                text: 'Female'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSub_Sel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+            });
+        } 
+    });
+
+    $('#lookupDetailSub_Sel').on('change', function() {
+        //alert($(this).find(":selected").val());
+        $('#lookupDetailSubsel').find('option').remove().end().append('<option value="">Please select</option>').val('').trigger('change');
+        //$('#lookupDetailSub_Sel').trigger("chosen:updated");
+        var storedata;
+        if ($(this).find(":selected").val() == "1") {
+            //alert("1");
+            storedata = [{
+                value: '1',
+                text: 'Assault'
+            }, {
+                value: '2',
+                text: 'MVC'
+            }, {
+                value: '3',
+                text: 'Drowning'
+            }, {
+                value: '4',
+                text: 'Falls'
+            }, {
+                value: '5',
+                text: 'Others injury'
+            }, {
+                value: '6',
+                text: 'Other Transport Injury'
+            }, {
+                value: '7',
+                text: 'Burn'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSubsel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+            });
+        } else if ($(this).find(":selected").val() == "2") {
+            //alert("2");
+            storedata = [{
+                value: '3',
+                text: 'Respiratory'
+            }, {
+                value: '4',
+                text: 'Cardiac / Chest Pain'
+            }, {
+                value: '5',
+                text: 'Neurologic'
+            }, {
+                value: '6',
+                text: 'Environmental'
+            }, {
+                value: '7',
+                text: 'Other Medical'
+            }, {
+                value: '8',
+                text: 'Poisoning / Drugs'
+            }, {
+                value: '9',
+                text: 'Obstetrics / Gynecology'
+            }];
+            $.each(storedata, function(index, value) {
+                $('#lookupDetailSubsel').append($('<option>', {
+                    value: value.value,
+                    text: value.text
+                })).trigger('change');
+            });
+        }
+    });
 });

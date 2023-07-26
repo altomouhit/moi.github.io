@@ -24,6 +24,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/colors.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap5.css" />
 
+    <!-- multiselect Css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/multiselect.css" />
 </head>
 
 <body class="bodybg">
@@ -252,10 +255,10 @@
 						<div class="col-12 master">
 							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
 								<ul class="nav nav-tabs border-bottom-0">
-                                    <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#lookupMasterTab"> 
+                                    <!-- <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#lookupMasterTab"> 
                                         <i class="fal fa-ballot-check me-2 fa-lg" aria-hidden="true"></i>&nbsp;Lookup Master
-                                    </a></li>
-                                    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#lookupDetail"> 
+                                    </a></li> -->
+                                    <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#lookupDetail"> 
                                         <i class="fa-light fa-users-rectangle me-2 fa-lg" aria-hidden="true"></i>&nbsp;Lookup Detail Master
                                     </a></li>
                                     <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#lookupDetailSub"> 
@@ -279,26 +282,26 @@
 					<div class="row">
 						<div class="col-xxl-12">
 							<div class="tab-content">
-                                <div class="tab-pane fade active show" id="lookupMasterTab" role="tabpanel">
-                                    <!-- start page title -->
+                                <!-- <div class="tab-pane fade" id="lookupMasterTab" role="tabpanel">
+                                    start page title
                                     <div class="row contest_input_block">
                                         <div class="col-12">
-                                                <div class="page-title-right top_header_bar d-flex align-items-center justify-content-end">
-                                                    <div class="input-group input-group-navbar">
-                                                        <div class="input-group-append">
-                                                            <button class="btn" type="button" style="min-width: auto">
-                                                                <i class="fal fa-search" aria-hidden="true"></i>
-                                                            </button>
-                                                        </div>
-                                                        <input type="text" id="LookupSearch" class="form-control" placeholder="Search..." aria-label="Search">
+                                            <div class="page-title-right top_header_bar d-flex align-items-center justify-content-end">
+                                                <div class="input-group input-group-navbar">
+                                                    <div class="input-group-append">
+                                                        <button class="btn" type="button" style="min-width: auto">
+                                                            <i class="fal fa-search" aria-hidden="true"></i>
+                                                        </button>
                                                     </div>
-                                                    <a href="javascript:void(0);" class="btn btn-primary justify-content-center mx-2" id="createNew" style="min-width: 158px">
-                                                        <i class="fal fa-plus" aria-hidden="true"></i>&nbsp; Create new
-                                                    </a>
+                                                    <input type="text" id="LookupSearch" class="form-control" placeholder="Search..." aria-label="Search">
                                                 </div>
+                                                <a href="javascript:void(0);" class="btn btn-primary justify-content-center mx-2" id="createNew" style="min-width: 158px">
+                                                    <i class="fal fa-plus" aria-hidden="true"></i>&nbsp; Create new
+                                                </a>
                                             </div>
-                                        </div> <!-- /.row -->
-                                    <!-- end page title -->
+                                        </div>
+                                    </div> /.row
+                                        end page title
                                     <div class="row project-wrapper">
                                         <div class="col-xxl-12">
                                             <section class="smart-Wizard">
@@ -323,7 +326,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- /.row -->
+                                                        /.row
                 
                                                         <div class="row">
                                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
@@ -336,7 +339,7 @@
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <!-- /.row  -->
+                                                        /.row 
                                                     </fieldset>
                                                 </form>
                                             </section>
@@ -353,14 +356,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- /.row  -->
+                                            /.row 
                                         </div>
-                                        <!-- end col -->
+                                        end col
                                     </div>
-                                    <!-- end row -->
-                                </div>
+                                    end row
+                                </div> -->
 
-                                <div class="tab-pane fade p-2" id="lookupDetail">
+                                <div class="tab-pane fade active show p-2" id="lookupDetail">
                                     <!-- start page title -->
                                     <div class="row contest_input_block">
                                         <div class="col-12">
@@ -390,16 +393,19 @@
                                                     <fieldset class="mb-2 p-3">
                                                         <div class="row">
                                                             <div class="col-sm-6 col-md-3">
-                                                                <div class="form-floating">
-                                                                    <select class="form-select" id="lookUp" aria-label="Floating label">
+                                                                <div class="form-floating singleSelect">
+                                                                    <select class="form-select multiSelect" id="lookUp" data-live-search="true" aria-label="Floating label">
                                                                         <option value="">Please select</option>
-                                                                        <option value="1">Truma</option>
-                                                                        <option value="2">Medical</option>
+                                                                        <option value="1">Call Category</option>
+                                                                        <option value="2">Factors Affecting EMS</option>
+                                                                        <option value="3">Gender</option>
+                                                                        <option value="4">Nationality</option>
+                                                                        <option value="5">Medical Insurance Status</option>
+                                                                        <option value="6">Vehicle Insurance Status</option>
                                                                     </select>
                                                                     <label for="lookUp">Lookup</label>
                                                                 </div>
                                                             </div>
-                                
                                                             <div class="col-sm-6 col-md-3">
                                                                 <div class="form-floating">
                                                                     <input type="text" class="form-control" id="lookupDetailtxt" placeholder="Lookup Detail Description" />
@@ -486,41 +492,35 @@
                                                 <form action="" class="smart-form" id="checkout-form" name="checkout-form" novalidate="novalidate">
                                                     <fieldset class="mb-2 p-3">
                                                         <div class="row">
-                                                            <div class="col-sm-6 col-md-3">
-                                                                <div class="form-floating">
-                                                                    <select class="form-select" id="lookUpSel" aria-label="Floating label">
+                                                            <div class="col-sm-6 col-md-3 mb-3">
+                                                                <div class="form-floating singleSelect">
+                                                                    <select class="form-select multiSelect" id="lookUpSel" data-live-search="true" aria-label="Floating label">
                                                                         <option value="">Please select</option>
-                                                                        <option value="1">Truma</option>
-                                                                        <option value="2">Medical</option>
+                                                                        <option value="1">Call Category</option>
+                                                                        <option value="2">Factors Affecting EMS</option>
+                                                                        <option value="3">Gender</option>
                                                                     </select>
                                                                     <label for="lookUpSel">Lookup</label>
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-lg-3">
-                                                                <div class="form-floating">
-                                                                    <select class="form-select" id="lookupDetail" aria-label="Floating label">
+                                                            <div class="col-sm-6 col-lg-3 mb-3">
+                                                                <div class="form-floating singleSelect">
+                                                                    <select class="form-select" id="lookupDetailSel" aria-label="Floating label">
                                                                         <option value="">Please select</option>
-                                                                        <option value="1">Assault</option>
-                                                                        <option value="2">MVC</option>
-                                                                        <option value="3">Drowning</option>
-                                                                        <option value="4">Falls</option>
-                                                                        <option value="5">Burn</option>
-                                                                        <option value="6">Others injury</option>
-                                                                        <option value="7">Others Transport Injury</option>
                                                                     </select>
-                                                                    <label for="lookupDetail">Lookup Detail</label>
+                                                                    <label for="lookupDetailSel">Lookup Detail</label>
                                                                 </div>
                                                             </div>
                                 
-                                                            <div class="col-sm-6 col-md-3">
+                                                            <div class="col-sm-6 col-md-3 mb-3">
                                                                 <div class="form-floating">
-                                                                    <input type="text" class="form-control" id="lookupDetailSubtxt" placeholder="Lookup Detail Subcategory Description" />
-                                                                    <label for="lookupDetailSubtxt">Lookup Detail Subcategory Description</label>
+                                                                    <input type="text" class="form-control" id="lookupDetailSubtxt" placeholder="Lookup Detail category" />
+                                                                    <label for="lookupDetailSubtxt">Lookup Detail category</label>
                                                                 </div>
                                                             </div>
                                 
-                                                            <div class="col-sm-6 col-md-3">
+                                                            <div class="col-sm-6 col-md-3 mb-3">
                                                                 <div class="form-floating">
                                                                     <select name="" id="lookupDetailSubStatus" class="form-select">
                                                                         <option value="">Please select</option>
@@ -541,7 +541,7 @@
                                                                 </button>
                                 
                                                                 <button type="button" class="btn btn-chartreuse btn-height ml-2" onclick="lookupDetailSubFn()"
-                                                                    id="lookupDetailSubbtn">
+                                                                    id="lookupDetailSub_Btn">
                                                                     <i class="fal fa-check" aria-hidden="true"></i>&nbsp; Save
                                                                 </button>
                                                             </div>
@@ -603,53 +603,40 @@
                                                                 <div class="form-floating">
                                                                     <select class="form-select" id="lookUpSelSub" aria-label="Floating label">
                                                                         <option value="">Please select</option>
-                                                                        <option value="1">Truma</option>
-                                                                        <option value="2">Medical</option>
+                                                                        <option value="1">Call Category</option>
+                                                                        <!-- <option value="2">Factors Affecting EMS</option>
+                                                                        <option value="3">Gender</option> -->
                                                                     </select>
                                                                     <label for="lookUpSelSub">Lookup</label>
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-lg-3">
+                                                            <div class="col-sm-6 col-md-3 mb-3">
                                                                 <div class="form-floating">
-                                                                    <select class="form-select" id="lookupDetailSubSet" aria-label="Floating label">
+                                                                    <select class="form-select" id="lookupDetailSub_Sel" aria-label="Floating label">
                                                                         <option value="">Please select</option>
-                                                                        <option value="1">Assault</option>
-                                                                        <option value="2">MVC</option>
-                                                                        <option value="3">Drowning</option>
-                                                                        <option value="4">Falls</option>
-                                                                        <option value="5">Burn</option>
-                                                                        <option value="6">Others injury</option>
-                                                                        <option value="7">Others Transport Injury</option>
                                                                     </select>
-                                                                    <label for="lookupDetailSubSet">Lookup Detail</label>
+                                                                    <label for="lookupDetailSub_Sel">Lookup Detail</label>
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-sm-6 col-md-3">
+                                                            <div class="col-sm-6 col-md-3 mb-3">
                                                                 <div class="form-floating">
                                                                     <select class="form-select" id="lookupDetailSubsel" aria-label="Floating label">
                                                                         <option value="">Please select</option>
-                                                                        <option value="1">Assault</option>
-                                                                        <option value="2">MVC</option>
-                                                                        <option value="3">Drowning</option>
-                                                                        <option value="4">Falls</option>
-                                                                        <option value="5">Burn</option>
-                                                                        <option value="6">Others injury</option>
-                                                                        <option value="7">Others Transport Injury</option>
                                                                     </select>
-                                                                    <label for="lookupDetailSubsel">Lookup Detail Subcategory Description</label>
+                                                                    <label for="lookupDetailSubsel">Lookup Detail category</label>
                                                                 </div>
                                                             </div>
                                 
-                                                            <div class="col-sm-6 col-md-3">
+                                                            <div class="col-sm-6 col-md-3 mb-3">
                                                                 <div class="form-floating">
-                                                                    <input type="text" class="form-control" id="lookupDetailSubStxt" placeholder="Lookup Detail Sub Subcategory Description" />
-                                                                    <label for="lookupDetailSubStxt">Lookup Detail Sub Subcategory Description</label>
+                                                                    <input type="text" class="form-control" id="lookupDetailSubStxt" placeholder="Detail Subcategory Description" />
+                                                                    <label for="lookupDetailSubStxt">Detail Subcategory Description</label>
                                                                 </div>
                                                             </div>
                                 
-                                                            <div class="col-sm-6 col-md-3">
+                                                            <div class="col-sm-6 col-md-3 mb-3">
                                                                 <div class="form-floating">
                                                                     <select name="" id="lookupDetailSubSubStatus" class="form-select">
                                                                         <option value="">Please select</option>
@@ -1302,8 +1289,9 @@
     <!-- JAVASCRIPT -->
     <script type="text/javascript" src="assets/js/jquery-3.6.3.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap-5.3.0/bootstrap.bundle.js"></script>
+
+    <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
     <script type="text/javascript" src="assets/libs/simplebar/simplebar.min.js"></script>
-   
     <script type="text/javascript" src="assets/libs/feather-icons/feather.min.js"></script>
     <script type="text/javascript" src="assets/libs/lord-icon/lord-icon-2.1.0.js"></script>
     <script type="text/javascript" src="assets/libs/flatpickr/flatpickr.min.js"></script>

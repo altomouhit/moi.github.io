@@ -71,7 +71,7 @@ $(document).ready(function() {
         table.row($(this).parents('tr')).remove().draw();
     });
     var region_cols = [
-        { "mDataProp": "DregionID", sTitle: "Governorate ID", sType: "string" }, 
+        { "mDataProp": "DregionID", sTitle: "Governorate", sType: "string" }, 
         { "mDataProp": "incidentLocationtxt_En", sTitle: "Incident Location", sType: "string" }, 
         { "mDataProp": "Cstatus", sTitle: "Status", sType: "string", sWidth: "10%", }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "10%", sType: "string", "defaultContent": 
