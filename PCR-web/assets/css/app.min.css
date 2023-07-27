@@ -6198,7 +6198,7 @@ a, button {
 	border-bottom-color: #4c5665!important
 }
 .table .form-check {
-	padding-left: 0;
+	padding-left: 0.8rem;
 	margin-bottom: 0
 }
 .table .form-check .form-check-input {
