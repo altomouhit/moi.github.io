@@ -1,8 +1,8 @@
 //FAQ Button
-// $(".smart-Wizard").hide();
-// $("#createNew").click(function() {
-// 	$(".smart-Wizard").show();
-// });
+$(".smart-Wizard-Gov").hide();
+$("#createNew").click(function() {
+	$(".smart-Wizard-Gov").show();
+});
 function governorateFn() {
     if ($.trim($("#form1Submit").text()) == "Update") {
         governorateEdit.remove().draw();
@@ -27,7 +27,7 @@ function governorateFn() {
 }
 //edit governorateFn details
 function governorateEditFunction(data1) {
-    //$(".smart-Wizard").show();
+    $(".smart-Wizard-Gov").show();
     var data = data1.data();
     $("#form1Submit").html("<i class='fal fa-check'></i>&nbsp; Update");
     $("#governoratetxt").val(data.governoratetxt_En);
@@ -35,6 +35,7 @@ function governorateEditFunction(data1) {
 }
 //View governorateFn details
 function governorateViewFunction(data1) {
+    $(".smart-Wizard-Gov").show();
     var data = data1.data();
     $("#governoratetxt").val(data.governoratetxt_En);
     $("#slaStatus").val(data.Cstatus_val);
@@ -65,18 +66,27 @@ $(document).ready(function() {
         { "mDataProp": "Cstatus", sTitle: "Status", sType: "string", sWidth: "10%", }, 
         { "mDataProp": "Actions", sTitle: "Action", sWidth: "10%", sType: "string", "defaultContent": 
             "<button type='button' id = 'governorateViewBtn' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
-            "<button type='button' id = 'governorateEditBtn' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" + 
-            "<button type='button' id = 'governorateDelBtn' class='delete-icon'><i class='fal fa-trash'></i></button>" }
+            "<button type='button' id = 'governorateEditBtn' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" } 
+            //+ "<button type='button' id = 'governorateDelBtn' class='delete-icon'><i class='fal fa-trash'></i></button>" }
     ];
     var governorateTable = $('#governorateTable').DataTable({
 		processing: true,
 		//serverSide: true,
-		"aoColumns": governorate_cols,
+		//"aoColumns": governorate_cols,
+        "ajax": "assets/js/governorate.txt",
+        "columns": [
+            { "data": "governoratetxt_En" },
+            { "data": "Cstatus" },
+            { "data": "Cstatus_val"},
+            { "data": "Actions", "orderable": false, "defaultContent":
+            "<button type='button' id = 'governorateViewBtn' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
+            "<button type='button' id = 'governorateEditBtn' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;"  }],
 		"destroy": true,
 		"dom": '<"top"f>rt<"bottom"ilp>',
 		"columnDefs": [{
 			"searchable": false,
-			"orderable": false,
+			//"orderable": false,
+            "visible": false,
 			"targets": [2]
 		}],
 		"order": [[0, 'asc']]
@@ -100,5 +110,5 @@ $("#cancelid").click(function() {
     $("#governoratetxt").val('');
     $('#governoratetxt').removeAttr('readonly');
     $("#slaStatus").prop('disabled', false);
-    //$(".smart-Wizard").hide();
+    $(".smart-Wizard-Gov").hide();
 });

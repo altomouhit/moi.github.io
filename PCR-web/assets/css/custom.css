@@ -703,3 +703,6 @@ hr.horizontal.dark {
     border-bottom: 2px solid var(--vz-gray-300);
     color: var(--vz-gray-300);
 }
+.w-10 {
+    width: 10% !important;
+}

@@ -1,8 +1,8 @@
 //FAQ Button
-// $(".smart-Wizard").hide();
-// $("#lookupDetailSubNew").click(function() {
-// 	$(".smart-Wizard").show();
-// });
+$(".smart-Wizard-Category").hide();
+$("#lookupDetailSubNew").click(function() {
+	$(".smart-Wizard-Category").show();
+});
 function lookupDetailSubFn() {
     if ($.trim($("#lookupDetailSub_Btn").text()) == "Update") {
         lookupDetailSubEdit.remove().draw();
@@ -37,26 +37,30 @@ function lookupDetailSubFn() {
 
     $("#lookUpSel option:selected").prop("selected", false);
     $('#lookUpSel').multiselect('refresh');
-    $("#lookupDetailSel option:selected").prop("selected", false);
-    $('#lookupDetailSel').multiselect('refresh');
+    // $("#lookupDetailSel option:selected").prop("selected", false);
+    // $('#lookupDetailSel').multiselect('refresh');
+    $('#lookupDetailSel').val('');
     $("#lookupDetailSubtxt").val('');
     $("#lookupDetailSubStatus").val('');
 }
 //edit lookupDetailSubFn details
 function lookupDetailSubEditFunction(data1) {
-    //$(".smart-Wizard").show();
+    $(".smart-Wizard-Category").show();
     var data = data1.data();
     $("#lookupDetailSub_Btn").html("<i class='fal fa-check'></i>&nbsp; Update");
     $("#lookUpSel").val(data.DlookUpSel_Val).multiselect('refresh');
-    $("#lookupDetailSel").val(data.DlookupDetailSel_val).multiselect('refresh');
+    $("#lookUpSel").trigger('change');
+    $("#lookupDetailSel").val(data.DlookupDetailSel_val);
     $("#lookupDetailSubtxt").val(data.lookupDetailSubtxt_En);
     $("#lookupDetailSubStatus").val(data.Cstatus_val);
 }
 //View lookupDetailSubFn details
 function lookupDetailSubViewFunction(data1) {
+    $(".smart-Wizard-Category").show();
     var data = data1.data();
     $("#lookUpSel").val(data.DlookUpSel_Val).multiselect('refresh');
-    $("#lookupDetailSel").val(data.DlookupDetailSel_val).multiselect('refresh');
+    $("#lookUpSel").trigger('change');
+    $("#lookupDetailSel").val(data.DlookupDetailSel_val);
     $("#lookupDetailSubtxt").val(data.lookupDetailSubtxt_En);
     $("#lookupDetailSubStatus").val(data.Cstatus_val);
 }
@@ -95,13 +99,26 @@ $(document).ready(function() {
     var lookupDetailSubTable = $('#lookupDetailSubTable').DataTable({
 		processing: true,
 		//serverSide: true,
-		"aoColumns": lookupDetailSub_cols,
+		//"aoColumns": lookupDetailSub_cols,
+        "ajax": "assets/js/lookupDetailSub.txt",
+        "columns": [
+            { "data": "DlookUpSel" },
+            { "data": "DlookUpSel_Val" },
+            { "data": "DlookupDetailSel" },
+            { "data": "DlookupDetailSel_val" },
+            { "data": "lookupDetailSubtxt_En"},
+            { "data": "Cstatus" },
+            { "data": "Cstatus_val" },
+            { "data": "Actions", "orderable": false, "defaultContent":
+            "<button type='button' id = 'lookupDetailSubViewBtn' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
+            "<button type='button' id = 'lookupDetailSubEditBtn' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" }],
 		"destroy": true,
 		"dom": '<"top"f>rt<"bottom"ilp>',
 		"columnDefs": [{
 			"searchable": false,
-			"orderable": false,
-			"targets": [2]
+			//"orderable": false,
+            "visible": false,
+			"targets": [1, 3, 6]
 		}],
 		"order": [[0, 'asc']]
 	});
@@ -124,7 +141,7 @@ $("#lookupDetailSubid").click(function() {
     $("#lookupDetailSubtxt").val('');
     $('#lookupDetailSubtxt').removeAttr('readonly');
     $("#lookupDetailSubStatus, #lookUpSel, #lookupDetailSel").prop('disabled', false);
-    //$(".smart-Wizard").hide();
+    $(".smart-Wizard-Category").hide();
 });
 $(document).ready(function() {
 	$('#lookUpSel').on('change', function() {

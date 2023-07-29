@@ -1,8 +1,8 @@
 //FAQ Button
-// $(".smart-Wizard").hide();
-// $("#lookupDetailSubNew").click(function() {
-// 	$(".smart-Wizard").show();
-// });
+$(".smart-Wizard-subCategory").hide();
+$("#lookupDetailSubSNew").click(function() {
+	$(".smart-Wizard-subCategory").show();
+});
 function lookupDetailSubSubFn() {
     if ($.trim($("#lookupDetailSubSub_btn").text()) == "Update") {
         SubSubEdit.remove().draw();
@@ -49,20 +49,25 @@ function lookupDetailSubSubFn() {
 }
 //edit lookupDetailSubSubFn details
 function SubSubEditFunction(data1) {
-    //$(".smart-Wizard").show();
+    $(".smart-Wizard-subCategory").show();
     var data = data1.data();
     $("#lookupDetailSubSub_btn").html("<i class='fal fa-check'></i>&nbsp; Update");
     $("#lookUpSelSub").val(data.DlookUpSelSub_Val);
+    $("#lookUpSelSub").trigger('change');
     $("#lookupDetailSub_Sel").val(data.DlookupDetailSub_Sel_val);
+    $("#lookupDetailSub_Sel").trigger('change');
     $("#lookupDetailSubsel").val(data.DlookupDetailSubsel_val);
     $("#lookupDetailSubStxt").val(data.lookupDetailSubStxt_En);
     $("#lookupDetailSubSubStatus").val(data.Cstatus_val);
 }
 //View lookupDetailSubSubFn details
 function SubSubViewFunction(data1) {
+    $(".smart-Wizard-subCategory").show();
     var data = data1.data();
     $("#lookUpSelSub").val(data.DlookUpSelSub_Val);
+    $("#lookUpSelSub").trigger('change');
     $("#lookupDetailSub_Sel").val(data.DlookupDetailSub_Sel_val);
+    $("#lookupDetailSub_Sel").trigger('change');
     $("#lookupDetailSubsel").val(data.DlookupDetailSubsel_val);
     $("#lookupDetailSubStxt").val(data.lookupDetailSubStxt_En);
     $("#lookupDetailSubSubStatus").val(data.Cstatus_val);
@@ -103,17 +108,32 @@ $(document).ready(function() {
     var lookupDetailSubSubTable = $('#lookupDetailSubSubTable').DataTable({
 		processing: true,
 		//serverSide: true,
-		"aoColumns": SubSub_cols,
+		//"aoColumns": SubSub_cols,
+        "ajax": "assets/js/lookupDetailSubSub.txt",
+        "columns": [
+            { "data": "DlookUpSelSub" },
+            { "data": "DlookUpSelSub_Val" },
+            { "data": "DlookupDetailSub_Sel" },
+            { "data": "DlookupDetailSub_Sel_val" },
+            { "data": "DlookupDetailSubsel"},
+            { "data": "DlookupDetailSubsel_val"},
+            { "data": "lookupDetailSubStxt_En"},
+            { "data": "Cstatus" },
+            { "data": "Cstatus_val" },
+            { "data": "Actions", "orderable": false, "defaultContent":
+            "<button type='button' id = 'SubSubViewBtn' class='edit-icon'><i class='fal fa-eye'></i></button>&nbsp;&nbsp;" +
+            "<button type='button' id = 'SubSubEditBtn' class='edit-icon'><i class='fal fa-edit'></i></button>&nbsp;&nbsp;" }],
 		"destroy": true,
 		"dom": '<"top"f>rt<"bottom"ilp>',
 		"columnDefs": [{
 			"searchable": false,
-			"orderable": false,
-			"targets": [2]
+			//"orderable": false,
+            "visible": false,
+			"targets": [1, 3, 5, 8]
 		}],
 		"order": [[0, 'asc']]
 	});
-	$('#callTypeSearch').keyup(function() {
+	$('#lookupDetailSubsSearch').keyup(function() {
 		lookupDetailSubSubTable.search($(this).val()).draw(); // this  is for customized searchbox with datatable search feature.
 	});
 	lookupDetailSubSubTable.columns().iterator('column', function(ctx, idx) {
@@ -132,7 +152,7 @@ $("#lookupDetailSubCancelId").click(function() {
     $("#lookupDetailSubStxt").val('');
     $('#lookupDetailSubStxt').removeAttr('readonly');
     $("#lookUpSelSub, #lookupDetailSub_Sel, #lookupDetailSubsel, #lookupDetailSubSubStatus").prop('disabled', false);
-    //$(".smart-Wizard").hide();
+    $(".smart-Wizard-subCategory").hide();
 });
 $(document).ready(function() {
 	$('#lookUpSelSub').on('change', function() {
@@ -271,25 +291,25 @@ $(document).ready(function() {
         } else if ($(this).find(":selected").val() == "2") {
             //alert("2");
             storedata = [{
-                value: '3',
+                value: '8',
                 text: 'Respiratory'
             }, {
-                value: '4',
+                value: '9',
                 text: 'Cardiac / Chest Pain'
             }, {
-                value: '5',
+                value: '10',
                 text: 'Neurologic'
             }, {
-                value: '6',
+                value: '11',
                 text: 'Environmental'
             }, {
-                value: '7',
+                value: '12',
                 text: 'Other Medical'
             }, {
-                value: '8',
+                value: '13',
                 text: 'Poisoning / Drugs'
             }, {
-                value: '9',
+                value: '14',
                 text: 'Obstetrics / Gynecology'
             }];
             $.each(storedata, function(index, value) {

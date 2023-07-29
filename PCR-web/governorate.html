@@ -299,7 +299,7 @@
                                     <!-- end page title -->
                                     <div class="row project-wrapper">
                                         <div class="col-xxl-12">
-                                            <section class="smart-Wizard">
+                                            <section class="smart-Wizard-Gov smart-Wizard">
                                                 <form action="" class="smart-form" id="checkout-form" name="checkout-form" novalidate="novalidate">
                                                     <fieldset class="mb-2 p-3">
                                                         <div class="row">
@@ -344,6 +344,12 @@
                                                     <div class="table-responsive-sm data_table">
                                                         <table class="table table-bordered table-striped w-100" id="governorateTable">
                                                             <thead class="table-light">
+                                                                <tr>
+                                                                    <th>Governorate</th>
+                                                                    <th class="w-10">Status</th>
+                                                                    <th></th>
+                                                                    <th class="w-10">Action</th>
+                                                                </tr>
                                                             </thead>
                                                             <tbody>
                                                             </tbody>
@@ -383,7 +389,7 @@
                                     <!-- end page title -->
                                     <div class="row project-wrapper">
                                         <div class="col-xxl-12">
-                                            <section class="smart-Wizard">
+                                            <section class="smart-Wizard-incidentLoc smart-Wizard">
                                                 <form action="" class="smart-form" id="checkout-form" name="checkout-form" novalidate="novalidate">
                                                     <fieldset class="mb-2 p-3">
                                                         <div class="row">
@@ -429,13 +435,13 @@
                                 
                                                         <div class="row">
                                                             <div class="col-sm-12 d-flex align-items-center justify-content-end btn-bottom">
-                                                                <button type="reset" class="btn btn-text" id="regionCancelid"
+                                                                <button type="reset" class="btn btn-text" id="incidentLocationId"
                                                                     style="width: auto; margin-left: 0; color: #868700">
                                                                     Cancel
                                                                 </button>
                                 
-                                                                <button type="button" class="btn btn-chartreuse btn-height ml-2" onclick="regionFn()"
-                                                                    id="regionbtn">
+                                                                <button type="button" class="btn btn-chartreuse btn-height ml-2" onclick="incidentLocationFn()"
+                                                                    id="incidentLocationBtn">
                                                                     <i class="fal fa-check" aria-hidden="true"></i>&nbsp; Save
                                                                 </button>
                                                             </div>
@@ -448,8 +454,16 @@
                                             <div class="row mt-4">
                                                 <div class="col-md-12">
                                                     <div class="table-responsive-sm data_table">
-                                                        <table class="table table-bordered table-striped w-100" id="regionTable">
+                                                        <table class="table table-bordered table-striped w-100" id="incidentLocTable">
                                                             <thead class="table-light">
+                                                                <tr>
+                                                                    <th>Governorate</th>
+                                                                    <th></th>
+                                                                    <th>Incident Location</th>
+                                                                    <th class="w-10">Status</th>
+                                                                    <th></th>
+                                                                    <th class="w-10">Actions</th>
+                                                                </tr>
                                                             </thead>
                                                             <tbody>
                                                             </tbody>
@@ -489,7 +503,7 @@
                                     <!-- end page title -->
                                     <div class="row project-wrapper">
                                         <div class="col-xxl-12">
-                                            <section class="smart-Wizard">
+                                            <section class="smart-Wizard-stn smart-Wizard">
                                                 <form action="" class="smart-form" novalidate="novalidate">
                                                     <fieldset class="mb-2 p-3">
                                                         <div class="row">
@@ -500,41 +514,19 @@
                                                                         <option value="1">Muscat</option>
                                                                         <option value="2">Al Batinah South</option>
                                                                         <option value="3">Al Batinah North</option>
-                                                                        <option value="4">Al Burimi</option>
-                                                                        <option value="5">Al Dakhiliyah</option>
-                                                                        <option value="6">Al Dhahira</option>
-                                                                        <option value="7">Al Sharqyah North</option>
-                                                                        <option value="8">Al Sharqyah South</option>
-                                                                        <option value="9">AL Wusta</option>
-                                                                        <option value="10">Dhofar</option>
-                                                                        <option value="11">Musandam</option>
                                                                     </select>
                                                                     <label for="regionIDStn">Governorate</label>
                                                                 </div>
                                                             </div>
 
-                                                            <!-- <div class="col-lg-3">
+                                                            <div class="col-lg-3">
                                                                 <div class="form-floating">
                                                                     <select class="form-select" id="incidentLocation" aria-label="Floating label">
-                                                                        <option value="">Please select</option>
-                                                                        <option value="1">Education Facility</option>
-                                                                        <option value="2">Industrial Place</option>
-                                                                        <option value="3">Premises</option>
-                                                                        <option value="4">Medical Facility</option>
-                                                                        <option value="5">Place For Recreation</option>
-                                                                        <option value="6">Sport</option>
-                                                                        <option value="7">Prison</option>
-                                                                        <option value="8">Public Building</option>
-                                                                        <option value="9">Residence / House</option>
-                                                                        <option value="10">Sea</option>
-                                                                        <option value="11">Shopping Place</option>
-                                                                        <option value="12">Street / Highway</option>
-                                                                        <option value="13">Work Place ( Office)</option>
-                                                                        <option value="14">Others</option>                                                                    
+                                                                        <option value="">Please select</option>                                                           
                                                                     </select>
                                                                     <label for="incidentLocation">Incident Location</label>
                                                                 </div>
-                                                            </div> -->
+                                                            </div>
                                 
                                                             <div class="col-sm-6 col-md-3">
                                                                 <div class="form-floating">
@@ -579,6 +571,16 @@
                                                     <div class="table-responsive-sm data_table">
                                                         <table class="table table-bordered table-striped w-100" id="stNameTable">
                                                             <thead class="table-light">
+                                                                <tr>
+                                                                    <th>Governorate</th>
+                                                                    <th></th>
+                                                                    <th>Incident Location</th>
+                                                                    <th></th>
+                                                                    <th>Station Name</th>
+                                                                    <th class="w-10">Status</th>
+                                                                    <th></th>
+                                                                    <th class="w-10">Actions</th>
+                                                                </tr>
                                                             </thead>
                                                             <tbody>
                                                             </tbody>
