@@ -17,7 +17,7 @@
       "DregionIDStn_Val": "2",
       "DincidentLocation":"Barka",
       "DincidentLocation_val": "10",
-      "stationNametxt_En": "Standby",
+      "stationNametxt_En": "Barka",
       "Cstatus": "Active",
       "Cstatus_val": "1"
     },
@@ -27,7 +27,7 @@
       "DregionIDStn_Val": "3",
       "DincidentLocation":"Sohar",
       "DincidentLocation_val": "18",
-      "stationNametxt_En": "Al-Khaborah",
+      "stationNametxt_En": "Sohar",
       "Cstatus": "Active",
       "Cstatus_val": "1"
     }
