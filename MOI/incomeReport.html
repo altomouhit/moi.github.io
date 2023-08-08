@@ -10,6 +10,7 @@
     <link rel=icon href="img/Khanjar.png" type=image/png />
     <!-- fontawesome -->
     <link rel="stylesheet" href="css/fontawesome.6.3.0/fontawesome.6.3.0.css" />
+    <link rel="stylesheet" href="css/bootstrap.5.3.1/bootstrap.5.3.1.css" />
     <link rel="stylesheet" href="css/moi-webapp.css?v.1.0" id=stylesheet>
     <link rel="stylesheet" href="css/moi.css" />
     <link rel="stylesheet" href="css/dataTables-4/dataTables.bootstrap4.css">
@@ -97,57 +98,95 @@
                     <fieldset class="border-dashed">
                         <!-- <legend></legend> -->
                         <div class="row">
-                            <div class="form-group col-12">
-                                <label for="fromDate" class="">From Date</label>
-                                <div class="input-group date">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fal fa-calendar fa-fw fa-lg" aria-hidden="true"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="fromDate" placeholder="dd/mm/yyyy">
-                                    <span class="input-group-addon"></span>
-                                </div>
-                            </div>
-        
-                            <div class="form-group col-12">
-                                <label for="toDate" class="">To Date</label>
-                                <div class="input-group date">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fal fa-calendar fa-fw fa-lg" aria-hidden="true"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="toDate" placeholder="dd/mm/yyyy">
-                                    <span class="input-group-addon"></span>
-                                </div>
-                            </div>
-                            <div class="form-group col-12">
-                                <label for="serviceType" class="label">Module</label>
+                            <div class="form-group col-lg-12">
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fal fa-construction fa-fw fa-lg" aria-hidden="true"></i></span>
+                                    <div class="form-floating date">
+                                        <input type="text" class="form-control" id="fromDate" placeholder="dd/mm/yyyy">
+                                        <span class="input-group-addon"></span>
+                                        <label for="fromDate">From Date</label>
                                     </div>
-                                    <select name="serviceType"  id="serviceType" class="form-control" required>
-                                        <option value="">Please select</option>
-                                        <option value="1">Technical Services</option>			
-                                        <option value="2">Health Services</option>
-                                        <option value="3">Both</option>
-                                    </select>
+                                    <span class="input-group-text"><i class="fa-light fa-calendar-lines-pen fa-lg fa-fw"></i></span>
                                 </div>
                             </div>
-                            <div class="form-group col-12">
-                                <label for="reportType" class="label">Report</label>
+
+                            <div class="form-group col-lg-12">
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fal fa-file-chart-line fa-fw fa-lg" aria-hidden="true"></i></span>
+                                    <div class="form-floating date">
+                                        <input type="text" class="form-control" id="toDate" placeholder="dd/mm/yyyy">
+                                        <span class="input-group-addon"></span>
+                                        <label for="toDate">To Date</label>
                                     </div>
-                                    <select name="reportType"  id="reportType" class="form-control" required>
-                                        <option value="">Please select</option>
-                                        <option value="1">Income</option>			
-                                        <option value="2">Insurance</option>
-                                        <option value="3">Both</option>
-                                    </select>
+                                    <span class="input-group-text"><i class="fa-light fa-calendar-lines-pen fa-lg fa-fw"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-12">
+                                <div class="input-group">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="governorateID" aria-label="Floating label">
+                                            <option value="">Please select</option>
+                                            <option value="1">Muscat</option>
+                                            <option value="2">AL Batinah South</option>
+                                            <option value="3">AL Batinah North</option>
+                                            <option value="4">AL Wusta</option>
+                                            <option value="5">Musandam</option>
+                                            <option value="6">AL Burimi</option>
+                                            <option value="7">AL Dakhiliyah</option>
+                                            <option value="8">AL Dhahira</option>
+                                            <option value="9">AL Sharqyah North</option>
+                                            <option value="10">AL Sharqyah South</option>
+                                            <option value="11">Dhofar</option>
+                                            <option value="12">Both</option>
+                                        </select>
+                                        <label for="governorateID">Governorate ID</label>
+                                    </div>
+                                    <span class="input-group-text"><i class="fa-light fa-fort fa-lg fa-fw"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-12">
+                                <div class="input-group">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="willayatID" aria-label="Floating label">
+                                            <option value="">Please select</option>
+                                        </select>
+                                        <label for="willayatID">Willayat</label>
+                                    </div>
+                                    <span class="input-group-text"><i class="fa-light fa-location-crosshairs fa-lg fa-fw"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-12">
+                                <div class="input-group">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="serviceType" aria-label="Floating label">
+                                            <option value="">Please select</option>
+                                            <option value="1">Technical Services</option>			
+                                            <option value="2">Health Services</option>
+                                            <option value="3">Both</option>                                                            
+                                        </select>
+                                        <label for="serviceType">Module</label>
+                                    </div>
+                                    <span class="input-group-text"><i class="fa-light fa-construction fa-lg fa-fw"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-12">
+                                <div class="input-group">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="reportType" aria-label="Floating label">
+                                            <option value="">Please select</option>
+                                            <option value="1">Income</option>			
+                                            <option value="2">Insurance</option>
+                                            <option value="3">Both</option>                                                           
+                                        </select>
+                                        <label for="reportType">Report</label>
+                                    </div>
+                                    <span class="input-group-text"><i class="fa-light fa-file-chart-line fa-lg fa-fw"></i></span>
                                 </div>
                             </div>
                         </div> <!-- /.row -->
-                        <div class="row mt-2">
+                        <div class="row">
                             <div class="col-12 d-flex justify-content-end">
                                 <button type="button" class="btn btn-danger">Clear</button>
                                 <button type="button" class="btn btn-ts" title="Search"><i class="fal fa-search fa-lg fa-fw"></i></button>

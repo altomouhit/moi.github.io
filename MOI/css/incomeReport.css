@@ -9,7 +9,7 @@ div.dataTables_wrapper div.dataTables_length select {
 }
 .bg-govt {
     background-color: #0D0D0D !important;
-    color: #fff;
+    color: #fff !important;
 }
 .bg-ts {
     background-color: #FFC000 !important;
@@ -27,4 +27,7 @@ div.dataTables_wrapper div.dataTables_length select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.table thead th {
+    color: #fff;
 }
