@@ -4,7 +4,7 @@ $(document).ready(function() {
         return '<div class="accordion custom-accordionwithicon accordion-fill-info" id="accordionFill">'+
         '<div class="accordion-item">'+
             '<h2 class="accordion-header" id="accordionFillExample2">'+
-                '<button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accor_fill1" aria-expanded="false" aria-controls="accor_fill2">'+
+                '<button class="accordion-button fw-semibold collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#accor_fill1" aria-expanded="false" aria-controls="accor_fill2">'+
                     data.stationName +
                 '</button>'+
             '</h2>'+
@@ -37,7 +37,7 @@ $(document).ready(function() {
         '</div>'+
         '<div class="accordion-item">'+
             '<h2 class="accordion-header" id="accordionFillExample2">'+
-                '<button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accor_fill2" aria-expanded="false" aria-controls="accor_fill2">'+
+                '<button class="accordion-button fw-semibold collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#accor_fill2" aria-expanded="false" aria-controls="accor_fill2">'+
                     'Al-Amirat / 1007' +
                 '</button>'+
             '</h2>'+
