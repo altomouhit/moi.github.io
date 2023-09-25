@@ -138,7 +138,7 @@ const triggerTabList = document.querySelectorAll("#mail-filter-navlist .nav-tabs
 
 function resizeEvent() {
 	var e;
-	document.documentElement.clientWidth < 767 && ((e = document.querySelector(".email-chat-list a.active")) && e.classList.remove("active"), document.getElementById("emailchat-detailElem").style.display = "none")
+	document.documentElement.clientWidth < 767 && ((e = document.querySelector(".email-chat-list a.active")) && e.classList.remove("active"))
 }
 triggerTabList.forEach(e => {
 	const t = new bootstrap.Tab(e);
