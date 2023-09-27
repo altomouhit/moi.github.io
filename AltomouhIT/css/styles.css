@@ -11006,8 +11006,7 @@ pre[class*="language-"] {
 }
 .pagination ul {
 	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+	zoom: 1;
 	margin: 0 auto;
 	padding: 0
 }
@@ -12115,4 +12114,34 @@ footer h3.normal:after {
 	background: #06df9e;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	z-index: 9999
+}
+.about-thumbnail {
+	position: relative;
+	z-index: 1
+}
+.about-thumbnail img {
+	border-radius: 6px;
+	width: 100%
+}
+.about-us-thumbnail .single-thumb {
+	position: relative;
+	z-index: 1;
+	margin: 5px;
+	display: block;
+	overflow: hidden;
+	border-radius: 6px
+}
+.about-us-thumbnail .single-thumb img {
+	-webkit-transition-duration: 500ms;
+	-o-transition-duration: 500ms;
+	transition-duration: 500ms;
+	border-radius: 6px;
+}
+.about-us-thumbnail .single-thumb:first-child {
+	margin-bottom: 10px;
+}
+.about-us-thumbnail .single-thumb:hover img, .about-us-thumbnail .single-thumb:focus img {
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15)
 }
