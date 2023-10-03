@@ -564,10 +564,10 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 })
 //.................................. tooltip by balaram on 18/02/2023..................................//
 // preloader
-$(window).on('load', function() {
-    $('#preloader').fadeOut(); // fade out the loading animation
-    $('#status').delay(350).fadeOut('slow'); // fade out the white DIV that covers the website.
-    $('body').delay(350).css({
-        'overflow': 'hide'
-    });
-});
+// $(window).on('load', function() {
+//     $('#preloader').fadeOut(); // fade out the loading animation
+//     $('#status').delay(350).fadeOut('slow'); // fade out the white DIV that covers the website.
+//     $('body').delay(350).css({
+//         'overflow': 'hide'
+//     });
+// });
