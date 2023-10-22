@@ -762,3 +762,6 @@ hr.horizontal.dark {
     box-shadow: 0 4px 0 0 #008200;
     color: #fff;
 }
+/* .form-control:read-only {
+    background-color: var(--vz-form-control-disabled-bg);
+} */
