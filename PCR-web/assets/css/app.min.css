@@ -52,6 +52,8 @@
 	--vz-input-check-border: var(--vz-input-border);
 	--vz-sw-bg: #E4F1F5;
 	--vz-footerNew-bg: rgb(27, 20, 119);
+	--vz-headerNew-bg: rgb(46, 49, 145);
+	--vz-footer-bg: rgb(41, 170, 225);
 }
 :root .nav-tabs {
 	--vz-nav-tabs-link-active-bg: #f3f6f9
@@ -425,10 +427,10 @@
     background-position: center center; */
 	/* background: url(../img/topNav.svg); */
 	/* background: url(../img/footer/pacda.jpg); */
-	background: #392290 url(../img/new/header.svg);
+	background: var(--vz-headerNew-bg) url(../img/new/header.svg);
 	background-repeat: no-repeat;
 }
-[data-topbar=dark] #page-topbar::before {
+/* [data-topbar=dark] #page-topbar::before {
     content: ' ';
     display: block;
     position: absolute;
@@ -437,8 +439,8 @@
     width: 100%;
     height: 100%;
     opacity: 0.6;
-    /* background-color: var(--vz-footer-bg); */
-}
+    background-color: var(--vz-footer-bg);
+} */
 [data-topbar=dark] .navbar-header .btn-topbar {
 	color: #f3f3f9;
 }
@@ -1249,8 +1251,9 @@
 }
 [data-layout=vertical][data-sidebar=dark] .navbar-menu {
 	/* background: var(--vz-vertical-menu-bg-dark); */
-	background: transparent linear-gradient(164deg, #1e2248 0%, #1a51a0 31%, #39bde1 100%) 0% 0% no-repeat padding-box;
-	border-right: 1px solid var(--vz-vertical-menu-bg-dark)
+	/* background: transparent linear-gradient(164deg, #1e2248 0%, #1a51a0 31%, #39bde1 100%) 0% 0% no-repeat padding-box; */
+	background: transparent linear-gradient(164deg, var(--vz-headerNew-bg) 0%, var(--vz-headerNew-bg) 31%, var(--vz-footer-bg) 100%) 0% 0% no-repeat padding-box;
+	border-right: 0px solid var(--vz-headerNew-bg);
 }
 [data-layout=vertical][data-sidebar=dark] .navbar-menu .hamburger-icon span {
 	background-color: var(--vz-vertical-menu-item-color-dark)

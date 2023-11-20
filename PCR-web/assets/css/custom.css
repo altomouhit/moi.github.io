@@ -792,7 +792,8 @@ hr.horizontal.dark {
     border-left: 38px solid var(--vz-footerNew-bg);
 }
 .bannerImg {
-   height: 499px;
+   /* height: 499px; */
+   min-height: 100%;
 }
 .bannerBg {
     background-color: rgba(46, 49, 145, 0.8);
@@ -800,6 +801,9 @@ hr.horizontal.dark {
     left: auto;
     bottom: 0;
     width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .img-avatar {
     height: 49px;
