@@ -1,0 +1,75 @@
+@import url(Nunito/Nunito.css);
+:root {
+    --primary-color: #0f67f6;
+    --secondary-color: #191919;
+    --third-color: #08d9ff;
+    --primary-color-rgb: 15, 103, 246;
+    --secondary-color-rgb: 25, 25, 25;
+    --third-color-rgb: 8, 217, 255;
+    --link-color: #006cff;
+    --link-color-hover: #1227b8;
+    --link-color-active: #1227b8;
+    --gradient-color-from: rgb(11,105,149);
+    --gradient-color-to: rgb(34,155,207);
+    --gradient-color-from-rgb: 0, 108, 255;
+    --gradient-color-to-rgb: 18, 39, 184;
+}
+/* Custom page CSS
+-------------------------------------------------- */
+html {
+    font-size: 1rem;
+    scrollbar-color: #080808 #a6a7a8;
+    scroll-behavior: smooth;
+}
+
+
+/*! Other Browser */
+
+html {
+    --scrollbarBG: #ECEEF2;
+    --thumbBG: #BEC6D0;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    font-display: swap;
+    font-size: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+/* Scrolling End */
+/* Not required for template or sticky footer method. */
+/* main > .container {
+    padding: 125px 15px 0;
+} */
+/* Custom styles for this template */
+.bottom {
+    margin-top: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px;
+}
+.w-5 {
+    width: 5%;
+}
+.w-10 {
+    width: 10%;
+}
+.w-15 {
+    width: 15%;
+}

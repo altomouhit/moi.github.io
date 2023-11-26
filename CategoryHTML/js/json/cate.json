@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "DcategoryID": "1245",
+            "DcategoryName": "Banana"
+        },
+        {
+            "DcategoryID": "1246",
+            "DcategoryName": "Apple"
+        },
+        {
+            "DcategoryID": "1247",
+            "DcategoryName": "Orange"
+        }
+    ]
+}
