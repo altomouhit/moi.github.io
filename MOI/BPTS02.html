@@ -144,7 +144,7 @@
                       <legend>Request Type Details</legend>
                       <div class="row">
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Request_ser">Request Type<span style="color:red">*</span></label>
+                          <label for="Request_ser" class="required">Request Type</label>
                           <select name="Request_ser" id="Request_ser" class="form-control">
                             <option value="1000">Please select</option>
                             <option value="162">New</option>
@@ -153,9 +153,8 @@
                           </select>
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3" id="lichide">
-                          <label for="PermitNo">License Number </label>
-                          <input type="number" class="form-control numeric" id="PermitNo"
-                            placeholder="License Number" />
+                          <label for="PermitNo" class="required">License Number </label>
+                          <input type="number" class="form-control numeric" id="PermitNo" placeholder="License Number" />
                         </div>
                         <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <label for="Minor_Permit" class="required">Type of Minor Permit</label>
@@ -164,6 +163,14 @@
                             <option value="169">Fencing</option>
                             <option value="170">Maintenance &amp; Restoration</option>
                             <option value="171">Simple Addition</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Minor_Permit" class="required">Type of Fencing</label>
+                          <select name="Minor_Permit" id="Minor_Permit" class="form-control">
+                            <option value="1000">Please select</option>
+                            <option value="169">With Fencing</option>
+                            <option value="170">Without Fencing</option>
                           </select>
                         </div>
                         <!-- <div class="form-group top-25">
@@ -207,12 +214,12 @@
                         <div class="form-group col-sm-3 col-md-4 col-lg-3">
                           <label for="Phnumber_app" class="required">Mobile Number</label>
                           <input type="text" class="form-control numeric" id="Phnumber_app" placeholder="Mobile Number">
-                          <div id="Ph_Error" style="color:red">Please enter a 8-digits Mobile Number</div>
+                          <div id="Ph_Error" class="text-danger">Please enter a 8-digits Mobile Number</div>
                         </div>
                         <div class="form-group col-sm-5 col-md-4 col-lg-3">
                           <label for="eMail">Email</label>
                           <input type="text" class="form-control" id="eMail" placeholder="Email">
-                          <div class="col-sm-12 col-md-12 col-lg-12" id="email_Error" style="color:red">Please Enter
+                          <div class="col-sm-12 col-md-12 col-lg-12 text-danger" id="email_Error">Please Enter
                             Valid Email</div>
                         </div>
                       </div>
@@ -478,15 +485,15 @@
                       <legend>Plot Data</legend>
                       <div class="row">
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Plot Serial Number">Plot Serial Number <span style="color:red">*</span></label>
+                          <label for="PSN_Plot" class="required">Plot Serial Number </label>
                           <input type="text" class="form-control" id="PSN_Plot" placeholder="Plot Serial Number">
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Plot Number">Plot Number <span style="color:red">*</span></label>
+                          <label for="PSN" class="required">Plot Number </label>
                           <input type="number" class="form-control numeric" id="PSN" placeholder="Plot Number" min="0">
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Region">Governorate <span style="color:red">*</span></label>
+                          <label for="region_Ld" class="required">Governorate </label>
                           <select name="" id="region_Ld" class="form-control">
                             <option value="0">Please select</option>
                             <option value="1">Alshaqiya Region</option>
@@ -495,7 +502,7 @@
                           </select>
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Willayat">Willayat <span style="color:red">*</span></label>
+                          <label for="Willayat_Ld" class="required">Willayat </label>
                           <select name="" id="Willayat_Ld" class="form-control">
                             <option value="0">Please select</option>
                             <option value="1">Suhar </option>
@@ -506,7 +513,7 @@
                           </select>
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Village">Village <span style="color:red">*</span></label>
+                          <label for="village_Ld" class="required">Village </label>
                           <select name="" id="village_Ld" class="form-control">
                             <option value="0">Please select</option>
                             <option value="461">Hay elain</option>
@@ -517,22 +524,22 @@
                           </select>
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Square">Block <span style="color:red">*</span></label>
+                          <label for="square_Ld" class="required">Block </label>
                           <input type="number" class="form-control numeric" id="square_Ld" placeholder="Block"
                             min="0" />
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Plot Area">Plot Area <span style="color:red">*</span></label>
+                          <label for="Plotsurface_Ld" class="required">Plot Area </label>
                           <input type="number" class="form-control numeric" id="Plotsurface_Ld" placeholder="Plot Area"
                             min="0">
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="StreetNumber_Ld">Street Name <span style="color:red">*</span></label>
+                          <label for="StreetNumber_Ld" class="required">Street Name </label>
                           <input type="number" class="form-control numeric" id="StreetNumber_Ld"
                             placeholder="Street Name" min="0">
                         </div>
                         <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Type of use">Type of Use <span style="color:red">*</span></label>
+                          <label for="typeUse_Ld" class="required">Type of Use </label>
                           <select name="" id="typeUse_Ld" class="form-control">
                             <option value="0">Please select</option>
                             <option value="463">Residential</option>
@@ -550,21 +557,21 @@
                     <fieldset>
                       <legend>GIS Coordinates Details</legend>
                       <div class="row">
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3" style="display: none;">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3" style="display: none;">
                           <label for="Point">Point</label>
                           <input type="number" class="form-control" id="Point" placeholder="Point" value="1" />
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                          <label for="Eastings">Eastings <span style="color:red">*</span></label>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Eastings" class="required">Eastings </label>
                           <input type="text" class="form-control numeric" id="Eastings" placeholder="Eastings"
                             title="Please enter valid numbers" />
                         </div>
-                        <div class="form-group  col-sm-4 col-md-4 col-lg-3">
-                          <label for="Northings">Northings <span style="color:red">*</span></label>
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                          <label for="Northings" class="required">Northings </label>
                           <input type="text" class="form-control numeric" id="Northings" placeholder="Northings"
                             title="Please enter valid numbers" />
                         </div>
-                        <div class="form-group pull-right top-25">
+                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
                           <button type="button" class="btn btn-ts" onclick="GIS()" id="GISid">Add GIS</button>
                         </div>
                       </div>
@@ -1108,14 +1115,14 @@
                                     placeholder="Number of Floors">
                                 </div>
                                 <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                                  <label for="Ptotalarea" class="required">Total Builtup Area(m2)</label>
+                                  <label for="Ptotalarea" class="required">Total Buildup Area(m2)</label>
                                   <input type="number" class="form-control numeric" id="Ptotalarea"
-                                    placeholder="Total Builtup Area(m2)">
+                                    placeholder="Total Buildup Area(m2)">
                                 </div>
                                 <div class="form-group col-sm-4 col-md-4 col-lg-3">
                                   <label for="PFootprint">Plot Area(m2)</label>
                                   <input type="text" class="form-control" id="PFootprint" placeholder="Plot Area(m2)">
-                                  <div id="pTotal_PlotError" style="color:red">Please enter less than Total Builtup
+                                  <div id="pTotal_PlotError" style="color:red">Please enter less than Total Buildup
                                     Area(m2)</div>
                                 </div>
                               </div>
@@ -1143,7 +1150,7 @@
                                   </select>
                                 </div>
                                 <div class="form-group col-sm-4 col-md-4 col-lg-3" id="Pcolorhide">
-                                  <label for="Pcolor">Building Colour</label>
+                                  <label for="Pcolor">Building Color</label>
                                   <select name="Pcolor" id="Pcolor" class="form-control">
                                     <option value="0">Please select</option>
                                     <option value="461">White</option>
