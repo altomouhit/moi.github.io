@@ -1556,3 +1556,6 @@ li {
 .panel-footer {
     margin-top: 1rem;
 }
+#fencingTable_length {
+    display: none !important;
+}

@@ -14,7 +14,7 @@
   <meta name="description" content="Official Portal for Oman Municipality" />
   <meta name="author" content="oman Government, oman Municipality" />
   <meta name="generator" content="ITON oman" />
-  <title>Application for Minor Building Permit Fencing and Restoration</title>
+  <title>Application for Major Building Permit Fencing and Maintenance &amp; Restoration</title>
   <script src="js/jquery-3.6.0.js"></script>
   <link rel=icon href="img/Khanjar.png" type=image/png />
   <!-- font-awesome -->
@@ -66,7 +66,7 @@
                 Log in</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-sm btn-laguage btn-icon ml-3" href="BPTS02ar.html">
+              <a class="btn btn-sm btn-laguage btn-icon ml-3" href="BPTS18ar.html">
                 <span class="btn-inner--icon"><i class="fal fa-globe fa-fw fa-lg"></i></span>
                 <span class="btn-inner--text">
                   <?xml version="1.0" encoding="ISO-8859-1" ?> &#1593;&#1585;&#1576;&#1610;
@@ -91,7 +91,7 @@
           <div class="panel-head-services d-flex align-items-center justify-content-between ts-panel">
             <div class="panel-title mt-0 d-flex align-items-center">
               <img src="img/New_sub_services_icons/Minor-building-permit.svg" class="mr-2" alt="Technical Services">
-              <span id="requestTypeChange">Application for Minor Building Permit Fencing and Restoration</span>
+              <span id="requestTypeChange">Application for Major Building Permit Fencing and Maintenance &amp; Restoration</span>
             </div>
             <div>
               <ul class="d-flex mb-0" style="list-style: none;">
@@ -135,7 +135,7 @@
                     <fieldset>
                       <legend>Request Type Details</legend>
                       <div class="row">
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="Fencing_type" class="required">Request Type</label>
                           <select name="Fencing_type" id="Fencing_type" class="form-control">
                             <option value="1000">Please select</option>
@@ -143,11 +143,11 @@
                             <option value="246">Restoration</option>
                           </select>
                         </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="lichide1">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3" id="lichide1">
                           <label for="PermitNo">License Number </label>
                           <input type="number" class="form-control numeric" id="PermitNo" placeholder="License Number" />
                         </div>
-                        <!-- <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                        <!-- <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="Minor_Permit" class="required">Type of Minor Permit</label>
                           <select name="Minor_Permit" id="Minor_Permit" class="form-control">
                             <option value="1000">Please select</option>
@@ -190,7 +190,7 @@
                           <label for="aname" class="required">Applicant Name</label>
                           <input type="text" class="form-control" id="aname" placeholder="Applicant Name">
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="address_app" class="required">Address</label>
                           <input type="text" class="form-control" id="address_app" placeholder="Address">
                         </div>
@@ -225,13 +225,13 @@
                           <input type="text" class="form-control" id="astatus" placeholder="Application Status"
                             value="In Progress" readonly>
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="Service Request Name">Service Request Name </label>
                           <input type="text" class="form-control" id="srname" placeholder="Service Request Name"
-                            value="Application for Minor Building Permit Fencing and Restoration"
+                            value="Application for Major Building Permit Fencing and Maintenance &amp; Restoration"
                             readonly>
                         </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="srdate">Service Request Date</label>
                           <div class="date">
                             <input type="text" class="form-control" id="srdate" placeholder="DD/MM/YYYY" disabled />
@@ -239,7 +239,7 @@
                                 class="glyphicon glyphicon-calendar"></i></span>
                           </div>
                         </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="sdate">Submission Date</label>
                           <div class="date">
                             <input type="text" class="form-control" id="sdate" placeholder="DD/MM/YYYY" disabled />
@@ -267,7 +267,7 @@
                             <option value="3">Nakhal</option>
                           </select>
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="Municiplity_ser" class="required">Municipality</label>
                           <select name="Municiplity_ser" id="Municiplity_ser" class="form-control">
                             <option value="0">Please select</option>
@@ -297,152 +297,9 @@
                     <fieldset>
                       <legend>Beneficiary Details</legend>
                       <div class="row">
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Beneficiary_select" class="required">Beneficiary</label>
-                          <select name="Beneficiary_select" id="Beneficiary_select" class="form-control">
-                            <option value="1000">Please select</option>
-                            <option value="Owner" selected>Owner</option>
-                            <option value="Investor">Investor</option>
-                            <option value="Usufructer">Usufructer</option>
-                            <option value="Attorney">Power of Attorney</option>
-                            <option value="Heirs">Heirs</option>
-                            <option value="waqf">waqf</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="AuthorizationNo">
-                          <label for="Authorization_No" class="required">Usufructer Number</label>
-                          <input type="text" class="form-control numeric" id="Authorization_No"
-                            placeholder="Usufructer Number" />
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="InvestorNo">
-                          <label for="Investor_No" class="required">Investment Contract Number</label>
-                          <input type="text" class="form-control numeric" id="Investor_No"
-                            placeholder="Investment Contract Number" />
-                        </div>
-                        <div class="form-group col-sm-6 col-md-4 col-lg-3 benradio1" id="benradio">
-                          <label for="optradio" class="required">Beneficiary Type</label>
-                          <div class="form-control" id="orgtypeID">
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio" id="inlineRadio1"
-                                value="Individual" checked>
-                              <label class="form-check-label" for="inlineRadio1">Individual</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio" id="inlineRadio2"
-                                value="Organization">
-                              <label class="form-check-label" for="inlineRadio2">Organization</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3" id="samehide">
-                          <label for="optradio1" class="required">Same as Applicant</label>
-                          <div class="form-control">
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio1" id="inlineRadio3"
-                                value="Yes">
-                              <label class="form-check-label" for="inlineRadio3">Yes</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio1" id="inlineRadio4" value="No"
-                                checked>
-                              <label class="form-check-label" for="inlineRadio4">No</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="GCC_div">
-                          <label for="gccRadio1" class="required">GCC Resident / Public Lands</label>
-                          <div class="form-control">
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="gccRadio" id="gccRadio1" value="True">
-                              <label class="form-check-label" for="gccRadio1">Yes</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="gccRadio" id="gccRadio2" value="False"
-                                checked>
-                              <label class="form-check-label" for="gccRadio2">No</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="benhide">
-                          <label for="optradio2">Beneficiary Type </label>
-                          <input type="text" class="form-control" id="optradio2" placeholder="Beneficiary Type"
-                            readonly>
-                        </div>
-                      </div>
-
-                      <div id="benType" class="row">
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="BeneficiaryID" class="required">Beneficiary ID</label>
-                          <input type="text" class="form-control numeric" id="BeneficiaryID"
-                            placeholder="Beneficiary ID">
-                        </div>
-                        <div class="form-group col-sm-3 col-md-4 col-lg-3 ">
-                          <label for="Bendate" class="required">ID Expiry Date</label>
-                          <div class="date">
-                            <input type="text" class="form-control" id="Bendate" placeholder="dd/mm/yyyy" />
-                            <span class="input-group-addon" style="display: none;"><i
-                                class="glyphicon glyphicon-calendar"></i></span>
-                          </div>
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Bname">Beneficiary Name </label>
-                          <input type="text" class="form-control" id="Bname" placeholder="Beneficiary Name">
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="benId">
-                          <label for="Baddress" class="required">Beneficiary Address</label>
-                          <input type="text" class="form-control" id="Baddress" placeholder="Beneficiary Address">
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Bph" class="required">Beneficiary Mobile Number</label>
-                          <input type="text" class="form-control numeric" id="Bph"
-                            placeholder="Beneficiary Mobile Number" onchange="return isNumberKey(event,this)"
-                            maxlength="8">
-                          <div id="Ph_BenfError" style="color:red">Please Enter a 8-Digits Mobile Number</div>
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Bemail">Beneficiary Email Address</label>
-                          <input type="text" class="form-control" id="Bemail" placeholder="Beneficiary Email Address">
-                          <div id="Bemail_Error" style="color:red">Please Enter Valid Email</div>
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" id="waqf_Name">
-                          <label for="waqfName">waqf Name</label>
-                          <input type="text" class="form-control" id="waqfName" placeholder="waqf Name">
-                        </div>
-                      </div>
-                      <!-- End Beneficiary Details -->
-
-                      <div id="OrganizationDetails" class="row">
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="crid" class="required">Commerical Registration ID </label>
-                          <input type="text" class="form-control" id="crid" placeholder="Commerical Registration ID"
-                            validate-group="form-step-03">
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="cname">Commercial Name</label>
-                          <input type="text" class="form-control" id="cname" placeholder="Commercial Name">
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Phnumber">Mobile Number</label>
-                          <input type="text" class="form-control numeric" id="Phnumber" placeholder="Mobile Number"
-                            maxlength="8">
-                          <div id="Ph_OrgError" style="color:red">Please Enter a 8-Digits Mobile Number</div>
-                        </div>
-                        <div class="form-group  col-sm-4 col-md-4 col-lg-3">
-                          <label for="Email">Email</label>
-                          <input type="text" class="form-control" id="E-mail" placeholder="Email">
-                          <div class="col-sm-12 col-md-12 col-lg-12" id="Cemail_Error" style="color:red">Please
-                            Enter Valid Email</div>
-                        </div>
-                      </div>
-                      <!-- OrganizationDetails -->
-                      <div class="form-group pull-right">
-                        <button type="button" class="btn btn-ts" onclick="Beneficiary1()" id="form1Submit"><i
-                            class="fa fa-plus"></i>&nbsp;Add Beneficiary</button>
-                      </div>
-                      <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div class="table-responsive">
-                            <table id="Beneficiary1" class="table table-striped table-bordered" width="100%">
+                            <table id="Beneficiary1" class="table table-striped table-bordered table-hover w-100">
                               <thead class="ts-thead">
                               </thead>
                               <tbody>
@@ -467,15 +324,15 @@
                     <fieldset>
                       <legend>Plot Data</legend>
                       <div class="row">
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="PSN_Plot">Plot Serial Number</label>
                           <input type="text" class="form-control" id="PSN_Plot" placeholder="Plot Serial Number">
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="PSN" class="required">Plot Number</label>
                           <input type="number" class="form-control numeric" id="PSN" placeholder="Plot Number" min="0">
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="region_Ld" class="required">Governorate</label>
                           <select name="" id="region_Ld" class="form-control">
                             <option value="0">Please select</option>
@@ -484,7 +341,7 @@
                             <option value="3">Mosandam Region</option>
                           </select>
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="Willayat_Ld" class="required">Willayat</label>
                           <select name="" id="Willayat_Ld" class="form-control">
                             <option value="0">Please select</option>
@@ -495,7 +352,7 @@
                             <option value="3">Nakhal</option>
                           </select>
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="village_Ld" class="required">Village</label>
                           <select name="" id="village_Ld" class="form-control">
                             <option value="0">Please select</option>
@@ -506,22 +363,22 @@
                             <option value="466">Daris</option>
                           </select>
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="square_Ld" class="required">Block</label>
                           <input type="number" class="form-control numeric" id="square_Ld" placeholder="Block"
                             min="0" />
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="Plotsurface_Ld" class="required">Plot Area</label>
                           <input type="number" class="form-control numeric" id="Plotsurface_Ld" placeholder="Plot Area"
                             min="0">
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="StreetNumber_Ld" class="required">Street Name</label>
                           <input type="number" class="form-control numeric" id="StreetNumber_Ld"
                             placeholder="Street Name" min="0">
                         </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3">
+                        <div class="form-group col-sm-6 col-md-4 col-xl-3">
                           <label for="typeUse_Ld" class="required">Type of Use</label>
                           <select name="" id="typeUse_Ld" class="form-control">
                             <option value="0">Please select</option>
@@ -539,26 +396,6 @@
                     </div>
                     <fieldset>
                       <legend>GIS Coordinates Details</legend>
-                      <div class="row">
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3" style="display: none;">
-                          <label for="Point">Point</label>
-                          <input type="number" class="form-control" id="Point" placeholder="Point" value="1" />
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Eastings" class="required">Eastings</label>
-                          <input type="text" class="form-control numeric" id="Eastings" placeholder="Eastings"
-                            title="Please enter valid numbers" />
-                        </div>
-                        <div class="form-group col-sm-6 col-md-3 col-lg-3">
-                          <label for="Northings" class="required">Northings</label>
-                          <input type="text" class="form-control numeric" id="Northings" placeholder="Northings"
-                            title="Please enter valid numbers" />
-                        </div>
-                        <div class="form-group col-md-6 d-flex align-items-center justify-content-end mt-4">
-                          <button type="button" class="btn btn-ts" onclick="GIS()" id="GISid">Add GIS</button>
-                        </div>
-                      </div>
-                      <!-- End row -->
                       <div class="row">
                         <div class="table-responsive">
                           <table id="GIS_table" class="table table-striped table-bordered">
@@ -584,21 +421,13 @@
                 <fieldset id="fencingDetails">
                   <legend>Fencing Details</legend>
                   <div class="row">
-                    <div class="form-group col-sm-6 col-md-3 col-lg-3" id="buildingNumberDiv" style="display: none;">
-                      <label for="PBuildingNo">Building Number</label> 
-                      <input class="form-control" id="PBuildingNo" maxlength="50" min="0" placeholder="Building Number" type="text">
-                    </div>
-                    <div class="form-group col-sm-6 col-md-3 col-lg-3" id="buildingNameDiv" style="display: none;">
-                      <label for="PBuildingname">Building Name</label> 
-                      <input class="form-control" id="PBuildingname" maxlength="100" placeholder="Building Name" type="text">
-                    </div>
-                    <div class="form-group col-sm-6 col-md-3 col-lg-3" id="typeOfBuildingDiv">
-                      <label class="required" for="Ptype">Type of Use</label> 
-                      <select class="form-control" id="Ptype">
+                    <div class="col mb-2">
+                      <label class="required" for="pType">Type of Use</label> 
+                      <select class="form-control" id="pType">
                         <option value="1000">Please select</option>
                         <option value="572">Residential Commercial</option>
                         <option value="598">Agricultural</option>
-                        <option value="900"> Residential Commercial Tourist</option>
+                        <option value="900">Residential Commercial Tourist</option>
                         <option value="138">Residential</option>
                         <option value="139">Commercial</option>
                         <option value="140">Industrial</option>
@@ -607,35 +436,35 @@
                       </select>
                     </div>
                     
-                    <div class="form-group col-sm-6 col-md-3 col-lg-3" id="plotAreaDiv">
-                      <label for="PFootprint" class="required">Plot Area(m<sup>2</sup>)</label> 
-                      <input class="form-control" id="PFootprint" min="0" placeholder="Plot Area(m2)" type="text">
+                    <div class="col mb-2">
+                      <label for="pFootprint" class="required">Plot Area(m<sup>2</sup>)</label> 
+                      <input class="form-control numeric" id="pFootprint" min="0" placeholder="Plot Area(m2)" type="text">
                       <div id="pTotal_PlotError" class="text-danger d-none">
-                        Please enter less than Plot Area(m2)
+                        Please enter less than Plot Area(m<sup>2</sup>)
                       </div>
                       <div id="pTotal_PlotAreaError" class="text-danger d-none">
                         Please enter less than Plot Data's Plot Area
                       </div>
                     </div>
 
-                    <div class="form-group col-sm-6 col-md-3 col-lg-3" id="PcolortypeDiv">
-                      <label for="Pcolortype">Color Type</label> 
-                      <select class="form-control" id="Pcolortype">
-                        <option selected="selected" value="1000">Please select</option>
+                    <div class="col mb-2">
+                      <label for="pColorType" class="required">Color Type</label> 
+                      <select class="form-control" id="pColorType">
+                        <option value="1000">Please select</option>
                         <option value="438">Stone</option>
                         <option value="439">Aluminum</option>
                         <option value="440">Building Color</option>
                       </select>
                     </div>
                     
-                    <div class="form-group col-sm-6 col-md-4 col-lg-3" id="P_LengthOfFenceDiv">
-                      <label for="P_LengthOfFence" class="required">Length of the fence in meters</label> 
-                      <input class="form-control" id="P_LengthOfFence" placeholder="Length of the fence in meters" type="text">
+                    <div class="col mb-2">
+                      <label for="pLengthFence" class="required">Length of the fence in meters</label> 
+                      <input class="form-control numeric" id="pLengthFence" placeholder="Length of the fence in meters" type="text">
                     </div>
 
-                    <div class="form-group col-sm-6 col-md-4 col-lg-3" id="P_FenceColorDiv">
-                      <label for="p_fencecolor" class="required">Fence Color</label>
-                      <select class="form-control" id="p_fencecolor">
+                    <div class="col mb-2">
+                      <label for="pFenceColor" class="required">Fence Color</label>
+                      <select class="form-control" id="pFenceColor">
                         <option value="1000">Please select</option>
                         <option value="126">Red</option>
                         <option value="127">PINK</option>
@@ -647,47 +476,39 @@
                     </div>
                   </div> <!-- /.row -->
 
-                  <div class="row">
+                  <div class="row my-3">
                     <div class="col-md-12">
                       <div class="form-group d-flex align-items-center justify-content-end">
-                        <button class="btn btn-ts" id="addProposedid" onclick="addProposed()" type="button">Add</button>
+                        <button class="btn btn-default" id="cancelBtn" type="button"> <i class='fas fa-times-circle fa-fw fa-lg'></i>&nbsp; Cancel</button>
+                        <button class="btn btn-ts" id="fencingBtn" onclick="fencingFn()" type="button">
+                          <i class='fal fa-plus fa-fw'></i>&nbsp; Add</button>
                       </div>
                     </div>
                   </div> <!-- /.row -->
 
-                  <table class="table table-striped table-bordered w-100 " id="Fencing_details_table" >
-                    <thead class="ts-thead">
-                      <tr role="row">
-                        <th>Storeys</th>
-                        <th>Building Number</th>
-                        <th>Building Name</th>
-                        <th>Type of Use</th>
-                        <th>Building Status</th>
-                        <th>Number of Units</th>
-                        <th>Number of Floors</th>
-                        <th>Length Of Fence</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td >
-                          <a class="btn btn-ts" data-target="#addPstoreysModal" data-toggle="modal" href="javascript:void(0)" id="Proposedaddstoreys">Add Storey Data</a>
-                        </td>
-                        <td>BNP_6999321</td>
-                        <td></td>
-                        <td>Residential</td>
-                        <td>Please select</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>2332</td>
-                        <td>
-                          <a class="text-success" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0)" id="editbuilgdetails1" title="Edit"><i class="fal fa-edit"></i></a>
-                          <a class="text-danger" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0)" id="removepbuilgdetails" title="Delete"><i class="fal fa-trash"></i></a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-hover w-100" id="fencingTable">
+                          <thead class="ts-thead">
+                            <tr role="row">
+                              <th>Type of Use</th>                  <!-- 0 -->
+                              <th></th>                             <!-- 1 -->
+                              <th>Plot Area(m<sup>2</sup>)</th>     <!-- 2 -->
+                              <th>Color Type</th>                   <!-- 3 -->
+                              <th></th>                             <!-- 4 -->
+                              <th>Length of the fence in meters</th><!-- 5 -->
+                              <th>Fence Color</th>                  <!-- 6 -->
+                              <th></th>                             <!-- 7 -->
+                              <th>Actions</th>                      <!-- 8 -->
+                            </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div> <!-- /.col-12 -->
+                  </div> <!-- /.row -->
                 </fieldset>
                 <!-- Fencing -->
                 
@@ -724,60 +545,8 @@
                     <fieldset>
                       <legend>Consultant Details</legend>
                       <div class="row">
-                        <div class="form-group col-sm-5 col-md-4 col-lg-3">
-                          <label for="optradio4">Consultant</label>
-                          <div class="form-control">
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio4" id="Applicant" value="179"
-                                checked>
-                              <label class="form-check-label" for="Applicant">Applicant</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="optradio4" id="Other" value="180">
-                              <label class="form-check-label" for="Other">Other</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-sm-4 col-md-4 col-lg-3 CommericalRegistrationID_val">
-                          <label for="CommericalRegistrationID" class="required">Commercial Registration ID </label>
-                          <input type="text" class="form-control" id="CommericalRegistrationID"
-                            placeholder="Commercial Registration ID" />
-                        </div>
-                        <div class="form-group col-sm-3 col-md-4 col-lg-3 CommericalRegistrationID_val"
-                          id="commrcialname">
-                          <label for="ComName" class="required">Commercial Name</label>
-                          <input type="text" class="form-control" id="ComName" placeholder="Commercial Name" />
-                        </div>
-                        <div class="form-group col-sm-5 col-md-4 col-lg-3 Civilno">
-                          <label for="CivilIDNumber" class="required">Civil Number</label>
-                          <input type="text" class="form-control" id="CivilIDNumber" placeholder="Civil Number" />
-                        </div>
-                        <div class="form-group col-sm-3 col-md-4 col-lg-3  Civilno">
-                          <label for="Consuldate" class="required">ID Expiry Date</label>
-                          <div class="date">
-                            <input type="text" class="form-control" id="Consuldate" placeholder="dd/mm/yyyy" />
-                            <span class="input-group-addon" style="display: none;"><i
-                                class="glyphicon glyphicon-calendar"></i></span>
-                          </div>
-                        </div>
-                        <!-- <div class="form-group col-sm-4 col-md-4 col-lg-3">
-                              <label for="NameofApprovedEngineer" class="required">Name of Authorized Engineer</label>
-                              <input type="text" class="form-control" id="NameofApprovedEngineer"
-                                placeholder="Name of Authorized Engineer" />
-                            </div>
-                            <div class="form-group col-sm-3 col-md-4 col-lg-3 hidden">
-                              <label for="Address_cons">Address</label>
-                              <input type="text" class="form-control" id="Address_cons" placeholder="Address" />
-                            </div> -->
-                        <div class="form-group col-sm-3 col-md-4 col-lg-3 d-flex align-items-end justify-content-end">
-                          <button type="button" class="btn btn-ts" onclick="Cons_fn()" id="Consid">
-                            <i class="fal fa-plus fa-fw"></i>Add</button>
-                        </div>
-                      </div> <!-- /.row -->
-
-                      <div class="row">
                         <div class="table-responsive">
-                          <table id="Consu_table" class="table table-bordered table-hover" width="100%">
+                          <table id="Consu_table" class="table table-bordered table-hover w-100">
                             <thead class="ts-thead">
                             </thead>
                             <tbody>
@@ -901,11 +670,11 @@
                 <div class="form-group">
                   <div class="row">
                     <fieldset>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3">
+                      <div class="form-group col-sm-6 col-md-4 col-xl-3">
                         <label for="Commentxt">Comments</label>
                         <textarea class="form-control" id="Commentxt" placeholder="Comments" rows="5"></textarea>
                       </div>
-                      <div class="form-group col-sm-6 col-md-3 col-lg-3" id="Freezehide">
+                      <div class="form-group col-sm-6 col-md-4 col-xl-3" id="Freezehide">
                         <label for="CommentFreeze">Freeze Comments &amp; Unfreeze</label>
                         <textarea class="form-control" id="CommentFreeze" placeholder="Freeze Comments and Unfreeze"
                           rows="5"></textarea>
@@ -972,8 +741,7 @@
                               <td></td>
                               <td></td>
                               <td></td>
-                              <td><button type="button" class="btn btn-default"> <span
-                                    class="glyphicon glyphicon-download"></span></button></td>
+                              <td><button type="button" class="btn btn-default"> <span class="fal fa-download fa-fw fa-lg"></span></button></td>
                             </tr>
                           </tbody>
                         </table>
@@ -1172,6 +940,7 @@
 
   <script src="js/moi-webapp.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/TS/fencingMaintenance.js"></script>
   <script>
     $(document).ready(function () {
       var org_type, AppType_BND;
