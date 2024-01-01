@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>:: Login ::</title>
+    <title>:: User Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/all.css" />
@@ -55,7 +55,8 @@
             <div class="absolute inset-0">
                 <img src="assets/images/auth/bg-gradient.png" alt="image" class="h-full w-full object-cover" />
             </div>
-            <div class="relative flex min-h-screen items-center justify-center bg-[url(../images/auth/map.png)] bg-cover bg-center bg-no-repeat px-6 py-10 dark:bg-[#060818] sm:px-16">
+            <div
+                class="relative flex min-h-screen items-center justify-center bg-[url(../images/auth/map.png)] bg-cover bg-center bg-no-repeat px-6 py-10 dark:bg-[#060818] sm:px-16">
                 <img src="assets/images/auth/coming-soon-object1.png" alt="image"
                     class="absolute left-0 top-1/2 h-full max-h-[893px] -translate-y-1/2" />
                 <img src="assets/images/auth/coming-soon-object2.png" alt="image"
@@ -66,16 +67,16 @@
                 <div
                     class="relative flex w-full max-w-[1502px] flex-col justify-between overflow-hidden rounded-md bg-white/60 backdrop-blur-lg dark:bg-black/50 lg:min-h-[758px] lg:flex-row lg:gap-10 xl:gap-0">
                     <div
-                        class="relative hidden w-full items-center justify-center bg-[linear-gradient(225deg,rgba(239,18,98,1)_0%,rgba(67,97,238,1)_100%)] p-5 lg:inline-flex lg:max-w-[835px] xl:-ms-32 ltr:xl:skew-x-[14deg] rtl:xl:skew-x-[-14deg]">
+                        class="relative hidden w-full items-center justify-center bg-[linear-gradient(225deg,rgba(239,18,98,1)_0%,rgba(67,97,238,1)_100%)] p-5 lg:inline-flex lg:max-w-[835px] xl:-ms-28 ltr:xl:skew-x-[14deg] rtl:xl:skew-x-[-14deg]">
                         <div
                             class="absolute inset-y-0 w-8 from-primary/10 via-transparent to-transparent ltr:-right-10 ltr:bg-gradient-to-r rtl:-left-10 rtl:bg-gradient-to-l xl:w-16 ltr:xl:-right-20 rtl:xl:-left-20">
                         </div>
                         <div class="ltr:xl:-skew-x-[14deg] rtl:xl:skew-x-[14deg]">
-                            <a href="index.html" class="block w-48 ms-10">
+                            <a href="index.html" class="w-48 block ms-10">
                                 <img src="assets/images/GCC_Logo_white.svg" alt="Logo" class="w-full" />
                             </a>
                             <div class="hidden w-full max-w-[430px] lg:block">
-                                <img src="assets/images/auth/login.svg" alt="Cover Image" class="w-full" />
+                                <img src="assets/images/auth/register.svg" alt="Cover Image" class="w-full" />
                             </div>
                         </div>
                     </div>
@@ -124,11 +125,26 @@
                         <div class="w-full max-w-[440px] lg:mt-16">
                             <div class="mb-10">
                                 <h1 class="text-3xl font-extrabold uppercase !leading-snug text-primary md:text-4xl">
-                                    Sign in</h1>
+                                    Sign Up</h1>
                                 <p class="text-base font-bold leading-normal text-white-dark">Enter your email and
-                                    password to login</p>
+                                    password to register</p>
                             </div>
-                            <form class="space-y-5 dark:text-white" @submit.prevent="window.location='dashboard.html'">
+                            <form class="space-y-5 dark:text-white" @submit.prevent="window.location='otp.html'">
+                                <div>
+                                    <label for="Name">Name</label>
+                                    <div class="relative text-white-dark">
+                                        <input id="Name" type="text" placeholder="Enter Name"
+                                            class="form-input ps-10 placeholder:text-white-dark" />
+                                        <span class="absolute start-4 top-1/2 -translate-y-1/2">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <circle cx="9" cy="4.5" r="3" fill="#888EA8" />
+                                                <path opacity="0.5"
+                                                    d="M15 13.125C15 14.989 15 16.5 9 16.5C3 16.5 3 14.989 3 13.125C3 11.261 5.68629 9.75 9 9.75C12.3137 9.75 15 11.261 15 13.125Z"
+                                                    fill="#888EA8" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
                                 <div>
                                     <label for="Email">Email</label>
                                     <div class="relative text-white-dark">
@@ -172,10 +188,9 @@
                                         </span>
                                     </div>
                                 </div>
-                                
                                 <button type="submit"
                                     class="btn btn-gradient !mt-6 w-full border-0 uppercase shadow-[0_10px_20px_-10px_rgba(67,97,238,0.44)]">
-                                    Sign in
+                                    Sign Up
                                 </button>
                             </form>
 
@@ -185,11 +200,12 @@
                                 <span
                                     class="relative bg-white px-2 font-bold uppercase text-white-dark dark:bg-dark dark:text-white-light">or</span>
                             </div>
+                            
                             <div class="text-center dark:text-white">
-                                Don't have an account ?
-                                <a href="user-register.html"
+                                Already have an account ?
+                                <a href="index.html"
                                     class="uppercase text-primary underline transition hover:text-black dark:hover:text-white">SIGN
-                                    UP</a>
+                                    IN</a>
                             </div>
                         </div>
                         <p class="absolute bottom-6 w-full text-center dark:text-white">
@@ -209,7 +225,6 @@
     <script defer src="assets/js/alpine.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/GCC.js"></script>
-    
 </body>
 
 </html>
