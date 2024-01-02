@@ -63,15 +63,15 @@
         <div :class="{'dark text-white-dark' : $store.app.semidark}">
             <nav x-data="sidebar"
                 class="sidebar fixed bottom-0 top-0 z-50 h-full min-h-screen w-[260px] shadow-[5px_0_25px_0_rgba(94,92,154,0.1)] transition-all duration-300">
-                <div class="h-full main-sidebar1 bg-white">
-                    <div class="flex items-center justify-between px-4 py-3">
+                <div class="h-full main-sidebar">
+                    <div class="flex items-center justify-between px-1 py-3">
                         <a href="dashboard.html" class="main-logo flex shrink-0 items-center">
-                            <img class="ml-[5px] w-8 flex-none" src="assets/images/GCC_Logo_color.svg" alt="image" />
-                            <span class="align-middle text-2xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline">GCC</span>
+                            <img class="ml-[1px] w-14 flex-none" src="assets/images/GCC_Logo_white.svg" alt="image" />
+                            <span class="align-middle text-2xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline logo-name">GCC</span>
                         </a>
                         <!-- <p>CONSULTATIVE AUTHORITY</p> -->
                         <a href="javascript:;"
-                            class="collapse-icon flex h-8 w-8 items-center rounded-full transition duration-300 hover:bg-gray-500/10 rtl:rotate-180 dark:text-white-light dark:hover:bg-dark-light/10"
+                            class="collapse-icon flex h-8 w-8 items-center rounded-full transition duration-300 hover:bg-gray-500/10 rtl:rotate-180 dark:text-white-light dark:hover:bg-dark-light/10 text-white"
                             @click="$store.app.toggleSidebar()">
                             <svg class="m-auto h-5 w-5" width="20" height="20" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +107,7 @@
                                                     d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z"
                                                     fill="currentColor" />
                                             </svg>
-                                            <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Dashboard</span>
+                                            <span class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Dashboard</span>
                                         </div>
                                     </a>
                                 </li>
@@ -124,7 +124,7 @@
                                                     fill="currentColor" />
                                             </svg>
                                             <span
-                                                class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Calendar</span>
+                                                class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Calendar</span>
                                         </div>
                                     </a>
                                 </li>
@@ -138,7 +138,7 @@
                                                 <circle cx="9.00098" cy="6" r="4" fill="currentColor"></circle>
                                                 <ellipse cx="9.00098" cy="17.001" rx="7" ry="4" fill="currentColor"></ellipse>
                                             </svg>
-                                            <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Committees</span>
+                                            <span class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Committees</span>
                                         </div>
                                     </a>
                                 </li>
@@ -161,7 +161,7 @@
                                                     fill="currentColor" />
                                             </svg>
                                             <span
-                                                class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Documents</span>
+                                                class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Documents</span>
                                         </div>
                                     </a>
                                 </li>
@@ -177,7 +177,7 @@
                                                     d="M15.486 1C16.7529 0.999992 17.7603 0.999986 18.5683 1.07681C19.3967 1.15558 20.0972 1.32069 20.7212 1.70307C21.3632 2.09648 21.9029 2.63623 22.2963 3.27821C22.6787 3.90219 22.8438 4.60265 22.9226 5.43112C22.9994 6.23907 22.9994 7.24658 22.9994 8.51343V9.37869C22.9994 10.2803 22.9994 10.9975 22.9597 11.579C22.9191 12.174 22.8344 12.6848 22.6362 13.1632C22.152 14.3323 21.2232 15.2611 20.0541 15.7453C20.0249 15.7574 19.9955 15.7691 19.966 15.7804C19.8249 15.8343 19.7039 15.8806 19.5978 15.915H17.9477C17.9639 15.416 17.9639 14.8217 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C7.22423 6.03516 6.41369 6.03516 5.73242 6.06309V4.4127C5.76513 4.29934 5.80995 4.16941 5.86255 4.0169C5.95202 3.75751 6.06509 3.51219 6.20848 3.27821C6.60188 2.63623 7.14163 2.09648 7.78361 1.70307C8.40759 1.32069 9.10805 1.15558 9.93651 1.07681C10.7445 0.999986 11.7519 0.999992 13.0188 1H15.486Z"
                                                     fill="currentColor" />
                                             </svg>
-                                            <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Discussions</span>
+                                            <span class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Discussions</span>
                                         </div>
                                     </a>
                                 </li>
@@ -198,7 +198,7 @@
                                                     fill="currentColor" />
                                             </svg>
                                             <span
-                                                class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Consultation Directory</span>
+                                                class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Consultation Directory</span>
                                         </div>
                                     </a>
                                 </li>
@@ -215,7 +215,7 @@
                                                     d="M12 5.25C12.4142 5.25 12.75 5.58579 12.75 6V7.25H14C14.4142 7.25 14.75 7.58579 14.75 8C14.75 8.41421 14.4142 8.75 14 8.75L12.75 8.75L12.75 10C12.75 10.4142 12.4142 10.75 12 10.75C11.5858 10.75 11.25 10.4142 11.25 10L11.25 8.75H9.99997C9.58575 8.75 9.24997 8.41421 9.24997 8C9.24997 7.58579 9.58575 7.25 9.99997 7.25H11.25L11.25 6C11.25 5.58579 11.5858 5.25 12 5.25ZM7.25 14C7.25 13.5858 7.58579 13.25 8 13.25H16C16.4142 13.25 16.75 13.5858 16.75 14C16.75 14.4142 16.4142 14.75 16 14.75H8C7.58579 14.75 7.25 14.4142 7.25 14ZM8.25 18C8.25 17.5858 8.58579 17.25 9 17.25H15C15.4142 17.25 15.75 17.5858 15.75 18C15.75 18.4142 15.4142 18.75 15 18.75H9C8.58579 18.75 8.25 18.4142 8.25 18Z"
                                                     fill="currentColor" />
                                             </svg>
-                                            <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Archives</span>
+                                            <span class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Archives</span>
                                         </div>
                                     </a>
                                 </li>
@@ -229,7 +229,7 @@
                                                 <path d="M22.3665 10.6922C23.2112 9.84754 23.2112 8.47812 22.3665 7.63348C21.5219 6.78884 20.1525 6.78884 19.3078 7.63348L19.1806 7.76071C19.0578 7.88348 19.0022 8.05496 19.0329 8.22586C19.0522 8.33336 19.0879 8.49053 19.153 8.67807C19.2831 9.05314 19.5288 9.54549 19.9917 10.0083C20.4545 10.4712 20.9469 10.7169 21.3219 10.847C21.5095 10.9121 21.6666 10.9478 21.7741 10.9671C21.945 10.9978 22.1165 10.9422 22.2393 10.8194L22.3665 10.6922Z" fill="currentColor"></path>
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 9C7.25 8.58579 7.58579 8.25 8 8.25H14.5C14.9142 8.25 15.25 8.58579 15.25 9C15.25 9.41421 14.9142 9.75 14.5 9.75H8C7.58579 9.75 7.25 9.41421 7.25 9ZM7.25 13C7.25 12.5858 7.58579 12.25 8 12.25H11C11.4142 12.25 11.75 12.5858 11.75 13C11.75 13.4142 11.4142 13.75 11 13.75H8C7.58579 13.75 7.25 13.4142 7.25 13ZM7.25 17C7.25 16.5858 7.58579 16.25 8 16.25H9.5C9.91421 16.25 10.25 16.5858 10.25 17C10.25 17.4142 9.91421 17.75 9.5 17.75H8C7.58579 17.75 7.25 17.4142 7.25 17Z" fill="currentColor"></path>
                                             </svg>
-                                            <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Rules And Regulations</span>
+                                            <span class="text-white ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Rules And Regulations</span>
                                         </div>
                                     </a>
                                 </li>
@@ -267,10 +267,10 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="hidden ltr:mr-2 rtl:ml-2 sm:block">
+                        <div class=" ltr:mr-2 rtl:ml-2 sm:block">
                             <ul class="flex items-center space-x-2 rtl:space-x-reverse dark:text-[#d0d2d6]">
                                 <li>
-                                    <a href="apps-calendar.html"
+                                    <a href="calendar.html"
                                         class="block rounded-full bg-white-light/40 p-2 hover:bg-white-light/90 hover:text-primary dark:bg-dark/40 dark:hover:bg-dark/60">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -287,7 +287,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="apps-todolist.html"
+                                    <a href="javascript:;"
                                         class="block rounded-full bg-white-light/40 p-2 hover:bg-white-light/90 hover:text-primary dark:bg-dark/40 dark:hover:bg-dark/60">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -304,7 +304,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="apps-chat.html"
+                                    <a href="discussions.html"
                                         class="block rounded-full bg-white-light/40 p-2 hover:bg-white-light/90 hover:text-primary dark:bg-dark/40 dark:hover:bg-dark/60">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -545,7 +545,7 @@
                                 <a href="javascript:;" class="group relative" @click="toggle()">
                                     <span>
                                         <img class="h-9 w-9 rounded-full object-cover saturate-50 group-hover:saturate-100"
-                                            src="assets/images/avatar.svg" alt="image" /></span>
+                                            src="assets/images/userProfile/profile-2.jpg" alt="image" /></span>
                                 </a>
                                 <ul x-cloak x-show="open" x-transition x-transition.duration.300ms
                                     class="top-11 w-[230px] !py-0 font-semibold text-dark ltr:right-0 rtl:left-0 dark:text-white-dark dark:text-white-light/90">
@@ -553,7 +553,7 @@
                                         <div class="flex items-center px-4 py-4">
                                             <div class="flex-none">
                                                 <img class="h-10 w-10 rounded-md object-cover"
-                                                    src="assets/images/avatar.svg" alt="image" />
+                                                    src="assets/images/userProfile/profile-2.jpg" alt="image" />
                                             </div>
                                             <div class="truncate ltr:pl-4 rtl:pr-4">
                                                 <h4 class="text-base">
@@ -762,13 +762,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div x-data="notes" class="mb-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-1">
-                            <div class="panel h-full pb-0 sm:col-span-2 xl:col-span-1">
-                                
-                            </div>
-                        </div>
-
+                        
                         <div class="mb-5 grid grid-cols-1 gap-5 lg:grid-cols-3 xl:grid-cols-4">
                             <div x-data="notes" class="panel lg:col-span-2 xl:col-span-3">
                                 <div class="flex items-center text-center">
@@ -802,7 +796,7 @@
                                         </div>
                                     </template>
                                     <template x-if="filterdNotesList.length">
-                                        <div class="min-h-[400px] sm:min-h-[300px]">
+                                        <div class="min-h-[400px]1 sm:min-h-[300px]1">
                                             <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
                                                 <template x-for="note in filterdNotesList" :key="note.id">
                                                     <div class="panel pb-12" :class="{
@@ -818,7 +812,7 @@
                                                                     <div class="flex-none">
                                                                         <template x-if="note.thumb">
                                                                             <div class="rounded-full bg-gray-300 p-0.5 dark:bg-gray-700">
-                                                                                <img class="h-8 w-8 rounded-full object-cover"
+                                                                                <img class="h-14 w-14 rounded-full object-cover"
                                                                                     :src="`assets/images/${note.thumb}`" />
                                                                             </div>
                                                                         </template>
@@ -1230,9 +1224,9 @@
                                             <div class="flex items-center justify-between ">
                                                 <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
                                                     <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-2.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" />
                                                 </div>
                                                 <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
@@ -1251,9 +1245,9 @@
                                             <div class="flex items-center justify-between ">
                                                 <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
                                                     <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-2.jpg" alt="image" />
                                                 </div>
                                                 <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
@@ -1272,9 +1266,9 @@
                                             <div class="flex items-center justify-between ">
                                                 <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
                                                     <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/satish.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/sri.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/vinod.jpg" alt="image" />
                                                 </div>
                                                 <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
@@ -1293,9 +1287,9 @@
                                             <div class="flex items-center justify-between ">
                                                 <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
                                                     <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
-                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/avatar.svg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/santosh.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" />
+                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-2.jpg" alt="image" />
                                                 </div>
                                                 <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
@@ -1503,13 +1497,13 @@
         </div>
     </div>
 
-    <script src="assets/js/alpine-collaspe.min.js"></script>
-    <script src="assets/js/alpine-persist.min.js"></script>
+    <script type="text/javascript" src="assets/js/alpine-collaspe.min.js"></script>
+    <script type="text/javascript" src="assets/js/alpine-persist.min.js"></script>
     <script defer src="assets/js/alpine-ui.min.js"></script>
     <script defer src="assets/js/alpine-focus.min.js"></script>
     <script defer src="assets/js/alpine.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
     <script defer src="assets/js/apexcharts.js"></script>
-    <script src="assets/js/GCC.js"></script>
+    <script type="text/javascript" src="assets/js/GCC.js"></script>
 </body>
 </html>

@@ -2542,9 +2542,12 @@ body.dark {
 
 .sidebar .nav-item>a.active,
 .sidebar .nav-item>button.active {
-    background-color: #00000014;
+    /* background-color: #00000014;
     --tw-text-opacity: 1;
-    color: rgb(14 23 38/var(--tw-text-opacity))
+    color: rgb(14 23 38/var(--tw-text-opacity)) */
+    background: rgba(255, 255, 255, 0.1);
+    color: #9ce9fd !important;
+    border-left: solid 5px #9ce9fd;
 }
 
 :is(.dark .sidebar .nav-item>a.active),
@@ -2636,9 +2639,9 @@ body.dark {
 
 .sidebar .nav-item a div:first-child svg,
 .sidebar .nav-item button div:first-child svg {
-    height: 1.25rem;
-    width: 1.25rem;
-    color: #0e172680
+    height: 1.625rem;
+    width: 1.625rem;
+    color: #ffffff;
 }
 
 :is(.dark .sidebar .nav-item a div:first-child svg),
@@ -3002,7 +3005,8 @@ body.dark {
 
 .collapsible-vertical .sidebar ul>h2 span {
     display: none;
-    white-space: nowrap
+    white-space: nowrap;
+    color: #c9ab6c;
 }
 
 .collapsible-vertical .sidebar ul>h2 svg {
@@ -8127,7 +8131,7 @@ pre {
 .ps__rail-y>.ps__thumb-y {
     width: .375rem !important;
     --tw-bg-opacity: 1 !important;
-    background-color: rgb(221 221 221/var(--tw-bg-opacity)) !important
+    background-color: rgb(57 204 219/var(--tw-bg-opacity)) !important
 }
 
 :is(.dark .ps__rail-y>.ps__thumb-y) {

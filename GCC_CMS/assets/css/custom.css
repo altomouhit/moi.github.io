@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 .main-sidebar {
     box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    background: url(../images/bg-pattern.png), url(../images/color_pattern.png),
+    background: url(../images/bg-pattern.png),
                 linear-gradient(180deg, #002650 50%, #025f3e);
     background-position: center center;
     transition: all 0.5s;
@@ -141,4 +141,7 @@ body::-webkit-scrollbar-thumb {
 .Skip {
     text-align: center;
     font-size: 21px;
+}
+.logo-name {
+    color: #ff9a09;
 }
