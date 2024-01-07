@@ -266,7 +266,7 @@ document.addEventListener('alpine:init', () => {
                     id: maxNoteId + 1,
                     title: this.params.title,
                     user: this.params.user,
-                    thumb: 'profile-21.jpeg',
+                    thumb: '',
                     description: this.params.description,
                     date: dt.getDate() + '/' + Number(dt.getMonth()) + 1 + '/' + dt.getFullYear(),
                     isFav: false,
@@ -353,90 +353,91 @@ document.addEventListener('alpine:init', () => {
         loginUser: {
             id: 0,
             name: 'Ahlam Hilal Khamis Alrasbi',
-            path: 'userProfile/profile-3.jpg',
+            thumb: 'userProfile/profile-3.jpg',
             designation: 'Admin',
         },
+        defaultParams: {
+            id: null,
+            title: '',
+            description: '',
+            tag: '',
+            user: '',
+            thumb: '',
+        },
+        isAddDiscussionsModal: false,
+        params: {
+            id: null,
+            title: '',
+            description: '',
+            tag: '',
+            user: '',
+            thumb: '',
+        },
         contactList: [{
-                userId: 1,
-                name: 'User Name 1',
-                path: 'userProfile/profile-1.jpg',
-                time: '2:09 PM',
-                preview: 'How do you do?',
+                id: 1,
+                title: 'Discussion title here 1',
+                thumb: 'userProfile/profile-1.jpg',
+                description: 'Description Discussion 1',
+                date: '1 Jan 2024',
+                user: 'User Name 1',
+                reply: '6 Replies',
                 messages: [{
                         fromUserId: 0,
                         toUserId: 1,
                         text: 'Hi, I am back from vacation',
                     }, {
-                        fromUserId: 0,
-                        toUserId: 1,
-                        text: 'How are you?',
-                    }, {
                         fromUserId: 1,
                         toUserId: 0,
-                        text: 'Welcom Back',
-                    }, {
-                        fromUserId: 1,
-                        toUserId: 0,
-                        text: 'I am all well',
-                    }, {
-                        fromUserId: 0,
-                        toUserId: 1,
-                        text: 'Coffee?',
+                        text: 'Welcome Back',
                     },
                 ],
                 active: true,
             }, {
-                userId: 2,
-                name: 'User Name 2',
-                path: 'userProfile/profile-2.jpg',
-                time: '12:09 PM',
-                preview: 'I was wondering...',
+                id: 2,
+                title: 'Discussion title here 2',
+                thumb: 'userProfile/profile-2.jpg',
+                description: 'Description Discussion 2',
+                date: '2 Jan 2024',
+                user: 'User Name 2',
+                reply: '4 Replies',
                 messages: [ {
                         fromUserId: 0,
                         toUserId: 2,
                         text: 'Hello',
                     }, {
-                        fromUserId: 0,
-                        toUserId: 2,
+                        fromUserId: 2,
+                        toUserId: 0,
                         text: "It's me",
-                    }, {
-                        fromUserId: 0,
-                        toUserId: 2,
-                        text: 'I have a question regarding project.',
                     },
                 ],
                 active: false,
             }, {
-                userId: 3,
-                name: 'Sridhar T',
-                path: 'userProfile/sri.jpg',
-                time: 'Jan 02 1:44 PM',
-                preview: 'I’ve forgotten how it felt before',
+                id: 3,
+                title: 'Discussion title here 3',
+                thumb: 'userProfile/sri.jpg',
+                description: 'Description Discussion 3',
+                date: '3 Jan 2024',
+                user: 'User Name 3',
+                reply: '6 Replies',
                 messages: [{
                         fromUserId: 0,
                         toUserId: 3,
                         text: 'Hey Buddy.',
                     }, {
-                        fromUserId: 0,
-                        toUserId: 3,
-                        text: "What's up",
-                    }, {
                         fromUserId: 3,
                         toUserId: 0,
                         text: 'I am good',
-                    }, {
-                        fromUserId: 0,
-                        toUserId: 3,
-                        text: 'Not coming to office today.',
                     },
                 ],
                 active: true,
             }, {
-                userId: 4,
-                name: 'Satish S',
-                path: 'userProfile/satish.jpg',
-                time: '2:06 PM',
-                preview: 'But we’re probably gonna need a new carpet.',
+                id: 4,
+                title: 'Discussion title here 4',
+                thumb: 'userProfile/satish.jpg',
+                description: 'Description Discussion 4',
+                date: '4 Jan 2024',
+                user: 'User Name 4',
+                reply: '2 Replies',
                 messages: [{
                         fromUserId: 0,
                         toUserId: 4,
@@ -450,46 +451,34 @@ document.addEventListener('alpine:init', () => {
                 active: false,
                 call: true,
             }, {
-                userId: 5,
-                name: 'Vinod K',
-                path: 'userProfile/vinod.jpg',
-                time: '2:05 PM',
-                preview: 'It’s not that bad...',
+                id: 5,
+                title: 'Discussion title here 5',
+                thumb: 'userProfile/vinod.jpg',
+                description: 'Description Discussion 5',
+                date: '3 Jan 2024',
+                user: 'User Name 5',
+                reply: '5 Replies',
                 messages: [{
                         fromUserId: 0,
-                        toUserId: 3,
+                        toUserId: 5,
                         text: 'Hi, I am back from vacation',
-                    },
-                    {
-                        fromUserId: 0,
-                        toUserId: 3,
-                        text: 'How are you?',
-                    },
-                    {
-                        fromUserId: 0,
-                        toUserId: 5,
-                        text: 'Welcome Back',
-                    },
-                    {
-                        fromUserId: 0,
-                        toUserId: 5,
-                        text: 'I am all well',
                     },
                     {
                         fromUserId: 5,
                         toUserId: 0,
-                        text: 'Coffee?',
+                        text: 'How are you?',
                     },
                 ],
                 active: false,
                 away: true,
-            },
-            {
-                userId: 6,
-                name: 'Santosh',
-                path: 'userProfile/santosh.jpg',
-                time: '2:00 PM',
-                preview: 'Wasup for the third time like is you bling bitch',
+            }, {
+                id: 6,
+                title: 'Discussion title here 6',
+                thumb: 'userProfile/santosh.jpg',
+                description: 'Description Discussion 6',
+                date: '3 Jan 2024',
+                user: 'User Name 6',
+                reply: '4 Replies',
                 messages: [
                     {
                         fromUserId: 0,
@@ -497,66 +486,12 @@ document.addEventListener('alpine:init', () => {
                         text: 'Hi',
                     },
                     {
-                        fromUserId: 0,
-                        toUserId: 6,
+                        fromUserId: 6,
+                        toUserId: 0,
                         text: 'Uploaded files to server.',
                     },
                 ],
                 active: false,
-            },
-            {
-                userId: 7,
-                name: 'Ernest Reeves',
-                path: 'avatar.svg',
-                time: '2:09 PM',
-                preview: 'Wasup for the third time like is you bling bitch',
-                messages: [],
-                active: true,
-            },
-            {
-                userId: 8,
-                name: 'Laurie Fox',
-                path: 'avatar.svg',
-                time: '12:09 PM',
-                preview: 'Wasup for the third time like is you bling bitch',
-                messages: [],
-                active: true,
-            },
-            {
-                userId: 9,
-                name: 'Xavier',
-                path: 'avatar.svg',
-                time: 'avatar.svg',
-                preview: 'Wasup for the third time like is you bling bitch',
-                messages: [],
-                active: false,
-            },
-            {
-                userId: 10,
-                name: 'Susan Phillips',
-                path: 'avatar.svg',
-                time: '9:00 PM',
-                preview: 'Wasup for the third time like is you bling bitch',
-                messages: [],
-                active: true,
-            },
-            {
-                userId: 11,
-                name: 'Dale Butler',
-                path: 'avatar.svg',
-                time: '5:09 PM',
-                preview: 'Wasup for the third time like is you bling bitch',
-                messages: [],
-                active: false,
-            },
-            {
-                userId: 12,
-                name: 'Grace Roberts',
-                path: 'avatar.svg',
-                time: '8:01 PM',
-                preview: 'Wasup for the third time like is you bling bitch',
-                messages: [],
-                active: true,
             },
         ],
         searchUser: '',
@@ -570,7 +505,7 @@ document.addEventListener('alpine:init', () => {
                 element.behavior = 'smooth';
             });
             return this.contactList.filter((d) => {
-                return d.name.toLowerCase().includes(this.searchUser);
+                return d.title.toLowerCase().includes(this.searchUser);
             });
         },
 
@@ -583,12 +518,12 @@ document.addEventListener('alpine:init', () => {
 
         sendMessage() {
             if (this.textMessage.trim()) {
-                const user = this.contactList.find((d) => d.userId === this.selectedUser.userId);
+                const user = this.contactList.find((d) => d.id === this.selectedUser.id);
                 user.messages.push({
-                    fromUserId: this.selectedUser.userId,
+                    fromUserId: this.selectedUser.id,
                     toUserId: 0,
                     text: this.textMessage,
-                    time: 'Just now',
+                    date: 'Just now',
                 });
                 this.textMessage = '';
                 this.scrollToBottom;
@@ -606,6 +541,71 @@ document.addEventListener('alpine:init', () => {
                 });
             }
         },
+
+        saveDiscussions() {
+            if (!this.params.title) {
+                this.showMessage('Title is required.', 'error');
+                return false;
+            }
+            if (this.params.id) {
+                //update task
+                let note = this.contactList.find((d) => d.id === this.params.id);
+                note.title = this.params.title;
+                note.user = this.params.user;
+                note.description = this.params.description;
+                note.tag = this.params.tag;
+            } else {
+                //add note
+                let maxNoteId = this.contactList.length
+                    ? this.contactList.reduce((max, character) => (character.id > max ? character.id : max), this.contactList[0].id)
+                    : 0;
+                if (!maxNoteId) {
+                    maxNoteId = 0;
+                }
+                let dt = new Date();
+                let note = {
+                    id: maxNoteId + 1,
+                    title: this.params.title,
+                    user: this.params.user,
+                    thumb: '',
+                    description: this.params.description,
+                    date: dt.getDate() + ' ' + Number(dt.getMonth()) + 1 + ' ' + dt.getFullYear(),
+                    reply: '0 Replies',
+                    tag: this.params.tag,
+                };
+                this.contactList.splice(0, 0, note);
+                //this.selectUser();
+            }
+
+            this.showMessage('Discussions has been saved successfully.');
+            this.isAddDiscussionsModal = false;
+        },
+
+        editDiscussions(note) {
+            this.isShowNoteMenu = false;
+            setTimeout(() => {
+                this.params = JSON.parse(JSON.stringify(this.defaultParams));
+                if (note) {
+                    this.params = JSON.parse(JSON.stringify(note));
+                }
+                this.isAddDiscussionsModal = true;
+            });
+        },
+
+        showMessage(msg = '', type = 'success') {
+            const toast = window.Swal.mixin({
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+            });
+            toast.fire({
+                icon: type,
+                title: msg,
+                padding: '10px 20px',
+            });
+        },
+
     }));
 
     //calendar
@@ -863,6 +863,610 @@ document.addEventListener('alpine:init', () => {
                 this.minEndDate = this.dateFormat(dateStr);
                 this.params.end = '';
             }
+        },
+
+        showMessage(msg = '', type = 'success') {
+            const toast = window.Swal.mixin({
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+            });
+            toast.fire({
+                icon: type,
+                title: msg,
+                padding: '10px 20px',
+            });
+        },
+    }));
+
+    //contacts
+    Alpine.data('contacts', () => ({
+        defaultParams: {
+            id: null,
+            name: '',
+            email: '',
+            role: '',
+            phone: '',
+            location: '',
+            specialty: '',
+            person: '',
+            website: '',
+            mobile: '',
+            fax: '',
+
+        },
+        displayType: 'list',
+        addContactModal: false,
+        params: {
+            id: null,
+            name: '',
+            email: '',
+            role: '',
+            phone: '',
+            location: '',
+            specialty: '',
+            person: '',
+            website: '',
+            mobile: '',
+            fax: '',
+        },
+        filterdContactsList: [],
+        searchUser: '',
+        contactList: [ {
+                id: 1,
+                path: '',
+                name: 'Al Tomouh IT Pvt Ltd',
+                role: 'Web Developer',
+                email: 'support@altomouhit.com',
+                location: 'Muscat, Oman',
+                phone: '+968 22060636',
+                specialty: 'consulting and business',
+                person: 'support',
+                website: 'www.altomouhit.com',
+                mobile: '+968 95235815',
+                fax: '+968 22060636',
+            }, {
+                id: 2,
+                name: 'Suhail Bahwan LLC',
+                role: 'Web Developer',
+                email: 'support@altomouhit.com',
+                location: 'Muscat, Oman',
+                phone: '+968 24650000',
+                specialty: 'AUTOMOBILES',
+                person: 'support',
+                website: 'www.suhailbahwangroup.com',
+                mobile: '+968 95235815',
+                fax: '+968 24650000',
+            }, {
+                id: 3,
+                path: '',
+                name: 'ZabonEx',
+                role: 'sales',
+                email: 'info@zabonex.com',
+                location: 'Muscat, Oman',
+                phone: '+968 22060636',
+                specialty: 'Products',
+                person: 'support',
+                website: 'www.zabonex.com',
+                mobile: '+968 95235815',
+                fax: '+968 22060636',
+            }, {
+                id: 4,
+                path: '',
+                name: 'Decoil',
+                role: 'sales',
+                email: 'info@decoil.co',
+                location: 'Muscat, Oman',
+                phone: '+968 93667705',
+                specialty: 'Building AI solutions',
+                person: 'support',
+                website: 'www.decoil.co',
+                mobile: '+968 93667705',
+                fax: '+968 93667705',
+            }, {
+                id: 5,
+                path: '',
+                name: '360 Real Vista',
+                role: 'Construction',
+                email: 'info@360realvista.com',
+                location: 'Muscat, Oman',
+                phone: '+968 93667705',
+                specialty: 'Construction',
+                person: 'support',
+                website: 'www.360realvista.com',
+                mobile: '+968 93667705',
+                fax: '+968 93667705',
+            }, {
+                id: 6,
+                path: '',
+                name: 'Al Tomouh IT LLC',
+                role: 'Web Developer',
+                email: 'support@altomouhit.com',
+                location: 'Muscat, Oman',
+                phone: '+968 22060636',
+                specialty: 'Consulting and Business',
+                person: 'support',
+                website: 'www.altomouhit.com',
+                mobile: '+968 95235815',
+                fax: '+968 22060636',
+            },
+        ],
+
+        init() {
+            this.searchContacts();
+        },
+
+        searchContacts() {
+            this.filterdContactsList = this.contactList.filter((d) => d.name.toLowerCase().includes(this.searchUser.toLowerCase()));
+        },
+
+        editUser(user) {
+            this.params = this.defaultParams;
+            if (user) {
+                this.params = JSON.parse(JSON.stringify(user));
+            }
+
+            this.addContactModal = true;
+        },
+
+        saveUser() {
+            if (!this.params.name) {
+                this.showMessage('Name is required.', 'error');
+                return true;
+            }
+            if (!this.params.email) {
+                this.showMessage('Email is required.', 'error');
+                return true;
+            }
+            if (!this.params.phone) {
+                this.showMessage('Phone is required.', 'error');
+                return true;
+            }
+            if (!this.params.role) {
+                this.showMessage('Occupation is required.', 'error');
+                return true;
+            }
+
+            if (this.params.id) {
+                //update user
+                let user = this.contactList.find((d) => d.id === this.params.id);
+                user.name = this.params.name;
+                user.email = this.params.email;
+                user.role = this.params.role;
+                user.phone = this.params.phone;
+                user.location = this.params.location;
+                user.specialty = this.params.specialty;
+                user.person = this.params.person;
+                user.website = this.params.website;
+                user.mobile = this.params.mobile;
+                user.fax = this.params.fax;
+            } else {
+                //add user
+                let maxUserId = this.contactList.length
+                    ? this.contactList.reduce((max, character) => (character.id > max ? character.id : max), this.contactList[0].id)
+                    : 0;
+
+                let user = {
+                    id: maxUserId + 1,
+                    path: '',
+                    name: this.params.name,
+                    email: this.params.email,
+                    role: this.params.role,
+                    phone: this.params.phone,
+                    location: this.params.location,
+                    specialty: this.params.specialty,
+                    person: this.params.person,
+                    website: this.params.website,
+                    mobile: this.params.mobile,
+                    fax: this.params.fax,
+                };
+                this.contactList.splice(0, 0, user);
+                this.searchContacts();
+            }
+
+            this.showMessage('User has been saved successfully.');
+            this.addContactModal = false;
+        },
+
+        deleteUser(user) {
+            this.contactList = this.contactList.filter((d) => d.id != user.id);
+            // this.ids = this.ids.filter((d) => d != user.id);
+            this.searchContacts();
+            this.showMessage('User has been deleted successfully.');
+        },
+
+        setDisplayType(type) {
+            this.displayType = type;
+        },
+
+        showMessage(msg = '', type = 'success') {
+            const toast = window.Swal.mixin({
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+            });
+            toast.fire({
+                icon: type,
+                title: msg,
+                padding: '10px 20px',
+            });
+        },
+    }));
+
+    //committees
+    Alpine.data('committees', () => ({
+        defaultParams: {
+            id: null,
+            committeeID: '',
+            name: '',
+            purpose: '',
+            date: '',
+            registeredBy: '',
+            head: '',
+            members: '',
+
+        },
+        displayType: 'list',
+        addCommitteesModal: false,
+        params: {
+            id: null,
+            committeeID: '',
+            name: '',
+            purpose: '',
+            date: '',
+            registeredBy: '',
+            head: '',
+            members: '',
+        },
+        filterdCommitteesList: [],
+        searchCommittee: '',
+        committeesList: [ {
+                id: 1,
+                path: '',
+                committeeID: '1',
+                name: 'Al Tomouh IT Pvt Ltd',
+                purpose: 'support',
+                date: '2022-12-22',
+                members: ['Member1', 'Member3', 'Member4'],
+                registeredBy: 'User 1',
+                head: 'User 2',
+            }, {
+                id: 2,
+                committeeID: '2',
+                name: 'Suhail Bahwan LLC',
+                purpose: 'support',
+                date: '2019-06-24',
+                members: ['Member2', 'Member3', 'Member5'],
+                registeredBy: 'User 1',
+                head: 'User 3',
+            }, {
+                id: 3,
+                path: '',
+                committeeID: '3',
+                name: 'ZabonEx',
+                purpose: 'support',
+                date: '2018-07-14',
+                members: ['Member1', 'Member5', 'Member6'],
+                head: 'User 1',
+                registeredBy: 'User 1',
+            }, {
+                id: 4,
+                path: '',
+                committeeID: '4',
+                name: 'Decoil',
+                purpose: 'support',
+                date: '2009-04-25',
+                members: ['Member1', 'Member3', 'Member4'],
+                registeredBy: 'User 1',
+                head: 'User 6',
+            }, {
+                id: 5,
+                path: '',
+                committeeID: '5',
+                name: '360 Real Vista',
+                purpose: 'support',
+                date: '2023-01-11',
+                members: ['Member2', 'Member3', 'Member5'],
+                registeredBy: 'User 1',
+                head: 'User 4',
+            }, {
+                id: 6,
+                path: '',
+                committeeID: '6',
+                name: 'Al Tomouh IT LLC',
+                purpose: 'support',
+                members: ['Member1', 'Member5', 'Member6'],
+                date: '2022-01-03',
+                head: 'User 5',
+                registeredBy: 'User 1',
+            },
+        ],
+
+        init() {
+            this.searchCommittees();
+        },
+
+        searchCommittees() {
+            this.filterdCommitteesList = this.committeesList.filter((d) => d.name.toLowerCase().includes(this.searchCommittee.toLowerCase()));
+        },
+
+        editCommittee(user) {
+            this.params = this.defaultParams;
+            if (user) {
+                this.params = JSON.parse(JSON.stringify(user));
+            }
+
+            this.addCommitteesModal = true;
+        },
+
+        saveCommittee() {
+            if (!this.params.name) {
+                this.showMessage('Please enter Committee Name.', 'error');
+                return true;
+            }
+            if (!this.params.head) {
+                this.showMessage('Please select Committee head.', 'error');
+                return true;
+            }
+            if (!this.params.members) {
+                this.showMessage('Please select members.', 'error');
+                return true;
+            }
+            if (!this.params.date) {
+                this.showMessage('Please Enter Date.', 'error');
+                return true;
+            }
+
+            if (this.params.id) {
+                //update user
+                let user = this.committeesList.find((d) => d.id === this.params.id);
+                user.committeeID = this.params.committeeID;
+                user.name = this.params.name;
+                user.purpose = this.params.purpose;
+                user.date = this.params.date;
+                user.members= this.params.members;
+                user.registeredBy = 'User 1';
+                user.head = this.params.head;
+            } else {
+                //add user
+                let maxUserId = this.committeesList.length
+                    ? this.committeesList.reduce((max, character) => (character.id > max ? character.id : max), this.committeesList[0].id)
+                    : 0;
+
+                let user = {
+                    id: maxUserId + 1,
+                    path: '',
+                    committeeID: maxUserId + 1,
+                    name: this.params.name,
+                    purpose: this.params.purpose,
+                    date: this.params.date,
+                    members: this.params.members,
+                    registeredBy: 'User 1',
+                    head: this.params.head,
+                };
+                this.committeesList.splice(0, 0, user);
+                this.searchCommittees();
+            }
+
+            this.showMessage('User has been saved successfully.');
+            this.addCommitteesModal = false;
+        },
+
+        deleteUser(user) {
+            this.committeesList = this.committeesList.filter((d) => d.id != user.id);
+            // this.ids = this.ids.filter((d) => d != user.id);
+            this.searchCommittees();
+            this.showMessage('User has been deleted successfully.');
+        },
+
+        setDisplayType(type) {
+            this.displayType = type;
+        },
+
+        showMessage(msg = '', type = 'success') {
+            const toast = window.Swal.mixin({
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+            });
+            toast.fire({
+                icon: type,
+                title: msg,
+                padding: '10px 20px',
+            });
+        },
+    }));
+
+    //Sub committees
+    Alpine.data('subCommittees', () => ({
+        defaultParams: {
+            id: null,
+            committeeID: '',
+            name: '',
+            purpose: '',
+            date: '',
+            registeredBy: '',
+            head: '',
+            members: '',
+            subCommitteeID: '',
+            subCommitteeName: '',
+        },
+        displayType: 'list',
+        addSubCommitteesModal: false,
+        params: {
+            id: null,
+            committeeID: '',
+            name: '',
+            purpose: '',
+            date: '',
+            registeredBy: '',
+            head: '',
+            members: '',
+            subCommitteeID: '',
+            subCommitteeName: '',
+        },
+        filterdSubCommitteesList: [],
+        searchUser: '',
+        subCommitteesList: [ {
+                id: 1,
+                path: '',
+                committeeID: '1',
+                name: 'Al Tomouh IT Pvt Ltd',
+                purpose: 'support',
+                date: '2022-12-22',
+                members: ['Member1', 'Member3', 'Member4'],
+                registeredBy: 'User 1',
+                head: 'User 2',
+                subCommitteeID: '1',
+                subCommitteeName: 'Sub Committee 1',
+            }, {
+                id: 2,
+                committeeID: '2',
+                name: 'Suhail Bahwan LLC',
+                purpose: 'support',
+                date: '2019-06-24',
+                members: ['Member2', 'Member3', 'Member5'],
+                registeredBy: 'User 1',
+                head: 'User 3',
+                subCommitteeID: '2',
+                subCommitteeName: 'Sub Committee 2',
+            }, {
+                id: 3,
+                path: '',
+                committeeID: '3',
+                name: 'ZabonEx',
+                purpose: 'support',
+                date: '2018-07-14',
+                members: ['Member1', 'Member5', 'Member6'],
+                registeredBy: 'User 1',
+                head: 'User 1',
+                subCommitteeID: '3',
+                subCommitteeName: 'Sub Committee 3',
+            }, {
+                id: 4,
+                path: '',
+                committeeID: '4',
+                name: 'Decoil',
+                purpose: 'support',
+                date: '2009-04-25',
+                members: ['Member1', 'Member3', 'Member4'],
+                registeredBy: 'User 1',
+                head: 'User 6',
+                subCommitteeID: '4',
+                subCommitteeName: 'Sub Committee 4',
+            }, {
+                id: 5,
+                path: '',
+                committeeID: '5',
+                name: '360 Real Vista',
+                purpose: 'support',
+                date: '2023-01-11',
+                members: ['Member2', 'Member3', 'Member5'],
+                registeredBy: 'User 1',
+                head: 'User 4',
+                subCommitteeID: '5',
+                subCommitteeName: 'Sub Committee 5',
+            }, {
+                id: 6,
+                path: '',
+                committeeID: '6',
+                name: 'Al Tomouh IT LLC',
+                purpose: 'support',
+                members: ['Member1', 'Member5', 'Member6'],
+                date: '2022-01-03',
+                registeredBy: 'User 1',
+                head: 'User 5',
+                subCommitteeID: '6',
+                subCommitteeName: 'Sub Committee 6',
+            },
+        ],
+
+        init() {
+            this.searchSubCommittees();
+        },
+
+        searchSubCommittees() {
+            this.filterdSubCommitteesList = this.subCommitteesList.filter((d) => d.name.toLowerCase().includes(this.searchUser.toLowerCase()));
+        },
+
+        editSubCommittees(user) {
+            this.params = this.defaultParams;
+            if (user) {
+                this.params = JSON.parse(JSON.stringify(user));
+            }
+
+            this.addSubCommitteesModal = true;
+        },
+
+        saveSubCommittees() {
+            if (!this.params.subCommitteeName) {
+                this.showMessage('Please enter Sub Committee Name.', 'error');
+                return true;
+            }
+            if (!this.params.head) {
+                this.showMessage('Please select Committee head.', 'error');
+                return true;
+            }
+            if (!this.params.members) {
+                this.showMessage('Please select members.', 'error');
+                return true;
+            }
+            if (!this.params.date) {
+                this.showMessage('Please Enter Date.', 'error');
+                return true;
+            }
+
+            if (this.params.id) {
+                //update user
+                let user = this.subCommitteesList.find((d) => d.id === this.params.id);
+                user.committeeID = this.params.committeeID;
+                user.name = this.params.name;
+                user.purpose = this.params.purpose;
+                user.date = this.params.date;
+                user.members= this.params.members;
+                user.registeredBy = 'User 1';
+                user.head = this.params.head;
+                user.subCommitteeID = this.params.subCommitteeID;
+                user.subCommitteeName = this.params.subCommitteeName;
+            } else {
+                //add user
+                let maxUserId = this.subCommitteesList.length
+                    ? this.subCommitteesList.reduce((max, character) => (character.id > max ? character.id : max), this.subCommitteesList[0].id)
+                    : 0;
+
+                let user = {
+                    id: maxUserId + 1,
+                    path: '',
+                    committeeID: maxUserId + 1,
+                    name: this.params.name,
+                    purpose: this.params.purpose,
+                    date: this.params.date,
+                    members: this.params.members,
+                    registeredBy: 'User 1',
+                    head: this.params.head,
+                    subCommitteeID: maxUserId + 1,
+                    subCommitteeName: this.params.subCommitteeName,
+                };
+                this.subCommitteesList.splice(0, 0, user);
+                this.searchSubCommittees();
+            }
+
+            this.showMessage('User has been saved successfully.');
+            this.addSubCommitteesModal = false;
+        },
+
+        deleteSubCommittees(user) {
+            this.subCommitteesList = this.subCommitteesList.filter((d) => d.id != user.id);
+            // this.ids = this.ids.filter((d) => d != user.id);
+            this.searchSubCommittees();
+            this.showMessage('User has been deleted successfully.');
+        },
+
+        setDisplayType(type) {
+            this.displayType = type;
         },
 
         showMessage(msg = '', type = 'success') {

@@ -4625,7 +4625,7 @@ pre {
 }
 
 .mt-0 {
-    margin-top: 0
+    margin-top: 0 !important;
 }
 
 .mt-0\.5 {
@@ -7375,7 +7375,7 @@ pre {
 }
 
 .pt-0 {
-    padding-top: 0
+    padding-top: 0 !important;
 }
 
 .pt-12 {
@@ -11467,7 +11467,9 @@ pre {
     .sm\:h-\[calc\(100vh_-_150px\)\] {
         height: calc(100vh - 150px)
     }
-
+    .sm\:h-\[calc\(100vh_-_200px\)\] {
+        height: calc(100vh - 235px)
+    }
     .sm\:h-\[calc\(100vh_-_300px\)\] {
         height: calc(100vh - 300px)
     }
