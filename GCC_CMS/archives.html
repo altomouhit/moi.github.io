@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Documents</title>
+    <title>Archives</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/all.css" />
@@ -688,46 +688,7 @@
                 <!-- start main content section -->
                 <div x-data="committeeTree">
                     <div class="panel mb-3">
-                        <div class="relative doc-bg p-2 rounded-md">
-                            <div class="space-y-5 grid grid-cols-4 gap-3">
-                                <div class="gap-1 sm:grid md:gap-2">
-                                    <label for="committeeType">Committee</label>
-                                    <select class="form-select" id="committeeType">
-                                        <option value="">Please select</option>
-                                        <option value="pdf">Committee1</option>
-                                        <option value="pdf">Committee2</option>
-                                        <option value="pdf">Committee3</option>
-                                    </select>
-                                </div>
-                                <div class="gap-1 sm:grid md:gap-4 mt-0">
-                                    <label for="sortBy">Subject</label>
-                                    <select class="form-select" id="sortBy">
-                                        <option value="">please select</option>
-                                        <option value="Subject1">Subject1</option>
-                                        <option value="Subject2">Subject2</option>
-                                        <option value="Subject3">Subject3</option>
-                                    </select>
-                                </div>
-                                <div class="gap-1 sm:grid md:gap-4 mt-0">
-                                    <label for="typeID">Type</label>
-                                    <select class="form-select" id="typeID">
-                                        <option value="">All Type</option>
-                                        <option value="pdf">PDF</option>
-                                        <option value="Doc">Doc</option>
-                                        <option value="Excel">Excel</option>
-                                    </select>
-                                </div>
-                                <div class="gap-1 sm:grid md:gap-4 mt-0">
-                                    <label for="sortBy">Sort By</label>
-                                    <select class="form-select" id="sortBy">
-                                        <option value="">Date</option>
-                                        <option value="This week">This week</option>
-                                        <option value="This Month">This Month</option>
-                                        <option value="This Year">This Year</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="h-px w-full border-b border-[#e0e6ed] dark:border-[#1b2e4b]"></div>
                         <div class="flex1 flex-col1 items-center justify-center sm:flex-row sm:justify-between">
                             <div class="mb-5" x-data="{ tab: 'documents'}">
@@ -916,9 +877,56 @@
                                                                     <template x-for="message in selectedUser.messages">
                                                                         <div class="grid grid-cols-1">
                                                                             <div class="mb-0" class="{'order-2' : selectedUser.id === message.fromUserId}">
-                                                                                <iframe :src="`assets/images/${message.file}`" frameborder="0" class="w-full sm:h-[calc(100vh_-_300px)]" frameborder='0'></iframe>
-                                                                                <!-- <iframe src="https://docs.google.com/gview?url=http://ieee802.org/secmail/docIZSEwEqHFr.doc&embedded=true" frameborder="0">
-                                                                                </iframe> -->
+                                                                                <div class="mb-5 flex items-center gap-3 p-2">
+                                                                                    <div class="w-full max-w-[18rem] rounded border border-[#e0e6ed] bg-white p-2 shadow-[4px_6px_10px_-3px_#bfc9d4] dark:border-0 dark:bg-secondary-dark-light dark:shadow-none">
+                                                                                        <div class="text-black">
+                                                                                            <img src="assets/images/icons/pdf.svg" class="h-32 w-32 object-cover mb-3 rounded-lg mx-auto" alt="" >
+                                                                                            <h3 class="font-bold text-md fileName">File name here Committee</h3>
+                                                                                            <div class="h-px w-full border-b border-[#e0e6ed] dark:border-[#1b2e4b] my-3"></div>
+                                                                                            <div class="flex items-center justify-between">
+                                                                                                <div class="mx-auto h-14 w-14 overflow-hidden rounded-full">
+                                                                                                    <img src="assets/images/userProfile/profile-1.jpg" alt="image" class="h-full w-full object-cover" />
+                                                                                                </div>
+                                                                                                <div class="flex-1 ltr:pl-2 rtl:pr-2">
+                                                                                                    <h5 class="mb-1 text-[15px] font-semibold text-primary">User Name 1</h5>
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="w-full max-w-[18rem] rounded border border-[#e0e6ed] bg-white p-2 shadow-[4px_6px_10px_-3px_#bfc9d4] dark:border-0 dark:bg-secondary-dark-light dark:shadow-none">
+                                                                                        <div class="text-black">
+                                                                                            <img src="assets/images/icons/word.svg" class="h-32 w-32 object-cover mb-3 rounded-lg mx-auto" alt="" >
+                                                                                            <h3 class="font-bold text-md fileName">File name here Committee</h3>
+                                                                                            <div class="h-px w-full border-b border-[#e0e6ed] dark:border-[#1b2e4b] my-3"></div>
+                                                                                            <div class="flex items-center justify-between">
+                                                                                                <div class="mx-auto h-14 w-14 overflow-hidden rounded-full">
+                                                                                                    <img src="assets/images/userProfile/profile-1.jpg" alt="image" class="h-full w-full object-cover" />
+                                                                                                </div>
+                                                                                                <div class="flex-1 ltr:pl-2 rtl:pr-2">
+                                                                                                    <h5 class="mb-1 text-[15px] font-semibold text-primary">User Name 1</h5>
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="w-full max-w-[18rem] rounded border border-[#e0e6ed] bg-white p-2 shadow-[4px_6px_10px_-3px_#bfc9d4] dark:border-0 dark:bg-secondary-dark-light dark:shadow-none">
+                                                                                        <div class="text-black">
+                                                                                            <img src="assets/images/icons/excel.svg" class="h-32 w-32 object-cover mb-3 rounded-lg mx-auto" alt="" >
+                                                                                            <h3 class="font-bold text-md fileName">File name here Committee</h3>
+                                                                                            <div class="h-px w-full border-b border-[#e0e6ed] dark:border-[#1b2e4b] my-3"></div>
+                                                                                            <div class="flex items-center justify-between">
+                                                                                                <div class="mx-auto h-14 w-14 overflow-hidden rounded-full">
+                                                                                                    <img src="assets/images/userProfile/profile-1.jpg" alt="image" class="h-full w-full object-cover" />
+                                                                                                </div>
+                                                                                                <div class="flex-1 ltr:pl-2 rtl:pr-2">
+                                                                                                    <h5 class="mb-1 text-[15px] font-semibold text-primary">User Name 1</h5>
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </template>
@@ -963,7 +971,7 @@
     <script defer src="assets/js/alpine.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/GCC.js"></script>
-    <script src="assets/js/GCC2.js"></script>
+    <script src="assets/js/GCC3.js"></script>
 </body>
 
 </html>

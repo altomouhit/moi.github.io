@@ -73,8 +73,7 @@
                     <div class="flex items-center justify-between px-1 py-3">
                         <a href="dashboard.html" class="main-logo flex shrink-0 items-center">
                             <img class="ml-[1px] w-14 flex-none" src="assets/images/logo-x2.png" alt="image" />
-                            <span
-                                class="align-middle text-2xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline logo-name">GCC</span>
+                            <span class="align-middle text-2xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline logo-name">GCC</span>
                         </a>
                         <!-- <p>CONSULTATIVE AUTHORITY</p> -->
                         <a href="javascript:;"
@@ -314,7 +313,7 @@
             <!-- start header section -->
             <header class="z-40" :class="{'dark' : $store.app.semidark && $store.app.menu === 'horizontal'}">
                 <div class="shadow-sm">
-                    <div class="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-[#0e1726]">
+                    <div class="relative flex w-full items-center l-bg-style5 px-5 py-2.5 dark:bg-[#0e1726]">
                         <div class="horizontal-logo flex items-center justify-between ltr:mr-2 rtl:ml-2 lg:hidden">
                             <a href="dashboard.html" class="main-logo flex shrink-0 items-center">
                                 <img class="inline w-8 ltr:-ml-1 rtl:-mr-1" src="assets/images/logo-x2.png" alt="image" />
@@ -693,332 +692,678 @@
             </header>
             <!-- end header section -->
             
-            <div class="animate__animated p-6" :class="[$store.app.animation]">
-                <!-- start main content section -->
-                <div> <!-- x-data="sales" -->
-                    <ul class="flex space-x-2 rtl:space-x-reverse text-lg">
-                        <li>
-                            <a href="javascript:;" class="text-primary hover:underline">Dashboard</a>
-                        </li>
-                        <!-- <li class="before:content-['/'] ltr:before:mr-1 rtl:before:ml-1">
-                            <span>Sales</span>
-                        </li> -->
-                    </ul>
-                    <div class="pt-5">
-                        <div class="mb-3 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-4">
-                            <!-- Latest Discussions -->
-                            <div class="panel l-bg-style1 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
-                                <div class="flex justify-between">
-                                    <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Latest Discussions</div>
-                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown">
-                                        <a href="javascript:;" @click="toggle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
-                                                <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                            </svg>
-                                        </a>
-                                        <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
-                                            <li><a href="javascript:;" @click="toggle">View Report</a></li>
-                                            <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">17</div>
-                                    <div class="badge bg-white/30">+ 2.35%</div>
-                                </div>
-                                <div class="mt-5 flex items-center font-semibold">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
-                                        <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
-                                        <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
-                                    </svg>
-                                    Last Week 44
-                                </div>
-                            </div>
-
-                            <!-- Latest Committees -->
-                            <div class="panel l-bg-style2 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
-                                <div class="flex justify-between">
-                                    <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Latest Committees</div>
-                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown">
-                                        <a href="javascript:;" @click="toggle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
-                                                <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                            </svg>
-                                        </a>
-                                        <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
-                                            <li><a href="javascript:;" @click="toggle">View Report</a></li>
-                                            <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">37</div>
-                                    <div class="badge bg-white/30">- 0.35%</div>
-                                </div>
-                                <div class="mt-5 flex items-center font-semibold">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
-                                        <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
-                                        <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
-                                    </svg>
-                                    Last Week 49
-                                </div>
-                            </div>
-
-                            <!-- Archives -->
-                            <div class="panel l-bg-style3 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
-                                <div class="flex justify-between">
-                                    <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Archives</div>
-                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown">
-                                        <a href="javascript:;" @click="toggle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
-                                                <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                            </svg>
-                                        </a>
-                                        <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
-                                            <li><a href="javascript:;" @click="toggle">View Report</a></li>
-                                            <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">38,085</div>
-                                    <div class="badge bg-white/30">+ 1.35%</div>
-                                </div>
-                                <div class="mt-5 flex items-center font-semibold">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
-                                        <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
-                                        <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
-                                    </svg>
-                                    Last Week 37,894
-                                </div>
-                            </div>
-
-                            <!-- Survey and Poll -->
-                            <div class="panel l-bg-style4 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
-                                <div class="flex justify-between">
-                                    <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Survey and Poll</div>
-                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown">
-                                        <a href="javascript:;" @click="toggle">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
-                                                <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                                <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
-                                            </svg>
-                                        </a>
-                                        <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
-                                            <li><a href="javascript:;" @click="toggle">View Report</a></li>
-                                            <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">49.10%</div>
-                                    <div class="badge bg-white/30">- 0.35%</div>
-                                </div>
-                                <div class="mt-5 flex items-center font-semibold">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
-                                        <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
-                                        <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
-                                    </svg>
-                                    Last Week 50.01%
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="flex space-x-2 rtl:space-x-reverse mb-3 text-lg">
+            <div class="main-bg">
+                <div class="animate__animated p-3" :class="[$store.app.animation]">
+                    <!-- start main content section -->
+                    <div> <!-- x-data="sales" -->
+                        <ul class="flex space-x-2 rtl:space-x-reverse text-lg bg-gray-100 p-2 rounded-md">
                             <li>
-                                <span class="text-primary">Committee</span>
+                                <a href="javascript:;" class="text-primary hover:underline">Dashboard</a>
                             </li>
-                            <li class="before:content-['/'] ltr:before:mr-1 rtl:before:ml-1">
-                                <span>Sub Committee</span>
-                            </li>
+                            <!-- <li class="before:content-['/'] ltr:before:mr-1 rtl:before:ml-1">
+                                <span>Sales</span>
+                            </li> -->
                         </ul>
-                        <div class="mb-3 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-4">
-                            <!-- Total No of Discussion Subjects -->
-                            <div class="panel bg-gradient-to-r from-cyan-500 to-cyan-400">
-                                <div class="flex justify-between">
-                                    <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total No of Discussion Subjects</div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">8</div>
-                                </div>
-                            </div>
-
-                            <!-- Total Events Organized -->
-                            <div class="panel bg-gradient-to-r from-violet-500 to-violet-400">
-                                <div class="flex justify-between">
-                                    <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Events Organized</div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">4</div>
-                                </div>
-                            </div>
-
-                            <!-- Total Events Completed -->
-                            <div class="panel bg-gradient-to-r from-blue-500 to-blue-400">
-                                <div class="flex justify-between">
-                                    <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Events Completed</div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">3</div>
-                                </div>
-                            </div>
-
-                            <!-- Total Due Events -->
-                            <div class="panel bg-gradient-to-r from-fuchsia-500 to-fuchsia-400">
-                                <div class="flex justify-between">
-                                    <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Due Events</div>
-                                </div>
-                                <div class="mt-5 flex items-center">
-                                    <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">1</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-2 mt-3">
-                            <div x-data="notes" class="panel h-full pb-0 sm:col-span-2 xl:col-span-1">
-                                
-
-                                <div class="mb-2 flex items-center justify-between dark:text-white-light">
-                                    <div class="flex items-center text-center">
-                                        <div class="shrink-0">
-                                            <svg class="shrink-0 group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4036 22.4797L10.6787 22.015C11.1195 21.2703 11.3399 20.8979 11.691 20.6902C12.0422 20.4825 12.5001 20.4678 13.4161 20.4385C14.275 20.4111 14.8523 20.3361 15.3458 20.1317C16.385 19.7012 17.2106 18.8756 17.641 17.8365C17.9639 17.0571 17.9639 16.0691 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C5.43314 6.03516 4.04489 6.03516 3.02507 6.66011C2.45442 7.0098 1.97464 7.48958 1.62495 8.06023C1 9.08006 1 10.4683 1 13.2448V14.093C1 16.0691 1 17.0571 1.32282 17.8365C1.75326 18.8756 2.57886 19.7012 3.61802 20.1317C4.11158 20.3361 4.68882 20.4111 5.5477 20.4385C6.46368 20.4678 6.92167 20.4825 7.27278 20.6902C7.6239 20.8979 7.84431 21.2703 8.28514 22.015L8.5602 22.4797C8.97002 23.1721 9.9938 23.1721 10.4036 22.4797ZM13.1928 14.5171C13.7783 14.5171 14.253 14.0424 14.253 13.4568C14.253 12.8713 13.7783 12.3966 13.1928 12.3966C12.6072 12.3966 12.1325 12.8713 12.1325 13.4568C12.1325 14.0424 12.6072 14.5171 13.1928 14.5171ZM10.5422 13.4568C10.5422 14.0424 10.0675 14.5171 9.48193 14.5171C8.89637 14.5171 8.42169 14.0424 8.42169 13.4568C8.42169 12.8713 8.89637 12.3966 9.48193 12.3966C10.0675 12.3966 10.5422 12.8713 10.5422 13.4568ZM5.77108 14.5171C6.35664 14.5171 6.83133 14.0424 6.83133 13.4568C6.83133 12.8713 6.35664 12.3966 5.77108 12.3966C5.18553 12.3966 4.71084 12.8713 4.71084 13.4568C4.71084 14.0424 5.18553 14.5171 5.77108 14.5171Z" fill="currentColor"></path>
-                                                <path opacity="0.5" d="M15.486 1C16.7529 0.999992 17.7603 0.999986 18.5683 1.07681C19.3967 1.15558 20.0972 1.32069 20.7212 1.70307C21.3632 2.09648 21.9029 2.63623 22.2963 3.27821C22.6787 3.90219 22.8438 4.60265 22.9226 5.43112C22.9994 6.23907 22.9994 7.24658 22.9994 8.51343V9.37869C22.9994 10.2803 22.9994 10.9975 22.9597 11.579C22.9191 12.174 22.8344 12.6848 22.6362 13.1632C22.152 14.3323 21.2232 15.2611 20.0541 15.7453C20.0249 15.7574 19.9955 15.7691 19.966 15.7804C19.8249 15.8343 19.7039 15.8806 19.5978 15.915H17.9477C17.9639 15.416 17.9639 14.8217 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C7.22423 6.03516 6.41369 6.03516 5.73242 6.06309V4.4127C5.76513 4.29934 5.80995 4.16941 5.86255 4.0169C5.95202 3.75751 6.06509 3.51219 6.20848 3.27821C6.60188 2.63623 7.14163 2.09648 7.78361 1.70307C8.40759 1.32069 9.10805 1.15558 9.93651 1.07681C10.7445 0.999986 11.7519 0.999992 13.0188 1H15.486Z" fill="currentColor"></path>
-                                            </svg>
+                        <div class="pt-5">
+                            <div class="mb-3 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-4">
+                                <!-- Latest Discussions -->
+                                <div class="panel l-bg-style1 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
+                                    <div class="flex justify-between">
+                                        <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Latest Discussions</div>
+                                        <div x-data="dropdown" @click.outside="open = false" class="dropdown">
+                                            <a href="javascript:;" @click="toggle">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
+                                                    <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                </svg>
+                                            </a>
+                                            <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
+                                                <li><a href="javascript:;" @click="toggle">View Report</a></li>
+                                                <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
+                                            </ul>
                                         </div>
-                                        <h3 class="text-lg font-semibold ltr:ml-3 rtl:mr-3">Latest Discussions</h3>
                                     </div>
-                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown">
-                                        <a href="javascript:;" @click="toggle">
-                                            <svg class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
-                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5" />
-                                                <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor"
-                                                    stroke-width="1.5" />
-                                                <circle cx="19" cy="12" r="2" stroke="currentColor"
-                                                    stroke-width="1.5" />
-                                            </svg>
-                                        </a>
-                                        <ul x-cloak x-show="open" x-transition x-transition.duration.300ms
-                                            class="ltr:right-0 rtl:left-0">
-                                            <li><a href="discussions.html" @click="toggle">Go to Discussion</a></li>
-                                        </ul>
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">17</div>
+                                        <div class="badge bg-white/30">+ 2.35%</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center font-semibold">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
+                                            <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
+                                            <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
+                                        </svg>
+                                        Last Week 44
                                     </div>
                                 </div>
 
-                                <div class="perfect-scrollbar relative -mr-3 mb-4 h-[290px] p-3 pt-0">
-                                    <div class="pb-5">
-                                        <button type="button" class="hover:text-primary xl:hidden"
-                                            @click="isShowNoteMenu = !isShowNoteMenu">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
-                                                <path d="M20 7L4 7" stroke="currentColor" stroke-width="1.5"
-                                                    stroke-linecap="round"></path>
-                                                <path opacity="0.5" d="M20 12L4 12" stroke="currentColor" stroke-width="1.5"
-                                                    stroke-linecap="round"></path>
-                                                <path d="M20 17L4 17" stroke="currentColor" stroke-width="1.5"
-                                                    stroke-linecap="round"></path>
-                                            </svg>
-                                        </button>
+                                <!-- Latest Committees -->
+                                <div class="panel l-bg-style2 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
+                                    <div class="flex justify-between">
+                                        <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Latest Committees</div>
+                                        <div x-data="dropdown" @click.outside="open = false" class="dropdown">
+                                            <a href="javascript:;" @click="toggle">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
+                                                    <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                </svg>
+                                            </a>
+                                            <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
+                                                <li><a href="javascript:;" @click="toggle">View Report</a></li>
+                                                <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <template x-if="filterdNotesList.length">
-                                        <div class="min-h-[400px]1 sm:min-h-[300px]1">
-                                            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
-                                                <template x-for="note in filterdNotesList" :key="note.id">
-                                                    <div class="panel" :class="{
-                                                                        'bg-primary-light shadow-primary': note.tag === 'personal',
-                                                                        'bg-warning-light shadow-warning': note.tag === 'work',
-                                                                        'bg-info-light shadow-info': note.tag === 'social',
-                                                                        'bg-danger-light shadow-danger': note.tag === 'important',
-                                                                        'dark:shadow-dark' : !note.tag
-                                                                    }">
-                                                        <div class="min-h-[142px]">
-                                                            <div class="flex justify-between">
-                                                                <div class="flex w-max items-center">
-                                                                    <div class="flex-none">
-                                                                        <template x-if="note.thumb">
-                                                                            <div class="rounded-full bg-gray-300 p-0.5 dark:bg-gray-700">
-                                                                                <img class="h-14 w-14 rounded-full object-cover"
-                                                                                    :src="`assets/images/${note.thumb}`" />
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">37</div>
+                                        <div class="badge bg-white/30">- 0.35%</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center font-semibold">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
+                                            <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
+                                            <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
+                                        </svg>
+                                        Last Week 49
+                                    </div>
+                                </div>
+
+                                <!-- Archives -->
+                                <div class="panel l-bg-style3 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
+                                    <div class="flex justify-between">
+                                        <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Archives</div>
+                                        <div x-data="dropdown" @click.outside="open = false" class="dropdown">
+                                            <a href="javascript:;" @click="toggle">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
+                                                    <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                </svg>
+                                            </a>
+                                            <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
+                                                <li><a href="javascript:;" @click="toggle">View Report</a></li>
+                                                <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">38,085</div>
+                                        <div class="badge bg-white/30">+ 1.35%</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center font-semibold">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
+                                            <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
+                                            <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
+                                        </svg>
+                                        Last Week 37,894
+                                    </div>
+                                </div>
+
+                                <!-- Survey and Poll -->
+                                <div class="panel l-bg-style4 overflow-hidden before:absolute before:-right-44 before:top-0 before:bottom-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#adb5bd]">
+                                    <div class="flex justify-between">
+                                        <div class="text-lg font-semibold ltr:mr-1 rtl:ml-1">Survey and Poll</div>
+                                        <div x-data="dropdown" @click.outside="open = false" class="dropdown">
+                                            <a href="javascript:;" @click="toggle">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 hover:opacity-80">
+                                                    <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                    <circle cx="19" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                                                </svg>
+                                            </a>
+                                            <ul x-show="open" x-transition="" x-transition.duration.300ms="" class="text-black ltr:right-0 rtl:left-0 dark:text-white-dark" style="display: none;">
+                                                <li><a href="javascript:;" @click="toggle">View Report</a></li>
+                                                <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">49.10%</div>
+                                        <div class="badge bg-white/30">- 0.35%</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center font-semibold">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0 ltr:mr-2 rtl:ml-2">
+                                            <path opacity="0.5" d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-width="1.5"></path>
+                                            <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5"></path>
+                                        </svg>
+                                        Last Week 50.01%
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="flex space-x-2 rtl:space-x-reverse mb-3 text-lg bg-gray-100 p-2 rounded-md">
+                                <li>
+                                    <span class="text-primary">Committee</span>
+                                </li>
+                                <li class="before:content-['/'] ltr:before:mr-1 rtl:before:ml-1">
+                                    <span>Sub Committee</span>
+                                </li>
+                            </ul>
+                            <div class="mb-3 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-4">
+                                <!-- Total No of Discussion Subjects -->
+                                <div class="panel bg-gradient-to-r from-cyan-500 to-cyan-400">
+                                    <div class="flex justify-between">
+                                        <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total No of Discussion Subjects</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">8</div>
+                                    </div>
+                                </div>
+
+                                <!-- Total Events Organized -->
+                                <div class="panel bg-gradient-to-r from-violet-500 to-violet-400">
+                                    <div class="flex justify-between">
+                                        <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Events Organized</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">4</div>
+                                    </div>
+                                </div>
+
+                                <!-- Total Events Completed -->
+                                <div class="panel bg-gradient-to-r from-blue-500 to-blue-400">
+                                    <div class="flex justify-between">
+                                        <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Events Completed</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">3</div>
+                                    </div>
+                                </div>
+
+                                <!-- Total Due Events -->
+                                <div class="panel bg-gradient-to-r from-fuchsia-500 to-fuchsia-400">
+                                    <div class="flex justify-between">
+                                        <div class="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Due Events</div>
+                                    </div>
+                                    <div class="mt-5 flex items-center">
+                                        <div class="text-3xl font-bold ltr:mr-3 rtl:ml-3">1</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-2 mt-3">
+                                <div x-data="notes" class="panel h-full p-0 sm:col-span-2 xl:col-span-1">
+                                    
+                                    <div class="mb-2 flex items-center justify-between dark:text-white-light l-bg-style7 p-2 rounded-md">
+                                        <div class="flex items-center text-center">
+                                            <div class="shrink-0">
+                                                <svg class="shrink-0 group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4036 22.4797L10.6787 22.015C11.1195 21.2703 11.3399 20.8979 11.691 20.6902C12.0422 20.4825 12.5001 20.4678 13.4161 20.4385C14.275 20.4111 14.8523 20.3361 15.3458 20.1317C16.385 19.7012 17.2106 18.8756 17.641 17.8365C17.9639 17.0571 17.9639 16.0691 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C5.43314 6.03516 4.04489 6.03516 3.02507 6.66011C2.45442 7.0098 1.97464 7.48958 1.62495 8.06023C1 9.08006 1 10.4683 1 13.2448V14.093C1 16.0691 1 17.0571 1.32282 17.8365C1.75326 18.8756 2.57886 19.7012 3.61802 20.1317C4.11158 20.3361 4.68882 20.4111 5.5477 20.4385C6.46368 20.4678 6.92167 20.4825 7.27278 20.6902C7.6239 20.8979 7.84431 21.2703 8.28514 22.015L8.5602 22.4797C8.97002 23.1721 9.9938 23.1721 10.4036 22.4797ZM13.1928 14.5171C13.7783 14.5171 14.253 14.0424 14.253 13.4568C14.253 12.8713 13.7783 12.3966 13.1928 12.3966C12.6072 12.3966 12.1325 12.8713 12.1325 13.4568C12.1325 14.0424 12.6072 14.5171 13.1928 14.5171ZM10.5422 13.4568C10.5422 14.0424 10.0675 14.5171 9.48193 14.5171C8.89637 14.5171 8.42169 14.0424 8.42169 13.4568C8.42169 12.8713 8.89637 12.3966 9.48193 12.3966C10.0675 12.3966 10.5422 12.8713 10.5422 13.4568ZM5.77108 14.5171C6.35664 14.5171 6.83133 14.0424 6.83133 13.4568C6.83133 12.8713 6.35664 12.3966 5.77108 12.3966C5.18553 12.3966 4.71084 12.8713 4.71084 13.4568C4.71084 14.0424 5.18553 14.5171 5.77108 14.5171Z" fill="currentColor"></path>
+                                                    <path opacity="0.5" d="M15.486 1C16.7529 0.999992 17.7603 0.999986 18.5683 1.07681C19.3967 1.15558 20.0972 1.32069 20.7212 1.70307C21.3632 2.09648 21.9029 2.63623 22.2963 3.27821C22.6787 3.90219 22.8438 4.60265 22.9226 5.43112C22.9994 6.23907 22.9994 7.24658 22.9994 8.51343V9.37869C22.9994 10.2803 22.9994 10.9975 22.9597 11.579C22.9191 12.174 22.8344 12.6848 22.6362 13.1632C22.152 14.3323 21.2232 15.2611 20.0541 15.7453C20.0249 15.7574 19.9955 15.7691 19.966 15.7804C19.8249 15.8343 19.7039 15.8806 19.5978 15.915H17.9477C17.9639 15.416 17.9639 14.8217 17.9639 14.093V13.2448C17.9639 10.4683 17.9639 9.08006 17.3389 8.06023C16.9892 7.48958 16.5094 7.0098 15.9388 6.66011C14.919 6.03516 13.5307 6.03516 10.7542 6.03516H8.20964C7.22423 6.03516 6.41369 6.03516 5.73242 6.06309V4.4127C5.76513 4.29934 5.80995 4.16941 5.86255 4.0169C5.95202 3.75751 6.06509 3.51219 6.20848 3.27821C6.60188 2.63623 7.14163 2.09648 7.78361 1.70307C8.40759 1.32069 9.10805 1.15558 9.93651 1.07681C10.7445 0.999986 11.7519 0.999992 13.0188 1H15.486Z" fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <h3 class="text-lg font-semibold ltr:ml-3 rtl:mr-3">Latest Discussions</h3>
+                                        </div>
+                                        <div x-data="dropdown" @click.outside="open = false" class="dropdown">
+                                            <a href="javascript:;" @click="toggle">
+                                                <svg class="h-5 w-5 text-white/70 hover:!text-white dark:text-white/70"
+                                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5" />
+                                                    <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor"
+                                                        stroke-width="1.5" />
+                                                    <circle cx="19" cy="12" r="2" stroke="currentColor"
+                                                        stroke-width="1.5" />
+                                                </svg>
+                                            </a>
+                                            <ul x-cloak x-show="open" x-transition x-transition.duration.300ms
+                                                class="ltr:right-0 rtl:left-0">
+                                                <li><a href="discussions.html" @click="toggle">Go to Discussion</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="perfect-scrollbar relative mb-3 h-[2901px] p-2">
+                                        <template x-if="filterdNotesList.length">
+                                            <div class="min-h-[400px]1 sm:min-h-[300px]1">
+                                                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3">
+                                                    <template x-for="note in filterdNotesList" :key="note.id">
+                                                        <div class="panel" :class="{
+                                                                            'bg-primary-light shadow-primary': note.tag === 'personal',
+                                                                            'bg-warning-light shadow-warning': note.tag === 'work',
+                                                                            'bg-info-light shadow-info': note.tag === 'social',
+                                                                            'bg-danger-light shadow-danger': note.tag === 'important',
+                                                                            'dark:shadow-dark' : !note.tag
+                                                                        }">
+                                                            <div class="min-h-[142px]">
+                                                                <div class="flex justify-between">
+                                                                    <div class="flex w-max items-center">
+                                                                        <div class="flex-none">
+                                                                            <template x-if="note.thumb">
+                                                                                <div class="rounded-full bg-gray-300 p-0.5 dark:bg-gray-700">
+                                                                                    <img class="h-14 w-14 rounded-full object-cover"
+                                                                                        :src="`assets/images/${note.thumb}`" />
+                                                                                </div>
+                                                                            </template>
+                                                                            <template x-if="!note.thumb && note.user">
+                                                                                <div class="grid h-8 w-8 place-content-center rounded-full bg-gray-300 text-sm font-semibold dark:bg-gray-700"
+                                                                                    x-text="note.user.charAt(0) + '' + note.user.charAt(note.user.indexOf(' ') + 1)">
+                                                                                </div>
+                                                                            </template>
+                                                                            <template x-if="!note.thumb && !note.user">
+                                                                                <div class="rounded-full bg-gray-300 p-2 dark:bg-gray-700">
+                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5">
+                                                                                        <circle cx="12" cy="6" r="4" stroke="currentColor" stroke-width="1.5">
+                                                                                        </circle>
+                                                                                        <ellipse opacity="0.5" cx="12" cy="17" rx="7" ry="4"
+                                                                                            stroke="currentColor" stroke-width="1.5"></ellipse>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </template>
+                                                                        </div>
+                                                                        <div class="ltr:ml-2 rtl:mr-2">
+                                                                            <div class="font-semibold" x-text="note.user"></div>
+                                                                            <div class="text-sx text-white-dark" x-text="note.date">
                                                                             </div>
-                                                                        </template>
-                                                                        <template x-if="!note.thumb && note.user">
-                                                                            <div class="grid h-8 w-8 place-content-center rounded-full bg-gray-300 text-sm font-semibold dark:bg-gray-700"
-                                                                                x-text="note.user.charAt(0) + '' + note.user.charAt(note.user.indexOf(' ') + 1)">
-                                                                            </div>
-                                                                        </template>
-                                                                        <template x-if="!note.thumb && !note.user">
-                                                                            <div class="rounded-full bg-gray-300 p-2 dark:bg-gray-700">
-                                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                                                    xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5">
-                                                                                    <circle cx="12" cy="6" r="4" stroke="currentColor" stroke-width="1.5">
-                                                                                    </circle>
-                                                                                    <ellipse opacity="0.5" cx="12" cy="17" rx="7" ry="4"
-                                                                                        stroke="currentColor" stroke-width="1.5"></ellipse>
-                                                                                </svg>
-                                                                            </div>
-                                                                        </template>
-                                                                    </div>
-                                                                    <div class="ltr:ml-2 rtl:mr-2">
-                                                                        <div class="font-semibold" x-text="note.user"></div>
-                                                                        <div class="text-sx text-white-dark" x-text="note.date">
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div>
-                                                                <h4 class="mt-4 font-semibold" x-text="note.title"></h4>
-                                                                <p class="mt-2 text-white-dark" x-text="note.description"></p>
+                                                                <div>
+                                                                    <h4 class="mt-4 font-semibold" x-text="note.title"></h4>
+                                                                    <p class="mt-2 text-white-dark" x-text="note.description"></p>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div x-data="calendar" class="panel h-full pb-0 sm:col-span-2 xl:col-span-1 p-0">
+                                    <div class="mb-2 flex items-center dark:text-white-light l-bg-style8 p-2 rounded-md">
+                                        <div class="shrink-0">
+                                            <svg class="shrink-0 group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.94028 2C7.35614 2 7.69326 2.32421 7.69326 2.72414V4.18487C8.36117 4.17241 9.10983 4.17241 9.95219 4.17241H13.9681C14.8104 4.17241 15.5591 4.17241 16.227 4.18487V2.72414C16.227 2.32421 16.5641 2 16.98 2C17.3958 2 17.733 2.32421 17.733 2.72414V4.24894C19.178 4.36022 20.1267 4.63333 20.8236 5.30359C21.5206 5.97385 21.8046 6.88616 21.9203 8.27586L22 9H2.92456H2V8.27586C2.11571 6.88616 2.3997 5.97385 3.09665 5.30359C3.79361 4.63333 4.74226 4.36022 6.1873 4.24894V2.72414C6.1873 2.32421 6.52442 2 6.94028 2Z" fill="currentColor"></path>
+                                                <path opacity="0.5" d="M21.9995 14.0001V12.0001C21.9995 11.161 21.9963 9.66527 21.9834 9H2.00917C1.99626 9.66527 1.99953 11.161 1.99953 12.0001V14.0001C1.99953 17.7713 1.99953 19.6569 3.1711 20.8285C4.34267 22.0001 6.22829 22.0001 9.99953 22.0001H13.9995C17.7708 22.0001 19.6564 22.0001 20.828 20.8285C21.9995 19.6569 21.9995 17.7713 21.9995 14.0001Z" fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-lg font-semibold ltr:ml-3 rtl:mr-3">Calendar</h3>
+                                    </div>
+                                    <div class="perfect-scrollbar relative mb-3 h-[2901px] p-2 pt-0">
+                                        <div class="calendar-wrapper" id="calendar"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="mb-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-2 mt-3">
+                                <div class="panel h-full pb-0 sm:col-span-2 xl:col-span-1">
+                                    <h5 class="mb-2 text-lg font-semibold dark:text-white-light">Latest Committees</h5>
+
+                                    <div class="perfect-scrollbar relative -mr-3 mb-4 h-[290px] pr-3">
+                                        <div class="table-responsive cursor-pointer">
+                                            <table>
+                                                <thead class="whitespace-nowrap">
+                                                    <tr class="border-b-0">
+                                                        <th>#</th>
+                                                        <th class="min-w-[150px] text-black dark:text-white">Committees Name</th>
+                                                        <th>Owner Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="group text-white-dark hover:text-black dark:hover:text-white-light/90">
+                                                        <th>1</th>
+                                                        <td >Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
+                                                        <td class="min-w-[300px]">
+                                                            <div class="flex items-center justify-between group relative ">
+                                                                <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" x-tooltip="Profile 1" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-2.jpg" alt="image" x-tooltip="Profile 2" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" x-tooltip="Profile 3" />
+                                                                </div>
+                                                                <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                        <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+                                                                        <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                    </svg>
+                                                                    Jan 2024
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <th>2</th>
+                                                        <td >Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
+                                                        <td class="min-w-[300px]">
+                                                            <div class="flex items-center justify-between group relative">
+                                                                <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" x-tooltip="Profile 3"/>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" x-tooltip="Profile 1"/>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-2.jpg" alt="image" x-tooltip="Profile 2"/>
+                                                                </div>
+                                                                <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                        <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+                                                                        <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                    </svg>
+                                                                    Jan 2024
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <th>3</th>
+                                                        <td >Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
+                                                        <td class="min-w-[300px]">
+                                                            <div class="flex items-center justify-between group relative">
+                                                                <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/satish.jpg" alt="image" x-tooltip="Satish"/>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/sri.jpg" alt="image" x-tooltip="Sridhar T"/>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/vinod.jpg" alt="image" x-tooltip="Vinod"/>
+                                                                </div>
+                                                                <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                        <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+                                                                        <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                    </svg>
+                                                                    Jan 2024
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel h-full pb-0 sm:col-span-2 xl:col-span-1">
+                                    <div class="mb-2 flex items-center justify-between dark:text-white-light">
+                                        <h5 class="text-lg font-semibold">Latest Documents</h5>
+                                        <div x-data="dropdown" @click.outside="open = false" class="dropdown">
+                                            <a href="javascript:;" @click="toggle">
+                                                <svg class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
+                                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5" />
+                                                    <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor"
+                                                        stroke-width="1.5" />
+                                                    <circle cx="19" cy="12" r="2" stroke="currentColor"
+                                                        stroke-width="1.5" />
+                                                </svg>
+                                            </a>
+                                            <ul x-cloak x-show="open" x-transition x-transition.duration.300ms
+                                                class="ltr:right-0 rtl:left-0">
+                                                <li><a href="javascript:;" @click="toggle">View Report</a></li>
+                                                <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
+                                                <li><a href="javascript:;" @click="toggle">Mark as Done</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="perfect-scrollbar relative h-[290px] pr-2">
+                                        <div class="space-y-6">
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
+                                                    <i class="fa-duotone fa-file-excel fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
                                                     </div>
-                                                </template>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
+                                                    <i class="fa-duotone fa-file-word fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
+                                                    <i class="fa-duotone fa-file-pdf fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
+                                                    <i class="fa-duotone fa-file-excel fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
+                                                    <i class="fa-duotone fa-file-word fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
+                                                    <i class="fa-duotone fa-file-pdf fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
+                                                    <i class="fa-duotone fa-file-excel fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
+                                                    <i class="fa-duotone fa-file-word fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
+                                                    <i class="fa-duotone fa-file-pdf fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
+                                                    <i class="fa-duotone fa-file-excel fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
+                                                    <i class="fa-duotone fa-file-word fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex">
+                                                <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
+                                                    <i class="fa-duotone fa-file-pdf fa-xl"></i>
+                                                </span>
+                                                <div class="flex-1 pl-3">
+                                                    <div>File name here Committee for the Development </div>
+                                                    <div class="flex justify-between items-center">
+                                                        <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
+                                                        <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </template>
-                                </div>
-                            </div>
-                            <div x-data="calendar" class="panel h-full pb-0 sm:col-span-2 xl:col-span-1">
-                                <div class="mb-2 flex items-center">
-                                    <div class="shrink-0">
-                                        <svg class="shrink-0 group-hover:!text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.94028 2C7.35614 2 7.69326 2.32421 7.69326 2.72414V4.18487C8.36117 4.17241 9.10983 4.17241 9.95219 4.17241H13.9681C14.8104 4.17241 15.5591 4.17241 16.227 4.18487V2.72414C16.227 2.32421 16.5641 2 16.98 2C17.3958 2 17.733 2.32421 17.733 2.72414V4.24894C19.178 4.36022 20.1267 4.63333 20.8236 5.30359C21.5206 5.97385 21.8046 6.88616 21.9203 8.27586L22 9H2.92456H2V8.27586C2.11571 6.88616 2.3997 5.97385 3.09665 5.30359C3.79361 4.63333 4.74226 4.36022 6.1873 4.24894V2.72414C6.1873 2.32421 6.52442 2 6.94028 2Z" fill="currentColor"></path>
-                                            <path opacity="0.5" d="M21.9995 14.0001V12.0001C21.9995 11.161 21.9963 9.66527 21.9834 9H2.00917C1.99626 9.66527 1.99953 11.161 1.99953 12.0001V14.0001C1.99953 17.7713 1.99953 19.6569 3.1711 20.8285C4.34267 22.0001 6.22829 22.0001 9.99953 22.0001H13.9995C17.7708 22.0001 19.6564 22.0001 20.828 20.8285C21.9995 19.6569 21.9995 17.7713 21.9995 14.0001Z" fill="currentColor"></path>
-                                        </svg>
+                                        <div class="table-responsive">
+                                            <table>
+                                                <thead class="whitespace-nowrap">
+                                                    <tr class="border-b-0">
+                                                        <th>#</th>
+                                                        <th class="ltr:rounded-l-md rtl:rounded-r-md">File Type</th>
+                                                        <th class="text-black dark:text-white">File Name</th>
+                                                        <th>Committee</th>
+                                                        <th>Owner Name</th>
+                                                        <th>Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="">
+                                                        <th>1</th>
+                                                        <td>
+                                                            <img class="h-9 w-9 rounded-md object-cover" src="assets/images/icons/word.svg" alt="word" />
+                                                        </td>
+                                                        <td >File name here Committee for the Development</td>
+                                                        <td>Al Tomouh IT Pvt Ltd</td>
+                                                        <td>
+                                                            <div class="flex items-center justify-center">
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" />
+                                                                <span>Ahlam Hilal Khamis Alrasbi</span>
+                                                            </div>
+                                                            <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/sri.jpg" alt="image" x-tooltip="Sridhar T"/>
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/satish.jpg" alt="image" x-tooltip="Satish"/>
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/vinod.jpg" alt="image" x-tooltip="Vinod"/>
+                                                            </div>
+                                                        </td>
+                                                        <td >
+                                                            <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+                                                                    <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                                Jan 2024
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <th>2</th>
+                                                        <td>
+                                                            <img class="h-9 w-9 rounded-md object-cover" src="assets/images/icons/pdf.svg" alt="pdf" />
+                                                        </td>
+                                                        <td >File name here Committee for the Development</td>
+                                                        <td>Suhail Bahwan LLC</td>
+                                                        <td class="">
+                                                            <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" x-tooltip="Profile 3"/>
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" x-tooltip="Profile 1"/>
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-2.jpg" alt="image" x-tooltip="Profile 2"/>
+                                                            </div>
+                                                        </td>
+                                                        <td >
+                                                            <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+                                                                    <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                                Jan 2024
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <th>3</th>
+                                                        <td>
+                                                            <img class="h-9 w-9 rounded-md object-cover" src="assets/images/icons/excel.svg" alt="excel" />
+                                                        </td>
+                                                        <td >File name here Committee for the Development</td>
+                                                        <td>ZabonEx</td>
+                                                        <td>
+                                                            <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" x-tooltip="Profile 1" />
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-2.jpg" alt="image" x-tooltip="Profile 2" />
+                                                                <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" x-tooltip="Profile 3" />
+                                                            </div>
+                                                        </td>
+                                                        <td >
+                                                            <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                    <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+                                                                    <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                                Jan 2024
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <h3 class="text-lg font-semibold ltr:ml-3 rtl:mr-3">Calendar</h3>
                                 </div>
-                                <div class="perfect-scrollbar relative -mr-3 mb-4 h-[290px] p-3 pt-0">
-                                    <div class="calendar-wrapper" id="calendar"></div>
-                                </div>
-                            </div>
-                        </div>
+                            </div> -->
 
-                        <div class="mb-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-2 mt-3">
-                            <div class="panel h-full pb-0 sm:col-span-2 xl:col-span-1">
-                                <h5 class="mb-2 text-lg font-semibold dark:text-white-light">Latest Committees</h5>
-
-                                <div class="perfect-scrollbar relative -mr-3 mb-4 h-[290px] pr-3">
-                                    <div class="table-responsive cursor-pointer">
+                            <div class="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+                                <div class="panel h-full w-full p-0">
+                                    <div class="mb-1 flex items-center justify-between l-bg-style2 p-2 rounded-md">
+                                        <h5 class="text-lg font-semibold dark:text-white-light">Latest Committees</h5>
+                                    </div>
+                                    <div class="table-responsive">
                                         <table>
-                                            <thead class="whitespace-nowrap">
-                                                <tr class="border-b-0">
+                                            <thead>
+                                                <tr>
                                                     <th>#</th>
-                                                    <th class="min-w-[150px] text-black dark:text-white">Committees Name</th>
-                                                    <th>Owner Name</th>
+                                                    <th>Committees Name</th>
+                                                    <th class="ltr:rounded-l-md rtl:rounded-r-md">Owner Name</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="">
-                                                    <th>1</th>
-                                                    <td class="min-w-[200px]">Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
-                                                    <td class="min-w-[300px]">
+                                                <tr class="group text-white-dark hover:text-black dark:hover:text-white-light/90">
+                                                    <td>1</td>
+                                                    <td class="min-w-[300px]">Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
+                                                    <td class="min-w-[300px] text-black dark:text-white">
                                                         <div class="flex items-center justify-between group relative ">
                                                             <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
                                                                 <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
@@ -1036,11 +1381,11 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr class="">
-                                                    <th>2</th>
-                                                    <td class="min-w-[200px]">Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
-                                                    <td class="min-w-[300px]">
-                                                        <div class="flex items-center justify-between group relative">
+                                                <tr class="group text-white-dark hover:text-black dark:hover:text-white-light/90">
+                                                    <td>2</td>
+                                                    <td class="min-w-[300px]">Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
+                                                    <td class="min-w-[300px] text-black dark:text-white">
+                                                        <div class="flex items-center justify-between group relative ">
                                                             <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
                                                                 <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
                                                                 <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-3.jpg" alt="image" x-tooltip="Profile 3"/>
@@ -1057,11 +1402,11 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr class="">
-                                                    <th>3</th>
-                                                    <td class="min-w-[200px]">Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
-                                                    <td class="min-w-[300px]">
-                                                        <div class="flex items-center justify-between group relative">
+                                                <tr class="group text-white-dark hover:text-black dark:hover:text-white-light/90">
+                                                    <td>3</td>
+                                                    <td class="min-w-[300px]">Committee of the development of the banking sector in the Gulf Cooperation Countries</td>
+                                                    <td class="min-w-[300px] text-black dark:text-white">
+                                                        <div class="flex items-center justify-between group relative ">
                                                             <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
                                                                 <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
                                                                 <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/satish.jpg" alt="image" x-tooltip="Satish"/>
@@ -1082,274 +1427,136 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="panel h-full pb-0 sm:col-span-2 xl:col-span-1">
-                                <div class="mb-2 flex items-center justify-between dark:text-white-light">
-                                    <h5 class="text-lg font-semibold">Latest Documents</h5>
-                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown">
-                                        <a href="javascript:;" @click="toggle">
-                                            <svg class="h-5 w-5 text-black/70 hover:!text-primary dark:text-white/70"
-                                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5" />
-                                                <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor"
-                                                    stroke-width="1.5" />
-                                                <circle cx="19" cy="12" r="2" stroke="currentColor"
-                                                    stroke-width="1.5" />
-                                            </svg>
-                                        </a>
-                                        <ul x-cloak x-show="open" x-transition x-transition.duration.300ms
-                                            class="ltr:right-0 rtl:left-0">
-                                            <li><a href="javascript:;" @click="toggle">View Report</a></li>
-                                            <li><a href="javascript:;" @click="toggle">Edit Report</a></li>
-                                            <li><a href="javascript:;" @click="toggle">Mark as Done</a></li>
-                                        </ul>
+                                <div class="panel h-full w-full p-0">
+                                    <div class="mb-1 flex items-center justify-between l-bg-style3 p-2 rounded-md">
+                                        <h5 class="text-lg font-semibold dark:text-white-light">Latest Documents</h5>
                                     </div>
-                                </div>
-                                <div class="perfect-scrollbar relative h-[290px] pr-2">
-                                    <!-- <div class="space-y-6">
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
-                                                <i class="fa-duotone fa-file-excel fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
+                                    <div class="perfect-scrollbar relative h-[290px]">
+                                        <div class="table-responsive">
+                                            <table>
+                                                <thead>
+                                                    <tr class="border-b-0 whitespace-nowrap">
+                                                        <th>#</th>
+                                                        <th class="ltr:rounded-l-md rtl:rounded-r-md">File</th>
+                                                        <th>Committee Name</th>
+                                                        <th class="ltr:rounded-r-md rtl:rounded-l-md">Owner Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="group text-white-dark hover:text-black dark:hover:text-white-light/90">
+                                                        <td>1</td>
+                                                        <td class="min-w-[150px] text-black dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img class="h-8 w-8 rounded-md object-cover ltr:mr-3 rtl:ml-3" src="assets/images/icons/pdf.svg" alt="pdf">
+                                                                <p class="">File name here Committee for the Development
+                                                                    <span class="inline-flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                            <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor"
+                                                                                stroke-width="1.5"></circle>
+                                                                            <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5"
+                                                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                        Jan 2024
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td>Al Tomouh IT Pvt Ltd</td>
+                                                        <td class="min-w-[180px] text-black dark:text-white">
+                                                            <div class="flex items-center justify-between group relative ">
+                                                                <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/satish.jpg" alt="image" x-tooltip="Satish" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/sri.jpg" alt="image" x-tooltip="Sridhar T" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/vinod.jpg" alt="image" x-tooltip="Vinod" />
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="group text-white-dark hover:text-black dark:hover:text-white-light/90">
+                                                        <td>2</td>
+                                                        <td class="min-w-[150px] text-black dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img class="h-8 w-8 rounded-md object-cover ltr:mr-3 rtl:ml-3" src="assets/images/icons/excel.svg" alt="excel">
+                                                                <p class="">File name here Committee for the Development
+                                                                    <span class="inline-flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                            <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor"
+                                                                                stroke-width="1.5"></circle>
+                                                                            <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5"
+                                                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                        Jan 2024
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td>Suhail Bahwan LLC</td>
+                                                        <td class="min-w-[180px] text-black dark:text-white">
+                                                            <div class="flex items-center justify-between group relative ">
+                                                                <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/profile-1.jpg" alt="image" x-tooltip="profile-1" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/profile-5.png" alt="image" x-tooltip="profile-2" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/profile-4.jpg" alt="image" x-tooltip="profile-4" />
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="group text-white-dark hover:text-black dark:hover:text-white-light/90">
+                                                        <td>3</td>
+                                                        <td class="min-w-[150px] text-black dark:text-white">
+                                                            <div class="flex items-center">
+                                                                <img class="h-8 w-8 rounded-md object-cover ltr:mr-3 rtl:ml-3" src="assets/images/icons/word.svg" alt="word">
+                                                                <p class="">File name here Committee for the Development
+                                                                    <span class="inline-flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
+                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
+                                                                            <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor"
+                                                                                stroke-width="1.5"></circle>
+                                                                            <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5"
+                                                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                        </svg>
+                                                                        Jan 2024
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td>Suhail Bahwan LLC</td>
+                                                        <td class="min-w-[180px] text-black dark:text-white">
+                                                            <div class="flex items-center justify-between group relative ">
+                                                                <div class="flex items-center justify-center group-hover:-space-x-2 rtl:space-x-reverse rtl:group-hover:space-x-reverse">
+                                                                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-[#bfc9d4] font-semibold text-dark">+6</span>
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/profile-2.jpg" alt="image" x-tooltip="profile-1" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/profile-3.jpg" alt="image" x-tooltip="profile-2" />
+                                                                    <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark"
+                                                                        src="assets/images/userProfile/profile-1.jpg" alt="image" x-tooltip="profile-4" />
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
-                                                <i class="fa-duotone fa-file-word fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
-                                                <i class="fa-duotone fa-file-pdf fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
-                                                <i class="fa-duotone fa-file-excel fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
-                                                <i class="fa-duotone fa-file-word fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
-                                                <i class="fa-duotone fa-file-pdf fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
-                                                <i class="fa-duotone fa-file-excel fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
-                                                <i class="fa-duotone fa-file-word fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
-                                                <i class="fa-duotone fa-file-pdf fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-success-light text-base text-success dark:bg-success dark:text-success-light">
-                                                <i class="fa-duotone fa-file-excel fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-success">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-primary-light text-base text-primary dark:bg-primary dark:text-primary-light">
-                                                <i class="fa-duotone fa-file-word fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-primary">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex">
-                                            <span class="grid h-9 w-9 shrink-0 place-content-center rounded-md bg-danger-light text-base text-danger dark:bg-danger dark:text-danger-light">
-                                                <i class="fa-duotone fa-file-pdf fa-xl"></i>
-                                            </span>
-                                            <div class="flex-1 pl-3">
-                                                <div>File name here Committee for the Development </div>
-                                                <div class="flex justify-between items-center">
-                                                    <div class="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
-                                                    <span class="whitespace-pre px-1 text-base text-danger">Ahlam Hilal Khamis Alrasbi </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <div class="table-responsive">
-                                        <table>
-                                            <thead class="whitespace-nowrap">
-                                                <tr class="border-b-0">
-                                                    <th>#</th>
-                                                    <th class="ltr:rounded-l-md rtl:rounded-r-md">File Type</th>
-                                                    <th class="min-w-[150px] text-black dark:text-white">File Name</th>
-                                                    <th>Owner Name</th>
-                                                    <th>Date</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="">
-                                                    <th>1</th>
-                                                    <td>
-                                                        <img class="h-9 w-9 rounded-md object-cover" src="assets/images/icons/word.svg" alt="word" />
-                                                    </td>
-                                                    <td class="min-w-[200px]">File name here Committee for the Development</td>
-                                                    <td class="min-w-[200px]">
-                                                        <div class="flex items-center justify-center">
-                                                            <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" />
-                                                            <span>Ahlam Hilal Khamis Alrasbi</span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="min-w-[120px]">
-                                                        <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
-                                                                <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
-                                                                <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                            </svg>
-                                                            Jan 2024
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <th>2</th>
-                                                    <td>
-                                                        <img class="h-9 w-9 rounded-md object-cover" src="assets/images/icons/pdf.svg" alt="pdf" />
-                                                    </td>
-                                                    <td class="min-w-[200px]">File name here Committee for the Development</td>
-                                                    <td class="min-w-[200px]">
-                                                        <div class="flex items-center justify-center">
-                                                            <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" />
-                                                            <span>Ahlam Hilal Khamis Alrasbi</span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="min-w-[120px]">
-                                                        <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
-                                                                <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
-                                                                <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                            </svg>
-                                                            Jan 2024
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <th>3</th>
-                                                    <td>
-                                                        <img class="h-9 w-9 rounded-md object-cover" src="assets/images/icons/excel.svg" alt="excel" />
-                                                    </td>
-                                                    <td class="min-w-[200px]">File name here Committee for the Development</td>
-                                                    <td class="min-w-[200px]">
-                                                        <div class="flex items-center justify-center">
-                                                            <img class="h-9 w-9 rounded-full border-2 border-white object-cover transition-all duration-300 dark:border-dark" src="assets/images/userProfile/profile-1.jpg" alt="image" />
-                                                            <span>Ahlam Hilal Khamis Alrasbi</span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="min-w-[120px]">
-                                                        <div class="flex items-center rounded-full bg-danger/20 px-2 py-1 text-xs font-semibold text-danger">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ltr:mr-1 rtl:ml-1">
-                                                                <circle opacity="0.5" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
-                                                                <path d="M12 8V12L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                            </svg>
-                                                            Jan 2024
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- end main content section -->
                 </div>
-                <!-- end main content section -->
             </div>
-
             <!-- start footer section -->
             <div class="mt-auto p-6 pt-0 text-center dark:text-white-dark ltr:sm:text-left rtl:sm:text-right">
                 &copy; <span id="footer-year"></span>. GCC All rights reserved.
