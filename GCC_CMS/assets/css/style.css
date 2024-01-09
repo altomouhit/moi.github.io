@@ -6897,7 +6897,7 @@ pre {
 }
 
 .from-violet-500 {
-    --tw-gradient-from: #8b5cf6 var(--tw-gradient-from-position);
+    --tw-gradient-from: #b3a612 var(--tw-gradient-from-position);
     --tw-gradient-to: #8b5cf600 var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
@@ -6981,7 +6981,7 @@ pre {
 }
 
 .to-cyan-400 {
-    --tw-gradient-to: #22d3ee var(--tw-gradient-to-position)
+    --tw-gradient-to: #0f6572 var(--tw-gradient-to-position)
 }
 
 .to-fuchsia-400 {
@@ -6997,7 +6997,7 @@ pre {
 }
 
 .to-violet-400 {
-    --tw-gradient-to: #a78bfa var(--tw-gradient-to-position)
+    --tw-gradient-to: #df5194 var(--tw-gradient-to-position)
 }
 
 .bg-contain {

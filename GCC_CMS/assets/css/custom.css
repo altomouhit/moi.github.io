@@ -165,7 +165,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .l-bg-style5 {
-    background: linear-gradient(to left, #ab7f27, #002650) !important;
+    background: linear-gradient(to left, #639, #002650) !important;
     color: #fff;
 }
 
@@ -180,10 +180,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .l-bg-style8 {
-    background: linear-gradient(40deg, #ec366e .4%, #f5b161 100.2%) !important;
+    /* background: linear-gradient(40deg, #b236ec .4%, #a56821 100.2%) !important; */
+    background-color: #639;
     color: #fff;
 }
-
+.l-bg-style9 {
+    background: linear-gradient(119.54deg,#000046,#1cb5e0) !important;
+    color: #fff;
+}
+.cadetblue {
+    background: cadetblue;
+    color: #fff;
+}
 /* OTP */
 .Skip {
     text-align: center;

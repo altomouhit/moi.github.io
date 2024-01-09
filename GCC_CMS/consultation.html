@@ -868,7 +868,7 @@
                                             <th>Mobile</th>
                                             <th>Phone</th>
                                             <th>Fax</th>
-                                            <th class="!text-center">Actions</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -906,7 +906,7 @@
                                                 <td x-text="contact.phone" ></td>
                                                 <td x-text="contact.fax" ></td>
                                                 <td class="group">
-                                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown opacity-0 group-hover:opacity-100">
+                                                    <div x-data="dropdown" @click.outside="open = false" class="dropdown">
                                                         <button type="button" class="text-primary" @click="toggle">
                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                                                 class="h-5 w-5 rotate-90 opacity-70 hover:opacity-100">
@@ -974,12 +974,12 @@
                         <div class="my-5 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                             <template x-for="contact in filterdContactsList" :key="contact.id">
                                 <div class="relative overflow-hidden rounded-md bg-white text-center shadow dark:bg-[#1c232f]">
-                                    <div class="rounded-t-md bg-white/40 bg-[url('../images/notification-bg.png')] bg-cover bg-center p-6 pb-0" style="height: 10vh;">
+                                    <div class="rounded-t-md bg-white/40 min-h-[100px] l-bg-style8 bg-[url('../images/notification-bg.png')] bg-cover bg-center p-6 pb-0" style="height: 10vh;">
                                         <template x-if="contact.path">
                                             <img class="mx-auto max-h-40 w-4/5 object-contain" :src="`assets/images/${contact.path}`" />
                                         </template>
                                         <div x-data="dropdown" @click.outside="open = false" class="dropdown absolute top-1 ltr:right-0 rtl:left-0">
-                                            <button type="button" class="text-primary" @click="toggle">
+                                            <button type="button" class="text-white" @click="toggle">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-90 opacity-70 hover:opacity-100">
                                                     <circle cx="5" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
                                                     <circle opacity="0.5" cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"></circle>
