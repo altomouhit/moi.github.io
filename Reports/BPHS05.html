@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="images/Khanjar.png">
+  <title>Health Card</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.4.2.1.css">
+
+  <!-- fontawesome CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="fontawesome-5.6.3/css/all.css">
+  <!-- AdminLTE style -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/AdminLTE.css">
+  <!-- dataTables-4 CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/dataTables-4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/dataTables-4/responsive.bootstrap4.css">
+  <!-- Animation CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/animation.css">
+
+  <!-- Customs CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/CMS.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/DRC.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/reports.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/landing.css">
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+  <section class="bg-boby">
+    <nav class="navbar navbar-expand-lg navbar-dark flex-md-row skin-blue zero-padding">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="#">Sticky top</a> -->
+        <ul class="navbar-nav d-none d-md-flex">
+          <li class="nav-item"> <a class="nav-link" href="index.html"><i class="fas fa-home">&nbsp;</i>Home <span
+                class="sr-only">(current)</span></a> </li>
+          <li class="nav-item active"> <a class="nav-link" href="BPHS05.html"><i class="fas fa-microscope">&nbsp;</i>Health
+              Services</a> </li>
+          <li class="nav-item"><a id="date" class="nav-link p-2" title="date" href="JavaScript:Void(0)"></a></li>
+          <li class="nav-item"><a href="javascript:Void" class="nav-link p-2">|</a></li>
+          <li class="nav-item"><a id="time" class="nav-link p-2" title="time" href="JavaScript:Void(0)"></a></li>
+        </ul>
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sridhar Talluri </a>
+            <div class="dropdown-menu animated slideInRight" aria-labelledby="bd-versions"> <a class="dropdown-item"
+                href="login.html"><i class="fas fa-sign-out-alt">&nbsp;</i>Logout</a> </div>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link p-2" hreflang="ar">&#1593;&#1585;&#1576;&#1610;</a></li>
+          <li class="nav-item active"> <a href="javascript:Void();" class="nav-link"> <i
+                class="fas fa-sync fa-spin fa-fw"></i><span id="timer"></span> </a> </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container mt-3 shadow-lg bg-white rounded">
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col zero-padding">
+          <!-- Tabs with icons on Card -->
+          <div class="card card-nav-tabs">
+            <div class="bg-Bighead">
+              <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                  <ul class="nav nav-tabs" data-tabs="tabs">
+                    <li class="nav-item"> <a class="nav-link" href="#bphs05" data-toggle="tab"> 
+                      <i class="fas fa-microscope fa-fw fa-2x"></i>Health Card </a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-body zero-padding">
+              <div class="tab-content">
+                <div class="tab-pane active animated fadeInDown" id="bphs05">
+                  <div class="row" style="margin-top: 5px;">
+                    <div class="form-group col-sm-6 col-md-3">
+                      <label for="region_ser">Governorate</label>
+                      <select name="region_ser" id="region_ser" class="form-control form-control-sm">
+                        <option value="1000">Please select</option>
+                        <option value="1">Alshaqiya Governorate</option>
+                        <option value="2">Aldhahira Governorate</option>
+                        <option value="3">Mosandam Governorate</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-sm-6 col-md-3">
+                      <label for="Willayat_ser">Willayat</label>
+                      <select name="Willayat_ser" id="Willayat_ser" class="form-control form-control-sm">
+                        <option value="1000">Please select</option>
+                        <option value="1">Suhar</option>
+                        <option value="2">Nizwa</option>
+                        <option value="3">Ibra</option>
+                        <option value="4">Saham</option>
+                        <option value="5">Nakhal</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-sm-6 col-md-3">
+                      <label for="Muncipality_ser">Municipality</label>
+                      <select name="Muncipality_ser" id="Muncipality_ser" class="form-control form-control-sm">
+                        <option value="1000">Please select</option>
+                        <option value="1">Suhar</option>
+                        <option value="2">Nizwa</option>
+                        <option value="3">Ibra</option>
+                        <option value="4">Saham</option>
+                        <option value="5">Nakhal</option>
+                      </select>
+                    </div>
+                  </div> <!-- /.row -->
+                  <hr class="hr">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <fieldset class="colcount">
+                        <legend class="text">Health Card</legend>
+                        <div class="row">
+                          <div class="col">
+                            <form class="form-horizontal" role="form">
+                            </form>
+                          </div>
+                          <div class="col">
+                            <div id="chart1"></div>
+                          </div>
+                        </div> <!-- </.row> -->
+                      </fieldset>
+                    </div> <!-- /.col -->
+                  </div> <!-- /.row -->
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Tabs with icons on Card -->
+        </div>
+      </div> <!-- /.row -->
+
+      <div class="clearfix"></div>
+      <div class="row my-3 animated fadeInDown">
+        <div class="col-8">
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Fee Collections</h3>
+              <div class="box-tools float-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="table-responsive">
+                <table id="Fee_Collections" class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="bg-primary text-white">Municipality</th>
+                      <th class="bg-success text-white">Advance Fee</th>
+                      <th class="bg-info text-white">Approval Fee</th>
+                      <th class="bg-dark text-white">Processing Fee</th>
+                      <th class="bg-warning">Grand Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Adam</td>
+                      <td>7</td>
+                      <td>133.792</td>
+                      <td>&nbsp;</td>
+                      <td>140.792</td>
+                    </tr>
+                    <tr>
+                      <td>Al_jazer</td>
+                      <td>0.1</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>0.1</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Awabi</td>
+                      <td>11.1</td>
+                      <td>101.176</td>
+                      <td>&nbsp;</td>
+                      <td>328.276</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Buraimi</td>
+                      <td>15.1</td>
+                      <td>232.258</td>
+                      <td>&nbsp;</td>
+                      <td>247.358</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Duqm</td>
+                      <td>2</td>
+                      <td>68.487</td>
+                      <td>&nbsp;</td>
+                      <td>70.487</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Hamra</td>
+                      <td>8.1</td>
+                      <td>49.57</td>
+                      <td>&nbsp;</td>
+                      <td>57.67</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Kamil And Al-Wafi</td>
+                      <td>51.2</td>
+                      <td>1536.538</td>
+                      <td>&nbsp;</td>
+                      <td>1587.738</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Khabura</td>
+                      <td>11.6</td>
+                      <td>201.736</td>
+                      <td>&nbsp;</td>
+                      <td>213.336</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Mudhaibi</td>
+                      <td>58.3</td>
+                      <td>653.628</td>
+                      <td>&nbsp;</td>
+                      <td>1361.928</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Musanna</td>
+                      <td>43.1</td>
+                      <td>1594.371</td>
+                      <td>&nbsp;</td>
+                      <td>4346.471</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Qabil</td>
+                      <td>24.8</td>
+                      <td>90</td>
+                      <td>&nbsp;</td>
+                      <td>1148.8</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Rustaq</td>
+                      <td>49.9</td>
+                      <td>662.085</td>
+                      <td>&nbsp;</td>
+                      <td>711.985</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Seeb</td>
+                      <td>0.1</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>0.1</td>
+                    </tr>
+                    <tr>
+                      <td>Al-Suwaiq</td>
+                      <td>55.1</td>
+                      <td>1606.142</td>
+                      <td>&nbsp;</td>
+                      <td>1661.242</td>
+                    </tr>
+                    <tr>
+                      <td>Bahla</td>
+                      <td>36</td>
+                      <td>400.864</td>
+                      <td>&nbsp;</td>
+                      <td>486.864</td>
+                    </tr>
+                    <tr>
+                      <td>Barka</td>
+                      <td>87.2</td>
+                      <td>7260.211</td>
+                      <td>0.2</td>
+                      <td>10270.891</td>
+                    </tr>
+                    <tr>
+                      <td>Bid Bid</td>
+                      <td>19.6</td>
+                      <td>67.58</td>
+                      <td>&nbsp;</td>
+                      <td>87.18</td>
+                    </tr>
+                    <tr>
+                      <td>Bidiya</td>
+                      <td>44.7</td>
+                      <td>992.7</td>
+                      <td>&nbsp;</td>
+                      <td>2993.4</td>
+                    </tr>
+                    <tr>
+                      <td>Bukha</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                      <td>&nbsp;</td>
+                      <td>6.5</td>
+                    </tr>
+                    <tr>
+                      <td>Daba Al-Biya</td>
+                      <td>12.8</td>
+                      <td>753.76</td>
+                      <td>&nbsp;</td>
+                      <td>844.56</td>
+                    </tr>
+                    <tr>
+                      <td>Dhank</td>
+                      <td>4.1</td>
+                      <td>84.256</td>
+                      <td>&nbsp;</td>
+                      <td>88.356</td>
+                    </tr>
+                    <tr>
+                      <td>Dima And Tayin</td>
+                      <td>17.9</td>
+                      <td>74.78</td>
+                      <td>&nbsp;</td>
+                      <td>92.68</td>
+                    </tr>
+                    <tr>
+                      <td>Haima</td>
+                      <td>0.7</td>
+                      <td>5</td>
+                      <td>&nbsp;</td>
+                      <td>5.7</td>
+                    </tr>
+                    <tr>
+                      <td>Ibra</td>
+                      <td>38.8</td>
+                      <td>1062.698</td>
+                      <td>&nbsp;</td>
+                      <td>1950.298</td>
+                    </tr>
+                    <tr>
+                      <td>Ibri</td>
+                      <td>58.4</td>
+                      <td>4347.336</td>
+                      <td>&nbsp;</td>
+                      <td>8367.186</td>
+                    </tr>
+                    <tr>
+                      <td>Izki</td>
+                      <td>17.9</td>
+                      <td>179.247</td>
+                      <td>&nbsp;</td>
+                      <td>197.147</td>
+                    </tr>
+                    <tr>
+                      <td>Jalan Bani Bu Ali</td>
+                      <td>69.3</td>
+                      <td>1097.752</td>
+                      <td>&nbsp;</td>
+                      <td>1494.712</td>
+                    </tr>
+                    <tr>
+                      <td>Jalan Bani Bu Hassan</td>
+                      <td>22.2</td>
+                      <td>759.24</td>
+                      <td>&nbsp;</td>
+                      <td>781.44</td>
+                    </tr>
+                    <tr>
+                      <td>Khasab</td>
+                      <td>6.6</td>
+                      <td>48.86</td>
+                      <td>&nbsp;</td>
+                      <td>55.46</td>
+                    </tr>
+                    <tr>
+                      <td>Liwa</td>
+                      <td>29.3</td>
+                      <td>331.027</td>
+                      <td>&nbsp;</td>
+                      <td>360.327</td>
+                    </tr>
+                    <tr>
+                      <td>Madha</td>
+                      <td>4.4</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>4.4</td>
+                    </tr>
+                    <tr>
+                      <td>Mahadha</td>
+                      <td>3.7</td>
+                      <td>40.608</td>
+                      <td>&nbsp;</td>
+                      <td>44.308</td>
+                    </tr>
+                    <tr>
+                      <td>Mahoot</td>
+                      <td>12.2</td>
+                      <td>261.98</td>
+                      <td>&nbsp;</td>
+                      <td>454.52</td>
+                    </tr>
+                    <tr>
+                      <td>Manah</td>
+                      <td>10.1</td>
+                      <td>64.797</td>
+                      <td>&nbsp;</td>
+                      <td>74.897</td>
+                    </tr>
+                    <tr>
+                      <td>Masirah</td>
+                      <td>12.1</td>
+                      <td>966.2</td>
+                      <td>&nbsp;</td>
+                      <td>1942.04</td>
+                    </tr>
+                    <tr>
+                      <td>Nakhal</td>
+                      <td>5.2</td>
+                      <td>591.147</td>
+                      <td>&nbsp;</td>
+                      <td>596.347</td>
+                    </tr>
+                    <tr>
+                      <td>Nizwa</td>
+                      <td>118.6</td>
+                      <td>3684.563</td>
+                      <td>&nbsp;</td>
+                      <td>5327.635</td>
+                    </tr>
+                    <tr>
+                      <td>Saham</td>
+                      <td>33</td>
+                      <td>238.56</td>
+                      <td>&nbsp;</td>
+                      <td>271.56</td>
+                    </tr>
+                    <tr>
+                      <td>Samad A'shan</td>
+                      <td>1</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Shinas</td>
+                      <td>20.5</td>
+                      <td>1231.461</td>
+                      <td>&nbsp;</td>
+                      <td>1251.961</td>
+                    </tr>
+                    <tr>
+                      <td>Sinaw</td>
+                      <td>1</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Sohar</td>
+                      <td>0.4</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>0.4</td>
+                    </tr>
+                    <tr>
+                      <td>Sumail</td>
+                      <td>65.5</td>
+                      <td>2571.64</td>
+                      <td>&nbsp;</td>
+                      <td>2637.14</td>
+                    </tr>
+                    <tr>
+                      <td>Sur</td>
+                      <td>40.6</td>
+                      <td>7919.929</td>
+                      <td>&nbsp;</td>
+                      <td>10389.669</td>
+                    </tr>
+                    <tr>
+                      <td>Wadi Bani Khalid</td>
+                      <td>2.9</td>
+                      <td>24.9</td>
+                      <td>&nbsp;</td>
+                      <td>27.8</td>
+                    </tr>
+                    <tr>
+                      <td>Wadi Maawil</td>
+                      <td>6.8</td>
+                      <td>159.05</td>
+                      <td>&nbsp;</td>
+                      <td>165.85</td>
+                    </tr>
+                    <tr>
+                      <td>Yanqul</td>
+                      <td>10.3</td>
+                      <td>1373.061</td>
+                      <td>&nbsp;</td>
+                      <td>3151.201</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th class="bg-primary text-white">Grand Total</th>
+                      <th class="bg-success text-white">1152.8</th>
+                      <th class="bg-info text-white">43527.99</th>
+                      <th class="bg-dark text-white">0.2</th>
+                      <th class="bg-warning">66300.712</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div> <!-- /.box-body -->
+          </div> <!-- /.box -->
+        </div> <!-- /.col -->
+
+        <div class="col">
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Fee Collections</h3>
+              <div class="box-tools float-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row">
+                <p class="text-center"> <strong>As on date need to displayed</strong> </p>
+                <div class="chart tab-pane" id="donut-chart" style="position: relative;"></div>
+              </div> <!-- /.row -->
+            </div> <!-- /.box-body -->
+          </div> <!-- /.box -->
+        </div> <!-- /.col -->
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <div class="row my-3 animated fadeInDown">
+        <div class="mb-12 col-lg-12 col-xl-12">
+          <div class="box box-success collapsed-box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Amount Collected based on Status</h3>
+              <div class="box-tools float-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="table-responsive">
+                <table id="Fee_Status1" class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="bg-primary text-white" rowspan="2">Municipality</th>
+                      <th class="bg-orange text-white" rowspan="2">Closed</th>
+                      <th class="bg-warning" rowspan="2">Rejected</th>
+                      <th class="bg-success text-white text-center" colspan="2">Site Inspection</th>
+                      <th class="bg-primary text-white" rowspan="2">Interview Scheduled</th>
+                      <th class="bg-success text-white" rowspan="2">Reschedule Activity</th>
+                      <th class="bg-info text-white" rowspan="2">Return for Review</th>
+                      <th class="bg-dark text-white" rowspan="2">Unassigned</th>
+                      <th class="bg-warning" rowspan="2">Grand Total</th>
+                    </tr>
+                    <tr>
+                      <th class="bg-info text-white">Required</th>
+                      <th class="bg-orange">Scheduled</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                  <tfoot>
+                    <th class="bg-primary text-white">Grand Total</th>
+                    <th class="bg-orange text-white"></th>
+                    <th class="bg-orange text-white"></th>
+                    <th class="bg-info text-white"></th>
+                    <th class="bg-orange"></th>
+                    <th class="bg-primary text-white"></th>
+                    <th class="bg-success text-white"></th>
+                    <th class="bg-info text-white"></th>
+                    <th class="bg-dark text-white"></th>
+                    <th class="bg-warning"></th>
+                  </tfoot>
+                </table>
+              </div>
+              <hr>
+              <div class="table-responsive">
+                <table id="Fee_Status" class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="bg-primary text-white" rowspan="2">Municipality</th>
+                      <th class="bg-info text-white" rowspan="2">Approved</th>
+                      <th class="bg-orange text-white" rowspan="2">Assigned</th>
+                      <th class="bg-info text-white text-center" colspan="5">Pending with</th>
+                      <th class="bg-primary text-white" rowspan="2">Grand Total</th>
+                    </tr>
+                    <tr>
+                      <th class="bg-primary text-white">Applicant</th>
+                      <th class="bg-success text-white">Health Control Inspector</th>
+                      <th class="bg-dark text-white">HOS</th>
+                      <th class="bg-orange">Technician</th>
+                      <th class="bg-orange text-white">Payment</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Adam</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th class="bg-primary text-white">Grand Total</th>
+                      <th class="bg-info text-white"></th>
+                      <th class="bg-orange"></th>
+                      <th class="bg-primary text-white"></th>
+                      <th class="bg-success text-white"></th>
+                      <th class="bg-dark text-white"></th>
+                      <th class="bg-orange"></th>
+                      <th class="bg-orange text-white"></th>
+                      <th class="bg-primary text-white"></th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div> <!-- /.box-body -->
+          </div> <!-- /.box -->
+        </div> <!-- /.col -->
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+      <div class="row my-3 animated fadeInDown">
+        <div class="mb-12 col-lg-12 col-xl-12">
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Requests based on Status</h3>
+              <div class="box-tools float-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="table-responsive">
+                <table id="Req_Status1" class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="bg-primary text-white">Municipality</th>
+                      <th class="bg-secondary text-white">Approved</th>
+                      <th class="bg-success text-white">Rejected</th>
+                      <th class="bg-danger text-white">Assigned</th>
+                      <th class="bg-info text-white">Unassigned</th>
+                      <th class="bg-warning">Grand Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th class="bg-primary text-white">Grand Total</th>
+                      <th class="bg-secondary text-white"></th>
+                      <th class="bg-success text-white"></th>
+                      <th class="bg-danger text-white"></th>
+                      <th class="bg-info text-white"></th>
+                      <th class="bg-warning"></th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <hr>
+              <div class="table-responsive">
+                <table id="Req_Status" class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="bg-primary text-white" rowspan="2">Municipality</th>
+                      <th class="bg-info text-white text-center" colspan="5">Pending with</th>
+                      <th class="bg-warning" rowspan="2">Grand Total</th>
+                    </tr>
+                    <tr>
+                      <th class="bg-secondary text-white">Applicant</th>
+                      <th class="bg-success text-white">Health Control Inspector</th>
+                      <th class="bg-danger text-white">HOS</th>
+                      <th class="bg-info text-white">Technician</th>
+                      <th class="bg-orange text-white">Site Inspection</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th class="bg-primary text-white">Grand Total</th>
+                      <th class="bg-secondary text-white"></th>
+                      <th class="bg-success text-white"></th>
+                      <th class="bg-danger text-white"></th>
+                      <th class="bg-info text-white"></th>
+                      <th class="bg-orange text-white"></th>
+                      <th class="bg-warning"></th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div> <!-- /.box-body -->
+          </div> <!-- /.box -->
+        </div> <!-- /.col -->
+      </div>
+      <div class="clearfix"></div>
+      <hr>
+    </div>
+    <!-- /.container -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small unique-color-dark">
+    <!-- Copyright -->
+    <div class="footer-copyright text-left py-3">
+      <div class="container">
+        <p class="float-left"> 2020 &copy; : <a href="#"> Sridhar Talluri</a></p>
+        <p class="float-right"> 
+          <a class="float-right ml10" href="#"> <img id="trustwaveSealImage"
+              src="images/gfx/trust-logo.png" class="trustwave"
+              alt="This site is protected by Trustwave's Trusted Commerce program"
+              title="This site is protected by Trustwave's Trusted Commerce program"> </a> <a class="float-right ml10"
+            href="http://www.w3.org/" target="_blank"> <img id="w3cImage" src="images/gfx/w3c-logo.png"
+              class="trustwave" alt="W3C" title="W3C"> </a> <a class="float-right" href="http://www.oman.om/"
+            target="_blank"> <img id="omanLogo" src="images/gfx/oman-logo.png" class="trustwave" alt="Oman"
+              title="Oman"> </a> </p>
+      </div>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="js/popper.1.14.6.js"></script>
+  <script type="text/javascript" src="js/bootstrap.4.2.1.js"></script>
+  <!-- Date &amp; Time Live-->
+  <script src="js/Time/timejs.js"></script>
+  <!-- Date &amp; Time Live-->
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- Morris.js charts -->
+  <script type="text/javascript" src="Plugins/raphael/raphael.js"></script>
+  <script type="text/javascript" src="Plugins/morris/morris.js"></script>
+  <!-- dataTables-4 -->
+  <script type="text/javascript" src="js/dataTables-4/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="js/datatables-4/dataTables.bootstrap4.js"></script>
+  <script type="text/javascript" src="js/datatables-4/dataTables.buttons.js"></script>
+  <!-- <script type="text/javascript" src="js/datatables-4/buttons.flash.js"></script> -->
+  <script type="text/javascript" src="js/datatables-4/jszip.js"></script>
+  <script type="text/javascript" src="js/datatables-4/pdfmake.js"></script>
+  <script type="text/javascript" src="js/datatables-4/vfs_fonts.js"></script>
+  <script type="text/javascript" src="js/datatables-4/buttons.html5.js"></script>
+  <script type="text/javascript" src="js/datatables-4/buttons.print.js"></script>
+  <script type="text/javascript" src="js/fee.js"></script>
+  <script type="text/javascript" src='js/stopExecutionOnTimeout.js'></script>
+  <script type="text/javascript" src="js/BPHS05.js"></script>
+  <script type="text/javascript" src="js/adminlte.js"></script>
+  <script>
+    var highestBox = 0;
+    $('.colcount').each(function () {
+      if ($(this).height() > highestBox) {
+        highestBox = $(this).height();
+      }
+    });
+    $('.colcount').height(highestBox);
+  </script>
+</body>
+
+</html>

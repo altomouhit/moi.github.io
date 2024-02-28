@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="images/Khanjar.png">
+<title>Home</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.4.2.1.css">
+
+<!-- fontawesome CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="fontawesome-5.6.3/css/all.css">
+<!-- AdminLTE style -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/AdminLTE.css">
+<!-- Animation CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/animation.css">
+
+<!-- Customs CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/CMS.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/DRC.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/reports.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/landing.css">
+</head>
+<body>
+<div class="preloader"> <div class="loader"></div> </div>
+<nav class="navbar navbar-expand-md navbar-dark flex-md-row skin-blue zero-padding">
+  <div class="container">
+    <!-- <a class="navbar-brand" href="#">Sticky top</a> -->
+    <ul class="navbar-nav d-none d-md-flex">
+      <li class="nav-item active"> <a class="nav-link" href="index.html"><i class="fas fa-home">&nbsp;</i>Home <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"><a id="date" class="nav-link p-2" title="date" href="JavaScript:Void(0)"></a></li>
+      <li class="nav-item"><a href="javascript:Void" class="nav-link p-2">|</a></li>
+      <li class="nav-item"><a id="time" class="nav-link p-2" title="time" href="JavaScript:Void(0)"></a></li>
+    </ul>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sridhar Talluri </a>
+        <div class="dropdown-menu animated slideInRight" aria-labelledby="bd-versions">
+          <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt">&nbsp;</i>Logout</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link p-2" hreflang="ar">&#1593;&#1585;&#1576;&#1610;</a></li>
+      <li class="nav-item active"> <a href="javascript:Void();" class="nav-link"> <i class="fas fa-sync fa-spin fa-fw"></i><span id="timer"></span> </a> </li>
+    </ul>
+  </div>
+</nav>
+<section class="bg-boby">
+  <div class="container-fulid shadow-lg p-3 mb-5">
+    <div class="row">
+      <div class="col zero-padding">
+        <!-- Tabs with icons on Card -->
+        <div class="card card-nav-tabs">
+          <div class="skin-blue">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                  <li class="nav-item"> <a class="nav-link active" href="#bpts" data-toggle="tab" title="Technical Services"> <i class="far fa-building fa-fw fa-2x"></i>Technical Services</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="#bphs" data-toggle="tab" title="Health Services"> <i class="fas fa-microscope fa-fw fa-2x"></i>Health Services</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#bpws" data-toggle="tab" title="Water Services"><i class="fas fa-tint fa-fw fa-2x"></i>Water Services</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#sand" data-toggle="tab"> <i class="fas fa-user-tag fa-fw fa-2x"></i>Sanad</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="#server" data-toggle="tab"> <i class="fas fa-user-cog fa-fw fa-2x"></i>Server Monitor</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body zero-padding">
+            <div class="tab-content">
+              <div class="tab-pane active animated fadeInDown" id="bpts">
+                <div class="form-group row" style="margin-top: 5px;">
+                  <!-- <label for="region_ser" class="col-sm-2 col-form-label">Governorate</label> -->
+                  <div class="col-sm-2">
+                    <select name="region_ser" id="region_ser" class="form-control form-control-sm">
+                      <option value="1000">Please select</option>
+                      <option value="1">Monthly</option>
+                      <option value="2">3 Months</option>
+                      <option value="3">6 Months</option>
+                      <option value="4">Yearly</option>
+                    </select>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="box box-danger">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Fee Collections</h3>
+                        <div class="box-tools float-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+                          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                       </div> <!-- /.box-header -->
+                      <div class="box-body ">
+                        <div id="container" style="height: 300px; margin: 0 auto"></div>
+                        <a href="total_fee.html" class="ml-md-auto text-blue float-right"><i class="fa fa-ellipsis-h fa-spin">&nbsp;</i>More</a>
+                      </div> <!-- /.box-body -->
+                    </div>  <!-- /.box -->
+                  </div>  <!-- /.col -->
+
+                  <div class="col-md-5">
+                    <div class="row">
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-blue-dark pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Major Building Permit</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon far fa-building fa-dash text-white"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="TS.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-orange pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Minor Building Permit</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-city"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPTS02.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-lorvens pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Excavation Permit</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-screwdriver"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPTS07.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 10px;">
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-red pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Connection Existing Building</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon far fa-edit"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPTS08.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-pink-dark pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Characterization Certificate</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-clipboard-list"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPTS09.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-pink pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>General Services</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-chalkboard-teacher"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPTS13.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="box box-info">
+                      <div class="box-header with-border">
+                        <h3 class="box-title h3">Request by Location</h3>
+                        <div class="box-tools float-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+                          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body no-padding">
+                        <div id="pieChart_Location" style="height: 335px; margin: 0 auto"></div>
+                      </div>  <!-- /.box-body -->
+                    </div> <!-- /.box -->
+                  </div>
+                </div> <!-- /.row -->
+                <div class="clearfix"></div>
+                <hr>
+                <div class="row">
+                  <div class="col">
+                    <div class="box box-success">
+                      <div class="box-header with-border">
+                        <h3 class="box-title h3">Monthly Report</h3>
+                        <div class="box-tools float-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+                          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <div class="row">
+                          <div class="col">
+                            <p class="text-center"> <strong>Sales: 1 Jan, 2018 - 30 Jul, 2018</strong> </p>
+                            <div class="chart">
+                              <!-- Sales Chart Canvas -->
+                              <canvas id="salesChart" style="height: 180px;"></canvas>
+                            </div>
+                            <!-- /.chart-responsive -->
+                          </div>
+                          <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                      </div>
+                      <!-- ./box-body -->
+                    </div> <!-- /.box -->
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+              </div> <!-- /#bpts -->
+
+              <div class="tab-pane animated fadeInDown" id="bphs">
+                <div class="form-group row" style="margin-top: 5px;">
+                  <!-- <label for="region_ser" class="col-sm-2 col-form-label">Governorate</label> -->
+                  <div class="col-sm-2">
+                    <select name="region_ser" id="region_ser" class="form-control form-control-sm">
+                      <option value="1000">Please select</option>
+                      <option value="1">Monthly</option>
+                      <option value="2">3 Months</option>
+                      <option value="3">6 Months</option>
+                      <option value="4">Yearly</option>
+                    </select>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="box box-danger">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Fee Collections</h3>
+                        <div class="box-tools float-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+                          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                       </div> <!-- /.box-header -->
+                      <div class="box-body ">
+                        <div id="containerHS" style="height: 300px; margin: 0 auto"></div>
+                        <a href="total_fee.html" class="ml-md-auto text-blue float-right"><i class="fa fa-ellipsis-h fa-spin">&nbsp;</i>More</a>
+                      </div> <!-- /.box-body -->
+                    </div>  <!-- /.box -->
+                  </div>  <!-- /.col -->
+
+                  <div class="col-md-5">
+                    <div class="row">
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-coal pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Lease Contract</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon far fa-building fa-dash text-white"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPHS01.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-Lawrencium pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Municipal License</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-city"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPHS03.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-Bighead pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Health Card</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-screwdriver"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPHS05.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 10px;">
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-Terminal pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Vehicle Inspection / Noc</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon far fa-edit"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPHS07.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-red pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Advertising License</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-clipboard-list"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPHS09.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="miniStats--panel text-white bg-Purplepine pull-up">
+                          <div class="miniStats--header" data-overlay="0.1">
+                            <p class="miniStats--title h4 text-white"><span>Main Board</span></p>
+                          </div>
+                          <div class="miniStats--body"> <i class="miniStats--icon fas fa-chalkboard-teacher"></i>
+                            <span class="miniStats--title text-white">Total Request</span>
+                            <p class="miniStats--num">3</p>
+                            <a class="miniStats--caption outside" href="BPHS15.html"><i class="fa fa-ellipsis-h">&nbsp;</i>More</a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="box box-info">
+                      <div class="box-header with-border">
+                        <h3 class="box-title h3">Request by Location</h3>
+                        <div class="box-tools float-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+                          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body no-padding">
+                        <div id="pieChart_Location_HS" style="height: 335px; margin: 0 auto"></div>
+                      </div>  <!-- /.box-body -->
+                    </div> <!-- /.box -->
+                  </div>
+                </div> <!-- /.row -->
+                <div class="clearfix"></div>
+                <hr>
+                <div class="row">
+                  <div class="col">
+                    <div class="box box-success">
+                      <div class="box-header with-border">
+                        <h3 class="box-title h3">Monthly Report</h3>
+                        <div class="box-tools float-right">
+                          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i> </button>
+                          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <div class="row">
+                          <div class="col">
+                            <p class="text-center"> <strong>Sales: 1 Jan, 2018 - 30 Jul, 2018</strong> </p>
+                            <div class="chart">
+                              <!-- Sales Chart Canvas -->
+                              <canvas id="salesChart" style="height: 180px;"></canvas>
+                            </div>
+                            <!-- /.chart-responsive -->
+                          </div>
+                          <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                      </div>
+                      <!-- ./box-body -->
+                    </div> <!-- /.box -->
+                  </div> <!-- /.col -->
+                </div> <!-- /.row -->
+              </div> <!-- /#bpts -->
+              <div class="tab-pane animated fadeInDown" id="bpws">
+
+              </div>
+              <div class="tab-pane animated fadeInDown" id="sand">
+
+              </div>
+              <div class="tab-pane animated fadeInDown" id="server">
+
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Tabs with icons on Card -->
+      </div>
+    </div> <!-- /.row -->
+    <div class="clearfix"></div>
+  </div> <!-- /.container -->
+  <br>
+</section>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+  <!-- Copyright -->
+  <div class="footer-copyright text-left py-3">
+    <div class="container">
+      <p class="float-left"> 2018 &copy; : <a href="#"> Sridhar Talluri</a></p>
+      <p class="float-right"> <a class="float-right ml10" href="#"> <img id="trustwaveSealImage" src="images/gfx/trust-logo.png" class="trustwave" alt="This site is protected by Trustwave's Trusted Commerce program" title="This site is protected by Trustwave's Trusted Commerce program"> </a> <a class="float-right ml10" href="http://www.w3.org/" target="_blank"> <img id="w3cImage" src="images/gfx/w3c-logo.png" class="trustwave" alt="W3C" title="W3C"> </a> <a class="float-right" href="http://www.oman.om/" target="_blank"> <img id="omanLogo" src="images/gfx/oman-logo.png" class="trustwave" alt="Oman" title="Oman"> </a> </p>
+    </div>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/popper.1.14.6.js"></script>
+<script type="text/javascript" src="js/bootstrap.4.2.1.js"></script>
+<!-- Date &amp; Time Live-->
+<script type="text/javascript" src="js/Time/timejs.js"></script>
+<!-- Date &amp; Time Live-->
+<!-- Morris.js charts -->
+<script type="text/javascript" src="Plugins/raphael/raphael.js"></script>
+<script type="text/javascript" src="Plugins/morris/morris.js"></script>
+<!-- ChartJS -->
+<script type="text/javascript" src="Plugins/chart/Chart.js"></script>
+<script type="text/javascript" src="js/adminlte.js"></script>
+<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="js/highcharts/highcharts-3d.js"></script>
+<script type="text/javascript" src="js/highcharts/exporting.js"></script>
+<script type="text/javascript" src="js/highcharts/export-data.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript">
+  var highestBox = 0;
+  $('.miniStats--panel').each(function() {
+    if ($(this).height() > highestBox) {
+      highestBox = $(this).height();
+    }
+  });
+  $('.miniStats--panel').height(highestBox);
+</script>
+</body>
+</html>

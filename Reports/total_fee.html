@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="images/Khanjar.png">
+<title>Technical Services</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.4.2.1.css">
+
+<!-- fontawesome CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="fontawesome-5.6.3/css/all.css">
+
+<!-- dataTables-4 CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/dataTables-4/dataTables.bootstrap4.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/dataTables-4/responsive.bootstrap4.css">
+<!-- Animation CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/animation.css">
+
+<!-- Customs CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/CMS.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/DRC.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/reports.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/landing.css">
+</head>
+<body>
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+<section class="bg-boby">
+  <nav class="navbar navbar-expand-lg navbar-dark flex-md-row skin-blue zero-padding">
+    <div class="container"> 
+      <!-- <a class="navbar-brand" href="#">Sticky top</a> -->
+      <ul class="navbar-nav d-none d-md-flex">
+        <li class="nav-item"> <a class="nav-link" href="index.html"><i class="fas fa-home">&nbsp;</i>Home <span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="TS.html"><i class="fas fa-building">&nbsp;</i>Technical Services</a> </li>
+        <li class="nav-item"><a id="date" class="nav-link p-2" title="date" href="JavaScript:Void(0)"></a></li>
+        <li class="nav-item"><a href="javascript:Void" class="nav-link p-2">|</a></li>
+        <li class="nav-item"><a id="time" class="nav-link p-2" title="time" href="JavaScript:Void(0)"></a></li>
+      </ul>
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sridhar Talluri </a>
+          <div class="dropdown-menu animated slideInRight" aria-labelledby="bd-versions"> <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt">&nbsp;</i>Logout</a> </div>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link p-2" hreflang="ar">&#1593;&#1585;&#1576;&#1610;</a></li>
+        <li class="nav-item active"> <a href="javascript:Void();" class="nav-link"> <i class="fas fa-sync fa-spin fa-fw"></i><span id="timer"></span> </a> </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mt-3 shadow-lg bg-white rounded">
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col zero-padding"> 
+        <!-- Tabs with icons on Card -->
+        <div class="card card-nav-tabs">
+          <div class="bg-blue-dark">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                  <li class="nav-item"> <a class="nav-link active" href="#bpts01" data-toggle="tab"> <i class="far fa-building fa-fw"></i>Technical Services</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body zero-padding">
+            <div class="tab-content">
+              <div class="tab-pane active animated fadeInDown" id="bpts01">
+                <div class="form-group row" style="margin-top: 5px;">
+                  <label for="region_ser" class="col-sm-2 col-form-label">Governorate</label>
+                  <div class="col-sm-2">
+                    <select name="region_ser" id="region_ser" class="form-control form-control-sm">
+                      <option value="1000">Please select...</option>
+                      <option value="1">Alshaqiya Governorate</option>
+                      <option value="2">Aldhahira Governorate</option>
+                      <option value="3">Mosandam Governorate</option>
+                    </select>
+                  </div>
+                  <label for="Willayat_ser" class="col-sm-2 col-form-label">Willayat</label>
+                  <div class="col-sm-2">
+                    <select name="Willayat_ser" id="Willayat_ser" class="form-control form-control-sm">
+                      <option value="1000">Please select</option>
+                      <option value="1">Suhar</option>
+                      <option value="2">Nizwa</option>
+                      <option value="3">Ibra</option>
+                      <option value="4">Saham</option>
+                      <option value="5">Nakhal</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Tabs with icons on Card --> 
+      </div>
+    </div> <!-- /.row -->
+    <div class="row my-3 animated fadeInDown">
+      <div class="mb-12 col-lg-12 col-xl-12">
+        <div class="table-responsive">
+          <table id="Muni_serv" class="table table-bordered">
+            <caption> Technical Services </caption>
+            <thead>
+              <tr>
+                <th class="bg-primary text-white">Municipality</th>
+                <th class="bg-success text-white">Preliminary Study</th>
+                <th class="bg-info text-white">Permit to Initiate Construction</th>
+                <th class="bg-orange text-white">Excavation Permit</th>
+                <th class="bg-dark text-white">General Services</th>
+                <th class="bg-warning">Major Building Permit</th>
+                <th class="bg-primary text-white">Minor Building Permit</th>
+                <th class="bg-success text-white">Services Connection Existing Building</th>
+                <th class="bg-info text-white">Temporary Services</th>
+                <th class="bg-orange text-white">Work Completion Certificate</th>
+                <th class="bg-dark text-white">Permanent Services</th>
+                <th class="bg-light-grayish-blue">Follow-up Implementation</th>
+                <th class="bg-warning">Grand Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Adam</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>140.092</td>
+                <td>0.4</td>
+                <td>0.3</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>140.792</td>
+              </tr>
+              <tr>
+                <td>Al_jazer</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+              </tr>
+              <tr>
+                <td>Al-Awabi</td>
+                <td>&nbsp;</td>
+                <td>218.8</td>
+                <td>4</td>
+                <td>&nbsp;</td>
+                <td>99.576</td>
+                <td>5.8</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>328.276</td>
+              </tr>
+              <tr>
+                <td>Al-Buraimi</td>
+                <td>&nbsp;</td>
+                <td>0.6</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>227.558</td>
+                <td>16.2</td>
+                <td>2.9</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>247.358</td>
+              </tr>
+              <tr>
+                <td>Al-Duqm</td>
+                <td>&nbsp;</td>
+                <td>0.3</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>70.087</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>70.487</td>
+              </tr>
+              <tr>
+                <td>Al-Hamra</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>4</td>
+                <td>&nbsp;</td>
+                <td>53.57</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>57.67</td>
+              </tr>
+              <tr>
+                <td>Al-Kamil And Al-Wafi</td>
+                <td>&nbsp;</td>
+                <td>1397.02</td>
+                <td>38</td>
+                <td>&nbsp;</td>
+                <td>143.318</td>
+                <td>6.1</td>
+                <td>2.8</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>0.3</td>
+                <td>&nbsp;</td>
+                <td>1587.738</td>
+              </tr>
+              <tr>
+                <td>Al-Khabura</td>
+                <td>&nbsp;</td>
+                <td>0.2</td>
+                <td>1</td>
+                <td>&nbsp;</td>
+                <td>210.836</td>
+                <td>1.3</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>213.336</td>
+              </tr>
+              <tr>
+                <td>Al-Mudhaibi</td>
+                <td>&nbsp;</td>
+                <td>1052.735</td>
+                <td>29</td>
+                <td>&nbsp;</td>
+                <td>183.493</td>
+                <td>95.2</td>
+                <td>1.5</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1361.928</td>
+              </tr>
+              <tr>
+                <td>Al-Musanna</td>
+                <td>&nbsp;</td>
+                <td>3115.48</td>
+                <td>884.4</td>
+                <td>&nbsp;</td>
+                <td>338.894</td>
+                <td>6.3</td>
+                <td>1.4</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>4346.471</td>
+              </tr>
+              <tr>
+                <td>Al-Qabil</td>
+                <td>&nbsp;</td>
+                <td>1036.5</td>
+                <td>26</td>
+                <td>&nbsp;</td>
+                <td>70</td>
+                <td>15.8</td>
+                <td>0.5</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1148.8</td>
+              </tr>
+              <tr>
+                <td>Al-Rustaq</td>
+                <td>&nbsp;</td>
+                <td>7.9</td>
+                <td>17</td>
+                <td>0.5</td>
+                <td>667.885</td>
+                <td>17</td>
+                <td>1</td>
+                <td>0.4</td>
+                <td>&nbsp;</td>
+                <td>0.3</td>
+                <td>&nbsp;</td>
+                <td>711.985</td>
+              </tr>
+              <tr>
+                <td>Al-Seeb</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+              </tr>
+              <tr>
+                <td>Al-Suwaiq</td>
+                <td>&nbsp;</td>
+                <td>1324.77</td>
+                <td>100.21</td>
+                <td>0.1</td>
+                <td>220.763</td>
+                <td>15</td>
+                <td>0.3</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1661.242</td>
+              </tr>
+              <tr>
+                <td>Bahla</td>
+                <td>&nbsp;</td>
+                <td>1.2</td>
+                <td>288.59</td>
+                <td>0.1</td>
+                <td>183.576</td>
+                <td>12</td>
+                <td>1.1</td>
+                <td>0.3</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>486.864</td>
+              </tr>
+              <tr>
+                <td>Barka</td>
+                <td>&nbsp;</td>
+                <td>7949.904</td>
+                <td>11</td>
+                <td>0.4</td>
+                <td>2266.987</td>
+                <td>36.4</td>
+                <td>6</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>10270.891</td>
+              </tr>
+              <tr>
+                <td>Bid Bid</td>
+                <td>&nbsp;</td>
+                <td>1</td>
+                <td>9</td>
+                <td>0.2</td>
+                <td>65.98</td>
+                <td>10.8</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>87.18</td>
+              </tr>
+              <tr>
+                <td>Bidiya</td>
+                <td>&nbsp;</td>
+                <td>2795.9</td>
+                <td>24</td>
+                <td>0.2</td>
+                <td>124.2</td>
+                <td>48.7</td>
+                <td>0.4</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>2993.4</td>
+              </tr>
+              <tr>
+                <td>Bukha</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1</td>
+                <td>0.1</td>
+                <td>0.2</td>
+                <td>5.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>6.5</td>
+              </tr>
+              <tr>
+                <td>Daba Al-Biya</td>
+                <td>&nbsp;</td>
+                <td>2</td>
+                <td>778.48</td>
+                <td>0.2</td>
+                <td>31.98</td>
+                <td>31.5</td>
+                <td>0.4</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>844.56</td>
+              </tr>
+              <tr>
+                <td>Dhank</td>
+                <td>&nbsp;</td>
+                <td>0.5</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>87.156</td>
+                <td>0.5</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>88.356</td>
+              </tr>
+              <tr>
+                <td>Dima And Tayin</td>
+                <td>&nbsp;</td>
+                <td>1.1</td>
+                <td>12</td>
+                <td>&nbsp;</td>
+                <td>79.08</td>
+                <td>0.5</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>92.68</td>
+              </tr>
+              <tr>
+                <td>Haima</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>5.7</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>5.7</td>
+              </tr>
+              <tr>
+                <td>Ibra</td>
+                <td>&nbsp;</td>
+                <td>859.2</td>
+                <td>833.55</td>
+                <td>0.4</td>
+                <td>225.95</td>
+                <td>27</td>
+                <td>4</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1950.298</td>
+              </tr>
+              <tr>
+                <td>Ibri</td>
+                <td>&nbsp;</td>
+                <td>5700.7</td>
+                <td>1928.2</td>
+                <td>&nbsp;</td>
+                <td>699.488</td>
+                <td>32.6</td>
+                <td>5.9</td>
+                <td>0.2</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>8367.186</td>
+              </tr>
+              <tr>
+                <td>Izki</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>9</td>
+                <td>&nbsp;</td>
+                <td>187.947</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>197.147</td>
+              </tr>
+              <tr>
+                <td>Jalan Bani Bu Ali</td>
+                <td>&nbsp;</td>
+                <td>1013.92</td>
+                <td>48</td>
+                <td>&nbsp;</td>
+                <td>423.892</td>
+                <td>6.1</td>
+                <td>2.3</td>
+                <td>0.5</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1494.712</td>
+              </tr>
+              <tr>
+                <td>Jalan Bani Bu Hassan</td>
+                <td>&nbsp;</td>
+                <td>647.44</td>
+                <td>13</td>
+                <td>0.1</td>
+                <td>119.7</td>
+                <td>1.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>781.44</td>
+              </tr>
+              <tr>
+                <td>Khasab</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>3</td>
+                <td>0.1</td>
+                <td>46.46</td>
+                <td>5.5</td>
+                <td>0.3</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>55.46</td>
+              </tr>
+              <tr>
+                <td>Liwa</td>
+                <td>&nbsp;</td>
+                <td>7.6</td>
+                <td>3</td>
+                <td>&nbsp;</td>
+                <td>307.327</td>
+                <td>42.2</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>360.327</td>
+              </tr>
+              <tr>
+                <td>Madha</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>4</td>
+                <td>&nbsp;</td>
+                <td>0.3</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>4.4</td>
+              </tr>
+              <tr>
+                <td>Mahadha</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>1</td>
+                <td>&nbsp;</td>
+                <td>42.208</td>
+                <td>0.3</td>
+                <td>0.7</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>44.308</td>
+              </tr>
+              <tr>
+                <td>Mahoot</td>
+                <td>&nbsp;</td>
+                <td>238.84</td>
+                <td>126.4</td>
+                <td>&nbsp;</td>
+                <td>68.38</td>
+                <td>20.8</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>454.52</td>
+              </tr>
+              <tr>
+                <td>Manah</td>
+                <td>&nbsp;</td>
+                <td>2.1</td>
+                <td>3</td>
+                <td>&nbsp;</td>
+                <td>48.697</td>
+                <td>20.9</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>74.897</td>
+              </tr>
+              <tr>
+                <td>Masirah</td>
+                <td>&nbsp;</td>
+                <td>1866.34</td>
+                <td>8</td>
+                <td>&nbsp;</td>
+                <td>61.8</td>
+                <td>5.8</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1942.04</td>
+              </tr>
+              <tr>
+                <td>Nakhal</td>
+                <td>&nbsp;</td>
+                <td>555.1</td>
+                <td>2</td>
+                <td>&nbsp;</td>
+                <td>38.947</td>
+                <td>0.3</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>596.347</td>
+              </tr>
+              <tr>
+                <td>Nizwa</td>
+                <td>&nbsp;</td>
+                <td>813.78</td>
+                <td>3525.9</td>
+                <td>1.1</td>
+                <td>922.324</td>
+                <td>59.5</td>
+                <td>0.7</td>
+                <td>3.4</td>
+                <td>&nbsp;</td>
+                <td>0.9</td>
+                <td>&nbsp;</td>
+                <td>5327.635</td>
+              </tr>
+              <tr>
+                <td>Saham</td>
+                <td>&nbsp;</td>
+                <td>5.2</td>
+                <td>1</td>
+                <td>0.1</td>
+                <td>223.16</td>
+                <td>40.9</td>
+                <td>1</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>271.56</td>
+              </tr>
+              <tr>
+                <td>Samad A'shan</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Shinas</td>
+                <td>&nbsp;</td>
+                <td>1125.36</td>
+                <td>1</td>
+                <td>&nbsp;</td>
+                <td>115.201</td>
+                <td>9.2</td>
+                <td>1</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1251.961</td>
+              </tr>
+              <tr>
+                <td>Sinaw</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Sohar</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>0.3</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>0.4</td>
+              </tr>
+              <tr>
+                <td>Sumail</td>
+                <td>&nbsp;</td>
+                <td>1652.38</td>
+                <td>16</td>
+                <td>0.2</td>
+                <td>939.76</td>
+                <td>26.6</td>
+                <td>1.8</td>
+                <td>0.4</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>2637.14</td>
+              </tr>
+              <tr>
+                <td>Sur</td>
+                <td>&nbsp;</td>
+                <td>9599.244</td>
+                <td>9</td>
+                <td>0.5</td>
+                <td>725.025</td>
+                <td>52.9</td>
+                <td>2.7</td>
+                <td>0.1</td>
+                <td>&nbsp;</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>10389.669</td>
+              </tr>
+              <tr>
+                <td>Wadi Bani Khalid</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>1</td>
+                <td>0.1</td>
+                <td>26.5</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>27.8</td>
+              </tr>
+              <tr>
+                <td>Wadi Maawil</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>2</td>
+                <td>&nbsp;</td>
+                <td>103.25</td>
+                <td>60.4</td>
+                <td>0.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>165.85</td>
+              </tr>
+              <tr>
+                <td>Yanqul</td>
+                <td>&nbsp;</td>
+                <td>2932.08</td>
+                <td>&nbsp;</td>
+                <td>0.1</td>
+                <td>197.021</td>
+                <td>20.8</td>
+                <td>1.2</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>3151.201</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th class="bg-primary text-white">Grand Total</th>
+                <th class="bg-success text-white">&nbsp;</th>
+                <th class="bg-info text-white">45925.49</th>
+                <th class="bg-orange text-white">8767.8</th>
+                <th class="bg-dark text-white">4.5</th>
+                <th class="bg-warning">10794.668</th>
+                <th class="bg-primary text-white">758.3</th>
+                <th class="bg-success text-white">41.4</th>
+                <th class="bg-info text-white">6.8</th>
+                <th class="bg-orange text-white">0.1</th>
+                <th class="bg-dark text-white">1.7</th>
+                <th class="bg-light-grayish-blue">&nbsp;</th>
+                <th class="bg-warning">66300.712</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div> <!-- End col-md-12 --> 
+    </div>
+    <div class="clearfix"></div>
+    <hr>
+  </div> <!-- /.container --> 
+</section>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark"> 
+  <!-- Copyright -->
+  <div class="footer-copyright text-left py-3">
+    <div class="container">
+      <p class="float-left"> 2018 &copy; : <a href="#"> Sridhar Talluri</a></p>
+      <p class="float-right"> <a class="float-right ml10" href="#"> <img id="trustwaveSealImage" src="images/gfx/trust-logo.png" class="trustwave" alt="This site is protected by Trustwave's Trusted Commerce program" title="This site is protected by Trustwave's Trusted Commerce program"> </a> <a class="float-right ml10" href="http://www.w3.org/" target="_blank"> <img id="w3cImage" src="images/gfx/w3c-logo.png" class="trustwave" alt="W3C" title="W3C"> </a> <a class="float-right" href="http://www.oman.om/" target="_blank"> <img id="omanLogo" src="images/gfx/oman-logo.png" class="trustwave" alt="Oman" title="Oman"> </a> </p>
+    </div>
+  </div>
+  <!-- Copyright --> 
+</footer>
+<!-- Footer --> 
+
+<!-- Optional JavaScript --> 
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script> 
+<script type="text/javascript" src="js/popper.1.14.6.js"></script> 
+<script type="text/javascript" src="js/bootstrap.4.2.1.js"></script> 
+<!-- Date &amp; Time Live--> 
+<script src="js/Time/timejs.js"></script> 
+<!-- Date &amp; Time Live--> 
+<script type="text/javascript" src="js/main.js"></script> 
+<!-- dataTables-4 --> 
+<script type="text/javascript" src="js/dataTables-4/jquery.dataTables.js"></script> 
+<script type="text/javascript" src="js/datatables-4/dataTables.bootstrap4.js"></script> 
+<script type="text/javascript" src="js/datatables-4/dataTables.buttons.js"></script> 
+<!-- <script type="text/javascript" src="js/datatables-4/buttons.flash.js"></script> --> 
+<script type="text/javascript" src="js/datatables-4/jszip.js"></script> 
+<script type="text/javascript" src="js/datatables-4/pdfmake.js"></script> 
+<script type="text/javascript" src="js/datatables-4/vfs_fonts.js"></script> 
+<script type="text/javascript" src="js/datatables-4/buttons.html5.js"></script> 
+<script type="text/javascript" src="js/datatables-4/buttons.print.js"></script> 
+<script type="text/javascript" src="js/fee.js"></script> 
+<script type="text/javascript" src='js/stopExecutionOnTimeout.js'></script> 
+<script type="text/javascript" src="js/services.js"></script>
+<script>
+var highestBox = 0;
+  $('.colcount').each(function() {
+    if ($(this).height() > highestBox) {
+      highestBox = $(this).height();
+    }
+  });
+  $('.colcount').height(highestBox);
+</script>
+</body>
+</html>
