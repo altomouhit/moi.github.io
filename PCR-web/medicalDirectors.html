@@ -418,9 +418,9 @@
                                     <input type="text" id="ambulanceSearch" class="form-control" placeholder="Search..." aria-label="Search">
                                 </div> -->
                                 <div class="">
-                                    <button type="button" class="btn btn-rounded btn-primary btn-label">
+                                    <button type="button" class="btn btn-rounded btn-primary btn-label" id="print">
                                             <i class="fal fa-print label-icon align-middle fa-2x"></i>&nbsp;Print</button>
-                                    <button type="button" class="btn btn-rounded btn-danger mx-2 btn-label">
+                                    <button type="button" class="btn btn-rounded btn-danger mx-2 btn-label" id="export">
                                             <i class="fal fa-file-pdf label-icon align-middle fa-2x"></i>&nbsp;Export to PDF</button>
                                 </div>
                             </div>
@@ -534,7 +534,7 @@
                 
                             <div class="row mt-4">
                                 <div class="col-md-12">
-                                    <div class="table-responsive-sm data_table">
+                                    <div class="table-responsive data_table">
                                         <table id="medicalDirectorsTable" class="table align-middle table-nowrap table-bordered w-100" aria-hidden="true">
                                             <thead>
                                                 <tr>
@@ -1147,6 +1147,15 @@
 
     <script type="text/javascript" src="assets/libs/dataTables/jquery.dataTables.js"></script>
     <script type="text/javascript" src="assets/libs/dataTables/dataTables.bootstrap5.js"></script>
+    <!-- Data table print buttons start -->
+    <script type="text/javascript" src="assets/libs/dataTables/dataTables.buttons.js"></script>
+    <script type="text/javascript" src="assets/libs/dataTables/buttons.dataTables.js"></script>
+    <script type="text/javascript" src="assets/libs/dataTables/jszip.js"></script>
+    <script type="text/javascript" src="assets/libs/dataTables/pdfmake.js"></script>
+    <script type="text/javascript" src="assets/libs/dataTables/vfs_fonts.js"></script>
+    <script type="text/javascript" src="assets/libs/dataTables/buttons.html5.js"></script>
+    <script type="text/javascript" src="assets/libs/dataTables/buttons.print.js"></script>
+    <!-- Data table print buttons End -->
 
     <!-- App js -->
     <script type="text/javascript" src="assets/js/app.js"></script>
