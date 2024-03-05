@@ -9,7 +9,7 @@ $(".staffRadio").on('change', function() {
 });
 $("#medicalDirectorsCancelId").click(function () {
     $("#medicalDirectorsBtn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save").show();
-    $("#governorateID, #incidentLocation, #stationID, #fromDate, #toDate, #callCategory, #transport").val('').prop('disabled', false);
+    $("#medicationType, #incidentLocation, #stationID, #fromDate, #toDate, #callCategory, #transport").val('').prop('disabled', false);
 });
 
 var printCounter = 0;
@@ -157,4 +157,148 @@ $(document).ready(function() {
     $('#print').on('click', function() {
         medicationReportTable.button(1).trigger();
     });
+});
+
+$('#medicationType').on('change', function() {
+	//alert($(this).find(":selected").val());
+	$('#medication').find('option').remove().end().val('').trigger('change');
+    $('select#medication').multiselect('rebuild');
+    $("#medication option:selected").prop("selected", false);
+	//$('#medication').trigger("chosen:updated");
+	var storedata;
+	if ($(this).find(":selected").val() == "1") {
+		//alert("1");
+		storedata = [{
+			value: '1',
+			text: 'Inj.Adenosine 3mg/1ml Injection'
+		}, {
+			value: '2',
+			text: 'Inj.Amiodarone HCL 150mg/3ml'
+		}, {
+			value: '3',
+			text: 'Inj.Aspirin 81mg/Tablet'
+		}, {
+			value: '4',
+			text: 'Inj.Atropine Sulphate 600mcg/ml'
+		}, {
+			value: '5',
+			text: 'Atrovent (ipratropium bromide) 500mcg /2ml'
+		}, {
+			value: '6',
+			text: 'Capsule Ammonia Inhalant'
+		}, {
+			value: '7',
+			text: 'Inj.Dextrose 50%/ (12.5g) 20ml'
+		}, {
+			value: '8',
+			text: 'Inj.Diphenylamine 50mg/1ml'
+		}, {
+			value: '9',
+			text: 'Inj.Dopamine HCL 200mg/5ml<'
+		}, {
+			value: '10',
+			text: 'Inj.Epinephrine 1:10000 1mg/10ml Minijet'
+		}, {
+			value: '11',
+			text: 'Inj.Epinephrine 1:1000 1mg/1ml (Adrenaline)'
+		}, {
+			value: '12',
+			text: 'Inj.Flumazinil 500mcg/5ml (Anaxate)'
+		}, {
+			value: '13',
+			text: 'Inj.Furosemide (Lasix) 20mg/2ml'
+		}, {
+			value: '14',
+			text: 'Glucose Gel 15g'
+		}, {
+			value: '15',
+			text: 'Inj.Glucagon 1mg/1ml'
+		}, {
+			value: '16',
+			text: 'Inj.Magnesium Sulphate 1g/2ml'
+		}, {
+			value: '17',
+			text: 'Inj.Methylprednisolone 125mg/ml'
+		}, {
+			value: '18',
+			text: 'Inj.Naloxone 0.4mg/ml Injection'
+		}, {
+			value: '19',
+			text: 'Nitroglycerine Trinitrate Spray 11.5g (0.4mg) 20dose'
+		}, {
+			value: '20',
+			text: 'Atrovent (ipratropium bromide) 250mcg /2ml'
+		}, {
+			value: '21',
+			text: 'Inj.Sodium Chloride 0.9% 5ml'
+		}, {
+			value: '22',
+			text: 'Sodium Chloride 0.9% 500ml'
+		}, {
+			value: '23',
+			text: 'Inj.Dextrose 25%/ (12.5g) 20ml'
+		}, {
+			value: '24',
+			text: 'Ventolin 2.5mg/2.5ml Resp/solution (Salbutamol)'
+		}, {
+			value: '25',
+			text: 'Normal Saline 0.9% 5ml (N/S)'
+		}, {
+			value: '26',
+			text: 'Normal Saline 0.9% 500ml (N/S)'
+		}, {
+			value: '27',
+			text: 'Oxygen Therapy (O2)'
+		}, {
+			value: '28',
+			text: 'Inj. Paratcemol 1g'
+		}, {
+			value: '29',
+			text: 'Inj. HALOPERIDOL'
+		}, {
+			value: '30',
+			text: 'Inj. ONDANSETRON'
+		}, {
+			value: '31',
+			text: 'Inj. SODIUM BICARBONATE 8.4'
+		}, {
+			value: '32',
+			text: 'Lactacted Ringer’s (Hartmann’s Solution)'
+		}, {
+			value: '33',
+			text: 'Inj.Tranexamic Acid'
+		}, {
+			value: '34',
+			text: 'Inj. CALCIUM CHLORIDE 10'
+		}];
+		$.each(storedata, function(index, value) {
+			$('#medication').append($('<option>', {
+				value: value.value,
+				text: value.text
+			})).trigger('change');
+			$('select#medication').multiselect('rebuild');
+		});
+	} else if ($(this).find(":selected").val() == "2") {
+		//alert("2");
+		storedata = [{
+			value: '35',
+			text: 'Inj.Morphine Sulphate 10mg/ ml'
+		}, {
+			value: '36',
+			text: 'Inj.Diazepam (Valium ) 10mg/2ml'
+		}, {
+			value: '37',
+			text: 'Inj.Midazolam 15mg/3ml (Dormicum)'
+		}, {
+			value: '38',
+			text: 'Inj.Fentanyl 100mcg/2ml'
+		}];
+		$.each(storedata, function(index, value) {
+			$('#medication').append($('<option>', {
+				value: value.value,
+				text: value.text
+			})).trigger('change');
+			$('select#medication').multiselect('rebuild');
+		});
+	}
 });

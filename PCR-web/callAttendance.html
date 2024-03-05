@@ -418,10 +418,10 @@
                                     <input type="text" id="ambulanceSearch" class="form-control" placeholder="Search..." aria-label="Search">
                                 </div> -->
                                 <div class="">
-                                    <button type="button" class="btn btn-rounded btn-primary btn-label" id="print">
-                                            <i class="fal fa-print label-icon align-middle fa-2x"></i>&nbsp;Print</button>
+                                    <!-- <button type="button" class="btn btn-rounded btn-primary btn-label" id="print">
+                                        <i class="fal fa-print label-icon align-middle fa-2x"></i>&nbsp;Print</button> -->
                                     <button type="button" class="btn btn-rounded btn-danger mx-2 btn-label" id="export">
-                                            <i class="fal fa-file-pdf label-icon align-middle fa-2x"></i>&nbsp;Export to PDF</button>
+                                        <i class="fal fa-file-pdf label-icon align-middle fa-2x"></i>&nbsp;Export to PDF</button>
                                 </div>
                             </div>
                         </div>
@@ -437,7 +437,8 @@
                                             <div class="col-sm-6 col-md-3 mb-3">
                                                 <div class="input-group">
                                                     <div class="form-floating">
-                                                        <select class="form-select" id="governorateID" aria-label="Floating label">
+                                                        <select class="form-select multiSelect" id="governorateID" data-live-search="true" multiple title="Please select">
+                                                            <!-- <option value="">Please select</option> -->
                                                             <option value="">Please select</option>
                                                             <option value="1">Muscat</option>
                                                             <option value="2">Al Batinah South</option>
@@ -518,7 +519,7 @@
                             <div class="row mt-4">
                                 <div class="col-md-12">
                                     <div class="table-responsive data_table">
-                                        <table id="callAttendanceTable" class="table align-middle table-bordered w-100" aria-hidden="true">
+                                        <table id="callAttendanceTable" class="table align-middle table-nowrap table-striped  table-bordered w-100" aria-hidden="true">
                                             <thead class="table-primary">
                                                 <tr>
                                                     <th>Staff Name</th>
