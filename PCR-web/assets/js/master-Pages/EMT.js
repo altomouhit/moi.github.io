@@ -11,10 +11,10 @@ $(document).ready(function() {
 		"autoWidth": true,
 		"buttons": [{
 			extend: 'pdfHtml5',
-            title: 'Medical Directors On Duty Report',
+            title: 'EMT General Report',
             text: '<i class="fal fa-file-pdf fa-lg fa-fw text-danger"></i>',
             className: 'btn btn-danger btn-md px-2 mr-1',
-            filename: 'MedicalDirectorsOnDuty',
+            filename: 'EMTReport',
             orientation: 'portrait', //landscape
             pageSize: 'A4', //A3 , A5 , A6 , legal , letter
 			exportOptions: {
@@ -53,7 +53,7 @@ $(document).ready(function() {
 						columns: [ {
 							alignment: 'left',
 							bold: true,
-							text: 'Medical Directors On Duty Report',
+							text: 'EMT General Report',
 							fontSize: 16,
 							margin: [10, 0]
 						 }, {
@@ -116,12 +116,12 @@ $(document).ready(function() {
 				};
 				doc.content[0].layout = objLayout;
 			}
-		}, {
+		},  {
 			extend: 'excel',
-            title: 'Incident Location Report',
+            title: 'EMT General Report',
             text: '<i class="fal fa-file-excel fa-lg fa-fw text-success"></i>',
             className: 'btn btn-danger btn-md px-2 mr-1',
-            filename: 'MedicalDirectorsOnDuty',
+            filename: 'EMTReport',
             orientation: 'landscape', //portrait
             pageSize: 'A4', //A3 , A5 , A6 , legal , letter
 			exportOptions: {

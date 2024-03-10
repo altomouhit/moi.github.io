@@ -1,21 +1,22 @@
-$("#medicalDirectorsCancelId").click(function () {
-    $("#medicalDirectorsBtn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save").show();
-    $("#governorateID, #incidentLocation, #stationID, #fromDate, #toDate,#callCategory, #transport").val('').prop('disabled', false);
+$("#MedicalInsuCancelId").click(function () {
+    $("#MedicalInsuBtn").html("<i class='fal fa-check fa-fw'></i>&nbsp; Save").show();
+    $("#governorateID, #incidentLocation, #stationID, #fromDate, #toDate, #attendanceType").val('').prop('disabled', false);
 });
+
 var printCounter = 0;
 $(document).ready(function() {
 	// DataTable initialisation
-	var medicalDirectorsTable = $('#medicalDirectorsTable').DataTable({
+	var MedicalInsuTable = $('#MedicalInsuTable').DataTable({
         "dom": '<"top"f>rt<"bottom"ilp>',
 		"paging": true,
 		"autoWidth": true,
 		"buttons": [{
 			extend: 'pdfHtml5',
-            title: 'Medical Directors On Duty Report',
+            title: 'Medical Insurance',
             text: '<i class="fal fa-file-pdf fa-lg fa-fw text-danger"></i>',
             className: 'btn btn-danger btn-md px-2 mr-1',
-            filename: 'MedicalDirectorsOnDuty',
-            orientation: 'portrait', //landscape
+            filename: 'medicalInsurance',
+            orientation: 'portrait', // landscape
             pageSize: 'A4', //A3 , A5 , A6 , legal , letter
 			exportOptions: {
 				//columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -53,7 +54,7 @@ $(document).ready(function() {
 						columns: [ {
 							alignment: 'left',
 							bold: true,
-							text: 'Medical Directors On Duty Report',
+							text: 'Medical Insurance',
 							fontSize: 16,
 							margin: [10, 0]
 						 }, {
@@ -121,7 +122,7 @@ $(document).ready(function() {
             title: 'Incident Location Report',
             text: '<i class="fal fa-file-excel fa-lg fa-fw text-success"></i>',
             className: 'btn btn-danger btn-md px-2 mr-1',
-            filename: 'MedicalDirectorsOnDuty',
+            filename: 'medicalInsurance',
             orientation: 'landscape', //portrait
             pageSize: 'A4', //A3 , A5 , A6 , legal , letter
 			exportOptions: {
@@ -133,7 +134,7 @@ $(document).ready(function() {
 			}
 		}, {
             extend: 'print',
-            orientation: 'portrait', //landscape
+            orientation: 'portrait', // landscape
             pageSize: 'A4', //A3 , A5 , A6 , legal , letter
             text: '<i class="fa fa-print fa-lg fa-fw text-primary" aria-hidden="true"></i>',
             titleAttr: 'Print',
@@ -157,12 +158,12 @@ $(document).ready(function() {
         }]
 	});
     $('#export').on('click', function() {
-        medicalDirectorsTable.button(0).trigger();
+        MedicalInsuTable.button(0).trigger();
     });
 	$('#excel').on('click', function() {
-        medicalDirectorsTable.button(1).trigger();
+        MedicalInsuTable.button(1).trigger();
     });
     $('#print').on('click', function() {
-        medicalDirectorsTable.button(1).trigger();
+        MedicalInsuTable.button(1).trigger();
     });
 });

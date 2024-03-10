@@ -1,4 +1,4 @@
-//$(".smart-Wizard").hide();
+$(".smart-Wizard").hide();
 $("#createUserProfileBtn").click(function() {
     $(".smart-Wizard").show();
 });

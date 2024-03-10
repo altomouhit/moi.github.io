@@ -118,6 +118,21 @@ $(document).ready(function() {
 				doc.content[0].layout = objLayout;
 			}
 		}, {
+			extend: 'excel',
+            title: 'Call Attendance Report',
+            text: '<i class="fal fa-file-excel fa-lg fa-fw text-success"></i>',
+            className: 'btn btn-danger btn-md px-2 mr-1',
+            filename: 'callAttendance',
+            orientation: 'landscape', //portrait
+            pageSize: 'A4', //A3 , A5 , A6 , legal , letter
+			exportOptions: {
+				//columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                columns: ":not(.noExport)",
+				rows: 	':visible',
+				search: 'applied',
+				order: 	'applied'
+			}
+		}, {
             extend: 'print',
             orientation: 'landscape', //portrait
             pageSize: 'A4', //A3 , A5 , A6 , legal , letter
@@ -144,6 +159,9 @@ $(document).ready(function() {
 	});
     $('#export').on('click', function() {
         callAttendanceTable.button(0).trigger();
+    });
+	$('#excel').on('click', function() {
+        callAttendanceTable.button(1).trigger();
     });
     $('#print').on('click', function() {
         callAttendanceTable.button(1).trigger();
