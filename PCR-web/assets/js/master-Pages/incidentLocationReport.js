@@ -120,7 +120,7 @@ $(document).ready(function() {
 		}, {
 			extend: 'excel',
             title: 'Incident Location Report',
-            text: '<i class="fal fa-file-excel fa-lg fa-fw text-success"></i>',
+            text: '<i class="fal fa-file-xls fa-lg fa-fw text-success"></i>',
             className: 'btn btn-danger btn-md px-2 mr-1',
             filename: 'incLoc',
             orientation: 'landscape', //portrait
@@ -166,4 +166,12 @@ $(document).ready(function() {
     $('#print').on('click', function() {
         incLocTable.button(1).trigger();
     });
+});
+$("#staffIdDiv").hide();
+$("#attendanceType").on('change',function(){
+	if(this.value == "1"){
+		$("#staffIdDiv").show();
+	} else {
+		$("#staffIdDiv").hide();
+	}
 });

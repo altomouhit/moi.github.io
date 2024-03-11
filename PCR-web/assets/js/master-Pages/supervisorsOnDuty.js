@@ -119,7 +119,7 @@ $(document).ready(function() {
 		}, {
 			extend: 'excel',
             title: 'Incident Location Report',
-            text: '<i class="fal fa-file-excel fa-lg fa-fw text-success"></i>',
+            text: '<i class="fal fa-file-xls fa-lg fa-fw text-success"></i>',
             className: 'btn btn-danger btn-md px-2 mr-1',
             filename: 'supervisorsOnDuty',
             orientation: 'landscape', //portrait
