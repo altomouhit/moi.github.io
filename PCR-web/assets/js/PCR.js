@@ -41,7 +41,7 @@ window.onload = function() {
 	// Location Type
 	$("#locationSelectDiv, #dutyDiv, #EMTTypeDiv").hide();
 	//Patient & Incident Info > Incident info > Factors Affecting EMS
-	$(".factorsAffectingEMSDiv, #governmentHospitalRefusedDiv, #privateHospitalRefusedDiv").hide();
+	$(".factorsAffectingEMSDiv, #governmentHospitalRefusedDiv, #privateHospitalRefusedDiv, #otherFieldFactorsEMS").hide();
 	//Patient & Incident Info > Additional Resources On Scene
 	$("#royalOmanPoliceDiv, #militaryGovernmentDiv, #privateSectorDiv").hide();
 	//Patient Assessment & Management > Resuscitation Management > Treatment > Intervention > Electrical Intervention
@@ -716,6 +716,11 @@ $("#factorsAffectingEMS").on('change', function() {
 	}
 	if (!(Value.indexOf("17") > -1)) {
 		$(".factorsAffectingEMSDiv, #governmentHospitalRefusedDiv, #privateHospitalRefusedDiv").hide();
+	}
+	if(Value.indexOf( "15" ) > -1){
+		$("#otherFieldFactorsEMS").show();
+	} else{
+		$("#otherFieldFactorsEMS").hide();
 	}
 });
 //Patient Assessment & Management > Patient Assessment > Abdomen
