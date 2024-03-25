@@ -81,15 +81,15 @@
 }
 
 .slide-1 {
-  background-image: url("../img/backgrounds/1920x800-slider-1.webp");
+  background-image: url("../img/banner/Mega Sale-ENGLISH ver6c.jpg");
 }
 
 .slide-2 {
-  background-image: url("../img/backgrounds/1920x800-slider-2.webp");
+  background-image: url("../img/banner/Mega Sale-ARB ver6c.jpg");
 }
 
 .slide-3 {
-  background-image: url("../img/backgrounds/1920x800-slider-3.webp");
+  background-image: url("../img/banner/Mega Sale-ENGLISH ver6c.jpg");
 }
 
 .showreel-image-1 {
@@ -2656,7 +2656,7 @@ form .inputs-description {
 }
 @media only screen and (min-width: 1200px) {
   .main__content {
-    height: 100%;
+    /* height: 100%; */
     min-height: unset;
   }
 }
@@ -2929,8 +2929,9 @@ form .inputs-description {
     right: 360px;
   }
   .main__media.media-top-l {
-    height: -moz-calc(100% - 410px);
-    height: calc(100% - 410px);
+    /* height: -moz-calc(100% - 410px);
+    height: calc(100% - 410px); */
+    height: 60vh;
   }
   .main__media.media-top-l .rotate-object {
     position: absolute;
